@@ -18,7 +18,7 @@
 
 @import "mixins/hover";
 @import "mixins/tab-focus";
-/**@import "mixins/image";
+@import "mixins/image";
 @import "mixins/tag";
 @import "mixins/reset-filter";
 @import "mixins/resize";
@@ -47,11 +47,11 @@
 @import "mixins/border-radius";
 @import "mixins/gradients";
 
-*/// // Layout
+// // Layout
 @import "mixins/clearfix";
 @import "mixins/breakpoints";
 @import "mixins/grid-framework";
 @import "mixins/grid";
-// @import "mixins/navbar-align";
+@import "mixins/navbar-align";
 
-// @import "mixins/pulls";
+@import "mixins/pulls";

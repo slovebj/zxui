@@ -14,10 +14,10 @@
 @import "reboot";
 @import "print";
 
-@import "mixins/clearfix";
-@import "mixins/breakpoints";
-@import "mixins/grid-framework";
-@import "mixins/grid";
-
+// Core CSS
 @import "grid";
 @import "color";
+@import "type";
+
+// Utility classes
+@import "utilities";
