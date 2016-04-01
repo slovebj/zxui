@@ -1,0 +1,127 @@
+
+// Z-levels
+.zdepth0 {
+  box-shadow: none !important;
+}
+.zdepth1{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.zdepth2{
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.zdepth3{
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zdepth4{
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+.zdepth5{
+  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+}
+.zdepth6{
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+}
+
+.hoverable {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+}
+
+.hoverable:hover {
+  transition: box-shadow .25s;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+//Box-radius
+
+.radius1 {
+  border-radius:2px;
+}
+
+.radius2 {
+  border-radius:4px;
+}
+
+.radius3 {
+  border-radius:6px;
+}
+
+.radius4 {
+  border-radius:8px;
+}
+
+.radius5 {
+  border-radius:2rem;
+  padding-left:1rem;
+  padding-right:1rem;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+
+//border
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-double {
+  border-style: double;
+}
+
+.border-inset {
+  border-style: inset;
+}
+
+.border-outset {
+  border-style: outset;
+}
+
+.border-top {
+  border-top: solid 1px;
+}
+
+.border-right {
+  border-right: solid 1px;
+}
+
+.border-bottom {
+  border-bottom: solid 1px;
+}
+
+.border-left {
+  border-left: solid 1px;
+}
+
+.border-x {
+  border-left: solid 1px;
+  border-right: solid 1px;
+}
+
+.border-y {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+}
+
+.border-large {
+  border-width: 10px;
+}
+
+.border-big {
+  border-width: 5px;
+}
+
+.border-middle {
+  border-width: 3px;
+}
+
+.border-small {
+  border-width: 2px;
+}

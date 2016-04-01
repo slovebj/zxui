@@ -129,7 +129,9 @@ mark,
   padding: ($spacer / 2) $spacer;
   margin-bottom: $spacer;
   font-size: $blockquote-font-size;
-  border-left: $blockquote-border-width solid $blockquote-border-color;
+  border: solid 1px $blockquote-border-color;
+  border-left-width: $blockquote-border-width;
+  border-radius: $blockquote-border-radius;
 }
 
 .blockquote-footer {
@@ -144,11 +146,13 @@ mark,
 
 // Opposite alignment of blockquote
 .blockquote-reverse {
-  padding-right: $spacer;
-  padding-left: 0;
+  padding: ($spacer / 2) $spacer;
+  margin-bottom: $spacer;
+  font-size: $blockquote-font-size;
   text-align: right;
-  border-right: $blockquote-border-width solid $blockquote-border-color;
-  border-left: 0;
+  border: solid 1px $blockquote-border-color;
+  border-right-width: $blockquote-border-width;
+  border-radius: $blockquote-border-radius;
 }
 
 .blockquote-reverse .blockquote-footer {
