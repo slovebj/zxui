@@ -10,15 +10,18 @@
 @import "mixins";
 
 // Reset and dependencies
-@import "normalize";
-@import "reboot";
-@import "print";
+@import "base/normalize";
+@import "base/reboot";
+@import "base/print";
 
 // Core CSS
-@import "grid";
-@import "color";
-@import "boxstyle";
-@import "type";
+@import "base/grid";
+@import "base/color";
+@import "base/boxstyle";
+@import "base/type";
+
+//Elements
+@import "elements/divider";
 
 // Utility classes
 @import "utilities";

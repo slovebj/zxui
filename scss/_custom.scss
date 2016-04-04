@@ -188,7 +188,7 @@ $display4-weight: 300 !default;
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
 $headings-font-weight:   500 !default;
-$headings-line-height:   1.1 !default;
+$headings-line-height:   1.2 !default;
 $headings-color:         inherit !default;
 
 $lead-font-size:   1.25rem !default;
@@ -202,10 +202,11 @@ $abbr-border-color: $gray-light !default;
 
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
-$blockquote-border-color: $gray-lighter !default;
-$blockquote-border-width: .25rem !default;
+$blockquote-border-color: #0277bd !default;
+$blockquote-border-width: 7px !default;
+$blockquote-border-radius: 5px !default;
 
-$hr-border-color: rgba(0,0,0,.1) !default;
+$hr-border-color: rgba(0,0,0,.2) !default;
 $hr-border-width: $border-width !default;
 
 $mark-padding: .2em !default;
@@ -225,17 +226,15 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
-
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
 
 $caret-width:            .3em !default;
 $caret-width-lg:         $caret-width !default;
 
-
+$border-radius:          .25rem !default;
+$border-radius-lg:       .3rem !default;
+$border-radius-sm:       .2rem !default;
 // Tables
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
@@ -741,7 +740,7 @@ $list-group-item-heading-margin-bottom: 5px !default;
 
 $thumbnail-padding:           .25rem !default;
 $thumbnail-bg:                $body-bg !default;
-$thumbnail-border-width:      $border-width !default;
+$thumbnail-border-width:      0.25rem !default;
 $thumbnail-border-color:      #ddd !default;
 $thumbnail-border-radius:     $border-radius !default;
 $thumbnail-box-shadow:        0 1px 2px rgba(0,0,0,.075) !default;

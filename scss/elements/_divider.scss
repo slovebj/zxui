@@ -1,0 +1,36 @@
+/*--------------
+   Horizontal divider
+---------------*/
+
+.divider {
+  display: table;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.divider:before,
+.divider:after {
+  content: '';
+  display: table-cell;
+  position: relative;
+  bottom: 0.5em;
+  width: 50%;
+  border-bottom:1px solid currentColor;
+  transform: scaleX(0.9);
+}
+
+/*--------------
+      Icon
+---------------*/
+
+.divider > .icon {
+  margin: 0;
+  font-size: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
