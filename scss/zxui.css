@@ -3635,52 +3635,87 @@ a.text-danger:focus, a.text-danger:hover {
 .circle {
   border-radius: 50%; }
 
-.border-dashed {
+.bd-dashed {
   border-style: dashed; }
 
-.border-dotted {
+.bd-dotted {
   border-style: dotted; }
 
-.border-double {
+.bd-double {
   border-style: double; }
 
-.border-inset {
+.bd-inset {
   border-style: inset; }
 
-.border-outset {
+.bd-outset {
   border-style: outset; }
 
-.border-top {
+.bd-top {
   border-top: solid 1px; }
 
-.border-right {
+.bd-right {
   border-right: solid 1px; }
 
-.border-bottom {
+.bd-bottom {
   border-bottom: solid 1px; }
 
-.border-left {
+.bd-left {
   border-left: solid 1px; }
 
-.border-x {
+.bd-x {
   border-left: solid 1px;
   border-right: solid 1px; }
 
-.border-y {
+.bd-y {
   border-top: solid 1px;
   border-bottom: solid 1px; }
 
-.border-large {
-  border-width: 10px; }
+.bd-width1 {
+  border: solid 1px; }
 
-.border-big {
-  border-width: 5px; }
+.bd-width2 {
+  border: solid 2px; }
 
-.border-middle {
-  border-width: 3px; }
+.bd-width3 {
+  border: solid 3px; }
 
-.border-small {
-  border-width: 2px; }
+.bd-width4 {
+  border: solid 5px; }
+
+.bd-width5 {
+  border: solid 10px; }
+
+.size1 {
+  width: 32px;
+  height: auto; }
+
+.size2 {
+  width: 64px;
+  height: auto; }
+
+.size3 {
+  width: 128px;
+  height: auto; }
+
+.size4 {
+  width: 256px;
+  height: auto; }
+
+.size5 {
+  width: 512px;
+  height: auto; }
+
+.size6 {
+  width: 640px;
+  height: auto; }
+
+.size7 {
+  width: 768px;
+  height: auto; }
+
+.size8 {
+  width: 960px;
+  height: auto; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {

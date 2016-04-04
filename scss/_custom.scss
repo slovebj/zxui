@@ -9,6 +9,7 @@
 // Colors
 // Options
 // Spacing
+// Box style
 // Body
 // Links
 // Grid breakpoints
@@ -92,8 +93,28 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
+
+//Box style
 $border-width: 1px !default;
 
+$bd-width: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 5px,
+  5: 10px,
+) !default;
+
+$box-size: (
+  1: 32px,
+  2: 64px,
+  3: 128px,
+  4: 256px,
+  5: 512px,
+  6: 640px,
+  7: 768px,
+  8: 960px,
+) !default;
 
 // Body
 //
