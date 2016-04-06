@@ -41,3 +41,12 @@
   font-size: $figure-caption-font-size;
   color: $gray-light;
 }
+
+.avatar {
+  margin-right: .25em;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+    

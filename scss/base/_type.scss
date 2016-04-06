@@ -41,27 +41,42 @@ h6, .h6 { font-size: $font-size-h6; }
   font-weight: $display4-weight;
 }
 
+// Transformation
+
+.text-lowercase      { text-transform: lowercase !important; }
+.text-uppercase      { text-transform: uppercase !important; }
+.text-capitalize     { text-transform: capitalize !important; }
+
+// Weight and italics
+
+.font-weight-normal  { font-weight: normal; }
+.font-weight-bold    { font-weight: bold; }
+.font-italic         { font-style: italic; }
+
+// Misc
+
+.text-hide {
+  @include text-hide();
+}
+
+
+// No Text Select
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 //
 // Line height
 //
-.height-large {
-  line-height: $line-height-large;
-}
-
-.height-big {
-  line-height: $line-height-big;
-}
-
-.height-base {
-  line-height: $line-height-base;
-}
-
-.height-small {
-  line-height: $line-height-small;
-}
-
-.height-little {
-  line-height: $line-height-little;
+@each $key, $height in $line-height {
+  .line-height#{$key} {
+    line-height: #{$height};
+  }
 }
 
 //
