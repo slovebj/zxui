@@ -4,7 +4,7 @@
 // Base styles
 //
 
-.btn {
+.btn,.btn-flat {
   display: inline-block;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
@@ -13,9 +13,10 @@
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  border: $input-btn-border-width solid transparent;
+  border: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
-  @include transition(all .2s ease-in-out);
 
   &,
   &:active,
@@ -53,7 +54,17 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
-
+// Raised Button
+.btn {
+  color: $btn-primary-color;
+  background-color: $btn-primary-bg;
+  @extend .zdepth1;
+  transition: .2s ease-out;
+  &:hover {
+    background-color: #fff;
+    @extend .zdepth2;
+  }
+}
 
 //
 // Alternate buttons
