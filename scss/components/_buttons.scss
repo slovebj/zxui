@@ -1,8 +1,11 @@
 // shared styles
 .btn,
-.btn-flat,
-.btn-large,
-.btn-floating {
+.btn-z,
+.btn-r,
+.btn-rz,
+.btn-o,
+.btn-ro,
+ {
   text-decoration: none;
   display: inline-block;
   font-weight: $btn-font-weight;
@@ -20,16 +23,35 @@
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+  i {
+    font-size: 1.2em;
+    font-style: normal;
+    line-height: inherit;
+  }
+  &:hover {
+    opacity: .7;
+    color: $btn-primary-color;
+  }
+  &:focus,
+  &.focus {
+    opacity: .9;
+  }
+
+  &:active,
+  &.active {
+    opacity: .9;
+  }
 }
 
 // Disabled shared style
 .btn.disabled,
-.btn-flat.disabled,
-.btn-floating.disabled,
-.btn-large.disabled,
-.btn:disabled
-.btn-large:disabled,
-.btn-floating:disabled {
+.btn-z.disabled,
+.btn-r.disabled,
+.btn-rz.disabled,
+.btn:disabled,
+.btn-z:disabled,
+.btn-r:disabled,
+.btn-rz:disabled {
   cursor: $cursor-disabled;
   opacity: .65;
   box-shadow: none;
@@ -40,36 +62,40 @@
 
   &:hover {
     opacity: .65;
-
+    color: $btn-primary-color;
   }
 }
+//Outline Button
+.btn-o {
+  color: $btn-primary-bg;
+  background-color: transparent;
+  border:1px solid;
+  border-color: currentColor;
 
-// Shared icon styles
-.btn,
-.btn-floating,
-.btn-large,
-.btn-flat {
-  i {
-    font-size: 1.3rem;
-    line-height: inherit;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,{
+    background-color: currentColor;
+    color: $btn-primary-bg;
+    & i{
+      color:$btn-primary-color;
+    }
   }
 }
-
 // Raised Button
-.btn {
+.btn-z,.btn-rz {
   @extend .zdepth1;
   transition: .2s ease-out;
-  
 
   &:hover {
-    color: $btn-primary-color;
-    opacity: .65;
     @extend .zdepth2;
   }
 }
 
-// Floating button
-.btn-floating {
+// Round button
+.btn-r,.btn-rz {
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -78,7 +104,6 @@
   line-height: $btn-floating-size;
   padding: 0;
   border-radius: 50%;
-  @extend .zdepth1;
   transition: .3s;
   i {
     width: inherit;
@@ -89,28 +114,17 @@
     line-height: $btn-floating-size;
   }
 
-  &:hover {
-    color: $btn-primary-color;
-    opacity: .75;
-    @extend .zdepth2;
-  }
-
   &:before {
     border-radius: 0;
   }
 
-  &.btn-large {
+  &.btn-lg {
     width: $btn-floating-large-size;
     height: $btn-floating-large-size;
     i {
       line-height: $btn-floating-large-size;
     }
   }
-}
-
-// button fix
-button.btn-floating {
-  border: none;
 }
 
 // Fixed Action Button
@@ -167,18 +181,54 @@ button.btn-floating {
 }
 
 
-// Large button
-.btn-large {
-  @extend .btn;
-  height: $btn-large-height;
-  line-height: $btn-large-height;
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: normal;
+  color: $link-color;
+  border-radius: 0;
 
-  i {
-    font-size: $btn-large-icon-font-size;
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  @include hover {
+    border-color: transparent;
+  }
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+  &:disabled {
+    @include hover-focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
   }
 }
+//
+// Button Sizes
+//
 
-// Block button
-.btn-block {
-  display: block;
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+
+
+.btn.block + .btn.block,
+.btn-flat.block + .btn-flat.block, {
+  margin-top: $btn-block-spacing-y;
 }
