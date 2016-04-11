@@ -29,17 +29,16 @@
     line-height: inherit;
   }
   &:hover {
-    opacity: .7;
+    opacity: .8;
     color: $btn-primary-color;
+    outline:0;
   }
   &:focus,
-  &.focus {
-    opacity: .9;
-  }
-
+  &.focus,
   &:active,
   &.active {
-    opacity: .9;
+    opacity: .65;
+    outline:0;
   }
 }
 
