@@ -1,9 +1,12 @@
 // shared styles
 .btn,
 .btn-z,
+.btn-p,
 .btn-c,
 .btn-o,
+.btn-pz,
 .btn-cz,
+.btn-po,
 .btn-co,
 .btn-t,
  {
@@ -57,11 +60,15 @@
 // Disabled shared style
 .btn.disabled,
 .btn-z.disabled,
+.btn-p.disabled,
 .btn-c.disabled,
+.btn-pz.disabled,
 .btn-cz.disabled,
 .btn:disabled,
 .btn-z:disabled,
+.btn-p:disabled,
 .btn-c:disabled,
+.btn-pz:disabled,
 .btn-cz:disabled, {
   cursor: $cursor-disabled;
   opacity: .5;
@@ -77,8 +84,10 @@
   }
 }
 
+.btn-po.disabled,
 .btn-co.disabled,
 .btn-o.disabled,
+.btn-po:disabled,
 .btn-co:disabled,
 .btn-o:disabled, {
   cursor: $cursor-disabled;
@@ -104,7 +113,7 @@
 }
 
 // Raised Button
-.btn-z,.btn-cz {
+.btn-z,.btn-pz,.btn-cz {
   @extend .zdepth1;
   transition: .2s ease-out;
 
@@ -141,7 +150,7 @@
 }
 
 //Outline Button
-.btn-o,.btn-co {
+.btn-o,.btn-po,.btn-co {
   color: $btn-primary-bg;
   background-color: transparent;
   border:1px solid;
@@ -159,6 +168,9 @@
   }
 }
 
+.btn-p,.btn-pz,.btn-po {
+  border-radius: 100em;
+}
 // Fixed Action Button
 .fixed-action-btn {
   &.active {
