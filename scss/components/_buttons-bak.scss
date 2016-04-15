@@ -1,5 +1,14 @@
 // shared styles
-.btn
+.btn,
+.btn-z,
+.btn-p,
+.btn-c,
+.btn-o,
+.btn-pz,
+.btn-cz,
+.btn-po,
+.btn-co,
+.btn-t,
  {
   text-decoration: none;
   display: inline-block;
@@ -50,7 +59,17 @@
 }
 // Disabled shared style
 .btn.disabled,
-.btn:disabled, {
+.btn-z.disabled,
+.btn-p.disabled,
+.btn-c.disabled,
+.btn-pz.disabled,
+.btn-cz.disabled,
+.btn:disabled,
+.btn-z:disabled,
+.btn-p:disabled,
+.btn-c:disabled,
+.btn-pz:disabled,
+.btn-cz:disabled, {
   cursor: $cursor-disabled;
   opacity: .5;
   box-shadow: none;
@@ -65,18 +84,23 @@
   }
 }
 
-.btn-op.disabled,
-.btn-oc.disabled,
+.btn-po.disabled,
+.btn-co.disabled,
 .btn-o.disabled,
-.btn-op:disabled,
-.btn-oc:disabled,
+.btn-po:disabled,
+.btn-co:disabled,
 .btn-o:disabled, {
+  cursor: $cursor-disabled;
   color: #AAA;
   background-color: transparent;
   border:1px solid;
   border-color: currentColor;
   i{
     color:#AAA;
+  }
+
+  * {
+    pointer-events: none;
   }
 
   &:hover {
@@ -89,7 +113,7 @@
 }
 
 // Raised Button
-.btn-z,.btn-zp,.btn-zc {
+.btn-z,.btn-pz,.btn-cz {
   @extend .zdepth1;
   transition: .2s ease-out;
 
@@ -99,7 +123,7 @@
 }
 
 // Circle button
-.btn-c,.btn-zc,.btn-oc {
+.btn-c,.btn-cz,.btn-co {
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -126,7 +150,7 @@
 }
 
 //Outline Button
-.btn-o,.btn-op,.btn-oc {
+.btn-o,.btn-po,.btn-co {
   color: $btn-primary-bg;
   background-color: transparent;
   border:1px solid;
@@ -144,7 +168,7 @@
   }
 }
 
-.btn-p,.btn-zp,.btn-op {
+.btn-p,.btn-pz,.btn-po {
   border-radius: 100em;
 }
 // Fixed Action Button
@@ -194,7 +218,7 @@
       margin-bottom: 15px;
     }
 
-    a.btn-c,a.btn-zc,a.btn-oc, {
+    a.btn-c,a.btn-cz,a.btn-co, {
       opacity: 0;
     }
   }
@@ -247,6 +271,7 @@
   }
 }
 
-.btn.block + .btn.block{
+.btn.block + .btn.block,
+.btn-z.block + .btn-z.block, {
   margin-top: $btn-block-spacing-y;
 }

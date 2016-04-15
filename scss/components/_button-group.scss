@@ -7,7 +7,7 @@
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
-  > .btn,.btn-o,.btn-z {
+  > .btn {
     position: relative;
     float: left;
 
@@ -38,24 +38,24 @@
     float: left;
   }
 
-  > [class^="btn"]:not(.btn-group),
+  > .btn,
   > .btn-group,
   > .input-group {
     margin-left: $btn-toolbar-margin;
   }
 }
 
-.btn-group > [class^="btn"]:not(:first-child):not(:last-child):not(.btn-group) {
+.btn-group > .btn:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
-.btn-group > [class^="btn"]:first-child:not(:last-child):not(.btn-group) {
+.btn-group > .btn:first-child:not(:last-child) {
   margin-left: 0;
   @include border-right-radius(0);
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
-.btn-group > [class^="btn"]:last-child:not(:first-child):not(.btn-group),
+.btn-group > .btn:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   @include border-left-radius(0);
 }
@@ -64,7 +64,7 @@
 .btn-group > .btn-group {
   float: left;
 }
-.btn-group > .btn-group:not(:first-child):not(:last-child) > [class^="btn"]:not(.btn-group) {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 .btn-group > .btn-group:first-child:not(:last-child) {
@@ -73,7 +73,7 @@
     @include border-right-radius(0);
   }
 }
-.btn-group > .btn-group:last-child:not(:first-child) > [class^="btn"]:not(.btn-group):first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
   @include border-left-radius(0);
 }
 
@@ -88,8 +88,8 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm > [class^="btn"]:not(.btn-group) { @extend .btn-sm; }
-.btn-group-lg > [class^="btn"]:not(.btn-group) { @extend .btn-lg; }
+.btn-group-sm > .btn { @extend .btn-sm; }
+.btn-group-lg > .btn { @extend .btn-lg; }
 
 
 //
@@ -97,7 +97,7 @@
 //
 
 // Give the line between buttons some depth
-.btn-group > [class^="btn"]:not(.btn-group) + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle {
   padding-right: $split-btn-dropdown-toggle-padding-x;
   padding-left: $split-btn-dropdown-toggle-padding-x;
 }
@@ -119,7 +119,7 @@
 
 
 // Reposition the caret
-[class^="btn"]:not(.btn-group) .caret {
+.btn .caret {
   margin-left: 0;
 }
 // Carets in other button sizes
@@ -139,9 +139,9 @@
 //
 
 .btn-group-v {
-  > [class^="btn"]:not(.btn-group),
+  > .btn,
   > .btn-group,
-  > .btn-group > [class^="btn"]:not(.btn-group) {
+  > .btn-group > .btn {
     display: block;
     float: none;
     width: 100%;
@@ -152,21 +152,21 @@
   > .btn-group {
     @include clearfix();
 
-    > [class^="btn"]:not(.btn-group) {
+    > .btn {
       float: none;
     }
   }
 
-  > [class^="btn"]:not(.btn-group) + [class^="btn"]:not(.btn-group),
-  > [class^="btn"]:not(.btn-group) + .btn-group,
-  > .btn-group + [class^="btn"]:not(.btn-group),
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
   > .btn-group + .btn-group {
     margin-top: -$input-btn-border-width;
     margin-left: 0;
   }
 }
 
-.btn-group-v > [class^="btn"]:not(.btn-group) {
+.btn-group-v > .btn {
   &:not(:first-child):not(:last-child) {
     border-radius: 0;
   }
@@ -177,16 +177,16 @@
     @include border-top-radius(0);
   }
 }
-.btn-group-v > .btn-group:not(:first-child):not(:last-child) > [class^="btn"]:not(.btn-group) {
+.btn-group-v > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0;
 }
 .btn-group-v > .btn-group:first-child:not(:last-child) {
-  > [class^="btn"]:not(.btn-group):last-child,
+  > .btn:last-child,
   > .dropdown-toggle {
     @include border-bottom-radius(0);
   }
 }
-.btn-group-v > .btn-group:last-child:not(:first-child) > [class^="btn"]:not(.btn-group):first-child {
+.btn-group-v > .btn-group:last-child:not(:first-child) > .btn:first-child {
   @include border-top-radius(0);
 }
 
@@ -204,8 +204,8 @@
 // https://github.com/twbs/bootstrap/pull/14559 for more information.
 
 [data-toggle="buttons"] {
-  > [class^="btn"]:not(.btn-group),
-  > .btn-group > [class^="btn"]:not(.btn-group) {
+  > .btn,
+  > .btn-group > .btn {
     input[type="radio"],
     input[type="checkbox"] {
       position: absolute;

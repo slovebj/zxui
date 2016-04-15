@@ -21,6 +21,12 @@
   }
 }
 
+ .tag-o,.tag-op {
+  color: $btn-primary-bg;
+  background-color: transparent;
+  border:1px solid;
+  border-color: currentColor;
+}
 // Quick fix for tags in buttons
 .btn .tag {
   position: relative;
@@ -29,7 +35,7 @@
 
 // scss-lint:disable QualifyingElement
 // Add hover effects, but only for links
-a.tag {
+a.tag:not([class^="tag-o"]) {
   @include hover-focus {
     opacity: .75;
     text-decoration: none;
@@ -42,7 +48,7 @@ a.tag {
 //
 // Make them extra rounded with a modifier to replace v3's badges.
 
-.tag-pill {
+.tag-p,.tag-op {
   padding-right: $tag-pill-padding-x;
   padding-left: $tag-pill-padding-x;
   @include border-radius($tag-pill-border-radius);
