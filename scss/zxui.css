@@ -1176,10 +1176,12 @@ output {
   display: inline !important; }
 
 .right {
-  float: right !important; }
+  float: right !important;
+  right: 0; }
 
 .left {
-  float: left !important; }
+  float: left !important;
+  left: 0; }
 
 .center {
   margin-left: auto;
@@ -1231,14 +1233,20 @@ output {
 
   .float-none-xl {
     float: none !important; } }
-.top {
+.v-top {
   vertical-align: top; }
 
-.middle {
+.v-middle {
   vertical-align: middle; }
 
-.bottom {
+.v-bottom {
   vertical-align: bottom; }
+
+.top {
+  top: 0; }
+
+.bottom {
+  bottom: 0; }
 
 .text-justify {
   text-align: justify !important; }
@@ -4443,6 +4451,85 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   z-index: 100;
   top: -.8em;
   right: -.8em; }
+
+.tag-corner {
+  position: absolute;
+  display: block;
+  top: 0;
+  margin: 0;
+  font-size: 1em;
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+  z-index: 1;
+  background-color: transparent !important; }
+
+.left.tag-corner {
+  left: 0;
+  text-align: left; }
+
+.right.tag-corner {
+  right: 0;
+  text-align: right; }
+
+.tag-corner:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  background-color: transparent !important; }
+
+.left.tag-corner:after {
+  border-left: 3em solid;
+  border-bottom: 3em solid transparent;
+  border-left-color: inherit; }
+
+.right.tag-corner:after {
+  border-right: 3em solid;
+  border-bottom: 3em solid transparent;
+  border-right-color: inherit; }
+
+.tag-r, .tag-at {
+  position: absolute;
+  display: block;
+  padding: 0.5em 2em;
+  z-index: 1;
+  border-radius: 0; }
+
+.tag-r {
+  top: 0; }
+
+.left.tag-r {
+  left: 0; }
+
+.right.tag-r {
+  right: 0; }
+
+.tag-r:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent; }
+
+.right.tag-r:before {
+  border-left: 15px solid;
+  border-left-color: inherit;
+  right: 0; }
+
+.left.tag-r:before {
+  border-right: 15px solid;
+  border-right-color: inherit;
+  left: 0; }
+
+.tag-at:not([class*="left"]):not([class*="right"]) {
+  width: 100%;
+  left: 0;
+  right: 0; }
 
 .btn {
   position: relative;
