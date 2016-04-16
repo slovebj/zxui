@@ -4363,6 +4363,7 @@ dl.row > dd + dt {
   border-radius: 50%; }
 
 .tag {
+  position: relative;
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -4376,15 +4377,35 @@ dl.row > dd + dt {
   .tag:empty {
     display: none; }
 
+.tag-a:before, .tag-a:after {
+  position: absolute;
+  content: ''; }
+
+.tag-a:before {
+  transform: rotate(-45deg);
+  left: -0.46em;
+  background-color: inherit;
+  width: 1.07em;
+  height: 1.07em; }
+
+.tag-a:after {
+  left: 0;
+  margin-top: 0.325em;
+  background-color: #FFF !important;
+  width: 0.4em;
+  height: 0.4em;
+  box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 500rem; }
+
+.tag.tag-a {
+  padding-left: 1.2em;
+  padding-right: 1em; }
+
 .tag-o, .tag-op {
   color: #26a69a;
   background-color: transparent;
   border: 1px solid;
   border-color: currentColor; }
-
-.btn .tag {
-  position: relative;
-  top: -1px; }
 
 a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   opacity: .75;
@@ -4393,8 +4414,8 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   cursor: pointer; }
 
 .tag-p, .tag-op {
-  padding-right: 0.6em;
-  padding-left: 0.6em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
   border-radius: 10rem; }
 
 .tag-group {
@@ -4417,9 +4438,16 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 .tag-group > :last-child:not(:first-child) {
   border-radius: 0 0.25em 0.25em 0; }
 
+.tag-sup {
+  position: absolute;
+  z-index: 100;
+  top: -.8em;
+  right: -.8em; }
+
 .btn {
-  text-decoration: none;
+  position: relative;
   display: inline-block;
+  text-decoration: none;
   font-weight: normal;
   line-height: 1.25em;
   text-align: center;
@@ -4507,7 +4535,6 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   transition: .2s ease-out; }
 
 .btn-c, .btn-zc, .btn-oc {
-  position: relative;
   overflow: hidden;
   z-index: 1;
   width: 2.5rem;

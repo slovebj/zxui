@@ -1,8 +1,9 @@
 // shared styles
 .btn
  {
-  text-decoration: none;
+  position: relative;
   display: inline-block;
+  text-decoration: none;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   text-align: center;
@@ -100,7 +101,6 @@
 
 // Circle button
 .btn-c,.btn-zc,.btn-oc {
-  position: relative;
   overflow: hidden;
   z-index: 1;
   width: $btn-floating-size;
