@@ -29,11 +29,22 @@
 
 
 //Elements
+@import "elements/animation";
 @import "elements/divider";
+@import "elements/close";
+@import "elements/code";
+@import "elements/resp-embed";
 @import "elements/images";
-@import "elements/tags";
+@import "elements/tables";
+@import "elements/forms";
+@import "elements/input-group";
 
 //Components
 @import "components/buttons";
 @import "components/button-group";
+@import "components/tags";
+@import "components/breadcrumb";
+@import "components/dropdown";
+@import "components/list-group";
+@import "components/media";
 

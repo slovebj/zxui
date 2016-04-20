@@ -1,10 +1,8 @@
 .right {
       float: right !important;
-      right: 0;
     }
 .left {
       float: left !important;
-      left: 0;
     }
 .center {    
         margin-left: auto;
@@ -34,11 +32,24 @@
 .v-bottom {
       vertical-align: bottom;
     }
-
-.top {
+.l0 {
+      left: 0;
+    }
+.r0 {
+      right: 0;
+    }
+.lr0 {
+      left: 0;
+      right: 0;
+    }
+.t0 {
       top: 0;
     }
-.bottom {
+.b0 {
+      bottom: 0;
+    }
+.tb0 {
+      top: 0;
       bottom: 0;
     }
 
