@@ -479,7 +479,9 @@ textarea {
   touch-action: manipulation; }
 
 table {
-  background-color: transparent; }
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse; }
 
 caption {
   padding-top: 0.75rem;
@@ -4431,17 +4433,17 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.embed-responsive {
+.embed-resp {
   position: relative;
   display: block;
   height: 0;
   padding: 0;
   overflow: hidden; }
-  .embed-responsive .embed-responsive-item,
-  .embed-responsive iframe,
-  .embed-responsive embed,
-  .embed-responsive object,
-  .embed-responsive video {
+  .embed-resp .embed-resp-item,
+  .embed-resp iframe,
+  .embed-resp embed,
+  .embed-resp object,
+  .embed-resp video {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -4450,17 +4452,22 @@ pre {
     height: 100%;
     border: 0; }
 
-.embed-responsive-21by9 {
+.embed-resp-21by9 {
   padding-bottom: 42.85714%; }
 
-.embed-responsive-16by9 {
+.embed-resp-16by9 {
   padding-bottom: 56.25%; }
 
-.embed-responsive-4by3 {
+.embed-resp-4by3 {
   padding-bottom: 75%; }
 
-.embed-responsive-1by1 {
+.embed-resp-1by1 {
   padding-bottom: 100%; }
+
+img.resp-img,
+video.resp-video {
+  max-width: 100%;
+  height: auto; }
 
 .img-fluid {
   display: block;
@@ -4504,12 +4511,13 @@ pre {
   .table td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #eceeef; }
-  .table thead th {
+    border-bottom: 1px solid #ddd; }
+  .table thead {
+    background-color: #f1f1f1;
     vertical-align: bottom;
-    border-bottom: 2px solid #eceeef; }
+    border-bottom: 2px solid #ddd; }
   .table tbody + tbody {
-    border-top: 2px solid #eceeef; }
+    border-top: 2px solid #ddd; }
   .table .table {
     background-color: #fff; }
 
@@ -4518,15 +4526,12 @@ pre {
   padding: 0.3rem; }
 
 .table-bordered {
-  border: 1px solid #eceeef; }
+  border: 1px solid #ddd; }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #eceeef; }
-  .table-bordered thead th,
-  .table-bordered thead td {
-    border-bottom-width: 2px; }
+    border: 1px solid #ddd; }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped tbody tr:nth-of-type(even) {
   background-color: #f9f9f9; }
 
 .table-hover tbody tr:hover {
@@ -4601,41 +4606,28 @@ pre {
   color: #55595c;
   background-color: #eceeef; }
 
-.table-inverse {
-  color: #eceeef;
-  background-color: #373a3c; }
-  .table-inverse.table-bordered {
-    border: 0; }
-  .table-inverse th,
-  .table-inverse td,
-  .table-inverse thead th {
-    border-color: #55595c; }
-
-.table-reflow thead {
-  float: left; }
+.table-reflow thead, .table-reflow tr {
+  float: left;
+  border: 0;
+  border-right-style: solid; }
 .table-reflow tbody {
   display: block;
   white-space: nowrap; }
 .table-reflow th,
 .table-reflow td {
-  border-top: 1px solid #eceeef;
-  border-left: 1px solid #eceeef; }
-  .table-reflow th:last-child,
-  .table-reflow td:last-child {
-    border-right: 1px solid #eceeef; }
-.table-reflow thead:last-child tr:last-child th,
-.table-reflow thead:last-child tr:last-child td,
-.table-reflow tbody:last-child tr:last-child th,
-.table-reflow tbody:last-child tr:last-child td,
-.table-reflow tfoot:last-child tr:last-child th,
-.table-reflow tfoot:last-child tr:last-child td {
-  border-bottom: 1px solid #eceeef; }
-.table-reflow tr {
-  float: left; }
-  .table-reflow tr th,
-  .table-reflow tr td {
-    display: block !important;
-    border: 1px solid #eceeef; }
+  display: block !important;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+  margin-bottom: -1px; }
+
+.table-inverse.table-bordered {
+  border: 0; }
+.table-inverse th,
+.table-inverse td,
+.table-inverse thead {
+  color: #eceeef;
+  border-color: #55595c;
+  background-color: #373a3c; }
 
 .form-control {
   display: block;
