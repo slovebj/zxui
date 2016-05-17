@@ -4506,7 +4506,10 @@ video.resp-video {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  border-radius: .28571429rem;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  text-align: left; }
   .table th,
   .table td {
     padding: 0.75rem;
@@ -4620,14 +4623,16 @@ video.resp-video {
   margin-left: -1px;
   margin-bottom: -1px; }
 
-.table-inverse.table-bordered {
-  border: 0; }
-.table-inverse th,
-.table-inverse td,
-.table-inverse thead {
+.table-inverse {
   color: #eceeef;
-  border-color: #55595c;
+  border: none;
   background-color: #373a3c; }
+  .table-inverse th,
+  .table-inverse td,
+  .table-inverse thead {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.9); }
 
 .form-control {
   display: block;

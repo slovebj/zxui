@@ -6,7 +6,9 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
-
+  border-radius: .28571429rem;
+  border: 1px solid rgba(34,36,38,.15);
+  text-align: left;
   th,
   td {
     padding: $table-cell-padding;
@@ -154,17 +156,17 @@
 
 
 .table-inverse {
+    color: $gray-lighter;
+   	border: none;
+    background-color: $gray-dark;
 
-  &.table-bordered {
-    border: 0;
-  }
-
+    
   th,
   td,
   thead {
-    color: $gray-lighter;
-    border-color: $gray;
-    background-color: $gray-dark;
+    background-color: rgba(0,0,0,.15);
+    border-color: rgba(255,255,255,.1)!important;
+    color: rgba(255,255,255,.9);
   }
 }
 
