@@ -1,14 +1,14 @@
 //
-// Basic Bootstrap table
+// Basic table style
 //
 
 .table {
   width: 100%;
   max-width: 100%;
   margin-bottom: $spacer;
-  border-radius: .28571429rem;
-  border: 1px solid rgba(34,36,38,.15);
+  border-radius: .285rem;
   text-align: left;
+  background-color: $table-bg;
   th,
   td {
     padding: $table-cell-padding;
@@ -16,19 +16,19 @@
     border-bottom: $table-border-width solid $table-border-color;
   }
 
-  thead {
-    background-color: #f1f1f1;
+  thead,tfoot {
+    background-color: rgba(0,0,0,0.1);.
     vertical-align: bottom;
+  }
+
+  thead {
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
-  tbody + tbody {
+  tbody + tbody,tfoot {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 
-  .table {
-    background-color: $body-bg;
-  }
 }
 
 
@@ -44,11 +44,9 @@
 }
 
 
-// Bordered version
-//
 // Add borders all around the table and between all the columns.
 
-.table-bordered {
+.table-bd {
   border: $table-border-width solid $table-border-color;
 
   th,
@@ -82,27 +80,13 @@
   }
 }
 
-
-// Table backgrounds
-//
-// Exact selectors below required to override `.table-striped` and prevent
-// inheritance to nested tables.
-
-// Generate the contextual variants
-@include table-row-variant(active, $table-bg-active);
-@include table-row-variant(success, $state-success-bg);
-@include table-row-variant(info, $state-info-bg);
-@include table-row-variant(warning, $state-warning-bg);
-@include table-row-variant(danger, $state-danger-bg);
-
-
 // Responsive tables
 //
 // Wrap your tables in `.table-responsive` and we'll make them mobile friendly
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
 // will display normally.
 
-.table-responsive {
+.table-resp {
   display: block;
   width: 100%;
   min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
@@ -114,20 +98,6 @@
   // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
 }
 
-
-.thead-inverse {
-  th {
-    color: #fff;
-    background-color: $gray-dark;
-  }
-}
-.thead-default {
-  th {
-    color: $gray;
-    background-color: $gray-lighter;
-  }
-}
-
 .table-reflow {
   
   thead,tr {
@@ -136,13 +106,10 @@
     border-right-style: solid;
   }
 
-  tbody {
+  tbody,tfoot {
     display: block;
     white-space: nowrap;
   }
-
-  
-  // scss-lint:disable ImportantRule
 
     th,
     td {
@@ -159,14 +126,12 @@
     color: $gray-lighter;
    	border: none;
     background-color: $gray-dark;
-
-    
-  th,
-  td,
-  thead {
+  thead,tfoot {
     background-color: rgba(0,0,0,.15);
-    border-color: rgba(255,255,255,.1)!important;
-    color: rgba(255,255,255,.9);
+  }
+
+  thead,tfoot,td,th{
+	border-color: rgba(255,255,255,.08)!important;
   }
 }
 
