@@ -1,10 +1,10 @@
 // scss-lint:disable QualifyingElement
 
 //
-// Textual form controls
+// Textual form ctrls
 //
 
-.form-control {
+.form-ctrl {
   display: block;
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -30,7 +30,7 @@
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
+  @include form-ctrl-focus();
 
   // Placeholder
   &::placeholder {
@@ -41,7 +41,7 @@
 
   // Disabled and read-only inputs
   //
-  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // HTML5 says that ctrls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
@@ -56,15 +56,15 @@
   }
 }
 
-select.form-control {
+select.form-ctrl {
   &:not([size]):not([multiple]) {
     height: $input-height;
   }
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
-.form-control-file,
-.form-control-range {
+.form-ctrl-file,
+.form-ctrl-range {
   display: block;
 }
 
@@ -74,8 +74,8 @@ select.form-control {
 //
 
 // For use with horizontal and inline forms, when you need the label text to
-// align with the form controls.
-.form-control-label {
+// align with the form ctrls.
+.form-ctrl-label {
   padding: $input-padding-y $input-padding-x;
   margin-bottom: 0; // Override the `<label>` default
 }
@@ -85,8 +85,8 @@ select.form-control {
 //
 
 // For use with horizontal and inline forms, when you need the legend text to
-// be the same size as regular labels, and to align with the form controls.
-.form-control-legend {
+// be the same size as regular labels, and to align with the form ctrls.
+.form-ctrl-legend {
   padding: $input-padding-y $input-padding-x;
   margin-bottom: 0;
   font-size: $font-size-base;
@@ -109,58 +109,58 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  &.form-control {
+  &.form-ctrl {
     line-height: $input-height;
   }
 
   &.input-sm,
-  .input-group-sm &.form-control {
+  .input-group-sm &.form-ctrl {
     line-height: $input-height-sm;
   }
 
   &.input-lg,
-  .input-group-lg &.form-control {
+  .input-group-lg &.form-ctrl {
     line-height: $input-height-lg;
   }
 }
 
 
-// Static form control text
+// Static form ctrl text
 //
 // Apply class to an element to make any string of text align with labels in a
 // horizontal form layout.
 
-.form-control-static {
+.form-ctrl-static {
   min-height: $input-height;
-  // Size it appropriately next to real form controls
+  // Size it appropriately next to real form ctrls
   padding-top: $input-padding-y;
   padding-bottom: $input-padding-y;
   // Remove default margin from `p`
   margin-bottom: 0;
 
-  &.form-control-sm,
-  &.form-control-lg {
+  &.form-ctrl-sm,
+  &.form-ctrl-lg {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
 
-// Form control sizing
+// Form ctrl sizing
 //
-// Build on `.form-control` with modifier classes to decrease or increase the
-// height and font-size of form controls.
+// Build on `.form-ctrl` with modifier classes to decrease or increase the
+// height and font-size of form ctrls.
 //
-// The `.form-group-* form-control` variations are sadly duplicated to avoid the
+// The `.form-group-* form-ctrl` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-.form-control-sm {
+.form-ctrl-sm {
   padding: $input-padding-y-sm $input-padding-x-sm;
   font-size: $font-size-sm;
   @include border-radius($input-border-radius-sm);
 }
 
-.form-control-lg {
+.form-ctrl-lg {
   padding: $input-padding-y-lg $input-padding-x-lg;
   font-size: $font-size-lg;
   @include border-radius($input-border-radius-lg);
@@ -179,7 +179,7 @@ input[type="month"] {
 
 // Checkboxes and radios
 //
-// Indent the labels to position radios/checkboxes as hanging controls.
+// Indent the labels to position radios/checkboxes as hanging ctrls.
 
 .radio,
 .checkbox {
@@ -260,13 +260,13 @@ input[type="checkbox"] {
 }
 
 
-// Form control feedback states
+// Form ctrl feedback states
 //
-// Apply contextual and semantic states to individual form controls.
+// Apply contextual and semantic states to individual form ctrls.
 
-.form-control-success,
-.form-control-warning,
-.form-control-danger {
+.form-ctrl-success,
+.form-ctrl-warning,
+.form-ctrl-danger {
   padding-right: ($input-padding-x * 3);
   background-repeat: no-repeat;
   background-position: center right ($input-height / 4);
@@ -275,25 +275,25 @@ input[type="checkbox"] {
 
 // Form validation states
 .has-success {
-  @include form-control-validation($brand-success);
+  @include form-ctrl-validation($brand-success);
 
-  .form-control-success {
+  .form-ctrl-success {
     background-image: $form-icon-success;
   }
 }
 
 .has-warning {
-  @include form-control-validation($brand-warning);
+  @include form-ctrl-validation($brand-warning);
 
-  .form-control-warning {
+  .form-ctrl-warning {
     background-image: $form-icon-warning;
   }
 }
 
 .has-danger {
-  @include form-control-validation($brand-danger);
+  @include form-ctrl-validation($brand-danger);
 
-  .form-control-danger {
+  .form-ctrl-danger {
     background-image: $form-icon-danger;
   }
 }
@@ -301,17 +301,17 @@ input[type="checkbox"] {
 
 
 
-// .form-control-success {
+// .form-ctrl-success {
 //   background-image: $form-icon-success;
 //   border-color: $brand-success;
 // }
 //
-// .form-control-warning {
+// .form-ctrl-warning {
 //   background-image: $form-icon-warning;
 //   border-color: $brand-warning;
 // }
 //
-// .form-control-error {
+// .form-ctrl-error {
 //   background-image: $form-icon-danger;
 //   border-color: $brand-danger;
 // }
@@ -322,12 +322,12 @@ input[type="checkbox"] {
 //   position: relative;
 //
 //   // Ensure icons don't overlap text
-//   .form-control {
+//   .form-ctrl {
 //     padding-right: ($input-height * 1.25);
 //   }
 // }
 // // Feedback icon
-// .form-control-feedback {
+// .form-ctrl-feedback {
 //   position: absolute;
 //   top: 0;
 //   right: 0;
@@ -339,14 +339,14 @@ input[type="checkbox"] {
 //   text-align: center;
 //   pointer-events: none;
 // }
-// .input-lg + .form-control-feedback,
-// .input-group-lg + .form-control-feedback {
+// .input-lg + .form-ctrl-feedback,
+// .input-group-lg + .form-ctrl-feedback {
 //   width: $input-height-lg;
 //   height: $input-height-lg;
 //   line-height: $input-height-lg;
 // }
-// .input-sm + .form-control-feedback,
-// .input-group-sm + .form-control-feedback {
+// .input-sm + .form-ctrl-feedback,
+// .input-group-sm + .form-ctrl-feedback {
 //   width: $input-height-sm;
 //   height: $input-height-sm;
 //   line-height: $input-height-sm;
@@ -354,24 +354,24 @@ input[type="checkbox"] {
 //
 // // Form validation states
 // .has-success {
-//   @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+//   @include form-ctrl-validation($state-success-text, $state-success-text, $state-success-bg);
 // }
 // .has-warning {
-//   @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+//   @include form-ctrl-validation($state-warning-text, $state-warning-text, $state-warning-bg);
 // }
 // .has-danger {
-//   @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+//   @include form-ctrl-validation($state-danger-text, $state-danger-text, $state-danger-bg);
 // }
 //
 // // Reposition feedback icon if input has visible label above
 // .has-feedback label {
 //
-//   ~ .form-control-feedback {
+//   ~ .form-ctrl-feedback {
 //     // TODO: redo this since we nuked the `$line-height-computed`
 //     top: 0; // Height of the `label` and its margin
 //   }
 //
-//   &.sr-only ~ .form-control-feedback {
+//   &.sr-only ~ .form-ctrl-feedback {
 //     top: 0;
 //   }
 // }
@@ -384,7 +384,7 @@ input[type="checkbox"] {
 // viewports reach <768px.
 //
 // Requires wrapping inputs and labels with `.form-group` for proper display of
-// default HTML form controls and our custom form controls (e.g., input groups).
+// default HTML form ctrls and our custom form ctrls (e.g., input groups).
 
 .form-inline {
 
@@ -398,14 +398,14 @@ input[type="checkbox"] {
     }
 
     // Allow folks to *not* use `.form-group`
-    .form-control {
+    .form-ctrl {
       display: inline-block;
       width: auto; // Prevent labels from stacking above inputs in `.form-group`
       vertical-align: middle;
     }
 
-    // Make static controls behave like regular ones
-    .form-control-static {
+    // Make static ctrls behave like regular ones
+    .form-ctrl-static {
       display: inline-block;
     }
 
@@ -415,17 +415,17 @@ input[type="checkbox"] {
 
       .input-group-addon,
       .input-group-btn,
-      .form-control {
+      .form-ctrl {
         width: auto;
       }
     }
 
     // Input groups need that 100% width though
-    .input-group > .form-control {
+    .input-group > .form-ctrl {
       width: 100%;
     }
 
-    .form-control-label {
+    .form-ctrl-label {
       margin-bottom: 0;
       vertical-align: middle;
     }
@@ -450,7 +450,7 @@ input[type="checkbox"] {
     }
 
     // Re-override the feedback icon.
-    .has-feedback .form-control-feedback {
+    .has-feedback .form-ctrl-feedback {
       top: 0;
     }
   }

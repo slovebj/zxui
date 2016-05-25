@@ -3,10 +3,11 @@
 // Used in _forms.scss to generate the form validation CSS for warnings, errors,
 // and successes.
 
-@mixin form-control-validation($color) {
+@mixin form-ctrl-validation($color) {
   // Color the label and help text
+  & label,
   .text-help,
-  .form-control-label,
+  .form-ctrl-label,
   .radio,
   .checkbox,
   .radio-inline,
@@ -15,11 +16,11 @@
   &.checkbox label,
   &.radio-inline label,
   &.checkbox-inline label,
-  .custom-control {
+  .custom-ctrl {
     color: $color;
   }
   // Set the border and box shadow on specific inputs to match
-  .form-control {
+  .form-ctrl {
     border-color: $color;
     // @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
 
@@ -37,12 +38,12 @@
     background-color: lighten($color, 40%);
   }
   // Optional feedback icon
-  .form-control-feedback {
+  .form-ctrl-feedback {
     color: $color;
   }
 }
 
-// Form control focus state
+// Form ctrl focus state
 //
 // Generate a customized focus state and for any input with the specified color,
 // which defaults to the `@input-border-focus` variable.
@@ -53,20 +54,20 @@
 // usability and accessibility should be taken into account with any change.
 //
 // Example usage: change the default blue border and shadow to white for better
-// contrast against a dark gray background.
-@mixin form-control-focus() {
+// contrast against a dark gray background.$input-border-focus
+@mixin form-ctrl-focus() {
   &:focus {
-    border-color: $input-border-focus;
+    border-color: $btn-primary-border;
     outline: none;
     $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $input-box-shadow-focus;
     @include box-shadow($shadow);
   }
 }
 
-// Form control sizing
+// Form ctrl sizing
 //
-// Relative text size, padding, and border-radii changes for form controls. For
-// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// Relative text size, padding, and border-radii changes for form ctrls. For
+// horizontal sizing, wrap ctrls in the predefined grid classes. `<select>`
 // element gets special love because it's special, and that's a fact!
 
 @mixin input-size($parent, $input-height, $padding-y, $padding-x, $font-size, $line-height, $border-radius) {
