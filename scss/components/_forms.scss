@@ -204,7 +204,7 @@ input[type="month"] {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-top: .25rem;
+  margin-top: .6rem;
   // margin-top: 4px \9;
   margin-left: -1.25rem;
 }
@@ -259,44 +259,13 @@ input[type="checkbox"] {
   }
 }
 
-
-// Form ctrl feedback states
-//
 // Apply contextual and semantic states to individual form ctrls.
 
-.form-ctrl-success,
-.form-ctrl-warning,
-.form-ctrl-danger {
-  padding-right: ($input-padding-x * 3);
-  background-repeat: no-repeat;
-  background-position: center right ($input-height / 4);
-  background-size: ($input-height / 2) ($input-height / 2);
+[class*="fg"] .form-ctrl{
+  border-color: currentColor;
+  color: inherit;
 }
 
-// Form validation states
-.has-success {
-  @include form-ctrl-validation($brand-success);
-
-  .form-ctrl-success {
-    background-image: $form-icon-success;
-  }
-}
-
-.has-warning {
-  @include form-ctrl-validation($brand-warning);
-
-  .form-ctrl-warning {
-    background-image: $form-icon-warning;
-  }
-}
-
-.has-danger {
-  @include form-ctrl-validation($brand-danger);
-
-  .form-ctrl-danger {
-    background-image: $form-icon-danger;
-  }
-}
 
 
 
@@ -413,8 +382,8 @@ input[type="checkbox"] {
       display: inline-table;
       vertical-align: middle;
 
-      .input-group-addon,
-      .input-group-btn,
+      .input-addon,
+      .input-btn,
       .form-ctrl {
         width: auto;
       }

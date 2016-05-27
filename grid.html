@@ -110,6 +110,85 @@
     </div>
 
     <div class="row">
+
+          <form action="#">
+          <p>
+            <input name="group1" type="radio" id="test1" />
+            <label for="test1">Red</label>
+          </p>
+          <p>
+            <input name="group1" type="radio" id="test2" />
+            <label for="test2">Yellow</label>
+          </p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="test3"  />
+            <label for="test3">Green</label>
+          </p>
+          <p>
+            <input name="group1" type="radio" id="test4" disabled="disabled" />
+            <label for="test4">Brown</label>
+          </p>
+        </form>
+
+        <form action="#">
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Red</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test6" checked="checked" />
+            <label for="test6">Yellow</label>
+          </p>
+          <p>
+            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+            <label for="filled-in-box">Filled in</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+            <label for="test7">Green</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test8" disabled="disabled" />
+            <label for="test8">Brown</label>
+          </p>
+        </form>
+
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+
+        <div class="switch">
+          <label>
+            Off
+            <input disabled type="checkbox">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+        <form action="#">
+          <div class="file-field input-field">
+            <input class="file-path validate" type="text"/>
+            <div class="btn">
+              <span>File</span>
+              <input type="file" />
+            </div>
+          </div>
+        </form>
+
+        <form action="#">
+          <p class="range-field">
+            <input type="range" id="test5" min="0" max="100" />
+          </p>
+        </form>
+
+
             <form>
         <fieldset class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -191,18 +270,18 @@
         <div class="form-group">
           <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
           <div class="input-group">
-            <div class="input-group-addon">$</div>
+            <div class="input-addon">$</div>
             <input type="text" class="form-ctrl" id="exampleInputAmount" placeholder="Amount">
-            <div class="input-group-addon">.00</div>
+            <div class="input-addon">.00</div>
           </div>
         </div>
         <button type="submit" class="btn btn-primary">Transfer cash</button>
       </form>
 
 
-      <div class="form-group has-success">
+      <div class="form-group fg-red7">
           <label class="form-ctrl-label" for="inputSuccess1">Input with success</label>
-          <input type="text" class="form-ctrl form-ctrl-success" id="inputSuccess1">
+          <input type="text" class="form-ctrl" id="inputSuccess1">
         </div>
         <div class="form-group has-warning">
           <label class="form-ctrl-label" for="inputWarning1">Input with warning</label>

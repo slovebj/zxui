@@ -1,113 +1,5 @@
 // scss-lint:disable PropertyCount
 
-// Embedded icons from Open Iconic.
-// Released under MIT and copyright 2014 Waybury.
-// http://useiconic.com/open
-
-
-// Checkboxes and radios
-//
-// Base class takes care of all the key behavioral aspects.
-
-.custom-control {
-  position: relative;
-  display: inline;
-  padding-left: $custom-control-gutter;
-  cursor: pointer;
-
-  + .custom-control {
-    margin-left: $custom-control-spacer-x;
-  }
-}
-
-.custom-control-input {
-  position: absolute;
-  z-index: -1; // Put the input behind the label so it doesn't overlay text
-  opacity: 0;
-
-  &:checked ~ .custom-control-indicator {
-    color: $custom-control-checked-indicator-color;
-    background-color: $custom-control-checked-indicator-bg;
-    @include box-shadow($custom-control-checked-indicator-box-shadow);
-  }
-
-  &:focus ~ .custom-control-indicator {
-    // the mixin is not used here to make sure there is feedback
-    box-shadow: $custom-control-focus-indicator-box-shadow;
-  }
-
-  &:active ~ .custom-control-indicator {
-    color: $custom-control-active-indicator-color;
-    background-color: $custom-control-active-indicator-bg;
-    @include box-shadow($custom-control-active-indicator-box-shadow);
-  }
-
-  &:disabled {
-    ~ .custom-control-indicator {
-      cursor: $custom-control-disabled-cursor;
-      background-color: $custom-control-disabled-indicator-bg;
-    }
-
-    ~ .custom-control-description {
-      color: $custom-control-disabled-description-color;
-      cursor: $custom-control-disabled-cursor;
-    }
-  }
-}
-
-// Custom indicator
-//
-// Generates a shadow element to create our makeshift checkbox/radio background.
-
-.custom-control-indicator {
-  position: absolute;
-  top: .0625rem;
-  left: 0;
-  display: block;
-  width: $custom-control-indicator-size;
-  height: $custom-control-indicator-size;
-  pointer-events: none;
-  user-select: none;
-  background-color: $custom-control-indicator-bg;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: $custom-control-indicator-bg-size;
-  @include box-shadow($custom-control-indicator-box-shadow);
-}
-
-// Checkboxes
-//
-// Tweak just a few things for checkboxes.
-
-.custom-checkbox {
-  .custom-control-indicator {
-    @include border-radius($custom-checkbox-radius);
-  }
-
-  .custom-control-input:checked ~ .custom-control-indicator {
-    background-image: $custom-checkbox-checked-icon;
-  }
-
-  .custom-control-input:indeterminate ~ .custom-control-indicator {
-    background-color: $custom-checkbox-indeterminate-bg;
-    background-image: $custom-checkbox-indeterminate-icon;
-    @include box-shadow($custom-checkbox-indeterminate-box-shadow);
-  }
-}
-
-// Radios
-//
-// Tweak just a few things for radios.
-
-.custom-radio {
-  .custom-control-indicator {
-    border-radius: $custom-radio-radius;
-  }
-
-  .custom-control-input:checked ~ .custom-control-indicator {
-    background-image: $custom-radio-checked-icon;
-  }
-}
 
 
 // Layout options
@@ -115,17 +7,17 @@
 // By default radios and checkboxes are `inline-block` with no additional spacing
 // set. Use these optional classes to tweak the layout.
 
-.custom-controls-stacked {
-  .custom-control {
+.custom-ctrls-stacked {
+  .custom-ctrl {
     display: inline;
 
     &::after {
       display: block;
-      margin-bottom: $custom-control-spacer-y;
+      margin-bottom: $custom-ctrl-spacer-y;
       content: "";
     }
 
-    + .custom-control {
+    + .custom-ctrl {
       margin-left: 0;
     }
   }
@@ -139,7 +31,7 @@
 //
 // Includes IE9-specific hacks (noted by ` \9`).
 
-.custom-select {
+.c-select {
   display: inline-block;
   max-width: 100%;
   padding: $custom-select-padding-y ($custom-select-padding-x + $custom-select-indicator-padding) $custom-select-padding-y $custom-select-padding-x;
@@ -167,7 +59,7 @@
   }
 }
 
-.custom-select-sm {
+.c-select-sm {
   padding-top: $custom-select-padding-y;
   padding-bottom: $custom-select-padding-y;
   font-size: $custom-select-sm-font-size;
@@ -179,71 +71,626 @@
 }
 
 
-// File
-//
-// Custom file input.
 
-.custom-file {
+/* Radio Buttons
+   ========================================================================== */
+
+// Remove default Radio Buttons
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
   position: relative;
+  padding-left: 35px;
+  cursor: pointer;
   display: inline-block;
-  max-width: 100%;
-  height: $custom-file-height;
+  height: 25px;
+  line-height: 25px;
+  font-size: 1rem;
+  transition: .28s ease;
+
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  user-select: none;
+}
+
+[type="radio"] + label:before,
+[type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  transition: .28s ease;
+}
+
+/* Unchecked styles */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:before,
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border-radius: 50%;
+}
+
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:after {
+  border: 2px solid $radio-empty-color;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  z-index: -1;
+  transform: scale(0);
+}
+
+/* Checked styles */
+[type="radio"]:checked + label:before {
+  border: 2px solid transparent;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: $radio-border;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: $radio-fill-color;
+  z-index: 0;
+}
+
+[type="radio"]:checked + label:after {
+  transform: scale(1.02);
+}
+
+/* Radio With gap */
+[type="radio"].with-gap:checked + label:after {
+  transform: scale(.5);
+}
+
+/* Focused styles */
+[type="radio"].tabbed:focus + label:before {
+  box-shadow: 0 0 0 10px rgba(0,0,0,.1);
+}
+
+/* Disabled Radio With gap */
+[type="radio"].with-gap:disabled:checked + label:before {
+  border: 2px solid $input-disabled-color;
+}
+
+[type="radio"].with-gap:disabled:checked + label:after {
+  border: none;
+  background-color: $input-disabled-color;
+}
+
+/* Disabled style */
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  background-color: transparent;
+  border-color: $input-disabled-color;
+}
+
+[type="radio"]:disabled + label {
+  color: $input-disabled-color;
+}
+
+[type="radio"]:disabled:not(:checked) + label:before {
+  border-color: $input-disabled-color;
+}
+
+[type="radio"]:disabled:checked + label:after {
+  background-color: $input-disabled-color;
+  border-color: $input-disabled-solid-color;
+}
+
+
+/* Checkboxes
+   ========================================================================== */
+
+/* CUSTOM CSS CHECKBOXES */
+form p {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+form p:last-child {
+  margin-bottom: 0;
+}
+
+/* Remove default checkbox */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+// Checkbox Styles
+[type="checkbox"] {
+  // Text Label Style
+  + label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1rem;
+
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+  }
+
+  /* checkbox aspect */
+  + label:before,
+  &:not(.filled-in) + label:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    z-index: 0;
+    border: 2px solid $radio-empty-color;
+    border-radius: 1px;
+    margin-top: 2px;
+    transition: .2s;
+  }
+
+  &:not(.filled-in) + label:after {
+    border: 0;
+    transform: scale(0);
+  }
+
+  &:not(:checked):disabled + label:before {
+    border: none;
+    background-color: $input-disabled-color;
+  }
+
+  // Focused styles
+  &.tabbed:focus + label:after {
+    transform: scale(1);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.1);
+  }
+}
+
+[type="checkbox"]:checked {
+  + label:before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: $radio-border;
+    border-bottom: $radio-border;
+    transform: rotate(40deg);
+    backface-visibility: hidden;
+    transform-origin: 100% 100%;
+  }
+
+  &:disabled + label:before {
+    border-right: 2px solid $input-disabled-color;
+    border-bottom: 2px solid $input-disabled-color;
+  }
+}
+
+/* Indeterminate checkbox */
+[type="checkbox"]:indeterminate {
+  +label:before {
+    top: -11px;
+    left: -12px;
+    width: 10px;
+    height: 22px;
+    border-top: none;
+    border-left: none;
+    border-right: $radio-border;
+    border-bottom: none;
+    transform: rotate(90deg);
+    backface-visibility: hidden;
+    transform-origin: 100% 100%;
+  }
+
+  // Disabled indeterminate
+  &:disabled + label:before {
+    border-right: 2px solid $input-disabled-color;
+    background-color: transparent;
+  }
+}
+
+// Filled in Style
+[type="checkbox"].filled-in {
+  // General
+  + label:after {
+    border-radius: 2px;
+  }
+
+  + label:before,
+  + label:after {
+    content: '';
+    left: 0;
+    position: absolute;
+    /* .1s delay is for check animation */
+    transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
+    z-index: 1;
+  }
+
+  // Unchecked style
+  &:not(:checked) + label:before {
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    left: 6px;
+    top: 10px;
+
+    -webkit-transform: rotateZ(37deg);
+    transform: rotateZ(37deg);
+    -webkit-transform-origin: 20% 40%;
+    transform-origin: 100% 100%;
+  }
+
+  &:not(:checked) + label:after {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid $radio-empty-color;
+    top: 0px;
+    z-index: 0;
+  }
+
+  // Checked style
+  &:checked {
+    + label:before {
+      top: 0;
+      left: 1px;
+      width: 8px;
+      height: 13px;
+      border-top: 2px solid transparent;
+      border-left: 2px solid transparent;
+      border-right: 2px solid $input-background;
+      border-bottom: 2px solid $input-background;
+      -webkit-transform: rotateZ(37deg);
+      transform: rotateZ(37deg);
+
+      -webkit-transform-origin: 100% 100%;
+      transform-origin: 100% 100%;
+    }
+
+    + label:after {
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $secondary-color;
+      background-color: $secondary-color;
+      z-index: 0;
+    }
+  }
+
+  // Focused styles
+  &.tabbed:focus + label:after {
+    border-radius: 2px;
+    border-color: $radio-empty-color;
+    background-color: rgba(0,0,0,.1);
+  }
+
+  &.tabbed:checked:focus + label:after {
+    border-radius: 2px;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+
+  // Disabled style
+  &:disabled:not(:checked) + label:before {
+    background-color: transparent;
+    border: 2px solid transparent;
+  }
+
+  &:disabled:not(:checked) + label:after {
+    border-color: transparent;
+    background-color: $input-disabled-solid-color;
+  }
+
+  &:disabled:checked + label:before {
+    background-color: transparent;
+  }
+
+  &:disabled:checked + label:after {
+    background-color: $input-disabled-solid-color;
+    border-color: $input-disabled-solid-color;
+  }
+}
+
+
+/* Range
+   ========================================================================== */
+
+.range-field {
+  position: relative;
+}
+
+input[type=range],
+input[type=range] + .thumb {
+  @extend .no-select;
   cursor: pointer;
 }
 
-.custom-file-input {
-  min-width: $custom-file-width;
-  max-width: 100%;
-  margin: 0;
-  filter: alpha(opacity = 0);
-  opacity: 0;
+input[type=range] {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 15px 0;
+  padding: 0;
 
-  &:focus ~ .custom-file-control {
-    @include box-shadow($custom-file-focus-box-shadow);
+  &:focus {
+    outline: none;
   }
 }
 
-.custom-file-control {
+input[type=range] + .thumb {
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 5;
-  height: $custom-file-height;
-  padding: $custom-file-padding-x $custom-file-padding-y;
-  line-height: $custom-file-line-height;
-  color: $custom-file-color;
-  user-select: none;
-  background-color: $custom-file-bg;
-  border: $custom-file-border-width solid $custom-file-border-color;
-  @include border-radius($custom-file-border-radius);
-  @include box-shadow($custom-file-box-shadow);
+  border: none;
+  height: 0;
+  width: 0;
+  border-radius: 50%;
+  background-color: $radio-fill-color;
+  top: 10px;
+  margin-left: -6px;
 
-  @each $lang, $text in map-get($custom-file-text, placeholder) {
-    &:lang(#{$lang})::after {
-      content: $text;
-    }
-  }
+  transform-origin: 50% 50%;
+  transform: rotate(-45deg);
 
-  &::before {
-    position: absolute;
-    top: -$custom-file-border-width;
-    right: -$custom-file-border-width;
-    bottom: -$custom-file-border-width;
-    z-index: 6;
+  .value {
     display: block;
-    height: $custom-file-height;
-    padding: $custom-file-padding-x $custom-file-padding-y;
-    line-height: $custom-file-line-height;
-    color: $custom-file-button-color;
-    background-color: $custom-file-button-bg;
-    border: $custom-file-border-width solid $custom-file-border-color;
-    @include border-radius(0 $custom-file-border-radius $custom-file-border-radius 0);
+    width: 30px;
+    text-align: center;
+    color: $radio-fill-color;
+    font-size: 0;
+    transform: rotate(45deg);
   }
 
-  @each $lang, $text in map-get($custom-file-text, button-label) {
-    &:lang(#{$lang})::before {
-      content: $text;
+  &.active {
+    border-radius: 50% 50% 50% 0;
+
+    .value {
+      color: $input-background;
+      margin-left: -1px;
+      margin-top: 8px;
+      font-size: 10px;
     }
+  }
+}
+
+// WebKit
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: $track-height;
+  background: #c2c0c2;
+  border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: $range-height;
+  width: $range-width;
+  border-radius: 50%;
+  background-color: $radio-fill-color;
+  transform-origin: 50% 50%;
+  margin: -5px 0 0 0;
+  transition: .3s;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
+// FireFox
+input[type=range] {
+  /* fix for FF unable to apply focus style bug  */
+  border: 1px solid white;
+
+  /*required for proper track sizing in FF*/
+}
+
+input[type=range]::-moz-range-track {
+  height: $track-height;
+  background: #ddd;
+  border: none;
+}
+
+input[type=range]::-moz-range-thumb {
+  border: none;
+  height: $range-height;
+  width: $range-width;
+  border-radius: 50%;
+  background: $radio-fill-color;
+  margin-top: -5px;
+}
+
+// hide the outline behind the border
+input[type=range]:-moz-focusring {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
+input[type=range]:focus::-moz-range-track {
+  background: #ccc;
+}
+
+// IE 10+
+input[type=range]::-ms-track {
+  height: $track-height;
+
+  // remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead
+  background: transparent;
+
+  // leave room for the larger thumb to overflow with a transparent border */
+  border-color: transparent;
+  border-width: 6px 0;
+
+  /*remove default tick marks*/
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #777;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type=range]::-ms-thumb {
+  border: none;
+  height: $range-height;
+  width: $range-width;
+  border-radius: 50%;
+  background: $radio-fill-color;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #ccc;
+}
+
+
+
+/* Switch
+   ========================================================================== */
+
+.switch,
+.switch * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.switch label input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked + .lever {
+    background-color: $switch-checked-lever-bg;
+
+    &:after {
+      background-color: $switch-bg-color;
+      left: 24px;
+    }
+  }
+}
+
+.switch label .lever {
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 15px;
+  background-color: $switch-unchecked-lever-bg;
+  border-radius: $switch-radius;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+  vertical-align: middle;
+  margin: 0 16px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-color: $switch-unchecked-bg;
+    border-radius: 21px;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,.4);
+    left: -5px;
+    top: -3px;
+    transition: left 0.3s ease, background .3s ease, box-shadow 0.1s ease;
+  }
+}
+
+// Switch active style
+input[type=checkbox]:checked:not(:disabled) ~ .lever:active::after,
+input[type=checkbox]:checked:not(:disabled).tabbed:focus ~ .lever::after {
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px transparentize($switch-bg-color, .9);
+}
+
+input[type=checkbox]:not(:disabled) ~ .lever:active:after,
+input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px rgba(0, 0, 0, .08);
+}
+
+// Disabled Styles
+.switch input[type=checkbox][disabled] + .lever {
+  cursor: default;
+}
+
+.switch label input[type=checkbox][disabled] + .lever:after,
+.switch label input[type=checkbox][disabled]:checked + .lever:after {
+  background-color: $input-disabled-solid-color;
+}
+
+/* File Input
+   ========================================================================== */
+
+.file-field {
+  position: relative;
+
+  .file-path-wrapper {
+    overflow: hidden;
+    padding-left: 10px;
+  }
+
+  input.file-path { width: 100%; }
+
+  .btn {
+    float: left;
+    height: $input-height;
+    line-height: $input-height;
+  }
+
+  span {
+    cursor: pointer;
+  }
+
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
   }
 }

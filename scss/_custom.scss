@@ -372,33 +372,33 @@ $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-pa
 
 $form-group-margin-bottom:       $spacer-y !default;
 
-$input-group-addon-bg:           $gray-lighter !default;
-$input-group-addon-border-color: $input-border-color !default;
+$input-addon-bg:           $gray-lighter !default;
+$input-addon-border-color: $input-border-color !default;
 
 $cursor-disabled:                not-allowed !default;
 
-$custom-control-gutter:   1.5rem !default;
-$custom-control-spacer-x: 1rem !default;
-$custom-control-spacer-y: .25rem !default;
+$custom-ctrl-gutter:   1.5rem !default;
+$custom-ctrl-spacer-x: 1rem !default;
+$custom-ctrl-spacer-y: .25rem !default;
 
-$custom-control-indicator-size:       1rem !default;
-$custom-control-indicator-bg:         #ddd !default;
-$custom-control-indicator-bg-size:    50% 50% !default;
-$custom-control-indicator-box-shadow: inset 0 .25rem .25rem rgba(0,0,0,.1) !default;
+$custom-ctrl-indicator-size:       1rem !default;
+$custom-ctrl-indicator-bg:         #ddd !default;
+$custom-ctrl-indicator-bg-size:    50% 50% !default;
+$custom-ctrl-indicator-box-shadow: inset 0 .25rem .25rem rgba(0,0,0,.1) !default;
 
-$custom-control-disabled-cursor:             $cursor-disabled !default;
-$custom-control-disabled-indicator-bg:       #eee !default;
-$custom-control-disabled-description-color:  #767676 !default;
+$custom-ctrl-disabled-cursor:             $cursor-disabled !default;
+$custom-ctrl-disabled-indicator-bg:       #eee !default;
+$custom-ctrl-disabled-description-color:  #767676 !default;
 
-$custom-control-checked-indicator-color:      #fff !default;
-$custom-control-checked-indicator-bg:         #0074d9 !default;
-$custom-control-checked-indicator-box-shadow: none !default;
+$custom-ctrl-checked-indicator-color:      #fff !default;
+$custom-ctrl-checked-indicator-bg:         #0074d9 !default;
+$custom-ctrl-checked-indicator-box-shadow: none !default;
 
-$custom-control-focus-indicator-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
+$custom-ctrl-focus-indicator-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9 !default;
 
-$custom-control-active-indicator-color:      #fff !default;
-$custom-control-active-indicator-bg:         #84c6ff !default;
-$custom-control-active-indicator-box-shadow: none !default;
+$custom-ctrl-active-indicator-color:      #fff !default;
+$custom-ctrl-active-indicator-bg:         #84c6ff !default;
+$custom-ctrl-active-indicator-box-shadow: none !default;
 
 $custom-checkbox-radius: $border-radius !default;
 $custom-checkbox-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !default;
@@ -456,6 +456,36 @@ $form-icon-success: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://ww
 $form-icon-warning: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23f0ad4e' d='M4.4 5.324h-.8v-2.46h.8zm0 1.42h-.8V5.89h.8zM3.76.63L.04 7.075c-.115.2.016.425.26.426h7.397c.242 0 .372-.226.258-.426C6.726 4.924 5.47 2.79 4.253.63c-.113-.174-.39-.174-.494 0z'/%3E%3C/svg%3E") !default;
 $form-icon-danger: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E") !default;
 
+$input-background: #fff !default;
+$input-disabled-color: rgba(0,0,0, .26) !default;
+$input-disabled-solid-color: #BDBDBD !default;
+$input-disabled-border: 1px dotted $input-disabled-color !default;
+$input-invalid-border: 1px solid red !default;
+$secondary-color: #26A69A !default;
+// Radio Buttons
+$radio-fill-color: $secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
+$radio-border: 2px solid $radio-fill-color !default;
+
+// Range
+$range-height: 14px !default;
+$range-width: 14px !default;
+$track-height: 3px !default;
+
+// Select
+$select-border: 1px solid #f2f2f2 !default;
+$select-background: rgba(255, 255, 255, 0.90) !default;
+$select-focus: 1px solid lighten($secondary-color, 47%) !default;
+$select-padding: 5px !default;
+$select-radius: 2px !default;
+$select-disabled-color: rgba(0,0,0,.3) !default;
+
+// Switches
+$switch-bg-color: $secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+$switch-radius: 15px !default;
 
 // Dropdowns
 //
