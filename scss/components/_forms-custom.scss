@@ -86,14 +86,13 @@
 [type="radio"]:not(:checked) + label,
 [type="radio"]:checked + label {
   position: relative;
-  padding-left: 35px;
+  padding: 0 2rem;
   cursor: pointer;
   display: inline-block;
-  height: 25px;
-  line-height: 25px;
+  height: 1.5rem;
+  line-height: 1.5rem;
   font-size: 1rem;
   transition: .28s ease;
-
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   user-select: none;
 }
@@ -104,9 +103,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  margin: 4px;
-  width: 16px;
-  height: 16px;
+  margin: 0.3rem 0;
+  width: 1rem;
+  height: 1rem;
   z-index: 0;
   transition: .28s ease;
 }
@@ -219,11 +218,11 @@ form p:last-child {
   // Text Label Style
   + label {
     position: relative;
-    padding-left: 35px;
+    padding:0 2rem;
     cursor: pointer;
     display: inline-block;
-    height: 25px;
-    line-height: 25px;
+    height: 1.5rem;
+    line-height: 1.5rem;
     font-size: 1rem;
 
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -234,21 +233,21 @@ form p:last-child {
 
   /* checkbox aspect */
   + label:before,
-  &:not(.filled-in) + label:after {
+  &:not(.filled) + label:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 18px;
-    height: 18px;
+    width: 1rem;
+    height: 1rem;
     z-index: 0;
     border: 2px solid $radio-empty-color;
     border-radius: 1px;
-    margin-top: 2px;
+    margin-top: 0.3rem;
     transition: .2s;
   }
 
-  &:not(.filled-in) + label:after {
+   &:not(.filled) + label:after {
     border: 0;
     transform: scale(0);
   }
@@ -272,8 +271,8 @@ form p:last-child {
   + label:before {
     top: -4px;
     left: -5px;
-    width: 12px;
-    height: 22px;
+    width: 0.75rem;
+    height: 1.25rem;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
     border-right: $radio-border;
@@ -313,45 +312,9 @@ form p:last-child {
 }
 
 // Filled in Style
-[type="checkbox"].filled-in {
+[type="checkbox"].filled {
   // General
-  + label:after {
-    border-radius: 2px;
-  }
-
-  + label:before,
-  + label:after {
-    content: '';
-    left: 0;
-    position: absolute;
-    /* .1s delay is for check animation */
-    transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
-    z-index: 1;
-  }
-
-  // Unchecked style
-  &:not(:checked) + label:before {
-    width: 0;
-    height: 0;
-    border: 3px solid transparent;
-    left: 6px;
-    top: 10px;
-
-    -webkit-transform: rotateZ(37deg);
-    transform: rotateZ(37deg);
-    -webkit-transform-origin: 20% 40%;
-    transform-origin: 100% 100%;
-  }
-
-  &:not(:checked) + label:after {
-    height: 20px;
-    width: 20px;
-    background-color: transparent;
-    border: 2px solid $radio-empty-color;
-    top: 0px;
-    z-index: 0;
-  }
-
+  
   // Checked style
   &:checked {
     + label:before {
@@ -372,8 +335,8 @@ form p:last-child {
 
     + label:after {
       top: 0;
-      width: 20px;
-      height: 20px;
+      width: 1rem;
+      height: 1rem;
       border: 2px solid $secondary-color;
       background-color: $secondary-color;
       z-index: 0;
