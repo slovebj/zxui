@@ -462,7 +462,7 @@ input[type=range] {
 
 input[type=range]::-webkit-slider-runnable-track {
   height: $track-height;
-  background: #c2c0c2;
+  background: #b4b4b4;
   border: none;
 }
 
@@ -479,20 +479,12 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
-}
-
-// FireFox
-input[type=range] {
-  /* fix for FF unable to apply focus style bug  */
-  border: 1px solid white;
-
-  /*required for proper track sizing in FF*/
+  background: #898989;
 }
 
 input[type=range]::-moz-range-track {
   height: $track-height;
-  background: #ddd;
+  background: #b4b4b4;
   border: none;
 }
 
@@ -512,7 +504,7 @@ input[type=range]:-moz-focusring {
 }
 
 input[type=range]:focus::-moz-range-track {
-  background: #ccc;
+  background: #898989;
 }
 
 // IE 10+
@@ -635,41 +627,3 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   background-color: $input-disabled-solid-color;
 }
 
-/* File Input
-   ========================================================================== */
-
-.file-field {
-  position: relative;
-
-  .file-path-wrapper {
-    overflow: hidden;
-    padding-left: 10px;
-  }
-
-  input.file-path { width: 100%; }
-
-  .btn {
-    float: left;
-    height: $input-height;
-    line-height: $input-height;
-  }
-
-  span {
-    cursor: pointer;
-  }
-
-  input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-}

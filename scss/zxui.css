@@ -4370,6 +4370,26 @@ dl.row > dd + dt {
   height: 1em;
   vertical-align: middle; }
 
+/*--------------
+   Horizontal progress bar
+---------------*/
+.progress {
+  display: block;
+  background-color: #BDBDBD;
+  width: 100%;
+  height: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 100%;
+  color: white; }
+
+.progress::before {
+  content: "30%";
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: #26A69A; }
+
 .close {
   float: right;
   font-size: 1.5rem;
@@ -5929,7 +5949,7 @@ input[type=range] {
 
 input[type=range]::-webkit-slider-runnable-track {
   height: 3px;
-  background: #c2c0c2;
+  background: #b4b4b4;
   border: none; }
 
 input[type=range]::-webkit-slider-thumb {
@@ -5944,16 +5964,11 @@ input[type=range]::-webkit-slider-thumb {
   transition: .3s; }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc; }
-
-input[type=range] {
-  /* fix for FF unable to apply focus style bug  */
-  border: 1px solid white;
-  /*required for proper track sizing in FF*/ }
+  background: #898989; }
 
 input[type=range]::-moz-range-track {
   height: 3px;
-  background: #ddd;
+  background: #b4b4b4;
   border: none; }
 
 input[type=range]::-moz-range-thumb {
@@ -5969,7 +5984,7 @@ input[type=range]:-moz-focusring {
   outline-offset: -1px; }
 
 input[type=range]:focus::-moz-range-track {
-  background: #ccc; }
+  background: #898989; }
 
 input[type=range]::-ms-track {
   height: 3px;
@@ -6059,35 +6074,6 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 .switch label input[type=checkbox][disabled] + .lever:after,
 .switch label input[type=checkbox][disabled]:checked + .lever:after {
   background-color: #BDBDBD; }
-
-/* File Input
-   ========================================================================== */
-.file-field {
-  position: relative; }
-  .file-field .file-path-wrapper {
-    overflow: hidden;
-    padding-left: 10px; }
-  .file-field input.file-path {
-    width: 100%; }
-  .file-field .btn {
-    float: left;
-    height: 2.5rem;
-    line-height: 2.5rem; }
-  .file-field span {
-    cursor: pointer; }
-  .file-field input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0); }
 
 .input-group {
   position: relative;
