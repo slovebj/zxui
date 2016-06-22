@@ -22,12 +22,13 @@
   .card-header,
   .card-footer,
   .card-title,
-  .card-blockquote {
+  .card-bq {
     color: #fff;
+    background-color: transparent;
   }
   .card-link,
   .card-text,
-  .card-blockquote > footer {
+  .card-bq > footer {
     color: rgba(255,255,255,.65);
   }
   .card-link {
