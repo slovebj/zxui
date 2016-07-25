@@ -3739,6 +3739,27 @@ a.text-warning:focus, a.text-warning:hover {
 a.text-danger:focus, a.text-danger:hover {
   color: #c9302c; }
 
+.opacity0 {
+  opacity: 0; }
+
+.opacity2 {
+  opacity: 0.2; }
+
+.opacity4 {
+  opacity: 0.4; }
+
+.opacity5 {
+  opacity: 0.5; }
+
+.opacity6 {
+  opacity: 0.6; }
+
+.opacity8 {
+  opacity: 0.8; }
+
+.opacity10 {
+  opacity: 1; }
+
 .zdepth0 {
   box-shadow: none !important; }
 
