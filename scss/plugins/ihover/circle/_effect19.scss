@@ -1,0 +1,23 @@
+
+
+// 
+// --------------------------------------------------
+.ih-item.circle.effect19 {
+
+    .info {
+        @include transform( scale(0) );
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            padding: 45px 0 0 0;
+            height: 140px;           
+        }
+
+    }
+
+    a:hover {
+        .info {
+            @include transform( scale(1) );
+        }
+    }
+}

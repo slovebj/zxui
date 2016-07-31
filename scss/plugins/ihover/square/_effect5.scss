@@ -1,0 +1,43 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect5 {
+    
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transition( all .35s ease-in-out );
+
+        
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(0) );
+            @include transition-delay(0);
+        }
+
+        .info {
+            @include transform( scale(1) rotate(0deg) );
+            @include transition-delay(.3s);
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect5.l2r {
+    .info {
+        @include transform( scale(0) rotate(-180deg) );
+    }
+}
+
+// -------------------------
+.ih-item.square.effect5.r2l {
+    .info {
+        @include transform( scale(0) rotate(180deg) );
+    }
+}

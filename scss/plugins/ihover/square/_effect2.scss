@@ -1,0 +1,39 @@
+.ih-item.square.effect2 {
+   
+    
+
+    .img {
+        opacity: 1;
+        @include transition(  all .5s ease-in-out );
+        @include transform( rotate(0deg) scale(1) );
+    }
+
+    .info {
+        @include transition(  all .35s .3s ease-in-out );
+
+        h3 {
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .6s ease-in-out );
+        }
+
+        p {
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .5s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate(720deg) scale(0) );
+            opacity: 0;
+        }
+
+        .info {
+
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }
+        }
+    }
+}

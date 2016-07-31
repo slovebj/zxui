@@ -1,0 +1,62 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect3 {
+   
+
+    .img {
+        @include transform( translateY(0) );
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        height: 65px;
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            padding: 10px 10px 0 4px;
+            margin: 4px 0 0 0;
+        }
+
+        p {
+            padding: 5px;
+        }
+    }
+
+}
+
+// -------------------------
+.ih-item.square.effect3.b2t {
+    .info {
+        top: auto;
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-50px) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect3.t2b {
+    .info {
+        bottom: auto;
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(50px) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}

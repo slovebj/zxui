@@ -1,0 +1,127 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect6 {
+   
+    
+    &.colored {
+        .info {
+
+        }
+    }
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            
+            @include transition(  all .35s ease-in-out );
+        }
+
+        p {
+            
+            @include transition(  all .35s .1s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(1.2) );
+        }
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.square.effect6.ftb {
+    .info {
+        h3 {
+            @include transform( translateY(-100%) );
+        }
+
+        p {
+            @include transform( translateY(100%) );
+        }
+    }
+
+    a:hover {
+        .info {
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect6.flr {
+    .info {
+        h3 {
+            @include transform( translateX(-100%) );
+        }
+
+        p {
+            @include transform( translateX(100%) );
+        }
+    }
+
+    a:hover {
+        .info {
+            h3,
+            p {
+                @include transform( translateX(0) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect6.t2b {
+    .info {
+        h3 {
+            @include transform( translateY(-100%) );
+        }
+
+        p {
+            @include transform( translateY(-100%) );
+        }
+    }
+
+    a:hover {
+        .info {
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect6.b2t {
+    .info {
+        h3 {
+            @include transform( translateY(100%) );
+        }
+
+        p {
+            @include transform( translateY(100%) );
+        }
+    }
+
+    a:hover {
+        .info {
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }            
+        }
+    }
+}

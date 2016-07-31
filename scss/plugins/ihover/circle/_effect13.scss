@@ -1,0 +1,108 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect13 {
+    
+
+    .info {
+        
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            visibility: hidden;
+                      
+            @include transition( all .35s ease-in-out );
+        }
+
+        p {
+            visibility: hidden;
+            
+            @include transition( all .35s ease-in-out );
+        }
+    }
+
+    a:hover {
+        .info {
+        }
+
+        h3 {
+            visibility: visible;
+        }
+
+        p {
+            visibility: visible;
+        }
+    }
+}
+
+
+
+// -------------------------
+.ih-item.circle.effect13.flr {
+    .info {
+        h3 {
+            @include transform( translateX(-100%) );
+        }
+
+        p {
+            @include transform( translateX(100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateX(0) );
+        }
+
+        p {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect13.t2b {
+    .info {
+        h3 {
+            @include transform( translateY(-100%) );
+        }
+
+        p {
+            @include transform( translateY(-100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateY(0) );
+        }
+
+        p {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect13.b2t {
+    .info {
+        h3 {
+            @include transform( translateY(100%) );
+        }
+
+        p {
+            @include transform( translateY(100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateY(0) );
+        }
+
+        p {
+            @include transform( translateY(0) );
+        }
+    }
+}
+

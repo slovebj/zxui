@@ -1,0 +1,88 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect9 {
+    .img {
+        opacity: 1;
+        @include transition( all 0.35s ease-out );
+    }
+
+
+    
+
+    .info {
+        visibility: hidden;
+        @include transform( scale(.5) );
+        @include transition( all .35s ease .2s);
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            pointer-events: none;
+            @include transform( scale(.5) );
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect9.l2r {
+    .img {
+        @include transform( translateX(0) rotate(0) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) rotate(180deg) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect9.r2l {
+    .img {
+        @include transform( translateX(0)  rotate(0) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%)  rotate(-180deg) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect9.t2b {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) );
+        }
+    }     
+}
+
+
+// -------------------------
+.ih-item.circle.effect9.b2t {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) );
+        }
+    } 
+}

@@ -1,0 +1,154 @@
+//  Shared style
+// --------------------------------------------------
+
+// All item
+// -------------------------
+.ih-item {
+    overflow: hidden;
+    position: relative;
+    @include transition( all 0.35s ease-in-out );
+    &,
+    * {
+        @include box-sizing(border-box);
+    }
+
+    a {
+        color: #333;
+        &:hover {
+            text-decoration: none;
+          .info {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .info {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        background: $overlay_dark;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        pointer-events: none;
+        @include backface-visibility(hidden);
+    }
+
+    &.colored {
+        .info {
+            background: $overlay_colored;
+            & .info-back {
+                background: $overlay_colored;
+            }
+        }
+    }
+}
+
+// Circle item
+// -------------------------
+.ih-item.circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    .img {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 
+                inset 0 0 0 16px rgba(255,255,255,0.6),
+                0 1px 2px rgba(0,0,0,0.3);            
+            @include transition( all 0.35s ease-in-out );
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .info {      
+        border-radius: 50%;
+         h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    
+}
+
+
+// Square item
+// -------------------------
+.ih-item.square {
+    position: relative;
+    width: 316px; // 300px + 8px * 2 (border)
+    height: 216px; // 200px + 8px * 2 (border)
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+    .info {
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+        }
+    }
+
+    &.colored {
+        .info {
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+}

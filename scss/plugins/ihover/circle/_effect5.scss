@@ -1,0 +1,35 @@
+
+.ih-item.circle.effect5 {
+    @include perspective(900px);
+    
+    
+
+    .info {
+        // // opacity: 0;
+        @include transition( all .35s ease-in-out );
+        @include transform-style(preserve-3d);
+        .info-back {
+            visibility: hidden;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            background: $overlay_dark;
+            @include transform( rotate3d(0,1,0,180deg) );
+            @include backface-visibility(hidden);
+        }
+
+        
+
+        
+    }
+
+    a:hover {
+        .info {
+            // opacity: 1;
+            @include transform( rotate3d(0,1,0,-180deg) );
+            .info-back {
+                visibility: visible;
+            }
+        }
+    }
+}

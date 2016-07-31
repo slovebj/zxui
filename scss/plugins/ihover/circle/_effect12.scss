@@ -1,0 +1,119 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect12 {
+    .img {
+        opacity: 1;
+        @include transition( all 0.35s ease-in-out );
+    }
+
+
+    
+
+    .info {
+        visibility: hidden;
+        @include transform( scale(.5) );
+        @include transition( all .35s ease-in-out);
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect12.l2r {
+    .img {
+        @include transform( translateX(0) rotate(0) );
+    }
+
+    .info {
+        @include transform( translateX(100%) rotate(180deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) rotate(180deg) );
+        }
+
+        .info {
+            @include transform( translateX(0) rotate(0) );
+            @include transition-delay( .4s );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect12.r2l {
+    .img {
+        @include transform( translateX(0)  rotate(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) rotate(-180deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%) rotate(-180deg) );
+        }
+
+        .info {
+            @include transform( translateX(0) rotate(0) );
+            @include transition-delay( .4s );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect12.t2b {
+    .img {
+        @include transform( translateY(0) rotate(0) );
+    }
+
+    .info {
+        @include transform( translateY(-100%) rotate(-180deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) rotate(-180deg) );
+        }
+
+        .info {
+            @include transform( translateY(0) rotate(0) );
+            @include transition-delay( .4s );
+        }
+    }     
+}
+
+
+// -------------------------
+.ih-item.circle.effect12.b2t {
+    .img {
+        @include transform( translateY(0) rotate(0) );
+    }
+
+    .info {
+        @include transform( translateY(100%) rotate(180deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) rotate(180deg) );
+        }
+
+        .info {
+            @include transform( translateY(0) rotate(0) );
+            @include transition-delay( .4s );
+        }
+    } 
+}

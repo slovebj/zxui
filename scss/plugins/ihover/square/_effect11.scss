@@ -1,0 +1,84 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect11 {
+   
+    
+    
+
+    .img {
+        opacity: 1;
+        @include transform( scale(1) );
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        @include transition(  all .35s ease .2s);
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            @include transform( scale(.5) );
+        }
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.square.effect11.l2r {
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect11.r2l {
+    .info {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect11.t2b {
+    .info {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect11.b2t {
+    .info {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+

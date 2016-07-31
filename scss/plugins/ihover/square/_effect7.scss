@@ -1,0 +1,37 @@
+.ih-item.square.effect7 {
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            
+            @include transform( scale(4) );
+            @include transition(  all .35s .1s ease-in-out );
+        }
+
+        p {
+            
+            @include transform( scale(5) );
+            @include transition(  all .35s .3s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(1.2) );
+        }
+
+        .info {
+
+            h3,
+            p {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}

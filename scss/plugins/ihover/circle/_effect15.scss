@@ -1,0 +1,35 @@
+
+.ih-item.circle.effect15 {
+    .img {
+        opacity: 1;
+        visibility: visible;
+        @include transform( scale(1) rotate(0) );
+        @include transition( all 0.35s ease-in-out );
+    }
+
+
+    
+
+    .info {
+        visibility: hidden;
+        @include transform( scale(.5) rotate(-720deg) );
+        @include transition( all .35s ease-in-out .3s );
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            visibility: hidden;
+            @include transform( scale(.5) rotate(720deg) );
+        }
+
+        .info {
+            @include transform( scale(1) rotate(0) );
+        }
+    }
+
+}
+
+

@@ -1,0 +1,86 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect20 {
+    @include perspective(900px);
+
+    .img {
+        @include transition( all .35s linear );
+        @include transform-origin( 50% 0% );
+    }
+
+    
+
+    .info {
+        @include transform-style(preserve-3d);
+        .info-back {
+            opacity: 1;
+            visibility: hidden;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            background: $overlay_dark;
+            @include transition( all .35s linear );
+            @include transform-origin( 50% 0% );
+            @include backface-visibility(hidden);
+        }
+
+        
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+        }
+        .info {
+            .info-back {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect20.t2b {
+    .info {
+        .info-back {
+            @include transform( translate3d(0,0,-220px) rotate3d(1,0,0,90deg) );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( translate3d(0,280px,0) rotate3d(1,0,0,-90deg) );
+        }
+
+        .info {
+            .info-back {
+                @include transform( rotate3d(1,0,0,0deg) );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect20.b2t {
+    .info {
+        .info-back {
+            @include transform( translate3d(0,280px,0) rotate3d(1,0,0,-90deg) );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( translate3d(0,0,-220px) rotate3d(1,0,0,90deg) );
+        }
+
+        .info {
+            .info-back {
+                @include transform( rotate3d(1,0,0,0deg) );
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect10 {
+   
+    
+    
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        @include transition(  all .35s ease-in-out );
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.square.effect10.l2r {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect10.r2l {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect10.t2b {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect10.b2t {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+

@@ -1,0 +1,166 @@
+
+
+// shared
+// -------------------------
+.ih-item.circle.effect8 {
+    
+
+    // thanks to the trick http://stackoverflow.com/questions/5395024/transform-scale-after-rotate
+    .img-container {
+        @include transform( scale(1) );
+        @include transition( all .3s ease-in-out );
+
+        .img {
+            opacity: 1;
+            @include transition( all .3s ease-in-out .3s );
+        }
+    }
+
+    .info-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        text-align: center;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        @include transition( all .3s ease-in-out .3s );
+    }
+
+    .info {
+        width: 100%;
+        height: 100%;
+        @include transform( scale(.5) );
+        @include transition( all .35s ease-in-out .6s);
+
+        h3 {
+            padding: 45px 0 0 0;
+            height: 140px;           
+        }
+
+    }
+
+    a:hover {
+        .img-container {
+            pointer-events: none;
+            @include transform( scale(.5) );
+
+            .img {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .info-container {
+            opacity: 1;
+            .info {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.l2r {
+    .img-container {
+        .img {
+            @include transform( translateX(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateX(-100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateX(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.r2l {
+    .img-container {
+        .img {
+            @include transform( translateX(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateX(100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateX(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.t2b {
+    .img-container {
+        .img {
+            @include transform( translateY(0) );
+
+        }
+    }
+
+    .info-container {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateY(100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateY(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.b2t {
+    .img-container {
+        .img {
+            @include transform( translateY(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateY(-100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateY(0) );
+        }        
+    }
+}
+
+

@@ -1,0 +1,161 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect12 {
+    .img {
+        @include transition( all .35s ease-in );
+    }
+
+    .info {
+        @include transition( all .35s ease-in );
+
+        h3 {
+            
+            @include transition( all .35s ease-in );
+        }
+
+        p {
+            
+            @include transition( all .35s ease-in );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transition-delay( .25s );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.l2r {
+    .info {
+        @include transform( translate(-460px, -100px) rotate(-180deg) );
+
+        h3 {
+            @include transform( translateY(-100px) );
+        }
+
+        p {
+            @include transform( translateX(-300px) rotate(-90deg) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+
+            h3 {
+                @include transform( translateY(0px) );
+            }
+
+            p {
+                @include transform( translateX(0px) rotate(0deg) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.r2l {
+    .info {
+        @include transform( translate(460px, -100px) rotate(180deg) );
+
+        h3 {
+            @include transform( translateY(-100px) );
+        }
+
+        p {
+            @include transform( translateX(300px) rotate(90deg) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+
+            h3 {
+                @include transform( translateY(0px) );
+            }
+
+            p {
+                @include transform( translateX(0px) rotate(0deg) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.t2b {
+    .info {
+        @include transform( translate(-265px, -145px) rotate(-45deg) );
+
+        h3 {
+            @include transform( translate(200px, -200px) );
+        }
+
+        p {
+            @include transform( translate(200px, -200px) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .4s );
+            }
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect12.b2t {
+    .info {
+        @include transform( translate(265px, 145px) rotate(45deg) );
+
+        h3 {
+            @include transform( translate(200px, -200px) );
+        }
+
+        p {
+            @include transform( translate(-200px, 200px) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .4s );
+            }
+        }
+    }
+}
+
+

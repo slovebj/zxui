@@ -1,0 +1,115 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect11 {
+    @include perspective(900px);
+    .img {
+        opacity: 1;
+        @include transform-origin( 50% 50% );
+        @include transition( all 0.35s ease-in-out );
+    }
+
+
+    
+
+    .info {
+        visibility: hidden;
+        @include transition( all .35s ease .35s );
+
+        
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+        }
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect11.l2r {
+    .img {
+        @include transform( translateZ(0) rotateY(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateY(-90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateY(90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect11.r2l {
+    .img {
+        @include transform( translateZ(0) rotateY(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateY(90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateY(-90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect11.t2b {
+    .img {
+        @include transform( translateZ(0) rotateX(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateX(90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateX(-90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateX(0) );
+        }
+    }    
+}
+
+
+// -------------------------
+.ih-item.circle.effect11.b2t {
+    .img {
+        @include transform( translateZ(0) rotateX(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateX(-90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateX(90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateX(0) );
+        }
+    }    
+}

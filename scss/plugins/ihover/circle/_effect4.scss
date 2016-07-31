@@ -1,0 +1,118 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect4 {
+    .img {
+        opacity: 1;
+        @include transition( all 0.4s ease-in-out );
+    }
+
+
+    
+
+    .info {
+        @include transition( all .35s ease );
+
+        
+
+        p {
+            
+            @include transition( all .35s ease-in-out );
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect4.l2r {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect4.r2l {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect4.t2b {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }    
+}
+
+
+// -------------------------
+.ih-item.circle.effect4.b2t {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }    
+}
