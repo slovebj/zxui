@@ -4,7 +4,6 @@
 // All item
 // -------------------------
 .ih-item {
-    overflow: hidden;
     position: relative;
     @include transition( all 0.35s ease-in-out );
     &,
@@ -45,9 +44,6 @@
     &.colored {
         .info {
             background: $overlay_colored;
-            & .info-back {
-                background: $overlay_colored;
-            }
         }
     }
 }
