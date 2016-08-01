@@ -40,5 +40,8 @@
         .spinner {
             @include transform( rotate(180deg) );
         }
+        .info {
+            opacity: 0.6;
+        }
     }
 }

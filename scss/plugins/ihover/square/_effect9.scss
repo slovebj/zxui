@@ -2,6 +2,7 @@
 // Shared
 // -------------------------
 .ih-item.square.effect9 {
+    overflow: visible;
     @include perspective(900px);
     
     .img {

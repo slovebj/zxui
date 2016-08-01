@@ -5,6 +5,7 @@
     
 
     .info {
+        opacity: 0.6;
         
         @include transition( all .35s ease-in-out );
 
