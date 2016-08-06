@@ -1,5 +1,5 @@
 .ih-item.square.effect4 {
-   
+    
     position: relative;
     
     &.colored {
@@ -41,7 +41,6 @@
 
     .info {
         height: 0;
-        visibility: hidden;
         width: 361px;
         @include transform( rotate(-33.5deg) translate(-112px, 166px) );
         @include transform-origin( 0% 100% );        

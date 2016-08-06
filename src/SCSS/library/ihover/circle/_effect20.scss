@@ -12,6 +12,7 @@
     
 
     .info {
+        background: none;
         @include transform-style(preserve-3d);
         .info-back {
             opacity: 1;
@@ -19,7 +20,6 @@
             border-radius: 50%;
             width: 100%;
             height: 100%;
-            background: $overlay_dark;
             @include transition( all .35s linear );
             @include transform-origin( 50% 0% );
             @include backface-visibility(hidden);

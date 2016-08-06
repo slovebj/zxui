@@ -5,6 +5,7 @@
 .ih-item.circle.effect19 {
 
     .info {
+        opacity: 0.6;
         @include transform( scale(0) );
         @include transition( all .35s ease-in-out );
 

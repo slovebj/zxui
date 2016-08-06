@@ -11,7 +11,6 @@
     
 
     .info {
-        visibility: hidden;
         @include transform( scale(.5) rotate(-720deg) );
         @include transition( all .35s ease-in-out .3s );
 

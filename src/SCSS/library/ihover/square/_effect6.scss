@@ -2,13 +2,6 @@
 // Shared
 // -------------------------
 .ih-item.square.effect6 {
-   
-    
-    &.colored {
-        .info {
-
-        }
-    }
 
     .img {
         @include transition(  all .35s ease-in-out );
@@ -16,6 +9,7 @@
     }
 
     .info {
+        opacity: 0.6;
         @include transition(  all .35s ease-in-out );
 
         h3 {

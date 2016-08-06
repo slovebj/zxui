@@ -33,17 +33,23 @@
         bottom: 0;
         left:0;
         right: 0;
-        background: $overlay_dark;
+        background: $overlay_dark_fallback;
         visibility: hidden;
         opacity: 0;
         text-align: center;
         pointer-events: none;
         @include backface-visibility(hidden);
+        .info-back {
+            background: $overlay_dark_fallback;
+            }
     }
 
     &.colored {
         .info {
-            background: $overlay_colored;
+            background: $overlay_colored_fallback;
+            .info-back {
+            background: $overlay_colored_fallback;
+            }
         }
     }
 }
@@ -112,6 +118,7 @@
 // Square item
 // -------------------------
 .ih-item.square {
+    overflow: hidden;
     position: relative;
     width: 316px; // 300px + 8px * 2 (border)
     height: 216px; // 200px + 8px * 2 (border)
