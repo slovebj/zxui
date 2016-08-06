@@ -1,0 +1,47 @@
+/*
+	jQuery.mmenu iconbar extension CSS，比如左侧留出50px，显示一个垂直菜单条，其实是右边页面没有完全覆盖菜单
+*/
+@media all and (min-width: 550px) {
+  .mm-menu.mm-iconbar {
+  display: block; }
+
+  .mm-page {
+    min-height: 100%; 
+    left:50px;
+    right:0;
+    position:absolute
+  }
+  /*
+  #mm-blocker覆盖在最顶层，页面偏移处理不好，它会覆盖部分菜单
+*/
+#mm-blocker
+{
+    left:50px;
+  }
+
+  html.mm-opening .mm-slideout {
+  -webkit-transform: translate(200px, 0);
+  -moz-transform: translate(200px, 0);
+  -ms-transform: translate(200px, 0);
+  -o-transform: translate(200px, 0);
+  transform: translate(200px, 0); }
+  
+  .mm-menu .fa-fw {
+    margin: 0 12px 0 0;
+  }
+
+  html .toggle-menu {
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0;
+    width: 50px;
+    z-index: 100;
+  }
+  html.mm-opened .toggle-menu {
+    display: none;
+  }
+}
