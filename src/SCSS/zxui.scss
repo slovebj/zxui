@@ -1,0 +1,26 @@
+/*!
+ * zxui - Responsive WebApp
+ *
+ * Copyright 2014 zxui
+ */
+
+// Core variables and mixins
+@import "variables";
+@import "custom"; // custom variable overrides
+
+// Libraries (Remove if not needed)
+@import "library/flags/flags";
+@import "library/cursors/cursors";
+
+// Individual pages, sections, and components.  You can remove any of these sections you don't use
+
+// Main THEME (Imports by order - do not change order)
+@import "zxui/main";
+@import "zxui/main-progress";
+@import "zxui/main-container-fix";
+@import "zxui/main-special-class";
+@import "zxui/main-colorpallet";
+@import "zxui/main-page-footer";
+@import "zxui/main-responsive";
+// Overrides
+@import "overrides";

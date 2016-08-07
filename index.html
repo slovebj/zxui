@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <!-- #CSS Links -->
-        <!-- Basic Styles -->
+        <!-- 这里仅包含基础css文件，ajax加载的页面片段内不共享的css在页面片段加载时加载 -->
         <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
         <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.v3.3.css"> -->
         <link rel="stylesheet" type="text/css" media="screen" href="src/SCSS/basecss/zxbase.css"> 
@@ -19,20 +19,15 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui-plugins.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui-skins.min.css">
-        <!-- We recommend you use "your_style.css" to override ZXUI
-        specific styles this will also ensure you retrain your customization with each ZXUI update.
-        <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.5.3/core/css/jquery.mmenu.all.css"> -->
+        <!--<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.5.3/core/css/jquery.mmenu.all.css"> -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mmenu.all.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mmenu.iconbar.css">
-
         <link rel="stylesheet" type="text/css" media="screen" href="css/bjui.css">
-        <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+        <!-- 只用于Demo目的: 设计自己的WebApp时可以删除这个css文件 -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
         <!-- #FAVICONS -->
         <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
-        <!-- #GOOGLE FONT
-        <link rel="stylesheet" href="http://fonts.useso.com/css@family=Open+Sans_3A400italic,700italic,300,400,700">-->
         <!-- #APP SCREEN / ICONS -->
         <!-- Specifying a Webpage Icon for Web Clip
         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
@@ -55,101 +50,43 @@
 
     ===================================================================
 
-                |  01. #CSS Links                |  所有 CSS 链接  |
-                |  02. #FAVICONS                 |  Favicon links and file paths  |
-                        |  03. #GOOGLE FONT              |  Google font link              |
-    |  04. #APP SCREEN / ICONS       |  app icons, screen backdrops   |
-                                        |  05. #BODY                     |  body tag                      |
-                                    |  06. #HEADER                   |  header tag                    |
-                                |  07. #PROJECTS                 |  project lists                 |
-        |  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
-                        |  09. #MOBILE                   |  mobile view dropdown          |
-                                |  10. #SEARCH                   |  search field                  |
+                |  01. #CSS链接                  |  所有 CSS 链接  |
+                |  02. #FAVICONS                 |  Favicon 链接和文件路径  |
+                |  04. #APP SCREEN / ICONS       |  针对苹果设备   |
+                |  05. #BODY                     |  body tag                      |
+                |  06. #HEADER                   |  header tag                    |
+                |  07. #PROJECTS                 |  project lists                 |
+                |  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
+                |  09. #MOBILE                   |  mobile view dropdown          |
+                |  10. #SEARCH                   |  search field                  |
                 |  11. #NAVIGATION               |  left panel & navigation       |
-                                |  12. #MAIN PANEL               |  main panel                    |
-                            |  13. #MAIN CONTENT             |  content holder                |
-                            |  14. #PAGE FOOTER              |  page footer                   |
+                |  12. #MAIN PANEL               |  main panel                    |
+                |  13. #MAIN CONTENT             |  content holder                |
+                |  14. #PAGE FOOTER              |  page footer                   |
                 |  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
-                    |  16. #PLUGINS                  |  all scripts and plugins       |
+                |  16. #PLUGINS                  |  all scripts and plugins       |
 
     ===================================================================
 
     -->
 
     <!-- #BODY -->
-    <!-- Possible Classes
-    * 'smart-style-{SKIN#}'
-        * 'smart-rtl'         - Switch theme mode to RTL
-    * 'menu-on-top'       - Switch to top navigation (no DOM change required)
-    * 'no-menu'			  - Hides the menu completely
-    * 'hidden-menu'       - Hides the main menu but still accessable by hovering over left edge
-    * 'fixed-header'      - Fixes the header
-    * 'fixed-navigation'  - Fixes the main menu
-    * 'fixed-ribbon'      - Fixes breadcrumb
-    * 'fixed-page-footer' - Fixes footer
-        * 'container'         - boxed layout mode (non-responsive: will not work with fixed-navigation & fixed-ribbon)
-    -->
     <body class="">
         <div id="page">
-
-            <!-- #HEADER -->
-            <header id="header">
-                <!-- #TOGGLE LAYOUT BUTTONS -->
-                <!-- nav area -->
-                <div class="tools-bar">
-
-                    <ul id="hide-menu" class="nav navbar-nav">
-                        <li> <a href="#leftMenu"  title="Collapse Menu"><i class="fa fa-reorder"></i></a> </li>
-                    </ul>
-                    <ul id="logo-area" class="nav navbar-nav">
-                        <li>ZXUI</li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right tooltip-area">
-                        <li><a href="#rightMenu" data-toggle="tooltip" title="Right Menu"><i class="fa fa-align-right"></i></a></li>
-                        <li class="hidden-xs hidden-sm"><a href="#" class="h-seperate">Help</a></li>
-                        <li><button class="btn btn-circle btn-header-search" ><i class="fa fa-search"></i></button></li>
-                        <li data-action="hidePanel"><a href="#" class="avatar-header">
-                            <img alt="" src="img/avatars/sunny.png"  class="circle">
-                            <span class="badge">3</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-                            <em><strong>Hi</strong>, Nutprawee </em> <i class="dropdown-icon fa fa-angle-down"></i>
-                            </a>
-                            <ul class="dropdown-menu pull-right icon-right arrow">
-                                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                                <li><a href="#"><i class="fa fa-cog"></i> Setting </a></li>
-                                <li><a href="#"><i class="fa fa-bookmark"></i> Bookmarks</a></li>
-                                <li><a href="#"><i class="fa fa-money"></i> Make a Deposit</a></li>
-                                <li class="divider"></li>
-                                <li><a href="login.html" title="注销"  data-action="userLogout" data-logout-msg="You can improve your security further after logging out by closing this opened browser"><i class="fa fa-sign-out"></i> 注销 </a></li>
-                            </ul>
-                            <!-- //dropdown-menu-->
-                        </li>
-                        <li class="visible-lg">
-                            <a href="#" class="h-seperate fullscreen"  data-action="launchFullscreen" title="全屏">
-                            <i class="fa fa-arrows-alt"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="widget-top-search">
-                    <span class="icon"><a href="#" class="close-header-search"><i class="fa fa-times"></i></a></span>
-                    <form id="top-search">
-                        <h2><strong>快捷搜索</strong> </h2>
-                        <div class="input-group">
-                            <input  type="text" name="q" placeholder="Find something..." class="form-control" />
-                            <span class="input-group-btn">
-                            <button class="btn" type="button" title="With Sound"><i class="fa fa-microphone"></i></button>
-                            <button class="btn" type="button" title="Visual Keyboard"><i class="fa fa-keyboard-o"></i></button>
-                            <button class="btn" type="button" title="Advance Search"><i class="fa fa-th"></i></button>
-                            </span>
-                        </div>
-                    </form>
-                </div>
+            <!-- #HEADER 顶端工具栏，包含网站logo和一些布局切换按钮 -->
+            <header id="header">               
+                <a href="#leftMenu"  title="Collapse Menu"><i class="fa fa-reorder"></i></a>                
+                    ZXUI
+                <div class="right">
+                    <a href="#rightMenu" data-toggle="tooltip" title="Right Menu"><i class="fa fa-align-right"></i></a>
+                    <a href="#">
+                        <img alt="" src="img/avatars/sunny.png"  class="circle avatar-header">
+                    </a>
+                    <a href="#" data-action="launchFullscreen" title="全屏">
+                        <i class="fa fa-arrows-alt"></i>
+                    </a>
+                </div>      
+                
             </header>
             <!-- END HEADER -->
             <!-- #页面碎片 -->
@@ -157,9 +94,8 @@
                 <div id="bjui-contextmenu"></div>
                 <div id="bjui-contextmenuShadow"></div>
             </aside>
-            <!-- #NAVIGATION -->
-            <!-- Left panel : Navigation area -->
-            <!-- Note: This width of the aside area can be adjusted through LESS/SASS variables -->
+            <!-- 导航菜单 -->
+            <!-- 左侧导航区 -->
             <aside id="left-panel">
                 <!-- 用户信息 -->
                 <div class="login-info">
@@ -1099,10 +1035,10 @@
             <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.js"></script>
             <!-- #PLUGINS -->
             <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-            <script src="http://apps.bdimg.com/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
             <script>
             if (!window.jQuery) {
-            document.write('<script src="js/libs/jquery-3.1.0.min.js"><\/script>');
+            document.write('<script src="js/libs/jquery-2.1.1.js"><\/script>');
             }
             </script>
             <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>

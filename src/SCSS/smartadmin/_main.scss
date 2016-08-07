@@ -1,37 +1,12 @@
 html {
-	margin: 0;
-	padding: 0;
 	min-height: 100%;
-	background:url("#{$base-url}/#{$html-background-image}") $html-background-color;
 	position:relative;
 }
 
 body {
-	margin: 0;
-	padding: 0;
 	min-height: 100%;
-	background:url("#{$base-url}/#{$body-background-image}") $body-background-color;
-	direction:ltr;
 }
 
-/* when mobile menu is active */
-body.mobile-view-activated.hidden-menu {
-	overflow-x:hidden;
-}
-
-body.modal-open {
-	overflow:hidden !important;
-}
-
-a:hover, a:active, a:focus, button, button:active, button:focus, object, embed, input::-moz-focus-inner {
-  outline: 0;
-}
-	
-h1,h2,h3,h4 {
-	margin:0;
-	font-family:"Open Sans", Arial, Helvetica, Sans-Serif;
-	font-weight:300;
-}
 
 .page-title {
     margin: 12px 0 28px;
@@ -43,85 +18,6 @@ h1,h2,h3,h4 {
     }
 }
 
-label {
-	font-weight:normal;
-}
-
-*:focus {
-    outline: 0 !important;
-}
-
-/*
- * IE FIX for tap delay
- */
-a, input, button {
-    -ms-touch-action: none !important;
-} 
-
-textarea:focus,
-select:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
-  
-}
-
-.input-sm,
-.input-lg,
-.input-xs,
-.form-control {
-		  border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-}
-
-.input-xs {
-	height: 24px;
-	padding: 2px 10px;
-	font-size: 11px;
-	line-height: 1.5;
-}	
-
-.btn-xs {
-	padding: 1px 5px;
-}
-
-.btn-sm {
-	padding: 6px 10px 5px;
-}
-
-.btn-lg {
-	padding: 10px 16px;
-}
-
-.no-space {
-  margin: 0;
-
-  > [class*="col-"] {
-    margin: 0 !important;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
 
 #content {
 	padding:10px 14px;
@@ -130,68 +26,9 @@ input[type="color"]:focus,
 	left:0px;*/
 }
 
-body.container {
-	position:absolute; 
-	left:0; 
-	right:0;
-	padding: 0;
-	border-left:1px solid $gray-mid-light;
-	border-right:1px solid $gray-mid-light;
-	box-shadow: 0 2px 70px rgba(red($black), green($black), blue($black), 0.45);
-}
-
-body.container.hidden-menu:not(.mobile-view-activated) {
-  overflow:hidden;
-}
-
 /*
  * Headers
  */
-
-h1 {
-	letter-spacing:-1px;
-	font-size:$font-size-h1;
-	margin:10px 0;
-}h1 small {
-	font-size:$font-size-h4;
-	font-weight:300;
-	letter-spacing:-1px;
-}.lead {
-	font-size:$font-size-h4 + 1px;
-}
-
-h2 {
-	letter-spacing:-1px;
-	font-size: $font-size-h2;
-	margin:20px 0;
-	line-height:normal;
-}
-
-h3 {
-	display: block;
-	font-size: $font-size-h3;
-	font-weight: 400;
-	margin: 20px 0;
-	line-height:normal;
-}
-
-h4 {
-	line-height:normal;
-}
-
-h5 {
-	font-size: $font-size-h5;
-	font-weight: 300;
-	margin: 10px 0;
-	line-height:normal;
-}
-
-h6 {
-	font-size: $font-size-h6;
-	margin: 10px 0;
-	font-weight:bold;
-	line-height:normal;
-}
 
 .row-seperator-header {
 	margin:15px 14px 20px;
@@ -215,17 +52,6 @@ h6 {
 	display:block !important;
 	margin:0 auto !important;
 }
-
-
-/*
- * JUST A BORDER 
- */
-.bordered {
-	border:1px solid rgba(red($black), green($black), blue($black),.2);
-}.bordered:hover {
-	border:1px solid rgba(red($black), green($black), blue($black),.4);
-}
-
 
 
 /*
