@@ -384,7 +384,8 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
-  background-color: #fff; }
+  background-color: #fff;
+  }
 
 *,
 *::before,
@@ -416,7 +417,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  }
 
 ol ol,
 ul ul,
@@ -462,7 +464,8 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none;
+  }
 
 [role="button"] {
   cursor: pointer; }

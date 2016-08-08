@@ -79,7 +79,7 @@
                     ZXUI
                 <div class="right">
                     <a href="#rightMenu" data-toggle="tooltip" title="Right Menu"><i class="fa fa-align-right"></i></a>
-                    <a href="#">
+                    <a data-action="hidePanel">
                         <img alt="" src="img/avatars/sunny.png"  class="circle avatar-header">
                     </a>
                     <a href="#" data-action="launchFullscreen" title="全屏">
@@ -91,16 +91,14 @@
             <!-- END HEADER -->
             <!-- #页面碎片 -->
             <aside>
-                <div id="bjui-contextmenu"></div>
-                <div id="bjui-contextmenuShadow"></div>
+                <div id="contextmenu"></div>
+                <div id="contextmenuShadow"></div>
             </aside>
-            <!-- 导航菜单 -->
-            <!-- 左侧导航区 -->
+            <!-- 左侧信息面板 -->
             <aside id="left-panel">
-                <!-- 用户信息 -->
+                <!--^ 用户信息 -->
                 <div class="login-info">
-                    <span> <!-- User image size is adjusted inside CSS, it should stay as is -->
-
+                    <span>
                     <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
                     <img src="img/avatars/sunny.png" alt="me" class="online" />
                     <span>
@@ -108,104 +106,17 @@
                     </span>
                     <i class="fa fa-angle-down"></i>
                     </a>
-
                     </span>
                 </div>
-                <!-- end user info -->
-                <!-- NAVIGATION : This navigation is also responsive
-                To make this navigation dynamic please make sure to link the node
-                (the reference to the nav > ul) after page load. Or the navigation
-                will not initialize.
-                -->
-
-
-                <a href="ajax/difver.html" data-options="{id:'difver'}"  class="btn btn-primary nav-demo-btn">AngularJS, PHP and .Net Versions</a>
-                <span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>
-                <!-- AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file -->
-                <div class="ajax-dropdown">
-                    <!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->
-                    <div class="btn-group btn-group-justified" data-toggle="buttons">
-                        <label class="btn btn-default">
-                            <input type="radio" name="activity" id="ajax/notify/mail.html">
-                        Msgs (14) </label>
-                        <label class="btn btn-default">
-                            <input type="radio" name="activity" id="ajax/notify/notifications.html">
-                        notify (3) </label>
-                        <label class="btn btn-default">
-                            <input type="radio" name="activity" id="ajax/notify/tasks.html">
-                        Tasks (4) </label>
-                    </div>
-                    <!-- notification content -->
-                    <div class="ajax-notifications custom-scroll">
-                        <div class="alert alert-transparent">
-                            <h4>Click a button to show messages here</h4>
-                            This blank page message helps protect your privacy, or you can show the first message here automatically.
-                        </div>
-                        <i class="fa fa-lock fa-4x fa-border"></i>
-                    </div>
-                    <!-- end notification content -->
-                    <!-- footer: refresh area -->
-                    <span> Last updated on: 12/12/2013 9:43AM
-                    <button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> Loading..." class="btn btn-xs btn-default pull-right">
-                    <i class="fa fa-refresh"></i>
-                    </button> </span>
-                    <!-- end footer -->
-                </div>
-                <!-- END AJAX-DROPDOWN -->
-                <!-- #PROJECTS: projects dropdown -->
-                <div class="project-context hidden-xs">
-                    <span class="label">Projects:</span>
-                    <span class="project-selector dropdown-toggle" data-toggle="dropdown">Recent projects <i class="fa fa-angle-down"></i></span>
-                    <!-- Suggestion: populate this list with fetch and push technique -->
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="javascript:void(0);">Online e-merchant management system - attaching integration with the iOS</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">Notes on pipeline upgradee</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">Assesment Report for merchant account</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="javascript:void(0);"><i class="fa fa-power-off"></i> Clear</a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-menu-->
-                </div>
-                <!-- end projects dropdown -->
-                <!-- RIBBON -->
-                <div id="ribbon">
-                    <span class="ribbon-button-alignment">
-                    <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true" data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?"><i class="fa fa-refresh"></i></span>
-                    </span>
-                    <!-- breadcrumb -->
-                    <ol class="breadcrumb">
-                        <!-- This is auto generated -->
-                    </ol>
-                    <!-- end breadcrumb -->
-                    <!-- You can also add more buttons to the
-                    ribbon for further usability
-                    Example below:
-                    <span class="ribbon-button-alignment pull-right" style="margin-right:25px">
-                    <a href="#" id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa fa-grid"></i> Change Grid</a>
-                    <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa fa-plus"></i> Add</span>
-                    <button id="search" class="btn btn-ribbon" data-title="search"><i class="fa fa-search"></i> <span class="hidden-mobile">Search</span></button>
-                    </span> -->
-                </div>
-                <!-- END RIBBON -->
+                <!-- $ 用户信息 -->            
             </aside>
-            <!-- END NAVIGATION -->
 
             <!-- #MAIN 主页面内容展示区 -->
             <div id="main" role="main">
-
-                <!-- #MAIN CONTENT -->
-                <div id="bjui-navtab" class="tabsPage">
-                    <div class="tabsPageHeader">
-                        <div class="tabsPageHeaderContent">
-                            <ul class="navtab-tab nav nav-tabs">
+                <div id="navtab">
+                    <div class="navtabHeader">
+                        <div class="navtabHeaderContent">
+                            <ul class="nav-tab nav">
                                 <li data-url="ajax/dashboard.html" data-options="{id:'dashboard'}"  data-faicon="home"><a href="javascript:;"><span><i class="fa fa-home"></i> 首页</span></a></li>
                             </ul>
                         </div>
@@ -216,9 +127,9 @@
                     <ul class="tabsMoreList">
                         <li><a href="javascript:;">首页</a></li>
                     </ul>
-                    <div class="navtab-panel tabsPageContent">
+                    <div class="navtabBody">
                         <div class="navtabPage unitBox">
-                            <div class="bjui-pageContent" style="background:#FFF;">
+                            <div class="navtabPageContent" style="background:#FFF;">
 
                             </div>
                         </div>
@@ -1035,13 +946,13 @@
             <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.js"></script>
             <!-- #PLUGINS -->
             <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-            <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="js/libs/jquery-2.1.1.js"></script>
             <script>
             if (!window.jQuery) {
             document.write('<script src="js/libs/jquery-2.1.1.js"><\/script>');
             }
             </script>
-            <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+            <script src="js/libs/jquery-ui-1.10.3.js"></script>
             <script>
             if (!window.jQuery.ui) {
             document.write('<script src="js/libs/jquery-ui-1.10.3.js"><\/script>');

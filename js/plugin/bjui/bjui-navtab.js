@@ -27,9 +27,9 @@
     $(function() {
         var INIT_NAVTAB = function() {
             currentIndex = 0
-            $box         = $('#bjui-navtab')
+            $box         = $('#navtab')
             $tabs        = $box.find('.navtab-tab')
-            $panels      = $box.find('.navtab-panel')
+            $panels      = $box.find('.navtabBody')
             $prevBtn     = $box.find('.tabsLeft')
             $nextBtn     = $box.find('.tabsRight')
             $moreBtn     = $box.find('.tabsMore')
@@ -205,11 +205,11 @@
                 if (this.getScrollBarW() > iW) {
                     $prevBtn.hide()
                     $nextBtn.hide()
-                    $tabs.parent().removeClass('tabsPageHeaderMargin')
+                    $tabs.parent().removeClass('navtabHeaderMargin')
                 } else {
                     $prevBtn.show().removeClass('tabsLeftDisabled')
                     $nextBtn.show().removeClass('tabsRightDisabled')
-                    $tabs.parent().addClass('tabsPageHeaderMargin')
+                    $tabs.parent().addClass('navtabHeaderMargin')
                     if (this.getLeft() >= 0)
                         $prevBtn.addClass('tabsLeftDisabled')
                     else if (this.getLeft() <= this.getScrollBarW() - iW)
@@ -576,7 +576,7 @@
     }
     
     Navtab.prototype.openExternal = function(url, $panel) {
-        var ih = $panel.closest('.navtab-panel').height()
+        var ih = $panel.closest('.navtabBody').height()
         
         $panel.html(FRAG.externalFrag.replaceAll('{url}', url).replaceAll('{height}', ih +'px'))
     }
