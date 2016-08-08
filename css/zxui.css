@@ -61,7 +61,12 @@
   background: #e5e9ec;
   height: 100%;
   margin-left: 250px;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  overflow: auto;
+  overflow-x: hidden;
+>>>>>>> 5586a385e02727737128e446899365c4746b200b
   padding-top: 2.5rem;
   position: absolute;
   left: 0;
