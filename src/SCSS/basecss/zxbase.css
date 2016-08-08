@@ -462,7 +462,8 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none;
+  }
 
 [role="button"] {
   cursor: pointer; }
