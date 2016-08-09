@@ -76,3 +76,13 @@
 body.hidePanel #main {
   margin-left: 0;
 }
+
+#page-footer {
+  height: 1.5rem;
+  /* padding: 5px 5px 0; */
+  background: #1b1e24;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1000;
+}

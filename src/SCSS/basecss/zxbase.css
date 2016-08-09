@@ -417,8 +417,10 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  /* margin-bottom: 1rem; */
-  }
+  margin-bottom: 1rem; }
+
+ul {
+  list-style: none; }
 
 ol ol,
 ul ul,
@@ -464,8 +466,7 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none;
-  }
+  border-style: none; }
 
 [role="button"] {
   cursor: pointer; }
@@ -1175,7 +1176,8 @@ output {
   display: block !important; }
 
 .inline-block {
-  display: inline-block !important; }
+  display: inline-block !important;
+  }
 
 .inline {
   display: inline !important; }
@@ -1283,7 +1285,8 @@ output {
   text-align: left !important; }
 
 .text-right-xs {
-  text-align: right !important; }
+  text-align: right !important;
+  }
 
 .text-center-xs {
   text-align: center !important; }
@@ -4420,8 +4423,7 @@ dl.row > dd + dt {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .2;
-  }
+  opacity: .2; }
   .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
@@ -4619,7 +4621,7 @@ video.resp-video {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
-  line-height: 1.25em;
+  line-height: 1.5em;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -4632,7 +4634,8 @@ video.resp-video {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 2px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  }
   .btn i {
     font-size: 1.2em;
     font-style: normal;
@@ -4882,7 +4885,8 @@ video.resp-video {
     box-shadow: none; }
 
 .btn .caret {
-  margin-left: 0; }
+  margin-left: 0;
+  }
 
 .btn-lg .caret, .btn-group-lg > .btn .caret {
   border-width: 0.3em 0.3em 0;
@@ -5129,7 +5133,8 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 
 .dropup,
 .dropdown {
-  position: relative; }
+  position: relative;
+  }
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -5236,7 +5241,8 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 .navbar-fixed-bottom .dropdown .caret {
   content: "";
   border-top: 0;
-  border-bottom: 0.3em solid; }
+  border-bottom: 0.3em solid;
+  }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
@@ -6302,4 +6308,4 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
       display: inline-block;
       width: 100%; } }
 
-/*# sourceMappingURL=zxui.css.map */
+/*# sourceMappingURL=zxbase.css.map */
