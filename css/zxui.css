@@ -45,7 +45,6 @@
  * LEFT PANEL
  */
 #left-panel {
-  transition: all 0.5s;
   background-color: #1b1e24;
   height: 100%;
   overflow: hidden;
@@ -61,12 +60,7 @@
   background: #e5e9ec;
   height: 100%;
   margin-left: 250px;
-<<<<<<< HEAD
   overflow: hidden;
-=======
-  overflow: auto;
-  overflow-x: hidden;
->>>>>>> 5586a385e02727737128e446899365c4746b200b
   padding-top: 2.5rem;
   position: absolute;
   left: 0;
@@ -81,7 +75,4 @@
  */
 body.hidePanel #main {
   margin-left: 0;
-}
-body.hidePanel #left-panel{
-  width:0;
 }

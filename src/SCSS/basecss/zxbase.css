@@ -417,7 +417,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   }
 
 ol ol,
@@ -4420,7 +4420,8 @@ dl.row > dd + dt {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .2; }
+  opacity: .2;
+  }
   .close:focus, .close:hover {
     color: #000;
     text-decoration: none;

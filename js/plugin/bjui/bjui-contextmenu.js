@@ -25,7 +25,7 @@
     
     $(function() {
         var INIT_CONTEXTMENU = function() {
-            $menu   = $('<div id="bjui-contextmenu"></div>').hide()
+            $menu   = $('<div id="contextmenu"></div>').hide()
             hash    = []
             
             $('body').append('<!-- contextmenu -->').append($menu)
@@ -81,7 +81,7 @@
         $.each(cur.bindings, function(id, func) {
             $('[rel="'+ id +'"]', $menu).on('click', function(e) {
                 that.hide()
-                func($(trigger), $('#bjui-'+ cur.id))
+                func($(trigger), $('#'+ cur.id))
             })
         })
         
@@ -95,7 +95,7 @@
         $(document).one('click', that.hide)
         
         if ($.isFunction(cur.ctrSub))
-            cur.ctrSub($(trigger), $('#bjui-'+ cur.id))
+            cur.ctrSub($(trigger), $('#'+ cur.id))
     }
     
     Contextmenu.prototype.hide = function() {

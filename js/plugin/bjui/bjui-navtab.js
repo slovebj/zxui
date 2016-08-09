@@ -28,7 +28,7 @@
         var INIT_NAVTAB = function() {
             currentIndex = 0
             $box         = $('#navtab')
-            $tabs        = $box.find('.navtab-tab')
+            $tabs        = $box.find('.nav-tab')
             $panels      = $box.find('.navtabBody')
             $prevBtn     = $box.find('.tabsLeft')
             $nextBtn     = $box.find('.tabsRight')
