@@ -1,32 +1,9 @@
 /*                  ______________________________________
            ________|                                      |_______
-           \       |           SmartAdmin WebApp          |      /
-            \      |      Copyright © 2015 MyOrange       |     /
+           \       |           Zxui WebApp          |      /
+            \      |      Copyright © 2016 zxui       |     /
             /      |______________________________________|     \
            /__________)                                (_________\
-
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- * =======================================================================
- * SmartAdmin is FULLY owned and LICENSED by MYORANGE INC.
- * This script may NOT be RESOLD or REDISTRUBUTED under any
- * circumstances (this extends the use of public repositories, which is
- * absolutely NOT ALLOWED under any circumstances), and is only to be used 
- * with this purchased copy of SmartAdmin Template
- * =======================================================================
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- * =======================================================================
- * original filename  : app.js
- * filesize           : 62,499~ bytes
- * author             : Sunny (@bootstraphunt)
- * email              : info@myorange.ca
- * legal notice       : This script is part of a theme sold by
- *                      https://wrapbootstrap.com/?ref=myorange 
  *    
  * =======================================================================
  * INDEX (Note: line numbers for index items may not be up to date):
@@ -76,32 +53,7 @@
  * angular mode) to clear auto fetch interval
  */
 	$.intervalArr = [];
-/*
- * Calculate nav height
- */
-var calc_navbar_height = function() {
-		var height = null;
-	
-		if ($('#header').length)
-			height = $('#header').height();
-	
-		if (height === null)
-			height = $('<div id="header"></div>').height();
-	
-		if (height === null)
-			return 46;
-		// default
-		return height;
-	},
-	
-	navbar_height = calc_navbar_height, 
-/*
- * APP DOM REFERENCES
- * Description: Obj DOM reference, please try to avoid changing these
- */	
-	shortcut_dropdown = $('#shortcut'),
-	
-	bread_crumb = $('#ribbon ol.breadcrumb'),
+
 /*
  * desktop or mobile
  */
@@ -115,30 +67,29 @@ var calc_navbar_height = function() {
 	ismobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())),
 /*
  * JS&CSS ARRAY STORAGE
- * Description: used with loadScript&loadCss to store script path and file name
- * so it will not load twice
+ * 用于loadScript和loadCss这两个函数，目的是保存脚本路径和文件名，防止重复加载
  */	
 	jsArray = {},
 	cssArray = {},
 /*
- * App Initialize
- * Description: Initializes the app with intApp();
+ * App初始化
+ * Description:通过intApp()对app初始化;
  */	
 	initApp = (function(app) {
 		
 		/*
-		 * ADD DEVICE TYPE
-		 * Detect if mobile or desktop
+		 * 添加设备类型
+		 * 检测是移动还是桌面设备
 		 */		
 		app.addDeviceType = function() {
 			
 			if (!ismobile) {
-				// Desktop
+				// 桌面设备
 				$.root_.addClass("desktop-detected");
 				thisDevice = "desktop";
 				return false; 
 			} else {
-				// Mobile
+				// 移动设备
 				$.root_.addClass("mobile-detected");
 				thisDevice = "mobile";
 				
@@ -153,22 +104,22 @@ var calc_navbar_height = function() {
 			}
 			
 		};
-		/* ~ END: ADD DEVICE TYPE */
+		/* ~ END: 添加设备类型 */
 		
 		/*
-		 * SMART ACTIONS
+		 * Zxui ACTIONS
 		 */
-		app.SmartActions = function(){
+		app.ZxuiActions = function(){
 				
-			var smartActions = {
+			var ZxuiActions = {
 			    
 			    // LOGOUT MSG 
 			    userLogout: function($this){
 			
 					// ask verification
-					$.SmartMessageBox({
+					$.ZxuiMessageBox({
 						title : "<i class='fa fa-sign-out txt-color-orangeDark'></i> Logout <span class='txt-color-orangeDark'><strong>" + $('#show-shortcut').text() + "</strong></span> ?",
-						content : $this.data('logout-msg') || "You can improve your security further after logging out by closing this opened browser",
+						content : $this.data('logout-msg') || "您可以在注销后关闭浏览器，以提高账号安全性！",
 						buttons : '[No][Yes]'
 			
 					}, function(ButtonPressed) {
@@ -183,13 +134,13 @@ var calc_navbar_height = function() {
 			
 				},
 		
-				// RESET WIDGETS
+				// 重置WIDGETS
 			    resetWidgets: function($this){
 					
-					$.SmartMessageBox({
-						title : "<i class='fa fa-refresh' style='color:green'></i> Clear Local Storage",
-						content : $this.data('reset-msg') || "Would you like to RESET all your saved widgets and clear LocalStorage?1",
-						buttons : '[No][Yes]'
+					$.ZxuiMessageBox({
+						title : "<i class='fa fa-refresh' style='color:green'></i>清理本地存储",
+						content : $this.data('reset-msg') || "您希望重置所有的widgets并清理LocalStorage吗？",
+						buttons : '[否][是]'
 					}, function(ButtonPressed) {
 						if (ButtonPressed == "Yes" && localStorage) {
 							localStorage.clear();
@@ -199,7 +150,7 @@ var calc_navbar_height = function() {
 					});
 			    },
 			    
-			    // LAUNCH FULLSCREEN 
+			    // 切换全屏 
 			    launchFullscreen: function(element){
 			
 					if (!$.root_.hasClass("full-screen")) {
@@ -231,64 +182,15 @@ var calc_navbar_height = function() {
 					}
 			
 			   },
-			
-			    
-			    // TOGGLE MENU 
-			        
-			
-			    // TOGGLE SHORTCUT 
-			    toggleShortcut: function(){
-			    	
-					if (shortcut_dropdown.is(":visible")) {
-						shortcut_buttons_hide();
-					} else {
-						shortcut_buttons_show();
-					}
-		
-					// SHORT CUT (buttons that appear when clicked on user name)
-					shortcut_dropdown.find('a').click(function(e) {
-						e.preventDefault();
-						window.location = $(this).attr('href');
-						setTimeout(shortcut_buttons_hide, 300);
-				
-					});
-				
-					// SHORTCUT buttons goes away if mouse is clicked outside of the area
-					$(document).mouseup(function(e) {
-						if (!shortcut_dropdown.is(e.target) && shortcut_dropdown.has(e.target).length === 0) {
-							shortcut_buttons_hide();
-						}
-					});
-					
-					// SHORTCUT ANIMATE HIDE
-					function shortcut_buttons_hide() {
-						shortcut_dropdown.animate({
-							height : "hide"
-						}, 300, "easeOutCirc");
-						$.root_.removeClass('shortcut-on');
-				
-					}
-				
-					// SHORTCUT ANIMATE SHOW
-					function shortcut_buttons_show() {
-						shortcut_dropdown.animate({
-							height : "show"
-						}, 200, "easeOutCirc");
-						$.root_.addClass('shortcut-on');
-					}
-			
-			    }  
 			   
 			};
 				
 			$.root_.on('click', '[data-action="userLogout"]', function(e) {
 				var $this = $(this);
-				smartActions.userLogout($this);
-				e.preventDefault();
-				
+				ZxuiActions.userLogout($this);
+				e.preventDefault();			
 				//clear memory reference
-				$this = null;
-				
+				$this = null;				
 			}); 
 
 			/*
@@ -296,15 +198,14 @@ var calc_navbar_height = function() {
 			 */		
 			$.root_.on('click', '[data-action="resetWidgets"]', function(e) {	
 				var $this = $(this);
-				smartActions.resetWidgets($this);
-				e.preventDefault();
-				
+				ZxuiActions.resetWidgets($this);
+				e.preventDefault();			
 				//clear memory reference
 				$this = null;
 			});
 			
 			$.root_.on('click', '[data-action="launchFullscreen"]', function(e) {	
-				smartActions.launchFullscreen(document.documentElement);
+				ZxuiActions.launchFullscreen(document.documentElement);
 				e.preventDefault();
 			}); 
 			
@@ -316,23 +217,10 @@ var calc_navbar_height = function() {
 				//clear memory reference
 				$this = null;
 			}); 
-			 
-		
-			$.root_.on('click', '[data-action="toggleShortcut"]', function(e) {	
-				smartActions.toggleShortcut();
-				e.preventDefault();
-			}); 
-					
+			
 		};
-		/* ~ END: SMART ACTIONS */
-		
-		/*
-		 * ACTIVATE NAVIGATION
-		 * Description: Activation will fail if top navigation is on
-		 */
-		
-		/* ~ END: ACTIVATE NAVIGATION */
-		
+		/* ~ END: Zxui ACTIONS */
+
 		/*
 		 * MISCELANEOUS DOM READY FUNCTIONS
 		 * Description: fire with jQuery(document).ready...
@@ -345,16 +233,7 @@ var calc_navbar_height = function() {
 			if ($("[rel=tooltip]").length) {
 				$("[rel=tooltip]").tooltip();
 			}
-		
-			// SHOW & HIDE MOBILE SEARCH FIELD
-			$('#search-mobile').click(function() {
-				$.root_.addClass('search-mobile');
-			});
-		
-			$('#cancel-search-js').click(function() {
-				$.root_.removeClass('search-mobile');
-			});
-		
+			
 			// ACTIVITY
 			// ajax drop
 			$('#activity').click(function(e) {
@@ -456,8 +335,7 @@ var calc_navbar_height = function() {
  */
 	jQuery(document).ready(function() {
 		
-		initApp.SmartActions();
-		$.material.init();
+		initApp.ZxuiActions();
 		var navMenu=$("nav#leftMenu");
 		var navMenuRight=$("nav#rightMenu");
 		navMenu.mmenu({
@@ -1414,8 +1292,8 @@ var calc_navbar_height = function() {
 			body.appendChild(script);
 			
 			// clear DOM reference
-			//body = null;
-			//script = null;
+			body = null;
+			script = null;
 	
 		} else if (callback) {
 			// changed else to else if(callback)
@@ -1448,36 +1326,15 @@ var calc_navbar_height = function() {
 			css.media = 'screen';
 	
 			head.appendChild(css);
-	
+	        // clear DOM reference
+			head = null;
+			css = null;
 		} else if (debugState) {
 			root.root.console.log("This css was already loaded %c: " + cssName, debugStyle_warning);
 		}
 	
 	}
 /* ~ END: LOAD STYLE */
-
-/*
- * UPDATE BREADCRUMB
- */ 
-	function drawBreadCrumb(opt_breadCrumbs) {
-		var a = $("nav li.active > a"),
-			b = a.length;
-	
-		bread_crumb.empty(), 
-		bread_crumb.append($("<li>Home</li>")), a.each(function() {
-			bread_crumb.append($("<li></li>").html($.trim($(this).clone().children(".badge").remove().end().text()))), --b || (document.title = bread_crumb.find("li:last-child").text())
-		});
-		
-		// Push breadcrumb manually -> drawBreadCrumb(["Users", "John Doe"]);
-		// Credits: Philip Whitt | philip.whitt@sbcglobal.net
-		if (opt_breadCrumbs != undefined) {
-			$.each(opt_breadCrumbs, function(index, value) {
-				bread_crumb.append($("<li></li>").html(value)); 
-				document.title = bread_crumb.find("li:last-child").text();
-			});
-		}
-	}
-/* ~ END: APP AJAX REQUEST SETUP */
 
 /*
  * PAGE SETUP
