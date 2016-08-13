@@ -11,15 +11,12 @@
         <!-- 这里仅包含基础css文件，ajax加载的页面片段内不共享的css在页面片段加载时加载 -->
         <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
         <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.v3.3.css"> -->
-        <link rel="stylesheet" type="text/css" media="screen" href="src/SCSS/basecss/zxbase.css"> 
-        <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.7/css/bootstrap-material-design.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.7/css/ripples.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" media="screen" href="src/SCSS/basecss/zxbase.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
         <!-- ZXUI Styles : Caution! DO NOT change the order -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui-plugins.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui-skins.min.css">
-        <!--<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.5.3/core/css/jquery.mmenu.all.css"> -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mmenu.all.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.mmenu.iconbar.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/bjui.css">
@@ -45,30 +42,6 @@
         <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
         <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
     </head>
-    <!--
-    内容列表
-
-    ===================================================================
-
-                |  01. #CSS链接                  |  所有 CSS 链接  |
-                |  02. #FAVICONS                 |  Favicon 链接和文件路径  |
-                |  04. #APP SCREEN / ICONS       |  针对苹果设备   |
-                |  05. #BODY                     |  body tag                      |
-                |  06. #HEADER                   |  header tag                    |
-                |  07. #PROJECTS                 |  project lists                 |
-                |  08. #TOGGLE LAYOUT BUTTONS    |  layout buttons and actions    |
-                |  09. #MOBILE                   |  mobile view dropdown          |
-                |  10. #SEARCH                   |  search field                  |
-                |  11. #NAVIGATION               |  left panel & navigation       |
-                |  12. #MAIN PANEL               |  main panel                    |
-                |  13. #MAIN CONTENT             |  content holder                |
-                |  14. #PAGE FOOTER              |  page footer                   |
-                |  15. #SHORTCUT AREA            |  dropdown shortcuts area       |
-                |  16. #PLUGINS                  |  all scripts and plugins       |
-
-    ===================================================================
-
-    -->
 
     <!-- #BODY -->
     <body class="">
@@ -76,13 +49,13 @@
             <!-- #HEADER 顶端工具栏，包含网站logo和一些布局切换按钮 -->
             <header id="header">               
                 <a href="#leftMenu"  title="Collapse Menu"><i class="fa fa-reorder"></i></a>                
-                    ZXUI
+                    南无阿弥陀佛
                 <div class="right">
                     <a href="#rightMenu" data-toggle="tooltip" title="Right Menu"><i class="fa fa-align-right"></i></a>
                     <a data-action="hidePanel">
-                        <img alt="" src="img/avatars/sunny.png"  class="circle avatar-header">
+                        <img alt="" src="img/avatars/avatar-s.jpg"  class="circle avatar-header">
                     </a>
-                    <a href="#" data-action="launchFullscreen" title="全屏">
+                    <adata-action="launchFullscreen" title="全屏">
                         <i class="fa fa-arrows-alt"></i>
                     </a>
                 </div>      
@@ -95,7 +68,7 @@
                 <div class="login-info">
                     <span>
                     <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-                    <img src="img/avatars/sunny.png" alt="me" class="online" />
+                    <img src="img/avatars/avatar.jpg" alt="精进修行" class="online" />
                     <span>
                     道祈
                     </span>
@@ -887,18 +860,14 @@
             document.write('<script src="js/libs/jquery-ui-1.10.3.js"><\/script>');
             }
             </script>
-            <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.5.3/core/js/jquery.mmenu.min.all.js"></script>-->
-            <script src="js/plugin/mmenu/jquery.mmenu.min.all.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.6.5/js/jquery.mmenu.all.min.js"></script>
+            <!--<script src="js/plugin/mmenu/jquery.mmenu.min.all.js"></script>-->
             <script src="js/vue.min.js"></script>
             <!-- IMPORTANT: APP CONFIG -->
             <script src="js/app.config.js"></script>
             <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
-            <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.js"></script>
-            <!-- BOOTSTRAP JS <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>-->
-            
+            <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.js"></script>           
             <script src="js/bootstrap/bootstrap.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.7/js/material.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.7/js/ripples.min.js"></script>
 
             <!-- CUSTOM NOTIFICATION -->
             <script src="js/notification/SmartNotification.js"></script>

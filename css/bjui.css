@@ -5,7 +5,7 @@
  */
 /* Navtab */
 #navtab{position: relative;height: 100%;}
-#navtab > .navtabHeader{position: absolute;width:100%;height: 1.6rem;background-color: rgba(0, 122, 158, 0.85);z-index: 100;}
+#navtab > .navtabHeader{position: absolute;width:100%;height: 1.6rem;background-color: #26B2DC;z-index: 100;}
 #navtab > .navtabHeader a:hover,#navtab > .navtabHeader a:active,#navtab > .navtabHeader a:focus{text-decoration: none}
 #navtab > .navtabHeader > .navtabHeaderContent{position: relative;margin: 0;height: 100%;overflow:hidden;}
 #navtab > .navtabHeader > .navtabHeaderContent.navtabHeaderMargin{margin: 0 55px 0 30px;}
@@ -21,7 +21,7 @@
 #navtab > .navtabHeader > .navtabHeaderContent > ul > li span.close:hover{color:#fff;}
 #navtab > .navtabHeader > .tabsLeft,
 #navtab > .navtabHeader > .tabsRight,
-#navtab > .navtabHeader > .tabsMore{position: absolute;width: 1.6rem;height: 1.6rem;font-size: 1.6rem;line-height: 1.4rem;text-align:center;overflow:hidden;cursor:pointer;}
+#navtab > .navtabHeader > .tabsMore{position: absolute;width: 1.6rem;height: 1.6rem;font-size: 1.6rem;color: white;line-height: 1.4rem;text-align:center;overflow:hidden;cursor:pointer;}
 #navtab > .navtabHeader > .tabsLeft{top:0; left:0; display:none;}
 #navtab > .navtabHeader > .tabsLeft.tabsLeftDisabled{top:0; left:0; cursor:default;}
 #navtab > .navtabHeader > .tabsRight{top:0; right:1.6rem; display:none; border-right:none;}

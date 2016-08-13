@@ -9,9 +9,16 @@
  * MAIN LAYOUT START
  * ***************************************************
  */
-
+#page {
+  height: 100%;
+  left: 0;
+  right: 0;
+  min-width: 320px;
+  overflow: hidden;
+  position: absolute;
+}
 /*
- * HEADER GROUP
+ * HEADER
  */
 
 
@@ -21,7 +28,7 @@
   font-size: 2.0rem;
   font-weight: bolder;
   background-color: #f3f3f3;
-  border-bottom: 1px #0aa699 solid;
+  border-bottom: 1px #228AA9 solid;
   position: absolute;
   left: 0;
   right: 0;
@@ -45,13 +52,12 @@
  * LEFT PANEL
  */
 #left-panel {
-  background-color: #1b1e24;
+  background-color: #F3F3F3;
   height: 100%;
   overflow: hidden;
   position: absolute;
   width: 250px;
   padding-top: 2.5rem;
- 
 }
 /*
  * MAIN PANEL

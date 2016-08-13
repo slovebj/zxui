@@ -70,6 +70,7 @@ body {
   color: $body-color;
   // By default, `<body>` has no `background-color` so we set one as a best practice.
   background-color: $body-bg;
+  overflow: hidden;
 }
 
 *,
@@ -168,10 +169,12 @@ a {
   @include hover-focus {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
+    outline: none;
   }
 
   &:focus {
     @include tab-focus();
+    outline: none;
   }
 }
 
@@ -186,6 +189,8 @@ a:not([href]) {
 
   @include hover-focus {
     //color: inherit;
+    cursor:pointer;
+    outline: none;
     text-decoration: none;
   }
 

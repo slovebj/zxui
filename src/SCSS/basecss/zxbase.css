@@ -385,7 +385,7 @@ body {
   line-height: 1.5;
   color: #373a3c;
   background-color: #fff;
-  }
+  overflow: hidden; }
 
 *,
 *::before,
@@ -444,15 +444,19 @@ a {
   text-decoration: none; }
   a:focus, a:hover {
     color: #014c8c;
-    text-decoration: underline; }
+    text-decoration: underline;
+    outline: none; }
   a:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px; }
+    outline-offset: -2px;
+    outline: none; }
 
 a:not([href]) {
   text-decoration: none; }
   a:not([href]):focus, a:not([href]):hover {
+    cursor: pointer;
+    outline: none;
     text-decoration: none; }
   a:not([href]):focus {
     outline: none; }
@@ -1176,8 +1180,7 @@ output {
   display: block !important; }
 
 .inline-block {
-  display: inline-block !important;
-  }
+  display: inline-block !important; }
 
 .inline {
   display: inline !important; }
@@ -1285,8 +1288,7 @@ output {
   text-align: left !important; }
 
 .text-right-xs {
-  text-align: right !important;
-  }
+  text-align: right !important; }
 
 .text-center-xs {
   text-align: center !important; }
@@ -4621,7 +4623,7 @@ video.resp-video {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
-  line-height: 1.5em;
+  line-height: 1.25em;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -4634,8 +4636,7 @@ video.resp-video {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 2px;
-  -webkit-tap-highlight-color: transparent;
-  }
+  -webkit-tap-highlight-color: transparent; }
   .btn i {
     font-size: 1.2em;
     font-style: normal;
@@ -4885,8 +4886,7 @@ video.resp-video {
     box-shadow: none; }
 
 .btn .caret {
-  margin-left: 0;
-  }
+  margin-left: 0; }
 
 .btn-lg .caret, .btn-group-lg > .btn .caret {
   border-width: 0.3em 0.3em 0;
@@ -5133,8 +5133,7 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 
 .dropup,
 .dropdown {
-  position: relative;
-  }
+  position: relative; }
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -5241,8 +5240,7 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 .navbar-fixed-bottom .dropdown .caret {
   content: "";
   border-top: 0;
-  border-bottom: 0.3em solid;
-  }
+  border-bottom: 0.3em solid; }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
