@@ -67,8 +67,7 @@
   height: 100%;
   margin-left: 250px;
   overflow: hidden;
-  padding-top: 2.5rem;
-  padding-bottom: 0;
+  padding: 2.5rem 0 0 0;
   position: absolute;
   left: 0;
   right: 0;
@@ -91,4 +90,15 @@ footer#page-footer {
   right: 0;
   left: 0;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+
+  #main {
+  margin-left: 0;
+}
+
+body.hidePanel #main {
+  margin-left: 250px;
+}
 }
