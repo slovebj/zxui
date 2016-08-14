@@ -24,7 +24,8 @@
   position: relative;
   float: left;
   min-height: 1px;
-  padding:0 ($gutter / 2);
+  padding: 0 ($gutter / 2);
+  width: 100%;
 }
 
 @mixin make-col($size, $columns: $grid-columns, $gutter: $grid-gutter-width) {

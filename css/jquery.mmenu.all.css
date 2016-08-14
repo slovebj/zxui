@@ -366,7 +366,8 @@ em.mm-counter {
   right: 40px;
   top: 50%; }
   em.mm-counter + a.mm-next {
-    width: 90px; }
+    width: 100%;
+    }
     em.mm-counter + a.mm-next + a,
     em.mm-counter + a.mm-next + span {
       margin-right: 90px; }
