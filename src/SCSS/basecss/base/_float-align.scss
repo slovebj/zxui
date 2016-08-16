@@ -47,3 +47,6 @@
 .text-truncate       { @include text-truncate; }
 .text-indent,.text-indent p,.text-indent div {
   text-indent: 2em;}
+.text-l { text-align: left !important; }
+.text-r { text-align: right !important; }
+.text-c { text-align: center !important; }

@@ -23,72 +23,15 @@
  * Generate a set of tests to show the responsive utilities in action.
  */
 
-/* Responsive (scrollable) doc tables */
-.table-responsive .highlight pre {
-  white-space: normal;
-}
-
-/* Utility classes table  */
-.bs-table th small,
-.responsive-utilities th small {
-  display: block;
-  font-weight: normal;
-  color: #999;
-  font-size:12px;
-}
-.responsive-utilities tbody th {
-  font-weight: normal;
-}
-.responsive-utilities td {
-  text-align: center;
-}
-.responsive-utilities td.is-visible {
+td.is-visible {
   color: rgba(61, 106, 124, 1);
   background-color: rgba(61, 106, 124, 0.07) !important;
 }
-.responsive-utilities td.is-hidden {
+td.is-hidden {
   color: #ccc;
   background-color: #f9f9f9 !important;
 }
 
-/* Responsive tests */
-.responsive-utilities-test {
-  margin-top: 5px;
-}
-.responsive-utilities-test .xs6 {
-  margin-bottom: 10px;
-}
-.responsive-utilities-test span {
-  padding: 15px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.1;
-  text-align: center;
-  border-radius: 4px;
-}
-.visible-on .xs6 .hidden-xs,
-.visible-on .xs6 .hidden-sm,
-.visible-on .xs6 .hidden-md,
-.visible-on .xs6 .hidden-lg,
-.hidden-on .xs6 .visible-xs,
-.hidden-on .xs6 .visible-sm,
-.hidden-on .xs6 .visible-md,
-.hidden-on .xs6 .visible-lg {
-  color: #999;
-  border: 1px solid #ddd;
-}
-.visible-on .xs6 .visible-xs,
-.visible-on .xs6 .visible-sm,
-.visible-on .xs6 .visible-md,
-.visible-on .xs6 .visible-lg,
-.hidden-on .xs6 .hidden-xs,
-.hidden-on .xs6 .hidden-sm,
-.hidden-on .xs6 .hidden-md,
-.hidden-on .xs6 .hidden-lg {
-  color: #468847;
-  background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
-}
 </style>
 
 <div>
@@ -163,14 +106,6 @@
 					<tr>
 						<th># 列数</th>
 						<td colspan="5">12(如：.sm6)</td>
-					</tr>
-					<tr>
-						<th>最大列宽</th>
-						<td class="text-muted">Auto</td>
-						<td>60px</td>
-						<td>78px</td>
-						<td>95px</td>
-						<td>95px</td>
 					</tr>
 					<tr>
 						<th>列间间隙宽度</th>
@@ -359,12 +294,13 @@
 	
 	<h5>可用的类</h5>
 	
-	<p class="hidden-md-up hidden-md-down">可以使用单个或多个类的组合</p>
-	<ul>
+	<p>可以使用单个或多个类的组合</p>
+	<ul class="disc">
   <li>当视口宽度等于或宽于给定的分隔点时，<code>.hidden-*-up</code>类将隐藏该元素。比如说，<code>.hidden-md-up</code>将在中屏、大屏、特大屏视口中隐藏元素。</li>
   <li>当视口宽度等于或窄于给定的分隔点时，<code>.hidden-*-down</code>将隐藏该元素，比如说，<code>.hidden-md-down</code>将在特小屏、小屏、中屏视口中隐藏元素。</li>
   <li>使元素只在一个给定的屏幕尺寸区间内显示：你可以组合使用<code>.hidden-*-up</code>类以及<code>.hidden-*-down</code>类。比如说，<code>.hidden-sm-down.hidden-xl-up</code>能使元素只在中屏和大屏视口中显示。使用多个<code>.hidden-*-up</code>类或多个<code>.hidden-*-down</code>类是多余而且无意义的。</li>
   <li>当一个元素的可见性不能被表达为一个单独连续的视口尺寸范围时，这些类并不会支持这些比较少见的情况。在这种情况下，你必须改用自定义类。</li>
+	<li><code>.left-*-up, .right-*-up, .float-none-*-up</code>控制不同视口宽度时的浮动情况;另有<code>.left, .right, .center</code>控制所有视口宽度时的浮动和居中。<code>.text-l-*-up, .text-r-*-up, .text-c-*-up</code>控制不同视口宽度时的文本水平对齐情况；另有<code>.text-l, .text-r, .text-c</code>控制所有视口宽度时的文本对齐。</li>
 </ul>
 	
 	<div class="table-responsive">
@@ -503,35 +439,6 @@
 <!-- end widget grid -->
 
 <script type="text/javascript">
-	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
-	 *
-	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
-	 *
-	 * // activate tooltips
-	 * $("[rel=tooltip]").tooltip();
-	 *
-	 * // activate popovers
-	 * $("[rel=popover]").popover();
-	 *
-	 * // activate popovers with hover states
-	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
-	 *
-	 * // activate inline charts
-	 * runAllCharts();
-	 *
-	 * // setup widgets
-	 * setup_widgets_desktop();
-	 *
-	 * // run form elements
-	 * runAllForms();
-	 *
-	 ********************************
-	 *
-	 * pageSetUp() is needed whenever you load a page.
-	 * It initializes and checks for all basic elements of the page
-	 * and makes rendering easier.
-	 *
-	 */
 
 	pageSetUp();
 
