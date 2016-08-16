@@ -14,21 +14,21 @@
 //
 // Media queries are placed on the inside to be mixin-friendly.
 
-.visible-print-block {
+.print-block {
   display: none !important;
 
   @media print {
     display: block !important;
   }
 }
-.visible-print-inline {
+.print-inline {
   display: none !important;
 
   @media print {
     display: inline !important;
   }
 }
-.visible-print-inline-block {
+.print-inline-block {
   display: none !important;
 
   @media print {

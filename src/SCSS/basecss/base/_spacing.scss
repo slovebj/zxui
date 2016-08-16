@@ -17,11 +17,11 @@
     .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
 
     // Axes
-    .#{$abbrev}-x-#{$size} {
+    .#{$abbrev}-lr-#{$size} {
       #{$prop}-right:  $length-x !important;
       #{$prop}-left:   $length-x !important;
     }
-    .#{$abbrev}-y-#{$size} {
+    .#{$abbrev}-tb-#{$size} {
       #{$prop}-top:    $length-y !important;
       #{$prop}-bottom: $length-y !important;
     }
@@ -30,7 +30,7 @@
 
 // Positioning
 
-.pos-f-t {
+.fixed-top {
   position: fixed;
   top: 0;
   right: 0;

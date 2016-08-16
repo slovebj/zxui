@@ -1,0 +1,18 @@
+@mixin pull-left {
+  float: left !important;
+}
+@mixin pull-right {
+  float: right !important;
+}
+
+@mixin float-bp-up($breakpoint) {
+    .left-#{$breakpoint}-up {
+      @include pull-left();
+    }
+    .right-#{$breakpoint}-up {
+      @include pull-right();
+    }
+    .float-none-#{$breakpoint}-up {
+      float: none !important;
+    }
+  }

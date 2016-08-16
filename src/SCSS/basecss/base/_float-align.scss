@@ -9,19 +9,6 @@
         margin-right: auto;
         display: block;
     }
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    .left-#{$breakpoint} {
-      @include pull-left();
-    }
-    .right-#{$breakpoint} {
-      @include pull-right();
-    }
-    .float-none-#{$breakpoint} {
-      float: none !important;
-    }
-  }
-}
 
 .v-top {
       vertical-align: top;
@@ -60,13 +47,3 @@
 .text-truncate       { @include text-truncate; }
 .text-indent,.text-indent p,.text-indent div {
   text-indent: 2em;}
-
-// Responsive alignment
-
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    .text-left-#{$breakpoint}   { text-align: left !important; }
-    .text-right-#{$breakpoint}  { text-align: right !important; }
-    .text-center-#{$breakpoint} { text-align: center !important; }
-  }
-}

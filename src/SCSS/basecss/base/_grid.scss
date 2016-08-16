@@ -32,19 +32,16 @@
 // Responsive visibility utilities
 
 @each $bp in map-keys($grid-breakpoints) {
-  .hidden-#{$bp}-up {
     @include media-breakpoint-up($bp) {
-      display: none !important;
+      @include hidden-bp-up($bp);
+      @include float-bp-up($bp);
+      @include text-align-up($bp);
     }
   }
-  .hidden-#{$bp}-down {
+
+@each $bp in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($bp) {
-      display: none !important;
+      @include hidden-bp-down($bp);
     }
   }
-  .hidden-#{$bp} {
-    @include media-breakpoint-only($bp) {
-      display: none !important;
-    }
-  }
-}
+
