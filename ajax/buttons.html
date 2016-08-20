@@ -1,9 +1,8 @@
 <div class="row">
-	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
-		<h1 class="page-title txt-color-blueDark"><i class="fa fa-desktop fa-fw "></i> UI Elements <span>>
-			Buttons </span></h1>
+	<div class="col xs12 sm7 md7 lg5">
+		<h1 class="page-title txt-color-blueDark"><i class="fa fa-desktop fa-fw "></i> UI 元素->Buttons</h1>
 	</div>
-	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+	<div class="col xs12 sm5 md5 lg7">
 		<ul id="sparks" class="">
 			<li class="sparks-info">
 				<h5> My Income <span class="txt-color-blue">$47,171</span></h5>
@@ -36,7 +35,7 @@
 	<div class="row">
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12">
+		<article class="col sm12">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget well" id="wid-id-0a" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
@@ -55,7 +54,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-hand-o-up"></i> </span>
-					<h2>Buttons at a glance </h2>
+					<h2>Buttons总览</h2>
 
 				</header>
 
@@ -71,188 +70,272 @@
 
 					<!-- widget content -->
 					<div class="widget-body">
-						<h1>Buttons at a glance...</h1>
+						<h1>Buttons总揽</h1>
 						<p>
-							See how aspects of the Bootstrap button system look and feel like at a glance.
+							通过下表对Buttons有个大致认识。
 						</p>
 						<div class="table-responsive">
 							<table class="table table-bordered">
 								<thead>
 									<tr>
-										<th>Button</th>
-										<th>btn-lg Button</th>
-										<th>Small Button</th>
-										<th>Small Mini</th>
-										<th>Disabled Button</th>
-										<th>Button with Icon</th>
-										<th>Split Button</th>
+										<th>.btn Button</th>
+										<th>.btn-lg Button</th>
+										<th>.btn-sm Button</th>
+										<th>.btn-xs Button</th>
+										<th>.disabled Button</th>
+										<th>.btn>i Button</th>
+										<th>btn-group</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td><a class="btn btn-default" href="javascript:void(0);">Default</a></td>
-										<td><a class="btn btn-default btn-lg" href="javascript:void(0);">Default</a></td>
-										<td><a class="btn btn-default btn-sm" href="javascript:void(0);">Default</a></td>
-										<td><a class="btn btn-default btn-xs" href="javascript:void(0);">Default</a></td>
-										<td><a class="btn btn-default disabled" href="javascript:void(0);">Default</a></td>
-										<td><a class="btn btn-default" href="javascript:void(0);"><i class="fa fa-cog"></i> Default</a></td>
+										<td><button class="btn">Default</button></td>
+										<td><button class="btn btn-lg">Default</button></td>
+										<td><button class="btn btn-sm">Default</button></td>
+										<td><button class="btn btn-xs">Default</button></td>
+										<td><button class="btn disabled">Default</button></td>
+										<td><button class="btn"><i class="fa fa-cog"></i>Default</button></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-default" href="javascript:void(0);">Default</a>
-											<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn">Default</a>
+											<a class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-primary" href="javascript:void(0);">Primary</a></td>
-										<td><a class="btn btn-primary btn-lg" href="javascript:void(0);">Primary</a></td>
-										<td><a class="btn btn-primary btn-sm" href="javascript:void(0);">Primary</a></td>
-										<td><a class="btn btn-primary btn-xs" href="javascript:void(0);">Primary</a></td>
-										<td><a class="btn btn-primary disabled" href="javascript:void(0);">Primary</a></td>
-										<td><a class="btn btn-primary" href="javascript:void(0);"><i class="fa fa-shopping-cart"></i> Primary</a></td>
+										<td><a class="btn btn-z">.btn-z浮动</a></td>
+										<td><a class="btn btn-z btn-lg">.btn-z浮动</a></td>
+										<td><a class="btn btn-z btn-sm">.btn-z浮动</a></td>
+										<td><a class="btn btn-z btn-xs">.btn-z浮动</a></td>
+										<td><a class="btn btn-z disabled">.btn-z浮动</a></td>
+										<td><a class="btn btn-z"><i class="fa fa-shopping-cart"></i> .btn-z浮动</a></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-primary" href="javascript:void(0);">Primary</a>
-											<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn">.btn-z浮动</a>
+											<a class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-info" href="javascript:void(0);">Info</a></td>
-										<td><a class="btn btn-info btn-lg" href="javascript:void(0);">Info</a></td>
-										<td><a class="btn btn-info btn-sm" href="javascript:void(0);">Info</a></td>
-										<td><a class="btn btn-info btn-xs" href="javascript:void(0);">Info</a></td>
-										<td><a class="btn btn-info disabled" href="javascript:void(0);">Info</a></td>
-										<td><a class="btn btn-info" href="javascript:void(0);"><i class="fa fa-exclamation-sign"></i> Info</a></td>
+										<td><a class="btn btn-c">.btn-c</a></td>
+										<td><a class="btn btn-c btn-lg">.btn-c</a></td>
+										<td><a class="btn btn-c btn-sm">.btn-c</a></td>
+										<td><a class="btn btn-c btn-xs"><i class="fa fa-cog"></i></a></td>
+										<td><a class="btn btn-c disabled">.btn-c</a></td>
+										<td><a class="btn btn-c"><i class="fa fa-exclamation-sign"></i> .btn-c</a></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-info" href="javascript:void(0);">Info</a>
-											<a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn btn-c">.btn-c</a>
+											<a class="btn btn-c dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-success" href="javascript:void(0);">Success</a></td>
-										<td><a class="btn btn-success btn-lg" href="javascript:void(0);">Success</a></td>
-										<td><a class="btn btn-success btn-sm" href="javascript:void(0);">Success</a></td>
-										<td><a class="btn btn-success btn-xs" href="javascript:void(0);">Success</a></td>
-										<td><a class="btn btn-success disabled" href="javascript:void(0);">Success</a></td>
-										<td><a class="btn btn-success" href="javascript:void(0);"><i class="fa fa-check"></i> Success</a></td>
+										<td><a class="btn btn-o"><i>.btn-o</i></a></td>
+										<td><a class="btn btn-o btn-lg"><i>.btn-o</i></a></td>
+										<td><a class="btn btn-o btn-sm"><i>.btn-o</i></a></td>
+										<td><a class="btn btn-o btn-xs"><i>.btn-o</i></a></td>
+										<td><a class="btn btn-o disabled"><i>.btn-o</i></a></td>
+										<td><a class="btn btn-o"><i class="fa fa-check"><i>.btn-o</i></a></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-success" href="javascript:void(0);">Success</a>
-											<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn btn-o"><i>.btn-o</i></a>
+											<a class="btn btn-o dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-warning" href="javascript:void(0);">Warning</a></td>
-										<td><a class="btn btn-warning btn-lg" href="javascript:void(0);">Warning</a></td>
-										<td><a class="btn btn-warning btn-sm" href="javascript:void(0);">Warning</a></td>
-										<td><a class="btn btn-warning btn-xs" href="javascript:void(0);">Warning</a></td>
-										<td><a class="btn btn-warning disabled" href="javascript:void(0);">Warning</a></td>
-										<td><a class="btn btn-warning" href="javascript:void(0);"><i class="fa fa-warning-sign"></i> Warning</a></td>
+										<td><a class="btn btn-p">.btn-p</a></td>
+										<td><a class="btn btn-p btn-lg">.btn-p</a></td>
+										<td><a class="btn btn-p btn-sm">.btn-p</a></td>
+										<td><a class="btn btn-p btn-xs">.btn-p</a></td>
+										<td><a class="btn btn-p disabled">.btn-p</a></td>
+										<td><a class="btn btn-p"><i class="fa fa-warning-sign"></i> .btn-p</a></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-warning" href="javascript:void(0);">Warning</a>
-											<a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn btn-p">.btn-p</a>
+											<a class="btn btn-p dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-danger" href="javascript:void(0);">Danger</a></td>
-										<td><a class="btn btn-danger btn-lg" href="javascript:void(0);">Danger</a></td>
-										<td><a class="btn btn-danger btn-sm" href="javascript:void(0);">Danger</a></td>
-										<td><a class="btn btn-danger btn-xs" href="javascript:void(0);">Danger</a></td>
-										<td><a class="btn btn-danger disabled" href="javascript:void(0);">Danger</a></td>
-										<td><a class="btn btn-danger" href="javascript:void(0);"><i class="fa fa-remove"></i> Danger</a></td>
+										<td><a class="btn btn-cz">.btn-cz</a></td>
+										<td><a class="btn btn-cz btn-lg">.btn-cz</a></td>
+										<td><a class="btn btn-cz btn-sm">.btn-cz</a></td>
+										<td><a class="btn btn-cz btn-xs">.btn-cz</a></td>
+										<td><a class="btn btn-cz disabled">.btn-cz</a></td>
+										<td><a class="btn btn-cz"><i class="fa fa-warning-sign"></i> .btn-cz</a></td>
 										<td>
 										<div class="btn-group">
-											<a class="btn btn-danger" href="javascript:void(0);">Danger</a>
-											<a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="caret"></span></a>
+											<a class="btn btn-cz">.btn-cz</a>
+											<a class="btn btn-cz dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">Action</a>
+													<a>Action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Another action</a>
+													<a>Another action</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">Something else here</a>
+													<a>Something else here</a>
 												</li>
 												<li class="divider"></li>
 												<li>
-													<a href="javascript:void(0);">Separated link</a>
+													<a>Separated link</a>
+												</li>
+											</ul>
+										</div><!-- /btn-group --></td>
+									</tr>
+									<tr>
+										<td><a class="btn btn-co"><i>.btn-co</i></a></td>
+										<td><a class="btn btn-co btn-lg"><i>.btn-co</i></a></td>
+										<td><a class="btn btn-co btn-sm"><i>.btn-co</i></a></td>
+										<td><a class="btn btn-co btn-xs"><i class="fa fa-cog"></i></a></td>
+										<td><a class="btn btn-co disabled"><i>.btn-co</i></a></td>
+										<td><a class="btn btn-co"><i class="fa fa-warning-sign"></i> <i>.btn-co</i></a></td>
+										<td>
+										<div class="btn-group">
+											<a class="btn btn-co"><i>.btn-co</i></a>
+											<a class="btn btn-co dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a>Action</a>
+												</li>
+												<li>
+													<a>Another action</a>
+												</li>
+												<li>
+													<a>Something else here</a>
+												</li>
+												<li class="divider"></li>
+												<li>
+													<a>Separated link</a>
+												</li>
+											</ul>
+										</div><!-- /btn-group --></td>
+									</tr>
+									<tr>
+										<td><a class="btn btn-op"><i>.btn-op</i></a></td>
+										<td><a class="btn btn-op btn-lg"><i>.btn-op</i></a></td>
+										<td><a class="btn btn-op btn-sm"><i>.btn-op</i></a></td>
+										<td><a class="btn btn-op btn-xs"><i>.btn-op</i></a></td>
+										<td><a class="btn btn-op disabled"><i>.btn-op</i></a></td>
+										<td><a class="btn btn-op"><i class="fa fa-warning-sign"></i> <i>.btn-op</i></a></td>
+										<td>
+										<div class="btn-group">
+											<a class="btn btn-op"><i>.btn-op</i></a>
+											<a class="btn btn-op dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a>Action</a>
+												</li>
+												<li>
+													<a>Another action</a>
+												</li>
+												<li>
+													<a>Something else here</a>
+												</li>
+												<li class="divider"></li>
+												<li>
+													<a>Separated link</a>
+												</li>
+											</ul>
+										</div><!-- /btn-group --></td>
+									</tr>
+									<tr>
+										<td><a class="btn btn-pz">.btn-pz</a></td>
+										<td><a class="btn btn-pz btn-lg">.btn-pz</a></td>
+										<td><a class="btn btn-pz btn-sm">.btn-pz</a></td>
+										<td><a class="btn btn-pz btn-xs">.btn-pz</a></td>
+										<td><a class="btn btn-pz disabled">.btn-pz</a></td>
+										<td><a class="btn btn-pz"><i class="fa fa-warning-sign"></i> .btn-pz</a></td>
+										<td>
+										<div class="btn-group">
+											<a class="btn btn-pz">.btn-pz</a>
+											<a class="btn btn-pz dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a>Action</a>
+												</li>
+												<li>
+													<a>Another action</a>
+												</li>
+												<li>
+													<a>Something else here</a>
+												</li>
+												<li class="divider"></li>
+												<li>
+													<a>Separated link</a>
 												</li>
 											</ul>
 										</div><!-- /btn-group --></td>
@@ -280,7 +363,7 @@
 	<div class="row">
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12 col-md-12 col-lg-6">
+		<article class="col sm12 md12 lg6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
@@ -325,17 +408,17 @@
 								.btn .btn-*
 							</code>
 							<code>
-								.btn-default, .btn-primary, .btn-success... etc
+								, .btn-primary, .btn-success... etc
 							</code>
 						</p>
-						<a href="javascript:void(0);" class="btn btn-default">Default</a>
-						<a href="javascript:void(0);" class="btn btn-primary">Primary</a>
-						<a href="javascript:void(0);" class="btn btn-success">Success</a>
-						<a href="javascript:void(0);" class="btn btn-info">Info</a>
-						<a href="javascript:void(0);" class="btn btn-warning">Warning</a>
-						<a href="javascript:void(0);" class="btn btn-danger">Danger</a>
-						<a href="javascript:void(0);" class="btn btn-default disabled">Disabled</a>
-						<a href="javascript:void(0);" class="btn btn-link">Link</a>
+						<a class="btn">Default</a>
+						<a class="btn">Primary</a>
+						<a class="btn btn-success">Success</a>
+						<a class="btn btn-info">Info</a>
+						<a class="btn btn-warning">Warning</a>
+						<a class="btn btn-danger">Danger</a>
+						<a class="btn disabled">Disabled</a>
+						<a class="btn btn-link">Link</a>
 
 					</div>
 					<!-- end widget content -->
@@ -385,16 +468,16 @@
 								.btn .btn-lg
 							</code>
 						</p>
-						<a href="javascript:void(0);" class="btn btn-primary btn-lg">Large button</a>&nbsp;<a href="javascript:void(0);" class="btn btn-default btn-lg">Large button</a>
+						<a class="btn btn-lg">Large button</a>&nbsp;<a class="btn btn-lg">Large button</a>
 						<hr class="simple">
 
 						<p>
 							The Default button
 							<code>
-								.btn .btn-default
+								.btn 
 							</code>
 						</p>
-						<a href="javascript:void(0);" class="btn btn-primary">Default button</a>&nbsp;<a href="javascript:void(0);" class="btn btn-default">Default button</a>
+						<a class="btn">Default button</a>&nbsp;<a class="btn">Default button</a>
 						<hr class="simple">
 
 						<p>
@@ -403,7 +486,7 @@
 								.btn .btn-sm
 							</code>
 						</p>
-						<a href="javascript:void(0);" class="btn btn-primary btn-sm">Small button</a>&nbsp;<a href="javascript:void(0);" class="btn btn-default btn-sm">Small button</a>
+						<a class="btn btn-sm">Small button</a>&nbsp;<a class="btn btn-sm">Small button</a>
 						<hr class="simple">
 
 						<p>
@@ -412,7 +495,7 @@
 								.btn .btn-xs
 							</code>
 						</p>
-						<a href="javascript:void(0);" class="btn btn-primary btn-xs">Mini button</a>&nbsp;<a href="javascript:void(0);" class="btn btn-default btn-xs">Mini button</a>
+						<a class="btn btn-xs">Mini button</a>&nbsp;<a class="btn btn-xs">Mini button</a>
 
 					</div>
 					<!-- end widget content -->
@@ -465,10 +548,10 @@
 						</p>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></a>
+								<a class="btn btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></a>
+								<a class="btn btn-circle btn-xl"><i class="glyphicon glyphicon-ok"></i></a>
 							</li>
 						</ul>
 
@@ -480,10 +563,10 @@
 						</p>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-circle btn-lg"><i class="glyphicon glyphicon-list"></i></a>
+								<a class="btn btn-circle btn-lg"><i class="glyphicon glyphicon-list"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></a>
+								<a class="btn btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></a>
 							</li>
 						</ul>
 
@@ -495,10 +578,10 @@
 						</p>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="glyphicon glyphicon-list"></i></a>
+								<a class="btn btn-circle"><i class="glyphicon glyphicon-list"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-ok"></i></a>
+								<a class="btn btn-circle"><i class="glyphicon glyphicon-ok"></i></a>
 							</li>
 						</ul>
 
@@ -553,48 +636,48 @@
 						</p>
 
 						<div class="btn-group">
-							<button class="btn btn-primary">
+							<button class="btn">
 								Drop Down
 							</button>
-							<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
 						<div class="btn-group dropup">
-							<button class="btn btn-default">
+							<button class="btn">
 								Drop Up
 							</button>
-							<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
@@ -609,42 +692,42 @@
 						</p>
 
 						<div class="btn-group">
-							<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
 						<div class="btn-group">
-							<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
@@ -656,42 +739,42 @@
 							</code>
 						</p>
 						<div class="btn-group">
-							<button class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+							<button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
 						<div class="btn-group">
-							<button class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+							<button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
@@ -704,42 +787,42 @@
 							</code>
 						</p>
 						<div class="btn-group">
-							<button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
+							<button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
 						<div class="btn-group">
-							<button class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+							<button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
 								Action <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="javascript:void(0);">Action</a>
+									<a>Action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Another action</a>
+									<a>Another action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Something else here</a>
+									<a>Something else here</a>
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="javascript:void(0);">Separated link</a>
+									<a>Separated link</a>
 								</li>
 							</ul>
 						</div>
@@ -753,37 +836,37 @@
 							</code>
 						</p>
 						<div class="dropdown">
-							<a id="dLabel" role="button" data-toggle="dropdown" class="btn btn-primary" data-target="#" href="javascript:void(0);"> Multi Level <span class="caret"></span> </a>
+							<a id="dLabel" role="button" data-toggle="dropdown" class="btn" data-target="#"> Multi Level <span class="caret"></span> </a>
 							<ul class="dropdown-menu multi-level" role="menu">
 								<li>
-									<a href="javascript:void(0);">Some action</a>
+									<a>Some action</a>
 								</li>
 								<li>
-									<a href="javascript:void(0);">Some other action</a>
+									<a>Some other action</a>
 								</li>
 								<li class="divider"></li>
 								<li class="dropdown-submenu">
-									<a tabindex="-1" href="javascript:void(0);">Hover me for more options</a>
+									<a tabindex="-1">Hover me for more options</a>
 									<ul class="dropdown-menu">
 										<li>
-											<a tabindex="-1" href="javascript:void(0);">Second level</a>
+											<a tabindex="-1">Second level</a>
 										</li>
 										<li class="dropdown-submenu">
-											<a href="javascript:void(0);">Even More..</a>
+											<a>Even More..</a>
 											<ul class="dropdown-menu">
 												<li>
-													<a href="javascript:void(0);">3rd level</a>
+													<a>3rd level</a>
 												</li>
 												<li>
-													<a href="javascript:void(0);">3rd level</a>
+													<a>3rd level</a>
 												</li>
 											</ul>
 										</li>
 										<li>
-											<a href="javascript:void(0);">Second level</a>
+											<a>Second level</a>
 										</li>
 										<li>
-											<a href="javascript:void(0);">Second level</a>
+											<a>Second level</a>
 										</li>
 									</ul>
 								</li>
@@ -846,7 +929,7 @@
 						</p>
 
 						<div class="row">
-							<div class="col-md-12">
+							<div class="md12">
 								<table class="table table-bordered">
 									<thead>
 										<tr>
@@ -859,60 +942,60 @@
 										<tr>
 											<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Left
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Middle
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Right
 												</button>
 											</div></td>
 											<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													<i class="fa fa-align-left"></i>
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													<i class="fa fa-align-center"></i>
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													<i class="fa fa-align-right"></i>
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													<i class="fa fa-align-justify"></i>
 												</button>
 											</div></td>
 											<td>
 											<div class="btn-toolbar">
 												<div class="btn-group">
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														1
 													</button>
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														2
 													</button>
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														3
 													</button>
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														4
 													</button>
 												</div>
 												<div class="btn-group">
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														5
 													</button>
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														6
 													</button>
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														7
 													</button>
 												</div>
 												<div class="btn-group">
-													<button type="button" class="btn btn-default">
+													<button type="button" class="btn">
 														8
 													</button>
 												</div>
@@ -933,7 +1016,7 @@
 						</p>
 
 						<div class="row">
-							<div class="col-md-12">
+							<div class="md12">
 								<table class="table table-bordered">
 									<thead>
 										<tr>
@@ -947,60 +1030,60 @@
 										<tr>
 											<td>
 											<div class="btn-group-vertical">
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Top
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Middle
 												</button>
-												<button type="button" class="btn btn-default">
+												<button type="button" class="btn">
 													Bottom
 												</button>
 											</div></td>
 											<td>
 											<div class="btn-group-vertical">
-												<button type="button" class="btn btn-primary">
+												<button type="button" class="btn">
 													Button 1
 												</button>
-												<button type="button" class="btn btn-primary">
+												<button type="button" class="btn">
 													Button 2
 												</button>
-												<button type="button" class="btn btn-primary">
+												<button type="button" class="btn">
 													Button 3
 												</button>
-												<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+												<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
 													Dropdown
 													<i class="fa fa-caret-down"></i>
 												</button>
 												<ul class="dropdown-menu">
 													<li>
-														<a href="javascript:void(0);">Dropdown link</a>
+														<a>Dropdown link</a>
 													</li>
 													<li>
-														<a href="javascript:void(0);">Dropdown link</a>
+														<a>Dropdown link</a>
 													</li>
 												</ul>
 											</div></td>
 											<td>
 											<div class="btn btn-group-vertical">
-												<a class="btn btn-default" href="javascript:void(0);"><i class="fa fa-align-left"></i></a>
-												<a class="btn btn-default" href="javascript:void(0);"><i class="fa fa-align-center"></i></a>
-												<a class="btn btn-default" href="javascript:void(0);"><i class="fa fa-align-right"></i></a>
-												<a class="btn btn-default" href="javascript:void(0);"><i class="fa fa-align-justify"></i></a>
+												<a class="btn"><i class="fa fa-align-left"></i></a>
+												<a class="btn"><i class="fa fa-align-center"></i></a>
+												<a class="btn"><i class="fa fa-align-right"></i></a>
+												<a class="btn"><i class="fa fa-align-justify"></i></a>
 											</div></td>
 											<td>
 											<div class="btn-toolbar">
 												<div class="btn-group-vertical">
-													<button type="button" class="btn btn-primary">
+													<button type="button" class="btn">
 														Page 1
 													</button>
-													<button type="button" class="btn btn-primary">
+													<button type="button" class="btn">
 														Page 2
 													</button>
-													<button type="button" class="btn btn-primary">
+													<button type="button" class="btn">
 														Page 3
 													</button>
-													<button type="button" class="btn btn-primary">
+													<button type="button" class="btn">
 														Page 4
 													</button>
 												</div>
@@ -1025,7 +1108,7 @@
 		<!-- WIDGET END -->
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12 col-md-12 col-lg-6">
+		<article class="sm12 md12 lg6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
@@ -1072,52 +1155,52 @@
 
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-blueLight txt-color-white">.bg-color-blueLight</a>
+								<a class="btn bg-color-blueLight txt-color-white">.bg-color-blueLight</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-blue txt-color-white">.bg-color-blue</a>
+								<a class="btn bg-color-blue txt-color-white">.bg-color-blue</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-teal txt-color-white">.bg-color-teal</a>
+								<a class="btn bg-color-teal txt-color-white">.bg-color-teal</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-blueDark txt-color-white">.bg-color-blueDark</a>
+								<a class="btn bg-color-blueDark txt-color-white">.bg-color-blueDark</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-green txt-color-white">.bg-color-green</a>
+								<a class="btn bg-color-green txt-color-white">.bg-color-green</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-greenDark txt-color-white">.bg-color-greenDark</a>
+								<a class="btn bg-color-greenDark txt-color-white">.bg-color-greenDark</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-greenLight txt-color-white">.bg-color-greenLight</a>
+								<a class="btn bg-color-greenLight txt-color-white">.bg-color-greenLight</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-purple txt-color-white">.bg-color-purple</a>
+								<a class="btn bg-color-purple txt-color-white">.bg-color-purple</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-magenta txt-color-white">.bg-color-magenta</a>
+								<a class="btn bg-color-magenta txt-color-white">.bg-color-magenta</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-pink txt-color-white">.bg-color-pink</a>
+								<a class="btn bg-color-pink txt-color-white">.bg-color-pink</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-pinkDark txt-color-white">.bg-color-pinkDark</a>
+								<a class="btn bg-color-pinkDark txt-color-white">.bg-color-pinkDark</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-yellow txt-color-white">.bg-color-yellow</a>
+								<a class="btn bg-color-yellow txt-color-white">.bg-color-yellow</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-orange txt-color-white">.bg-color-orange</a>
+								<a class="btn bg-color-orange txt-color-white">.bg-color-orange</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-red txt-color-white">.bg-color-red</a>
+								<a class="btn bg-color-red txt-color-white">.bg-color-red</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-redLight txt-color-white">.bg-color-redLight</a>
+								<a class="btn bg-color-redLight txt-color-white">.bg-color-redLight</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-dark">.btn-default</a>
+								<a class="btn txt-color-dark"></a>
 							</li>
 						</ul>
 
@@ -1175,46 +1258,46 @@
 
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-blueLight"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-blueLight"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-blue"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-blue"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-teal"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-teal"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-blueDark"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-blueDark"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-green"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-green"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-greenDark"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-greenDark"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-greenLight"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-greenLight"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-purple"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-purple"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-pink"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-pink"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-pinkDark"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-pinkDark"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-yellow"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-yellow"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-orange"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-orange"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default txt-color-red"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn txt-color-red"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 
 						</ul>
@@ -1228,13 +1311,13 @@
 						</p>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-blueLight txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn bg-color-blueLight txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-blueDark txt-color-teal"><i class="fa fa-gear fa-3x"></i></a>
+								<a class="btn bg-color-blueDark txt-color-teal"><i class="fa fa-gear fa-3x"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn bg-color-red txt-color-white"><i class="fa fa-gear fa-4x fa-spin"></i></a>
+								<a class="btn bg-color-red txt-color-white"><i class="fa fa-gear fa-4x fa-spin"></i></a>
 							</li>
 						</ul>
 
@@ -1286,24 +1369,24 @@
 						</p>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary"><i class="fa fa-gear"></i> Icon Left</a>
+								<a class="btn"><i class="fa fa-gear"></i> Icon Left</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-success"><i class="fa fa-gear"></i> Both Sides <i class="fa fa-gear"></i></a>
+								<a class="btn btn-success"><i class="fa fa-gear"></i> Both Sides <i class="fa fa-gear"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-danger">Icon Right <i class="fa fa-gear"></i></a>
+								<a class="btn btn-danger">Icon Right <i class="fa fa-gear"></i></a>
 							</li>
 						</ul>
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default"><i class="fa fa-gear"></i> Icon Left</a>
+								<a class="btn"><i class="fa fa-gear"></i> Icon Left</a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default"><i class="fa fa-gear"></i> Both Sides <i class="fa fa-gear"></i></a>
+								<a class="btn"><i class="fa fa-gear"></i> Both Sides <i class="fa fa-gear"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default">Icon Right <i class="fa fa-gear"></i></a>
+								<a class="btn">Icon Right <i class="fa fa-gear"></i></a>
 							</li>
 						</ul>
 
@@ -1316,7 +1399,7 @@
 									<button class="btn bg-color-blueDark txt-color-white">
 										<i class="fa fa-gear"></i> Drop Down
 									</button>
-									<button class="btn btn-primary dropdown-toggle">
+									<button class="btn dropdown-toggle">
 										<span class="caret"></span>
 									</button>
 								</div>
@@ -1352,10 +1435,10 @@
 							<li>
 
 								<div class="btn-group">
-									<button class="btn btn-default">
+									<button class="btn">
 										<i class="fa fa-gear"></i> Drop Down
 									</button>
-									<button class="btn btn-default dropdown-toggle">
+									<button class="btn dropdown-toggle">
 										<span class="caret"></span>
 									</button>
 								</div>
@@ -1364,10 +1447,10 @@
 							<li>
 
 								<div class="btn-group">
-									<button class="btn btn-default">
+									<button class="btn">
 										<i class="fa fa-gear"></i> Drop Down <i class="fa fa-gear"></i>
 									</button>
-									<button class="btn btn-default dropdown-toggle">
+									<button class="btn dropdown-toggle">
 										<span class="caret"></span>
 									</button>
 								</div>
@@ -1376,10 +1459,10 @@
 							<li>
 
 								<div class="btn-group">
-									<button class="btn btn-default">
+									<button class="btn">
 										Drop Down <i class="fa fa-gear"></i>
 									</button>
-									<button class="btn btn-default dropdown-toggle">
+									<button class="btn dropdown-toggle">
 										<span class="caret"></span>
 									</button>
 								</div>
@@ -1392,16 +1475,16 @@
 						<ul class="demo-btns">
 
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-gear"></i></a>
+								<a class="btn btn-xs"><i class="fa fa-gear"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn btn-sm"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-lg"><i class="fa fa-gear fa-lg"></i></a>
+								<a class="btn btn-lg"><i class="fa fa-gear fa-lg"></i></a>
 							</li>
 
 						</ul>
@@ -1409,16 +1492,16 @@
 						<ul class="demo-btns">
 
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-gear"></i> <i class="fa fa-caret-down"></i></a>
+								<a class="btn btn-xs"><i class="fa fa-gear"></i> <i class="fa fa-caret-down"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-default btn-sm"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
+								<a class="btn btn-sm"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
+								<a class="btn"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-primary btn-lg"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
+								<a class="btn btn-lg"><i class="fa fa-gear fa-lg"></i> <i class="fa fa-caret-down"></i></a>
 							</li>
 
 						</ul>
@@ -1468,39 +1551,39 @@
 
 						<ul class="demo-btns">
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success </a>
+								<a class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel </a>
+								<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-warning"> <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark </a>
+								<a class="btn btn-labeled btn-warning"> <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-primary"> <span class="btn-label"><i class="glyphicon glyphicon-camera"></i></span>Camera </a>
+								<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-camera"></i></span>Camera </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-default"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Left </a>
+								<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Left </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-default"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Right </a>
+								<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Right </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-up"></i></span>Thumbs
+								<a class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-up"></i></span>Thumbs
 								Up </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-down"></i></span>Thumbs
+								<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-down"></i></span>Thumbs
 								Down </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span>Refresh </a>
+								<a class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span>Refresh </a>
 							</li>
 							<li>
-								<a href="javascript:void(0);" class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Trash </a>
+								<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Trash </a>
 							</li>
 							<li>
-								<a class="btn btn-success btn-labeled" href="javascript:void(0);"> <span class="btn-label"><i class="glyphicon glyphicon-info-sign"></i></span>Info Web </a>
+								<a class="btn btn-success btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-info-sign"></i></span>Info Web </a>
 							</li>
 
 						</ul>
@@ -1564,13 +1647,13 @@
 						</p>
 
 						<div class="well">
-							<button type="button" class="btn btn-primary btn-lg btn-block">
+							<button type="button" class="btn btn-lg btn-block">
 								Block level button
 							</button>
-							<button type="button" class="btn btn-default btn-sm btn-block">
+							<button type="button" class="btn btn-sm btn-block">
 								Block level small button
 							</button>
-							<button type="button" class="btn btn-default btn-xs btn-block">
+							<button type="button" class="btn btn-xs btn-block">
 								Block level extra small button
 							</button>
 						</div>
@@ -1587,9 +1670,9 @@
 						<div class="well">
 
 							<div class="btn-group btn-group-justified">
-								<a href="javascript:void(0);" class="btn btn-default">Left</a>
-								<a href="javascript:void(0);" class="btn btn-default">Middle</a>
-								<a href="javascript:void(0);" class="btn btn-default">Right</a>
+								<a class="btn">Left</a>
+								<a class="btn">Middle</a>
+								<a class="btn">Right</a>
 							</div>
 
 						</div>
