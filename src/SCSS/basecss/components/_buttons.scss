@@ -18,7 +18,9 @@
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
-  
+  i {
+    font-style: normal;
+  }
   &:hover {
     opacity: .8;
     color: $btn-primary-color;
@@ -113,11 +115,6 @@
   padding: 0;
   border-radius: 50%;
   transition: .3s;
-  i {
-    display: inline-block;
-    text-align: center;
-    font-style: normal;
-  }
 
   &:before {
     border-radius: 0;
@@ -138,7 +135,7 @@
   &.btn-xs {
     width: $btn-circle-mini-size;
     height: $btn-circle-mini-size;
-    line-height:  1rem;
+    line-height: $btn-circle-mini-size;
   }
 }
 

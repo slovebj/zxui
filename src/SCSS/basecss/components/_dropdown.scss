@@ -38,17 +38,15 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -1px;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
   padding: $dropdown-padding-y 0;
   margin: $dropdown-margin-top 0 0; // override default ul
-  font-size: $font-size-base;
   color: $body-color;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  list-style: none;
   background-color: $dropdown-bg;
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
@@ -64,7 +62,7 @@
 // Links, buttons, and more within the dropdown menu
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
-.dropdown-item {
+ul.dropdown-menu > li {
   display: block;
   width: 100%; // For `<button>`s
   padding: 3px $dropdown-item-padding-x;
@@ -73,7 +71,6 @@
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
-  background: none; // For `<button>`s
   border: 0; // For `<button>`s
 
   @include hover-focus {
@@ -128,12 +125,12 @@
 //
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
 // menu with the parent.
-.dropdown-menu-right {
+.dropdown-menu-r {
   right: 0;
   left: auto; // Reset the default from `.dropdown-menu`
 }
 
-.dropdown-menu-left {
+.dropdown-menu-l {
   right: auto;
   left: 0;
 }

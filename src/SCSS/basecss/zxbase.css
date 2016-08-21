@@ -4813,6 +4813,8 @@ video.resp-video {
   font-size: 1rem;
   border-radius: 2px;
   -webkit-tap-highlight-color: transparent; }
+  .btn i {
+    font-style: normal; }
   .btn:hover {
     opacity: .8;
     color: #fff;
@@ -4899,10 +4901,6 @@ video.resp-video {
   padding: 0;
   border-radius: 50%;
   transition: .3s; }
-  .btn-c i, .btn-cz i, .btn-co i {
-    display: inline-block;
-    text-align: center;
-    font-style: normal; }
   .btn-c:before, .btn-cz:before, .btn-co:before {
     border-radius: 0; }
   .btn-c.btn-lg, .btn-group-lg > .btn-c.btn, .btn-cz.btn-lg, .btn-group-lg > .btn-cz.btn, .btn-co.btn-lg, .btn-group-lg > .btn-co.btn {
@@ -4914,9 +4912,9 @@ video.resp-video {
     height: 2rem;
     line-height: 2rem; }
   .btn-c.btn-xs, .btn-cz.btn-xs, .btn-co.btn-xs {
-    width: 1.2rem;
-    height: 1.2rem;
-    line-height: 1rem; }
+    width: 1.25rem;
+    height: 1.25rem;
+    line-height: 1.25rem; }
 
 .btn-o, .btn-op, .btn-co {
   color: #26a69a;
@@ -5014,7 +5012,7 @@ video.resp-video {
     .btn-group-v > .btn:hover {
       z-index: 2; }
 
-.btn-group :not(:first-child) {
+.btn-group .btn:not(:first-child) {
   margin-left: -1px; }
 
 .btn-toolbar {
@@ -5347,17 +5345,15 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -1px;
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 100px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 1rem;
   color: #373a3c;
   text-align: left;
-  list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -5365,12 +5361,13 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
 
 .dropdown-divider {
-  height: 1px;
-  margin: 0.5rem 0;
+  height: 2px;
+  margin: 0.25rem 0;
+  padding: 0 !important;
   overflow: hidden;
   background-color: #e5e5e5; }
 
-.dropdown-item {
+ul.dropdown-menu > li {
   display: block;
   width: 100%;
   padding: 3px 20px;
@@ -5379,20 +5376,19 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
   color: #373a3c;
   text-align: inherit;
   white-space: nowrap;
-  background: none;
   border: 0; }
-  .dropdown-item:focus, .dropdown-item:hover {
+  ul.dropdown-menu > li:focus, ul.dropdown-menu > li:hover {
     color: #2b2d2f;
     text-decoration: none;
     background-color: #f5f5f5; }
-  .dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
+  ul.dropdown-menu > li.active, ul.dropdown-menu > li.active:focus, ul.dropdown-menu > li.active:hover {
     color: #fff;
     text-decoration: none;
     background-color: #0275d8;
     outline: 0; }
-  .dropdown-item.disabled, .dropdown-item.disabled:focus, .dropdown-item.disabled:hover {
+  ul.dropdown-menu > li.disabled, ul.dropdown-menu > li.disabled:focus, ul.dropdown-menu > li.disabled:hover {
     color: #818a91; }
-  .dropdown-item.disabled:focus, .dropdown-item.disabled:hover {
+  ul.dropdown-menu > li.disabled:focus, ul.dropdown-menu > li.disabled:hover {
     text-decoration: none;
     cursor: not-allowed;
     background-color: transparent;
@@ -5404,11 +5400,11 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
 .open > a {
   outline: 0; }
 
-.dropdown-menu-right {
+.dropdown-menu-r {
   right: 0;
   left: auto; }
 
-.dropdown-menu-left {
+.dropdown-menu-l {
   right: auto;
   left: 0; }
 
