@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.dropdown-toggle {
+.drop-toggle {
   // Generate the caret automatically
   &::after {
     display: inline-block;
@@ -26,7 +26,7 @@
 }
 
 .dropup {
-  .dropdown-toggle {
+  .drop-toggle {
     &::after {
       border-top: 0;
       border-bottom: $caret-width solid;
@@ -35,7 +35,7 @@
 }
 
 // The dropdown menu
-.dropdown-menu {
+.drop-menu {
   position: absolute;
   top: 100%;
   left: -1px;
@@ -55,14 +55,14 @@
 }
 
 // Dividers (basically an `<hr>`) within the dropdown
-.dropdown-divider {
+.drop-divider {
   @include nav-divider($dropdown-divider-bg);
 }
 
 // Links, buttons, and more within the dropdown menu
 //
 // `<button>`-specific styles are denoted with `// For <button>s`
-ul.dropdown-menu > li {
+.drop-menu > li,.drop-menu > a {
   display: block;
   width: 100%; // For `<button>`s
   padding: 3px $dropdown-item-padding-x;
@@ -77,6 +77,7 @@ ul.dropdown-menu > li {
     color: $dropdown-link-hover-color;
     text-decoration: none;
     background-color: $dropdown-link-hover-bg;
+    cursor: pointer；
   }
 
   // Active state
@@ -104,6 +105,9 @@ ul.dropdown-menu > li {
       background-color: transparent;
       background-image: none; // Remove CSS gradient
       @include reset-filter();
+      * {
+        pointer-events: none;
+        }
     }
   }
 }
@@ -111,7 +115,7 @@ ul.dropdown-menu > li {
 // Open state for the dropdown
 .open {
   // Show the menu
-  > .dropdown-menu {
+  > .drop-menu {
     display: block;
   }
 
@@ -123,20 +127,15 @@ ul.dropdown-menu > li {
 
 // Menu positioning
 //
-// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
+// Add extra class to `.drop-menu` to flip the alignment of the dropdown
 // menu with the parent.
-.dropdown-menu-r {
+.drop-menu-r {
   right: 0;
-  left: auto; // Reset the default from `.dropdown-menu`
-}
-
-.dropdown-menu-l {
-  right: auto;
-  left: 0;
+  left: auto; // Reset the default from `.drop-menu`
 }
 
 // Dropdown section headers
-.dropdown-header {
+.drop-header {
   display: block;
   padding: $dropdown-padding-y $dropdown-item-padding-x;
   font-size: $font-size-sm;
@@ -145,7 +144,7 @@ ul.dropdown-menu > li {
 }
 
 // Backdrop to catch body clicks on mobile, etc.
-.dropdown-backdrop {
+.drop-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -160,7 +159,7 @@ ul.dropdown-menu > li {
 // TODO: abstract this so that the navbar fixed styles are not placed here?
 
 .dropup,
-.navbar-fixed-bottom .dropdown {
+.navbar-fixed-b .dropdown {
   // Reverse the caret
   .caret {
     content: "";
@@ -169,7 +168,7 @@ ul.dropdown-menu > li {
   }
 
   // Different positioning for bottom up menu
-  .dropdown-menu {
+  .drop-menu {
     top: auto;
     bottom: 100%;
     margin-bottom: $dropdown-margin-top;

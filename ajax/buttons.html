@@ -1,3 +1,4 @@
+<!--头部-->
 <div class="row">
 	<div class="col xs12 sm7 md7 lg5">
 		<h1 class="page-title txt-color-blueDark"><i class="fa fa-desktop fa-fw "></i> UI 元素->Buttons</h1>
@@ -25,7 +26,7 @@
 		</ul>
 	</div>
 </div>
-
+<!--Buttons总揽-->
 <div class="row">
 	<div class="col sm12">
 		<h1>Buttons总揽</h1>
@@ -56,8 +57,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn">Default</a>
-							<a class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -84,8 +85,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn">.btn-z浮动</a>
-							<a class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -112,8 +113,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-c">.btn-c</a>
-							<a class="btn btn-c dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-c drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -140,8 +141,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-o"><i>.btn-o</i></a>
-							<a class="btn btn-o dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-o drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -168,8 +169,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-p">.btn-p</a>
-							<a class="btn btn-p dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-p drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -196,8 +197,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-cz">.btn-cz</a>
-							<a class="btn btn-cz dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-cz drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -224,8 +225,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-co"><i>.btn-co</i></a>
-							<a class="btn btn-co dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-co drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -252,8 +253,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-op"><i>.btn-op</i></a>
-							<a class="btn btn-op dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-op drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -280,8 +281,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-pz">.btn-pz</a>
-							<a class="btn btn-pz dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-pz drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -308,8 +309,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-link">.btn-link</a>
-							<a class="btn btn-link dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-link drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -336,8 +337,8 @@
 						<td>
 						<div class="btn-group">
 							<a class="btn btn-t">.btn-t</a>
-							<a class="btn btn-t dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-							<ul class="dropdown-menu">
+							<a class="btn btn-t drop-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+							<ul class="drop-menu">
 								<li>
 									<a>Action</a>
 								</li>
@@ -364,7 +365,10 @@
 	<div class="col sm12 md12 lg6">
 		<div>
 			<p>
-				按钮没有像其他ui框架预定义几种颜色，而是根据预定义的背景色和前景色自由组合，只要加上bg-*就可以。
+				依靠数据属性或者JavaScript，通过切换菜单项的父元素上的.open类，弹出菜单插件可以切换内容（弹出菜单）的可见性。
+				在移动设备上，打开一个弹出菜单会添加一个.drop-backdrop作为轻触区域，如果在菜单外面轻触时弹，菜单会关闭。这是支持iOS设备的要求。这意味着在移动设备上，从一个打开的弹出菜单切换到另一个弹出菜单至少需要两次轻触。
+				注意：data-toggle-"dropdown"属性是关闭弹出菜单的菜单在应用程序级别的依靠。所以最好一直使用它。
+				按钮没有像其他ui框架预定义几种颜色，而是根据预定义的背景色和前景色自由组合，只要加上bg-*，fg-*就可以。
 			</p>
 
 			<p>
@@ -373,17 +377,17 @@
 					.btn .btn-*
 				</code>
 				<code>
-					, .bg-red5, .btn-blue7 etc
+					, .bg-red5, .fg-blue7
 				</code>
 			</p>
 			<a class="btn">默认</a>
 			<a class="btn bg-blue7">默认+蓝色</a>
-			<a class="btn bg-grey5">默认+灰色</a>
+			<a class="btn bg-grey5 fg-red9">bg-grey5+fg-red9</a>
 			<a class="btn disabled">Disabled</a>
 			<a class="btn btn-link">Link</a>
 
 		</div>
-
+		<!--尺寸-->
 		<div>
 			<p>
 				大号按钮
@@ -418,7 +422,7 @@
 			<a class="btn btn-xs">超小按钮</a>&nbsp;<a class="btn btn-xs">Mini button</a>
 			
 			<p>
-				Block buttons
+				块状按钮
 				<code>
 					.btn .block
 				</code>
@@ -437,33 +441,34 @@
 			</div>
 			<hr/>
 		</div>
-
+		<!--带下拉列表的按钮组-->
 		<div>
 			<p>
 				配合下拉列表的按钮组
 				<code>
 					.btn-group
 				</code>
+				附加一个<code>.dropup</code>类，可以触发向上弹出的菜单。使用一个分隔线<code>.drop-divider</code>来对相关的菜单项分组。对弹出菜单中的某一项添加<code>.disabled</code>类，可以把它们样式化为不可用。
 			</p>
 
 			<div class="btn-group">
 				<button class="btn">
 					Drop Down
 				</button>
-				<button class="btn dropdown-toggle" data-toggle="dropdown">
+				<button class="btn drop-toggle" data-toggle="dropdown">
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
 					<li>
 						<a>Another action</a>
 					</li>
-					<li>
-						<a>Something else here</a>
+					<li class="disabled">
+						<a>disabled</a>
 					</li>
-					<li class="dropdown-divider"></li>
+					<li class="drop-divider"></li>
 					<li>
 						<a>Separated link</a>
 					</li>
@@ -473,10 +478,10 @@
 				<button class="btn">
 					Drop Up
 				</button>
-				<button class="btn dropdown-toggle" data-toggle="dropdown">
+				<button class="btn drop-toggle" data-toggle="dropdown">
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
@@ -486,27 +491,43 @@
 					<li>
 						<a>Something else here</a>
 					</li>
-					<li class="dropdown-divider"></li>
+					<li class="drop-divider"></li>
 					<li>
 						<a>Separated link</a>
 					</li>
 				</ul>
 			</div>
-
-			<hr class="simple">
 
 			<p>
 				Default button dropdowns
 				<code>
-					.dropdown-toggle
+					.drop-toggle
 				</code>
+				。默认情况下，一个弹出菜单的菜单是自动放置在父元素下面，与父元素左侧对齐。给.drop-menu添加.drop-menu-r类能使菜单向右侧对齐。在任何一个弹出菜单添加一个头部.drop-header以标记活动的分区。
 			</p>
-
 			<div class="btn-group">
-				<button class="btn dropdown-toggle" data-toggle="dropdown">
-					Action <span class="caret"></span>
+				<button class="btn drop-toggle" data-toggle="dropdown">
+					使用div > a的drop-menu <span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<div class="drop-menu">
+						<h6 class="drop-header">Dropdown header</h6>
+						<a>Action</a>
+					
+						<a>Another action</a>
+					
+						<a>Something else here</a>
+					
+					<a class="divider"></a>
+					
+						<a>Separated link</a>
+					
+				</div>
+			</div>
+			<div class="btn-group">
+				<button class="btn drop-toggle" data-toggle="dropdown">
+					.drop-menu-r <span class="caret"></span>
+				</button>
+				<ul class="drop-menu drop-menu-r">
 					<li>
 						<a>Action</a>
 					</li>
@@ -522,38 +543,17 @@
 					</li>
 				</ul>
 			</div>
-			<div class="btn-group">
-				<button class="btn dropdown-toggle" data-toggle="dropdown">
-					Action <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li>
-						<a>Action</a>
-					</li>
-					<li>
-						<a>Another action</a>
-					</li>
-					<li>
-						<a>Something else here</a>
-					</li>
-					<li class="divider"></li>
-					<li>
-						<a>Separated link</a>
-					</li>
-				</ul>
-			</div>
-			<hr class="simple">
 			<p>
 				Smaller button dropdowns
 				<code>
-					.btn-sm .dropdown-toggle
+					.btn-sm .drop-toggle
 				</code>
 			</p>
 			<div class="btn-group">
-				<button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-sm drop-toggle" data-toggle="dropdown">
 					Action <span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
@@ -570,10 +570,10 @@
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-sm dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-sm drop-toggle" data-toggle="dropdown">
 					Action <span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
@@ -589,19 +589,18 @@
 					</li>
 				</ul>
 			</div>
-			<hr class="simple">
 
 			<p>
 				Extra small button dropdowns
 				<code>
-					.btn-xs .dropdown-toggle
+					.btn-xs .drop-toggle
 				</code>
 			</p>
 			<div class="btn-group">
-				<button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-xs drop-toggle" data-toggle="dropdown">
 					Action <span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
@@ -618,10 +617,10 @@
 				</ul>
 			</div>
 			<div class="btn-group">
-				<button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">
+				<button class="btn btn-xs drop-toggle" data-toggle="dropdown">
 					Action <span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu">
+				<ul class="drop-menu">
 					<li>
 						<a>Action</a>
 					</li>
@@ -638,17 +637,17 @@
 				</ul>
 			</div>
 
-			<hr class="simple">
+			<hr />
 			<h3>Multiple Level Dropdown <small><span class="label label-warning">New!</span></small></h3>
 			<p>
 				Custom created Multiple Level dropdown that works with ease! Simply use the class
 				<code>
-					.dropdown-menu .multi-level
+					.drop-menu .multi-level
 				</code>
 			</p>
 			<div class="dropdown">
 				<a id="dLabel" role="button" data-toggle="dropdown" class="btn" data-target="#"> Multi Level <span class="caret"></span> </a>
-				<ul class="dropdown-menu multi-level" role="menu">
+				<ul class="drop-menu multi-level" role="menu">
 					<li>
 						<a>Some action</a>
 					</li>
@@ -658,13 +657,13 @@
 					<li class="divider"></li>
 					<li class="dropdown-submenu">
 						<a tabindex="-1">Hover me for more options</a>
-						<ul class="dropdown-menu">
+						<ul class="drop-menu">
 							<li>
 								<a tabindex="-1">Second level</a>
 							</li>
 							<li class="dropdown-submenu">
 								<a>Even More..</a>
-								<ul class="dropdown-menu">
+								<ul class="drop-menu">
 									<li>
 										<a>3rd level</a>
 									</li>
@@ -685,18 +684,21 @@
 			</div>
 
 		</div>
-		<div>
 
+	</div>
+
+	<div class="col sm12 md12 lg6">
+		<!--多个按钮组成的按钮组-->
+		<div>
 			<p>
-				Group a series of buttons together on a single line with the button group. Wrap a series of buttons with
+				使用按钮组，即把一系列按钮编组在一行里。可以使用按钮插件添加一个可选的JavaScript单选钮以及复选框样式行为。
+				用<code>
+					.btn-group
+				</code>把一系列带有
 				<code>
 					.btn
-				</code>
-				in
-				<code>
-					.btn-group
-				</code>
-				.
+				</code>的按钮包裹起来。
+				将一系列按钮组组合成工具栏以实现更复杂的组件。
 			</p>
 
 			<div class="row">
@@ -777,11 +779,11 @@
 				</div>
 			</div>
 
-			<hr class="simple">
+			<hr/>
 			<p>
-				Make a set of buttons appear vertically stacked rather than horizontally by putting it in
+				使一系列按钮垂直堆叠而不是横向排布。
 				<code>
-					.btn-group-vertical
+					.btn-group-v
 				</code>
 				.
 			</p>
@@ -800,7 +802,7 @@
 						<tbody>
 							<tr>
 								<td>
-								<div class="btn-group-vertical">
+								<div class="btn-group-v">
 									<button type="button" class="btn">
 										Top
 									</button>
@@ -812,7 +814,7 @@
 									</button>
 								</div></td>
 								<td>
-								<div class="btn-group-vertical">
+								<div class="btn-group-v">
 									<button type="button" class="btn">
 										Button 1
 									</button>
@@ -822,11 +824,11 @@
 									<button type="button" class="btn">
 										Button 3
 									</button>
-									<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+									<button type="button" class="btn drop-toggle" data-toggle="dropdown">
 										Dropdown
 										<i class="fa fa-caret-down"></i>
 									</button>
-									<ul class="dropdown-menu">
+									<ul class="drop-menu">
 										<li>
 											<a>Dropdown link</a>
 										</li>
@@ -836,7 +838,7 @@
 									</ul>
 								</div></td>
 								<td>
-								<div class="btn btn-group-vertical">
+								<div class="btn btn-group-v">
 									<a class="btn"><i class="fa fa-align-left"></i></a>
 									<a class="btn"><i class="fa fa-align-center"></i></a>
 									<a class="btn"><i class="fa fa-align-right"></i></a>
@@ -844,7 +846,7 @@
 								</div></td>
 								<td>
 								<div class="btn-toolbar">
-									<div class="btn-group-vertical">
+									<div class="btn-group-v">
 										<button type="button" class="btn">
 											Page 1
 										</button>
@@ -866,163 +868,10 @@
 				</div>
 			</div>
 
-			</div>
-			<!-- end widget content -->
-
 		</div>
-
-	</div>
-
-	<div class="col sm12 md12 lg6">
-		<div>
-
-			<div>
-
-				<p>
-					Custom buttons with core CSS elements. Mix and match existing classes to come up with unique style buttons.
-					<strong>For example:</strong>
-					<code>
-						.btn .bg-color-blueLight .txt-color-white
-					</code>
-
-				</p>
-
-				<ul>
-					<li>
-						<a class="btn bg-color-blueLight txt-color-white">.bg-color-blueLight</a>
-					</li>
-					<li>
-						<a class="btn bg-color-blue txt-color-white">.bg-color-blue</a>
-					</li>
-					<li>
-						<a class="btn bg-color-teal txt-color-white">.bg-color-teal</a>
-					</li>
-					<li>
-						<a class="btn bg-color-blueDark txt-color-white">.bg-color-blueDark</a>
-					</li>
-					<li>
-						<a class="btn bg-color-green txt-color-white">.bg-color-green</a>
-					</li>
-					<li>
-						<a class="btn bg-color-greenDark txt-color-white">.bg-color-greenDark</a>
-					</li>
-					<li>
-						<a class="btn bg-color-greenLight txt-color-white">.bg-color-greenLight</a>
-					</li>
-					<li>
-						<a class="btn bg-color-purple txt-color-white">.bg-color-purple</a>
-					</li>
-					<li>
-						<a class="btn bg-color-magenta txt-color-white">.bg-color-magenta</a>
-					</li>
-					<li>
-						<a class="btn bg-color-pink txt-color-white">.bg-color-pink</a>
-					</li>
-					<li>
-						<a class="btn bg-color-pinkDark txt-color-white">.bg-color-pinkDark</a>
-					</li>
-					<li>
-						<a class="btn bg-color-yellow txt-color-white">.bg-color-yellow</a>
-					</li>
-					<li>
-						<a class="btn bg-color-orange txt-color-white">.bg-color-orange</a>
-					</li>
-					<li>
-						<a class="btn bg-color-red txt-color-white">.bg-color-red</a>
-					</li>
-					<li>
-						<a class="btn bg-color-redLight txt-color-white">.bg-color-redLight</a>
-					</li>
-					<li>
-						<a class="btn txt-color-dark"></a>
-					</li>
-				</ul>
-
-			</div>
-
-
-		</div>
-
-		<div>
-
+		<div >
 			<p>
-				Custom text colors can also be applied
-				<strong>For example:</strong>
-				<code>
-					.txt-color-red
-				</code>
-
-			</p>
-
-			<ul>
-				<li>
-					<a class="btn txt-color-blueLight"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-blue"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-teal"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-blueDark"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-green"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-greenDark"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-greenLight"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-purple"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-pink"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-pinkDark"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-yellow"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-orange"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn txt-color-red"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-
-			</ul>
-
-			<hr class="simple">
-			<p>
-				Mix and match color with backgrounds
-				<code>
-					.btn .bg-color-blueLight .txt-color-magenta
-				</code>
-			</p>
-			<ul>
-				<li>
-					<a class="btn bg-color-blueLight txt-color-magenta"><i class="fa fa-gear fa-lg"></i></a>
-				</li>
-				<li>
-					<a class="btn bg-color-blueDark txt-color-teal"><i class="fa fa-gear fa-3x"></i></a>
-				</li>
-				<li>
-					<a class="btn bg-color-red txt-color-white"><i class="fa fa-gear fa-4x fa-spin"></i></a>
-				</li>
-			</ul>
-
-		</div>
-		<div>
-			<p>
-				Default buttons have a single line of text with or without one or two icons aligned left or right.
+				具有1或2个图标的默认按钮。
 			</p>
 			<ul>
 				<li>
@@ -1035,99 +884,8 @@
 					<a class="btn btn-danger">Icon Right <i class="fa fa-gear"></i></a>
 				</li>
 			</ul>
-			<ul>
-				<li>
-					<a class="btn"><i class="fa fa-gear"></i> Icon Left</a>
-				</li>
-				<li>
-					<a class="btn"><i class="fa fa-gear"></i> Both Sides <i class="fa fa-gear"></i></a>
-				</li>
-				<li>
-					<a class="btn">Icon Right <i class="fa fa-gear"></i></a>
-				</li>
-			</ul>
 
-			<hr class="simple">
-
-			<ul>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn bg-color-blueDark txt-color-white">
-							<i class="fa fa-gear"></i> Drop Down
-						</button>
-						<button class="btn dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn bg-color-blueDark txt-color-white">
-							<i class="fa fa-gear"></i> Drop Down <i class="fa fa-gear"></i>
-						</button>
-						<button class="btn btn-success dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn bg-color-blueDark txt-color-white">
-							Drop Down <i class="fa fa-gear"></i>
-						</button>
-						<button class="btn btn-danger dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-			</ul>
-
-			<ul>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn">
-							<i class="fa fa-gear"></i> Drop Down
-						</button>
-						<button class="btn dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn">
-							<i class="fa fa-gear"></i> Drop Down <i class="fa fa-gear"></i>
-						</button>
-						<button class="btn dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-				<li>
-
-					<div class="btn-group">
-						<button class="btn">
-							Drop Down <i class="fa fa-gear"></i>
-						</button>
-						<button class="btn dropdown-toggle">
-							<span class="caret"></span>
-						</button>
-					</div>
-
-				</li>
-			</ul>
-
-			<hr class="simple">
+			<hr/>
 
 			<ul>
 
@@ -1164,72 +922,21 @@
 			</ul>
 		</div>
 		<div>
-
-			<ul>
-				<li>
-					<a class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-warning"> <span class="btn-label"><i class="glyphicon glyphicon-bookmark"></i></span>Bookmark </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-camera"></i></span>Camera </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-left"></i></span>Left </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> Right </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-success"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-up"></i></span>Thumbs
-					Up </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-thumbs-down"></i></span>Thumbs
-					Down </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-info"> <span class="btn-label"><i class="glyphicon glyphicon-refresh"></i></span>Refresh </a>
-				</li>
-				<li>
-					<a class="btn btn-labeled btn-danger"> <span class="btn-label"><i class="glyphicon glyphicon-trash"></i></span>Trash </a>
-				</li>
-				<li>
-					<a class="btn btn-success btn-labeled"> <span class="btn-label"><i class="glyphicon glyphicon-info-sign"></i></span>Info Web </a>
-				</li>
-
-			</ul>
-			<pre></pre>
-					
-
-
-		</div>
-		<div>
 			
 
 			<hr class="simple">
 
 			<p>
-				Block group buttons
+				可以使用网格系统来控制按钮组的宽度。
 				<code>
-					.btn-group .btn-group-justified
+					.btn-group .col
 				</code>
 			</p>
-
-			<div class="well">
-
-				<div class="btn-group btn-group-justified">
-					<a class="btn">Left</a>
-					<a class="btn">Middle</a>
-					<a class="btn">Right</a>
-				</div>
-
+			<div class="btn-group col">
+				<a class="btn xs4">Left</a>
+				<a class="btn xs4">Middle</a>
+				<a class="btn xs4">Right</a>
 			</div>
-
 		</div>
 	</div>
 </div>
