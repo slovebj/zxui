@@ -54,9 +54,9 @@
   margin-left: 0;
   @include border-right-radius(0);
 }
-// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+// Need .drop-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child:not(:first-child),
-.btn-group > .dropdown-toggle:not(:first-child) {
+.btn-group > .drop-toggle:not(:first-child) {
   @include border-left-radius(0);
 }
 
@@ -69,7 +69,7 @@
 }
 .btn-group > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
-  > .dropdown-toggle {
+  > .drop-toggle {
     @include border-right-radius(0);
   }
 }
@@ -78,8 +78,8 @@
 }
 
 // On active and open, don't show outline
-.btn-group .dropdown-toggle:active,
-.btn-group.open .dropdown-toggle {
+.btn-group .drop-toggle:active,
+.btn-group.open .drop-toggle {
   outline: 0;
 }
 
@@ -97,18 +97,18 @@
 //
 
 // Give the line between buttons some depth
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .drop-toggle {
   padding-right: $split-btn-dropdown-toggle-padding-x;
   padding-left: $split-btn-dropdown-toggle-padding-x;
 }
-.btn-group > .btn-lg + .dropdown-toggle {
+.btn-group > .btn-lg + .drop-toggle {
   padding-right: $split-btn-lg-dropdown-toggle-padding-x;
   padding-left: $split-btn-lg-dropdown-toggle-padding-x;
 }
 
 // The clickable button for toggling the menu
 // Remove the gradient and set the same inset shadow as the :active state
-.btn-group.open .dropdown-toggle {
+.btn-group.open .drop-toggle {
   @include box-shadow($btn-active-box-shadow);
 
   // Show no shadow for `.btn-link` since it has no other button styles.
@@ -182,7 +182,7 @@
 }
 .btn-group-v > .btn-group:first-child:not(:last-child) {
   > .btn:last-child,
-  > .dropdown-toggle {
+  > .drop-toggle {
     @include border-bottom-radius(0);
   }
 }
