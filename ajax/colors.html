@@ -1,0 +1,110 @@
+<style>
+	.dynamic-color>*>*{
+		height:50px;
+	}
+</style>
+<h2 class="header">调色板</h2>
+
+<div id="colors-list" class="row dynamic-color">
+	<div v-for="color in colors1" class="col xs12 sm6 md4 lg3">
+		<div v-for="n in 14"><span class='bg-{{color}}{{n}}'>bg-{{color}}{{n}}</span></div>
+	</div>
+</div>
+<script type="text/javascript">
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 * 
+	 * var pagefunction = function() {
+	 *   ...
+	 * }
+	 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+	 * 
+	 * TO LOAD A SCRIPT:
+	 * var pagefunction = function (){ 
+	 *  loadScript("../../plugin.js", run_after_loaded);	
+	 * }
+	 * 
+	 * OR
+	 * 
+	 * loadScript("../../plugin.js", run_after_loaded);
+	 */
+
+	// PAGE RELATED SCRIPTS
+	
+	// pagefunction
+	
+	var pagefunction = function() {
+		// clears memory even if nothing is in the function
+	};
+	
+	// end pagefunction
+	
+	// run pagefunction on load
+	pagefunction();
+    var colors = new Vue({
+                    el: '#colors-list',
+                    data: {
+                        colors1: [
+							"red",
+							"pink",
+							"purple",
+							"purple-d",
+							"indigo",
+							"blue",
+							"blue-l",
+							"cyan",
+							"teal",
+							"green",
+							"green-l",
+							"lime",
+							"yellow",
+							"amber",
+							"orange",
+							"orange-d"
+                        ],
+						colors2: [
+							"brown",
+							"blue-grey",
+							"grey"
+                        ],
+						colors3: [
+							"white",
+							"black",
+							"transparent"
+                        ]
+                    }
+                })
+</script>
