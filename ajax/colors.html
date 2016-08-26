@@ -4,10 +4,16 @@
 	}
 </style>
 <h2 class="header">调色板</h2>
-
+<p>这套颜色系统使用fg-*、bg-*、bd-*可以分别应用于前景色（文字）、背景色、边框颜色。</p>
 <div id="colors-list" class="row dynamic-color">
-	<div v-for="color in colors1" class="col xs12 sm6 md4 lg3">
-		<div v-for="n in 14"><span class='bg-{{color}}{{n}}'>bg-{{color}}{{n}}</span></div>
+	<div v-for="ca in colors14" class="col xs12 sm6 md4 lg3">
+		<div v-for="n in 14" :class="'bg-'+ca+n">bg-{{ca}}{{n}}</div>
+	</div>
+	<div v-for="cb in colors10" class="col xs12 sm6 md4 lg3">
+		<div v-for="x in 10" :class="'bg-'+cb+x">bg-{{cb}}{{x}}</div>
+	</div>
+	<div v-for="cc in colors1" class="col xs12 sm6 md4 lg3">
+		<div :class="'bg-'+cc">bg-{{cc}}</div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -77,7 +83,7 @@
     var colors = new Vue({
                     el: '#colors-list',
                     data: {
-                        colors1: [
+                        colors14: [
 							"red",
 							"pink",
 							"purple",
@@ -95,12 +101,12 @@
 							"orange",
 							"orange-d"
                         ],
-						colors2: [
+						colors10: [
 							"brown",
 							"blue-grey",
 							"grey"
                         ],
-						colors3: [
+						colors1: [
 							"white",
 							"black",
 							"transparent"
