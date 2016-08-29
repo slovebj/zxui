@@ -3830,33 +3830,6 @@ output {
 .bd-grey10 {
   border-color: #212121 !important; }
 
-.fg-shadesblack {
-  color: #000000 !important; }
-
-.bg-shadesblack {
-  background-color: #000000 !important; }
-
-.bd-shadesblack {
-  border-color: #000000 !important; }
-
-.fg-shadeswhite {
-  color: #FFFFFF !important; }
-
-.bg-shadeswhite {
-  background-color: #FFFFFF !important; }
-
-.bd-shadeswhite {
-  border-color: #FFFFFF !important; }
-
-.fg-shadestransparent {
-  color: transparent !important; }
-
-.bg-shadestransparent {
-  background-color: transparent !important; }
-
-.bd-shadestransparent {
-  border-color: transparent !important; }
-
 .bg-black {
   background-color: #000000 !important; }
 
@@ -4012,6 +3985,9 @@ a.text-danger:focus, a.text-danger:hover {
   transition: box-shadow .25s;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
+.radius0 {
+  border-radius: none !important; }
+
 .radius1 {
   border-radius: 0.25rem; }
 
@@ -4032,6 +4008,44 @@ a.text-danger:focus, a.text-danger:hover {
 .circle {
   border-radius: 50%; }
 
+.bd-top {
+  border-top: solid; }
+
+.bd-right {
+  border-right: solid; }
+
+.bd-bottom {
+  border-bottom: solid; }
+
+.bd-left {
+  border-left: solid; }
+
+.bd-x {
+  border-left: solid;
+  border-right: solid; }
+
+.bd-y {
+  border-top: solid;
+  border-bottom: solid; }
+
+.bd-xy {
+  border: solid; }
+
+.bd-w1 {
+  border-width: 1px; }
+
+.bd-w2 {
+  border-width: 2px; }
+
+.bd-w3 {
+  border-width: 3px; }
+
+.bd-w4 {
+  border-width: 5px; }
+
+.bd-w5 {
+  border-width: 10px; }
+
 .bd-dashed {
   border-style: dashed; }
 
@@ -4046,41 +4060,6 @@ a.text-danger:focus, a.text-danger:hover {
 
 .bd-outset {
   border-style: outset; }
-
-.bd-top {
-  border-top: solid 1px; }
-
-.bd-right {
-  border-right: solid 1px; }
-
-.bd-bottom {
-  border-bottom: solid 1px; }
-
-.bd-left {
-  border-left: solid 1px; }
-
-.bd-x {
-  border-left: solid 1px;
-  border-right: solid 1px; }
-
-.bd-y {
-  border-top: solid 1px;
-  border-bottom: solid 1px; }
-
-.bd-width1 {
-  border: solid 1px; }
-
-.bd-width2 {
-  border: solid 2px; }
-
-.bd-width3 {
-  border: solid 3px; }
-
-.bd-width4 {
-  border: solid 5px; }
-
-.bd-width5 {
-  border: solid 10px; }
 
 .size1 {
   width: 32px;

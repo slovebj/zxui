@@ -1,0 +1,231 @@
+<style>
+	.shadow-demo {
+  background-color: #26a69a;
+  width: 125px;
+  height: 125px;
+  margin: 20px auto;
+  padding:20px;
+  color: #fff;
+}
+	.size-demo {
+  background-color: #26a69a;
+  margin: 20px;
+  padding:20px;
+  color: #fff;
+}
+</style>
+<h2 class="header">阴影</h2>
+<p>使用.zdepth0~.zdepth6设置无阴影到深度阴影。</p>
+<div class="row">
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth0 shadow-demo">zdepth0</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth1 shadow-demo">zdepth1</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth2 shadow-demo">zdepth2</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth3 shadow-demo">zdepth3</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth4 shadow-demo">zdepth4</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth5 shadow-demo">zdepth5</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="zdepth6 shadow-demo">zdepth6</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="hoverable shadow-demo">使用hoverable类，鼠标经过添加阴影</p>
+          </div>
+</div>
+<h2 class="header">圆角</h2>
+<p>使用.radius0~.radius5设置圆角，.circle为圆形。</p>
+<div class="row">
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="radius0 shadow-demo">radius0</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="radius1 shadow-demo">radius1</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="radius2 shadow-demo">radius2</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="radius3 shadow-demo">radius3</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="radius4 shadow-demo">radius4</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="radius5 shadow-demo">radius5</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="circle shadow-demo">circle</p>
+          </div>
+</div>
+<h2 class="header">边框</h2>
+<p>组合使用bd位置、宽度（1~5）、样式、颜色会得到不同的效果。</p>
+<div class="row">
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-xy bd-dashed shadow-demo">bd-xy bd-dashed</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-xy bd-dotted shadow-demo">bd-xy bd-dotted</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-xy bd-double shadow-demo">bd-xy bd-double</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-xy bd-inset shadow-demo">bd-xy bd-inset</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-xy bd-outset shadow-demo">bd-xy bd-outset</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-top bd-red7 shadow-demo">bd-top bd-red7</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-bottom bd-blue7 shadow-demo">bd-bottom bd-blue7</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-left bd-w2 shadow-demo">bd-left bd-w2</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-right bd-w4 shadow-demo">bd-right bd-w4</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-x bd-pink7 shadow-demo">bd-x bd-pink7</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="bd-y bd-pink9 shadow-demo">bd-y bd-pink9</p>
+          </div>
+</div>
+<h2 class="header">BOX尺寸</h2>
+<p>size1~size8。</p>
+		  <div class="col">
+            <p class="size1 size-demo">size1</p>
+          </div>
+          <div class="col">
+            <p class="size2 size-demo">size2</p>
+          </div>
+          <div class="col">
+            <p class="size3 size-demo">size3</p>
+          </div>
+          <div class="col">
+            <p class="size4 size-demo">size4</p>
+          </div>
+          <div class="col">
+            <p class="size5 size-demo">size5</p>
+          </div>
+		  <div class="col">
+            <p class="size6 size-demo">size6</p>
+          </div>
+		  <div class="col">
+            <p class="size7 size-demo">size7</p>
+          </div>
+		  <div class="col">
+            <p class="size8 size-demo">size8</p>
+          </div>
+</div>
+<script type="text/javascript">
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 * 
+	 * var pagefunction = function() {
+	 *   ...
+	 * }
+	 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+	 * 
+	 * TO LOAD A SCRIPT:
+	 * var pagefunction = function (){ 
+	 *  loadScript("../../plugin.js", run_after_loaded);	
+	 * }
+	 * 
+	 * OR
+	 * 
+	 * loadScript("../../plugin.js", run_after_loaded);
+	 */
+
+	// PAGE RELATED SCRIPTS
+	
+	// pagefunction
+	
+	var pagefunction = function() {
+		// clears memory even if nothing is in the function
+	};
+	
+	// end pagefunction
+	
+	// run pagefunction on load
+	pagefunction();
+    var colors = new Vue({
+                    el: '#colors-list',
+                    data: {
+                        colors14: [
+							"red",
+							"pink",
+							"purple",
+							"purple-d",
+							"indigo",
+							"blue",
+							"blue-l",
+							"cyan",
+							"teal",
+							"green",
+							"green-l",
+							"lime",
+							"yellow",
+							"amber",
+							"orange",
+							"orange-d"
+                        ],
+						colors10: [
+							"brown",
+							"blue-grey",
+							"grey"
+                        ],
+						colors1: [
+							"white",
+							"black",
+							"transparent"
+                        ]
+                    }
+                })
+</script>

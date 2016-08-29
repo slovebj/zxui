@@ -34,7 +34,9 @@
 
 
 //Box-radius
-
+.radius0 {
+  border-radius:none !important;
+}
 .radius1 {
   border-radius:0.25rem;
 }
@@ -63,6 +65,42 @@
 
 
 //border
+.bd-top {
+  border-top: solid;
+}
+
+.bd-right {
+  border-right: solid;
+}
+
+.bd-bottom {
+  border-bottom: solid;
+}
+
+.bd-left {
+  border-left: solid;
+}
+
+.bd-x {
+  border-left: solid;
+  border-right: solid;
+}
+
+.bd-y {
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.bd-xy {
+  border: solid;
+}
+
+
+@each $key, $width in $bd-width {
+  .bd-w#{$key} {
+    border-width: #{$width};
+  }
+}
 
 .bd-dashed {
   border-style: dashed;
@@ -82,39 +120,6 @@
 
 .bd-outset {
   border-style: outset;
-}
-
-.bd-top {
-  border-top: solid 1px;
-}
-
-.bd-right {
-  border-right: solid 1px;
-}
-
-.bd-bottom {
-  border-bottom: solid 1px;
-}
-
-.bd-left {
-  border-left: solid 1px;
-}
-
-.bd-x {
-  border-left: solid 1px;
-  border-right: solid 1px;
-}
-
-.bd-y {
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-}
-
-
-@each $key, $width in $bd-width {
-  .bd-width#{$key} {
-    border: solid #{$width};
-  }
 }
 
 @each $key, $width in $box-size {
