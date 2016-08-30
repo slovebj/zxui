@@ -429,27 +429,6 @@ ol ul,
 ul ol {
   margin-bottom: 0; }
 
-ul.disc {
-  list-style-type: disc; }
-
-ul.circle {
-  list-style-type: circle; }
-
-ul.square {
-  list-style-type: square; }
-
-ol.lower-roman {
-  list-style-type: lower-roman; }
-
-ol.upper-roman {
-  list-style-type: upper-roman; }
-
-ol.lower-alpha {
-  list-style-type: lower-alpha; }
-
-ol.upper-alpha {
-  list-style-type: upper-alpha; }
-
 dt {
   font-weight: bold; }
 
@@ -1521,18 +1500,18 @@ output {
   top: 0;
   bottom: 0; }
 
-.text-justify {
+.justify {
   text-align: justify !important; }
 
-.text-nowrap {
+.nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-indent, .text-indent p, .text-indent div {
+.indent, .indent p, .indent div {
   text-indent: 2em; }
 
 .text-l {
@@ -4101,60 +4080,70 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
   color: inherit; }
 
-h1, .h1 {
+h1, .h1, .font-size1 {
   font-size: 2.5rem; }
 
-h2, .h2 {
+h2, .h2, .font-size2 {
   font-size: 2rem; }
 
-h3, .h3 {
+h3, .h3, .font-size3 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h4, .h4, .font-size4 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h5, .h5, .font-size5 {
   font-size: 1.25rem; }
 
 h6, .h6 {
   font-size: 1rem; }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300; }
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, .small {
+  font-size: 70%;
+  opacity: 0.6;
+  margin-left: 0.4rem; }
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: #fcf8e3; }
 
 .display1 {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 300; }
 
 .display2 {
-  font-size: 5.5rem;
+  font-size: 6rem;
   font-weight: 300; }
 
 .display3 {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 300; }
 
 .display4 {
+  font-size: 4.5rem;
+  font-weight: 300; }
+
+.display5 {
   font-size: 3.5rem;
   font-weight: 300; }
 
-.text-lowercase {
+.lowercase {
   text-transform: lowercase !important; }
 
-.text-uppercase {
+.uppercase {
   text-transform: uppercase !important; }
 
-.text-capitalize {
+.capitalize {
   text-transform: capitalize !important; }
 
-.font-weight-normal {
+.normal {
   font-weight: normal; }
 
-.font-weight-bold {
+.bold {
   font-weight: bold; }
 
-.font-italic {
+.italic {
   font-style: italic; }
 
 .text-hide {
@@ -4194,27 +4183,33 @@ hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
-small,
-.small {
-  font-size: 80%;
-  font-weight: normal; }
+ul.disc {
+  list-style-type: disc; }
 
-mark,
-.mark {
-  padding: 0.2em;
-  background-color: #fcf8e3; }
+ul.circle {
+  list-style-type: circle; }
 
-.list-unstyled {
-  padding-left: 0;
-  list-style: none; }
+ul.square {
+  list-style-type: square; }
+
+ol.lower-roman {
+  list-style-type: lower-roman; }
+
+ol.upper-roman {
+  list-style-type: upper-roman; }
+
+ol.lower-alpha {
+  list-style-type: lower-alpha; }
+
+ol.upper-alpha {
+  list-style-type: upper-alpha; }
 
 .list-inline {
-  padding-left: 0;
-  list-style: none; }
+  padding-left: 0; }
 
-.list-inline-item {
+.list-inline > li {
   display: inline-block; }
-  .list-inline-item:not(:last-child) {
+  .list-inline > li:not(:last-child) {
     margin-right: 5px; }
 
 .initialism {

@@ -42,10 +42,10 @@
 
 // Text-Alignment
 
-.text-justify        { text-align: justify !important; }
-.text-nowrap         { white-space: nowrap !important; }
-.text-truncate       { @include text-truncate; }
-.text-indent,.text-indent p,.text-indent div {
+.justify        { text-align: justify !important; }
+.nowrap         { white-space: nowrap !important; }
+.truncate       { @include text-truncate; }
+.indent,.indent p,.indent div {
   text-indent: 2em;}
 .text-l { text-align: left !important; }
 .text-r { text-align: right !important; }
