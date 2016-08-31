@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -4080,23 +4079,43 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
   color: inherit; }
 
-h1, .h1, .font-size1 {
+h1, .h1, .f6 {
   font-size: 2.5rem; }
 
-h2, .h2, .font-size2 {
+h2, .h2, .f5 {
   font-size: 2rem; }
 
-h3, .h3, .font-size3 {
+h3, .h3, .f4 {
   font-size: 1.75rem; }
 
-h4, .h4, .font-size4 {
+h4, .h4, .f3 {
   font-size: 1.5rem; }
 
-h5, .h5, .font-size5 {
+h5, .h5, .f2 {
   font-size: 1.25rem; }
 
-h6, .h6 {
+h6, .h6, .f1 {
   font-size: 1rem; }
+
+.f7 {
+  font-size: 3.5rem;
+  font-weight: 300; }
+
+.f8 {
+  font-size: 4.5rem;
+  font-weight: 300; }
+
+.f9 {
+  font-size: 5.5rem;
+  font-weight: 300; }
+
+.f10 {
+  font-size: 6rem;
+  font-weight: 300; }
+
+.f11 {
+  font-size: 7rem;
+  font-weight: 300; }
 
 h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small, .small {
   font-size: 70%;
@@ -4107,26 +4126,6 @@ mark,
 .mark {
   padding: 0.2em;
   background-color: #fcf8e3; }
-
-.display1 {
-  font-size: 7rem;
-  font-weight: 300; }
-
-.display2 {
-  font-size: 6rem;
-  font-weight: 300; }
-
-.display3 {
-  font-size: 5.5rem;
-  font-weight: 300; }
-
-.display4 {
-  font-size: 4.5rem;
-  font-weight: 300; }
-
-.display5 {
-  font-size: 3.5rem;
-  font-weight: 300; }
 
 .lowercase {
   text-transform: lowercase !important; }
@@ -5356,7 +5355,7 @@ a.tag:not([class^="tag-o"]):focus, a.tag:not([class^="tag-o"]):hover {
     color: #2b2d2f;
     text-decoration: none;
     background-color: #f5f5f5;
-    cursor: pointer；; }
+    cursor: pointer; }
   .drop-menu > li.active, .drop-menu > li.active:focus, .drop-menu > li.active:hover, .drop-menu > a.active, .drop-menu > a.active:focus, .drop-menu > a.active:hover {
     color: #fff;
     text-decoration: none;

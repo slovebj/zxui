@@ -11,12 +11,33 @@ h1, h2, h3, h4, h5, h6,
   color: $headings-color;
 }
 
-h1, .h1,.font-size1 { font-size: $font-size-h1; }
-h2, .h2,.font-size2 { font-size: $font-size-h2; }
-h3, .h3,.font-size3 { font-size: $font-size-h3; }
-h4, .h4,.font-size4 { font-size: $font-size-h4; }
-h5, .h5,.font-size5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
+h1, .h1,.f6 { font-size: $font-size-h1; }
+h2, .h2,.f5 { font-size: $font-size-h2; }
+h3, .h3,.f4 { font-size: $font-size-h3; }
+h4, .h4,.f3 { font-size: $font-size-h4; }
+h5, .h5,.f2 { font-size: $font-size-h5; }
+h6, .h6,.f1 { font-size: $font-size-h6; }
+// font-size7~11
+.f7 {
+  font-size: $font-size7;
+  font-weight: $font-weight7;
+}
+.f8 {
+  font-size: $font-size8;
+  font-weight: $font-weight8;
+}
+.f9 {
+  font-size: $font-size9;
+  font-weight: $font-weight9;
+}
+.f10 {
+  font-size: $font-size10;
+  font-weight: $font-weight10;
+}
+.f11 {
+  font-size: $font-size11;
+  font-weight: $font-weight11;
+}
 //
 // Emphasis
 //
@@ -33,27 +54,6 @@ mark,
   background-color: $mark-bg;
 }
 
-// Type display classes
-.display1 {
-  font-size: $display1-size;
-  font-weight: $display1-weight;
-}
-.display2 {
-  font-size: $display2-size;
-  font-weight: $display2-weight;
-}
-.display3 {
-  font-size: $display3-size;
-  font-weight: $display3-weight;
-}
-.display4 {
-  font-size: $display4-size;
-  font-weight: $display4-weight;
-}
-.display5 {
-  font-size: $display5-size;
-  font-weight: $display5-weight;
-}
 // Transformation
 
 .lowercase      { text-transform: lowercase !important; }
