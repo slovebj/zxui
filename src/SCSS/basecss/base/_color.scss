@@ -430,3 +430,13 @@ $colors: (
 @include text-emphasis-variant('.text-warning', $brand-warning);
 
 @include text-emphasis-variant('.text-danger', $brand-danger);
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@include color-variant(success, $state-success-bg, $state-success-text);
+@include color-variant(info, $state-info-bg, $state-info-text);
+@include color-variant(warning, $state-warning-bg, $state-warning-text);
+@include color-variant(danger, $state-danger-bg, $state-danger-text);
+

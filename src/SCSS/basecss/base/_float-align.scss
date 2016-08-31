@@ -40,13 +40,3 @@
       bottom: 0;
     }
 
-// Text-Alignment
-
-.justify        { text-align: justify !important; }
-.nowrap         { white-space: nowrap !important; }
-.truncate       { @include text-truncate; }
-.indent,.indent p,.indent div {
-  text-indent: 2em;}
-.text-l { text-align: left !important; }
-.text-r { text-align: right !important; }
-.text-c { text-align: center !important; }

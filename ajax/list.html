@@ -1,0 +1,304 @@
+<style>
+	.bd-example .list-group {
+	  max-width:400px;
+	}
+</style>
+<div class="row">		
+  <h1>列表</h1>
+	<p class="f2">包含无序列表、有序列表、内联列表、描述列表等效果。</p>
+	<p>加上行高样式.line-height(*)，可以改变列表的行距。</p>
+	<h2>无序列表</h2>
+	<p>加上.disc、.circle、.square，可以改变列表的样式。</p>
+	<ul class="disc">
+		<li>一切法无自性 </li>
+		<li><strong>菩提本无树</strong></li>
+
+		<li><i>明镜亦非台</i>
+		<ul class="circle">
+			<li>本来无一物</li>
+			<li>何处惹尘埃</li>
+		</ul>
+		<ul class="square">
+			<li>本来无一物</li>
+			<li>何处惹尘埃</li>
+		</ul>
+		</li>
+		<li><small>不可以少善根福德得生彼国</small></li>
+	</ul>
+	<h2>有序列表</h2>
+	<p>加上.lower-roman、.upper-roman、.lower-alpha、.upper-alpha、.cn(部份浏览器不支持)，可以改变列表的样式，默认为数字。</p>
+	<ol>
+		<li>众生度尽方证菩提 </li>
+		<li><u>大慈大悲悯众生</u></li>
+
+		<li><strong>大喜大舍济含识</strong>
+		<ul class="">
+			<li><i class="fa fa-bell text-danger"></i> 菩萨见色如避火坑</li>
+			<li class="text-success"><i class="fa fa-check"></i> <strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i class="fa fa-warning text-warning"></i> <i>末轻小恶，以为无罪</i></li>
+
+		</ul>
+		<ol class="lower-roman">
+			<li> 菩萨见色如避火坑</li>
+			<li class="text-success"><strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i>末轻小恶，以为无罪</i></li>
+		</ol>
+		<ol class="upper-roman">
+			<li> 菩萨见色如避火坑</li>
+			<li class="text-success"><strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i>末轻小恶，以为无罪</i></li>
+		</ol>
+		<ol class="lower-alpha">
+			<li> 菩萨见色如避火坑</li>
+			<li class="text-success"><strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i>末轻小恶，以为无罪</i></li>
+		</ol>
+		<ol class="upper-alpha">
+			<li> 菩萨见色如避火坑</li>
+			<li class="text-success"><strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i>末轻小恶，以为无罪</i></li>
+		</ol>
+		<ol class="cn">
+			<li> 菩萨见色如避火坑</li>
+			<li class="text-success"><strong><u>地藏菩萨</u> 妙难伦</strong></li>
+			<li><i>末轻小恶，以为无罪</i></li>
+		</ol>
+		</li>
+
+		<li class="text-info"><strong><i>地狱未空誓不成佛</i></strong></li>
+		<li>众生度尽方证菩提</li>
+	</ol>
+
+	<ul class="list-inline">
+		<li class="text-success">
+			<strong>南无阿弥陀佛</strong>
+		</li>
+		<li class="text-danger">
+			<strong><u>南无观世音菩萨</u></strong>
+		</li>
+		<li class="text-primary">
+			<strong><i>南无大势至菩萨</i></strong>
+		</li>
+	</ul>		
+	<h2>描述列表</h2>
+	<p>为了得到更简单的样式、清晰的等级以及更好的间距，描述列表&lt;dl&gt;有了一个更新的<code>margin</code>值。<code>&lt;dd&gt;</code>的<code>margin-left</code>被重置为<code>0</code>，添加了<code>margin-bottom: .5rem</code>。<code>&lt;dt&gt;</code>的字体是粗体。</p>
+	<h3>垂直描述列表</h3>
+	<dl>
+		<dt>耳根圆通</dt>
+		<dd>初于闻中，入流亡所。所入既寂，动静二相，了然不生。如是渐增，闻所闻尽。尽闻不住，觉所觉空。空觉极圆，空所空灭。生灭既灭，寂灭现前。忽然超越，世出世间，十方圆明，获二殊胜……</dd>
+		<dt>念佛圆通</dt>
+		<dd>我忆往昔。恒河沙劫。有佛出世。名无量光。十二如来。相继一劫。其最后佛。名超日月光。 彼佛教我。念佛三昧。譬如有人。一专为忆。一人专忘。如是二人。若逢不逢。或见非见。二人相忆。二忆念深。 如是乃至。从生至生。同于形影。不相乖异。十方如来。怜念众生。如母忆子。若子逃逝。虽忆何为。子若忆母。如母忆时。母子历生。不相违远。若众生心。忆佛念佛。现前当来。必定见佛。去佛不远。不假方便。自得心开。如染香人。身有香气。此则名曰。香光庄严。我本因地。以念佛心。入无生忍。今于此界。摄念佛人。归于净土。佛问圆通。我无选择。都摄六根。净念相继。得三摩地。斯为第一。</dd>
+	</dl>
+	<h3>水平描述列表.dl-h</h3>
+	<p>给dl添加.dl-h。窗口低于md:768px时显示为垂直列表。</p>
+	<dl class="dl-h">
+		<dt>耳根圆通</dt>
+		<dd>初于闻中，入流亡所。所入既寂，动静二相，了然不生。如是渐增，闻所闻尽。尽闻不住，觉所觉空。空觉极圆，空所空灭。生灭既灭，寂灭现前。忽然超越，世出世间，十方圆明，获二殊胜……</dd>
+		<dt>念佛圆通</dt>
+		<dd>我忆往昔。恒河沙劫。有佛出世。名无量光。十二如来。相继一劫。其最后佛。名超日月光。 彼佛教我。念佛三昧。譬如有人。一专为忆。一人专忘。如是二人。若逢不逢。或见非见。二人相忆。二忆念深。 如是乃至。从生至生。同于形影。不相乖异。十方如来。怜念众生。如母忆子。若子逃逝。虽忆何为。子若忆母。如母忆时。母子历生。不相违远。若众生心。忆佛念佛。现前当来。必定见佛。去佛不远。不假方便。自得心开。如染香人。身有香气。此则名曰。香光庄严。我本因地。以念佛心。入无生忍。今于此界。摄念佛人。归于净土。佛问圆通。我无选择。都摄六根。净念相继。得三摩地。斯为第一。</dd>
+	</dl>
+    <hr/>
+</div>
+
+<div class="row">
+	<h1>列表组</h1>
+	<p>列表组是一个灵活而且强大的组件，不仅仅可以用来显示简单的元素列表，还可以显示复杂的自定义内容。</p>
+	<h2>内容</h2>
+	<ul>
+	<li><a href="#section-1">基本示例</a></li>
+	<li><a href="#section-2">标签</a></li>
+	<li><a href="#section-3">带链接的项</a></li>
+	<li><a href="#section-4">按钮项</a></li>
+	<li><a href="#section-5">禁用的项</a></li>
+	<li><a href="#section-6">上下文类</a></li>
+	<li><a href="#section-7">自定义内容</a></li>
+	</ul>
+
+	<h2 id="section-1"><a href="#section-1" aria-label="Anchor link for: section 1" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>基本示例</h2>
+
+	<p>最基本的列表组就是一个无序列表，带有几个列表项，以及适当的类。在这基础上可以使用下列选项，或者有需要的话可以是你自己的CSS。</p>
+
+	<div class="bd-example">
+		<ul class="list-group">
+		<li class="list-group-item">Cras justo odio</li>
+		<li class="list-group-item">Dapibus ac facilisis in</li>
+		<li class="list-group-item">Morbi leo risus</li>
+		<li class="list-group-item">Porta ac consectetur ac</li>
+		<li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+	</div>
+	
+	<h2 id="section-2">标签</h2>
+
+	<p>向任意一个列表组项添加标签，以显示未阅读的计数、活动，等等。</p>
+
+	<div class="bd-example">
+		<ul class="list-group">
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">14</span>
+			Cras justo odio
+		</li>
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">2</span>
+			Dapibus ac facilisis in
+		</li>
+		<li class="list-group-item">
+			<span class="label label-default label-pill pull-right">1</span>
+			Morbi leo risus
+		</li>
+		</ul>
+	</div>
+
+	<h2 id="section-3">带链接的项</h2>
+
+	<p>使用锚标记而不是列表项标记来给列表组的项添加链接（这也意味着可以用一个父<code>&lt;div&gt;</code>代替<code>&lt;ul&gt;</code>）。不需要对每个元素提供单独的父元素。添加.radius0变成直角边框。</p>
+
+	<div class="bd-example">
+		<div class="list-group radius0">
+		<a href="#" class="list-group-item active">
+			Cras justo odio
+		</a>
+		<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+		<a href="#" class="list-group-item">Morbi leo risus</a>
+		<a href="#" class="list-group-item">Porta ac consectetur ac</a>
+		<a href="#" class="list-group-item">Vestibulum at eros</a>
+		</div>
+	</div>
+
+	<h2 id="section-4">按钮项</h2>
+
+	<p>列表组项可以是按钮，而不是<code>&lt;li&gt;</code>项（这也意味着可以用一个父<code>&lt;div&gt;</code>代替<code>&lt;ul&gt;</code>）。不需要对每个元素提供单独的父元素。<strong>不要在这里使用标准的<code>.btn</code>类。</strong></p>
+
+	<div class="bd-example">
+		<div class="list-group">
+		<button type="button" class="list-group-item">Cras justo odio</button>
+		<button type="button" class="list-group-item">Dapibus ac facilisis in</button>
+		<button type="button" class="list-group-item">Morbi leo risus</button>
+		<button type="button" class="list-group-item">Porta ac consectetur ac</button>
+		<button type="button" class="list-group-item">Vestibulum at eros</button>
+		</div>
+	</div>
+
+	<h2 id="section-5">禁用的项</h2>
+
+	<p>给一个<code>.list-group-item</code>上添加<code>.disabled</code>类，可以让它显示灰色，呈现禁用状态。</p>
+
+	<div class="bd-example">
+		<div class="list-group">
+		<a href="#" class="list-group-item disabled">
+			Cras justo odio
+		</a>
+		<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+		<a href="#" class="list-group-item">Morbi leo risus</a>
+		<a href="#" class="list-group-item">Porta ac consectetur ac</a>
+		<a href="#" class="list-group-item">Vestibulum at eros</a>
+		</div>
+	</div>
+
+	<h2 id="section-6">上下文类</h2>
+
+	<p>使用上下文类以样式化列表项，呈默认或链接状态。同样包括<code>.active</code>状态。</p>
+
+	<div class="bd-example">
+		<ul class="list-group">
+		<li class="list-group-item success">Dapibus ac facilisis in</li>
+		<li class="list-group-item info">Cras sit amet nibh libero</li>
+		<li class="list-group-item warning">Porta ac consectetur ac</li>
+		<li class="list-group-item danger">Vestibulum at eros</li>
+		</ul>
+		<div class="list-group">
+		<a href="#" class="list-group-item success">Dapibus ac facilisis in</a>
+		<a href="#" class="list-group-item info">Cras sit amet nibh libero</a>
+		<a href="#" class="list-group-item warning">Porta ac consectetur ac</a>
+		<a href="#" class="list-group-item danger">Vestibulum at eros</a>
+		</div>
+	</div>
+
+	<h2 id="section-7">自定义内容</h2>
+
+	<p>里面几乎可以添加任何HTML内容，甚至可以添加列表组，如下所示。</p>
+
+	<div class="bd-example">
+		<div class="list-group">
+		<a href="#" class="list-group-item active">
+			<h4 class="list-group-item-heading">List group item heading</h4>
+			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+		</a>
+		<a href="#" class="list-group-item">
+			<h4 class="list-group-item-heading">List group item heading</h4>
+			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+		</a>
+		<a href="#" class="list-group-item">
+			<h4 class="list-group-item-heading">List group item heading</h4>
+			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+		</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 * 
+	 * var pagefunction = function() {
+	 *   ...
+	 * }
+	 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+	 * 
+	 * TO LOAD A SCRIPT:
+	 * var pagefunction = function (){ 
+	 *  loadScript("../../plugin.js", run_after_loaded);	
+	 * }
+	 * 
+	 * OR
+	 * 
+	 * loadScript("../../plugin.js", run_after_loaded);
+	 */
+
+	// PAGE RELATED SCRIPTS
+
+	// pagefunction
+	
+	var pagefunction = function() {
+		
+	};
+	
+	// end pagefunction
+	
+	// run pagefunction on load
+
+	pagefunction();
+
+</script>

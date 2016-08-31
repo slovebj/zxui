@@ -1,18 +1,14 @@
 // List Groups
 
-@mixin list-group-item-variant($state, $background, $color) {
-  .list-group-item-#{$state} {
+@mixin color-variant($state, $background, $color) {
+  .#{$state} {
     color: $color;
     background-color: $background;
   }
 
-  a.list-group-item-#{$state},
-  button.list-group-item-#{$state} {
+  a.#{$state},
+  button.#{$state} {
     color: $color;
-
-    .list-group-item-heading {
-      color: inherit;
-    }
 
     @include hover-focus {
       color: $color;

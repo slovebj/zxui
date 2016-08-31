@@ -14,20 +14,6 @@
 @import "base/reboot";
 @import "base/print";
 
-// Core CSS
-@import "base/grid";
-@import "base/display";
-@import "base/float-align";
-@import "base/color";
-@import "base/opacity";
-@import "base/boxstyle";
-@import "base/typo";
-@import "base/clearfix";
-@import "base/screenreaders";
-@import "base/spacing";
-@import "base/visibility";
-@import "base/flex";
-
 
 //Elements
 @import "elements/animation";
@@ -46,7 +32,7 @@
 @import "components/tags";
 @import "components/breadcrumb";
 @import "components/dropdown";
-@import "components/list-group";
+@import "components/list";
 @import "components/media";
 @import "components/forms";
 @import "components/forms-custom";
@@ -54,3 +40,17 @@
 
 //Views
 @import "view/card";
+
+// Core CSS
+@import "base/grid";
+@import "base/display";
+@import "base/float-align";
+@import "base/color";
+@import "base/opacity";
+@import "base/boxstyle";
+@import "base/typo";
+@import "base/clearfix";
+@import "base/screenreaders";
+@import "base/spacing";
+@import "base/visibility";
+@import "base/flex";

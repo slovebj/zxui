@@ -20,23 +20,21 @@ h6, .h6,.f1 { font-size: $font-size-h6; }
 // font-size7~11
 .f7 {
   font-size: $font-size7;
-  font-weight: $font-weight7;
-}
+  }
 .f8 {
   font-size: $font-size8;
-  font-weight: $font-weight8;
-}
+  }
 .f9 {
   font-size: $font-size9;
-  font-weight: $font-weight9;
-}
+  }
 .f10 {
   font-size: $font-size10;
-  font-weight: $font-weight10;
 }
 .f11 {
   font-size: $font-size11;
-  font-weight: $font-weight11;
+}
+.f12 {
+  font-size: $font-size12;
 }
 //
 // Emphasis
@@ -53,7 +51,6 @@ mark,
   padding: $mark-padding;
   background-color: $mark-bg;
 }
-
 // Transformation
 
 .lowercase      { text-transform: lowercase !important; }
@@ -65,6 +62,19 @@ mark,
 .normal  { font-weight: normal; }
 .bold    { font-weight: bold; }
 .italic  { font-style: italic; }
+// Text-Alignment
+
+.justify { text-align: justify !important; }
+.text-l { text-align: left !important; }
+.text-r { text-align: right !important; }
+.text-c { text-align: center !important; }
+
+
+.nowrap { white-space: nowrap !important; }
+.breakall {word-break:break-all;}
+.truncate { @include text-truncate; }
+.indent,.indent p,.indent div {
+  text-indent: 2em;}
 
 // Misc
 
@@ -102,28 +112,7 @@ hr {
   border: 0;
   border-top: $hr-border-width solid $hr-border-color;
 }
-//
-// Lists
-//
 
-ul.disc {list-style-type:disc;}
-ul.circle {list-style-type:circle;}
-ul.square {list-style-type:square;}
-ol.lower-roman {list-style-type:lower-roman;}
-ol.upper-roman {list-style-type:upper-roman;}
-ol.lower-alpha {list-style-type:lower-alpha;}
-ol.upper-alpha {list-style-type:upper-alpha;}
-
-// Inline turns list items into inline-block
-.list-inline {
-  padding-left: 0;
-}
-.list-inline > li {
-  display: inline-block;
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
-}
 
 //
 // Misc
