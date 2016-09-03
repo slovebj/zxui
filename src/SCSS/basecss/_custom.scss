@@ -354,7 +354,7 @@ $input-height:                   (($font-size-base * $line-height-base) + ($inpu
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
 $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2)) !default;
 
-$form-group-margin-bottom:       $spacer-y !default;
+$form-margin-bottom:       $spacer-y !default;
 
 $input-addon-bg:           $gray-lighter !default;
 $input-addon-border-color: $input-border-color !default;
@@ -757,28 +757,28 @@ $progress-bar-info-bg:        $brand-info !default;
 
 // List group
 
-$list-group-bg:                 #fff !default;
-$list-group-border-color:       #ddd !default;
-$list-group-border-width:       $border-width !default;
-$list-group-border-radius:      $border-radius !default;
+$list-bg:                 #fff !default;
+$list-border-color:       #ddd !default;
+$list-border-width:       $border-width !default;
+$list-border-radius:      $border-radius !default;
 
-$list-group-hover-bg:           #f5f5f5 !default;
-$list-group-active-color:       $component-active-color !default;
-$list-group-active-bg:          $component-active-bg !default;
-$list-group-active-border:      $list-group-active-bg !default;
-$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+$list-hover-bg:           #f5f5f5 !default;
+$list-active-color:       $component-active-color !default;
+$list-active-bg:          $component-active-bg !default;
+$list-active-border:      $list-active-bg !default;
+$list-active-text-color:  lighten($list-active-bg, 40%) !default;
 
-$list-group-disabled-color:      $gray-light !default;
-$list-group-disabled-bg:         $gray-lighter !default;
-$list-group-disabled-text-color: $list-group-disabled-color !default;
+$list-disabled-color:      $gray-light !default;
+$list-disabled-bg:         $gray-lighter !default;
+$list-disabled-text-color: $list-disabled-color !default;
 
-$list-group-link-color:         #555 !default;
-$list-group-link-hover-color:   $list-group-link-color !default;
-$list-group-link-heading-color: #333 !default;
+$list-link-color:         #555 !default;
+$list-link-hover-color:   $list-link-color !default;
+$list-link-header-color: #333 !default;
 
-$list-group-item-padding-x:             1.25rem !default;
-$list-group-item-padding-y:             .75rem !default;
-$list-group-item-heading-margin-bottom: 5px !default;
+$list-item-padding-x:             1.25rem !default;
+$list-item-padding-y:             .75rem !default;
+$list-item-header-margin-bottom: 5px !default;
 
 
 // Image thumbnails

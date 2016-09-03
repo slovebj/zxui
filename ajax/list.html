@@ -1,5 +1,5 @@
 <style>
-	.bd-example .list-group {
+	.bd-example .list {
 	  max-width:400px;
 	}
 </style>
@@ -102,30 +102,122 @@
 
 <div class="row">
 	<h1>列表组</h1>
-	<p>列表组是一个灵活而且强大的组件，不仅仅可以用来显示简单的元素列表，还可以显示复杂的自定义内容。</p>
+	<p>列表组是一个灵活而且强大的组件，不仅仅可以用来显示简单的元素列表，还可以显示复杂的自定义内容。列表计数需要将列表置于同样的相对body的深度。列表项中含有content的子列表左padding为0，即不缩进。</p>
 	<h2>内容</h2>
-	<ul>
+    <div>
+	<ol class="list">
 	<li><a href="#section-1">基本示例</a></li>
 	<li><a href="#section-2">标签</a></li>
-	<li><a href="#section-3">带链接的项</a></li>
+	<li><a href="#section-3">带链接的项</a>
+		<ol>
+			<li><a href="#section-1">基本示例</a></li>
+			<li><a href="#section-2">标签</a></li>
+			<li><a href="#section-3">带链接的项</a></li>
+			<li><a href="#section-4">按钮项</a></li>
+			<li><a href="#section-5">禁用的项</a></li>
+			<li><a href="#section-6">上下文类</a></li>
+			<li><a href="#section-7">自定义内容</a></li>
+		</ol>
+	</li>
+
 	<li><a href="#section-4">按钮项</a></li>
 	<li><a href="#section-5">禁用的项</a></li>
 	<li><a href="#section-6">上下文类</a></li>
 	<li><a href="#section-7">自定义内容</a></li>
-	</ul>
-
+	</ol>
+	<ol class="list">
+		<li value="*">Signing Up</li>
+		<li value="*">User Benefits</li>
+		<li value="*">User Types <ol>
+			<li value="-">Admin</li>
+			<li value="-">Power User</li>
+			<li value="-">Regular User</li>
+			</ol>
+		</li>
+		<li value="*">Deleting Your Account</li>
+	</ol>
+	<div class="list ordered">
+		<div class="li-simple" data-value="@">Signing Up</div>
+		<div class="li-simple" data-value="*">User Benefits</div>
+		<div class="li-simple" data-value="$">User Types 
+			<div  class="list">
+			<div class="li-simple" data-value="%">Admin</div>
+			<div class="li-simple" data-value="^">Power User</div>
+			<div class="li-simple" data-value="&">Regular User</div>
+			</div>
+		</div>
+		<div class="li-simple" data-value="!">Deleting Your Account</div>
+	</div>
+    </div>
 	<h2 id="section-1"><a href="#section-1" aria-label="Anchor link for: section 1" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; line-height: 1; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>基本示例</h2>
 
 	<p>最基本的列表组就是一个无序列表，带有几个列表项，以及适当的类。在这基础上可以使用下列选项，或者有需要的话可以是你自己的CSS。</p>
 
 	<div class="bd-example">
-		<ul class="list-group">
-		<li class="list-group-item">Cras justo odio</li>
-		<li class="list-group-item">Dapibus ac facilisis in</li>
-		<li class="list-group-item">Morbi leo risus</li>
-		<li class="list-group-item">Porta ac consectetur ac</li>
-		<li class="list-group-item">Vestibulum at eros</li>
-		</ul>
+		<div class="list">
+		<div class="li-simple">
+			<i class="fa fa-fw fa-file"></i>
+			<div class="content">
+				<h4 class="li-header">List group item heading</h4>
+				<p class="li-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+				<div class="list">
+					<a class="li-simple">
+						<i class="fa fa-fw fa-file"></i>
+						<div class="content">
+							<h4 class="li-header">List group item heading</h4>
+							<p class="li-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+						</div>
+					</a>
+					
+		        </div>
+			</div>
+		</div>
+		<div class="li-simple">
+			<img src="img/avatars/avatar.jpg" alt="精进修行" class="avatar image" />
+			<div class="content">
+				<h4 class="li-header">List group item heading</h4>
+				<p class="li-text">Donec id elit non mi porta .</p>
+			</div>
+			
+		</div>
+		</div>
+		<div class="list ordered">
+			<a class="li-simple">新列表</a>
+			<div class="li-simple">Morbi leo risus
+				<div class="list">
+				<a class="li-simple">Dapibus ac facilisis in</a>
+				<a class="li-simple">Morbi leo risus</a>
+				<a class="li-simple">Porta ac consectetur ac</a>
+				<a class="li-simple">Vestibulum at eros</a>
+				</div>
+				</div>
+			<a class="li-simple">Porta ac consectetur ac</a>
+			<a class="li-simple">Vestibulum at eros</a>
+		</div>
+
+		<div class="ordered list ">
+			<a class="li-simple">新列表</a>
+			
+			<a class="li-simple">Porta ac consectetur ac</a>
+			<a class="li-simple">Vestibulum at eros</a>
+		</div>
+
+		<div class="list-inline">
+		<div class="li-simple">
+			<i class="fa fa-fw fa-file"></i>
+			<div class="content">
+				<h4 class="li-header">List 1</h4>
+				<p class="li-text">Donec id elit non mi p</p>
+			</div>
+		</div>
+		<div class="li-simple">
+			<img src="img/avatars/avatar.jpg" alt="精进修行" class="avatar image" />
+			<div class="content">
+				<h4 class="li-header">List group item</h4>
+				<p class="li-text">Donec id elit no</p>
+			</div>	
+		</div>
+		</div>
 	</div>
 	
 	<h2 id="section-2">标签</h2>
@@ -133,16 +225,16 @@
 	<p>向任意一个列表组项添加标签，以显示未阅读的计数、活动，等等。</p>
 
 	<div class="bd-example">
-		<ul class="list-group">
-		<li class="list-group-item">
+		<ul class="list">
+		<li class="li-complex">
 			<span class="label label-default label-pill pull-right">14</span>
 			Cras justo odio
 		</li>
-		<li class="list-group-item">
+		<li class="li-complex">
 			<span class="label label-default label-pill pull-right">2</span>
 			Dapibus ac facilisis in
 		</li>
-		<li class="list-group-item">
+		<li class="li-complex">
 			<span class="label label-default label-pill pull-right">1</span>
 			Morbi leo risus
 		</li>
@@ -154,14 +246,14 @@
 	<p>使用锚标记而不是列表项标记来给列表组的项添加链接（这也意味着可以用一个父<code>&lt;div&gt;</code>代替<code>&lt;ul&gt;</code>）。不需要对每个元素提供单独的父元素。添加.radius0变成直角边框。</p>
 
 	<div class="bd-example">
-		<div class="list-group radius0">
-		<a href="#" class="list-group-item active">
+		<div class="list radius0">
+		<a href="#" class="li-complex active">
 			Cras justo odio
 		</a>
-		<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-		<a href="#" class="list-group-item">Morbi leo risus</a>
-		<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-		<a href="#" class="list-group-item">Vestibulum at eros</a>
+		<a href="#" class="li-complex">Dapibus ac facilisis in</a>
+		<a href="#" class="li-complex">Morbi leo risus</a>
+		<a href="#" class="li-complex">Porta ac consectetur ac</a>
+		<a href="#" class="li-complex">Vestibulum at eros</a>
 		</div>
 	</div>
 
@@ -170,28 +262,28 @@
 	<p>列表组项可以是按钮，而不是<code>&lt;li&gt;</code>项（这也意味着可以用一个父<code>&lt;div&gt;</code>代替<code>&lt;ul&gt;</code>）。不需要对每个元素提供单独的父元素。<strong>不要在这里使用标准的<code>.btn</code>类。</strong></p>
 
 	<div class="bd-example">
-		<div class="list-group">
-		<button type="button" class="list-group-item">Cras justo odio</button>
-		<button type="button" class="list-group-item">Dapibus ac facilisis in</button>
-		<button type="button" class="list-group-item">Morbi leo risus</button>
-		<button type="button" class="list-group-item">Porta ac consectetur ac</button>
-		<button type="button" class="list-group-item">Vestibulum at eros</button>
+		<div class="list">
+		<button type="button" class="li-complex">Cras justo odio</button>
+		<button type="button" class="li-complex">Dapibus ac facilisis in</button>
+		<button type="button" class="li-complex">Morbi leo risus</button>
+		<button type="button" class="li-complex">Porta ac consectetur ac</button>
+		<button type="button" class="li-complex">Vestibulum at eros</button>
 		</div>
 	</div>
 
 	<h2 id="section-5">禁用的项</h2>
 
-	<p>给一个<code>.list-group-item</code>上添加<code>.disabled</code>类，可以让它显示灰色，呈现禁用状态。</p>
+	<p>给一个<code>.li-complex</code>上添加<code>.disabled</code>类，可以让它显示灰色，呈现禁用状态。</p>
 
 	<div class="bd-example">
-		<div class="list-group">
-		<a href="#" class="list-group-item disabled">
+		<div class="list">
+		<a href="#" class="li-complex disabled">
 			Cras justo odio
 		</a>
-		<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-		<a href="#" class="list-group-item">Morbi leo risus</a>
-		<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-		<a href="#" class="list-group-item">Vestibulum at eros</a>
+		<a href="#" class="li-complex">Dapibus ac facilisis in</a>
+		<a href="#" class="li-complex">Morbi leo risus</a>
+		<a href="#" class="li-complex">Porta ac consectetur ac</a>
+		<a href="#" class="li-complex">Vestibulum at eros</a>
 		</div>
 	</div>
 
@@ -200,17 +292,17 @@
 	<p>使用上下文类以样式化列表项，呈默认或链接状态。同样包括<code>.active</code>状态。</p>
 
 	<div class="bd-example">
-		<ul class="list-group">
-		<li class="list-group-item success">Dapibus ac facilisis in</li>
-		<li class="list-group-item info">Cras sit amet nibh libero</li>
-		<li class="list-group-item warning">Porta ac consectetur ac</li>
-		<li class="list-group-item danger">Vestibulum at eros</li>
+		<ul class="list">
+		<li class="li-complex success">Dapibus ac facilisis in</li>
+		<li class="li-complex info">Cras sit amet nibh libero</li>
+		<li class="li-complex warning">Porta ac consectetur ac</li>
+		<li class="li-complex danger">Vestibulum at eros</li>
 		</ul>
-		<div class="list-group">
-		<a href="#" class="list-group-item success">Dapibus ac facilisis in</a>
-		<a href="#" class="list-group-item info">Cras sit amet nibh libero</a>
-		<a href="#" class="list-group-item warning">Porta ac consectetur ac</a>
-		<a href="#" class="list-group-item danger">Vestibulum at eros</a>
+		<div class="list">
+		<a href="#" class="li-complex success">Dapibus ac facilisis in</a>
+		<a href="#" class="li-complex info">Cras sit amet nibh libero</a>
+		<a href="#" class="li-complex warning">Porta ac consectetur ac</a>
+		<a href="#" class="li-complex danger">Vestibulum at eros</a>
 		</div>
 	</div>
 
@@ -219,18 +311,40 @@
 	<p>里面几乎可以添加任何HTML内容，甚至可以添加列表组，如下所示。</p>
 
 	<div class="bd-example">
-		<div class="list-group">
-		<a href="#" class="list-group-item active">
-			<h4 class="list-group-item-heading">List group item heading</h4>
-			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+		<div class="list">
+		<div class="li-complex active">
+			<i class="fa fa-lg fa-fw fa-desktop"></i>
+			<div class="content">
+			<h4 class="li-header">List group item heading</h4>
+			<p class="li-text">Donec id elit non mi porta <small>gravida at</small> eget metus. Maecenas sed diam eget risus varius blandit.</p>
+			<div class="list">
+				<div class="li-complex active">
+					<i class="fa fa-lg fa-fw fa-file"></i>
+					<div class="content">
+						<a class="li-header">List group item </a>
+						<p class="li-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>				
+		      </div>
+			</div>
+		</div>
+		<a href="#" class="li-complex">
+			<img src="img/avatars/avatar.jpg" alt="精进修行" class="avatar image" />
+			<div class="content">
+				<h4 class="li-header">文本较少带图片</h4>
+				<p class="li-text">直接使用img.image就行
+				</p>
+			</div>
 		</a>
-		<a href="#" class="list-group-item">
-			<h4 class="list-group-item-heading">List group item heading</h4>
-			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-		</a>
-		<a href="#" class="list-group-item">
-			<h4 class="list-group-item-heading">List group item heading</h4>
-			<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+		<a href="#" class="li-complex">			
+			文本内容较多的带图片的列表
+			<div class="list">
+				<div class="li-complex">
+					<div class="content">
+						<p class="li-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+					</div>
+				</div>				
+		      </div>
 		</a>
 		</div>
 	</div>
