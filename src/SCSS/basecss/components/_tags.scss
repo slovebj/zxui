@@ -8,12 +8,10 @@
   display: inline-block;
   padding: $tag-padding-y $tag-padding-x;
   font-size: $tag-font-size;
-  font-weight: $tag-font-weight;
-  line-height: 1;
   color: $tag-color;
+  background-color: $btn-primary-bg;
   text-align: center;
   white-space: nowrap;
-  vertical-align: text-bottom;
   @include border-radius();
 
   // Empty tags collapse automatically
@@ -21,22 +19,40 @@
     display: none;
   }
 }
-
-.tag-a:before,.tag-a:after {
+.tag-join{
+    display: inline-block;
+}
+.tag-join img{
+    width: auto;
+    height:1.25em;
+    vertical-align: text-bottom;
+}
+.tag-join>.tag{
+    margin-left: 0;
+    border-radius:0;
+}
+.tag-join>:first-child{
+    border-radius:.25rem 0 0 .25rem;
+}
+.tag-join>:last-child{
+    border-radius:0 .25rem .25rem 0;
+}
+.tag-a:before,.tags.tag-a .tag:before {
     position: absolute;
     content: '';
-}
-.tag-a:before {
-    transform: rotate(-45deg);
-    left: -0.46em;
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    right: 100%;
+    top: 50%;
     background-color: inherit;
-    width: 1.07em;
-    height: 1.07em;
+    width: 1.0em;
+    height: 1.0em;
 }
 
-.tag-a:after {
+.tag-a:after,.tags.tag-a .tag:after{
+    position: absolute;
+    content: '';
     left: 0;
-    margin-top: 0.325em;
+    margin-top: 0.56em;
     background-color: #FFF!important;
     width: 0.4em;
     height: 0.4em;
@@ -44,12 +60,16 @@
     border-radius: 500rem;
 }
 
-.tag.tag-a{
+.tag.tag-a,.tags.tag-a .tag{
 	padding-left: 1.2em;
 	padding-right: 1em;
+    margin-left: 0.7em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
 }
 
- .tag-o,.tag-op {
+ .tag.tag-o,.tag.tag-op,.tags.tag-o .tag,.tags.tag-op .tag {
   color: $btn-primary-bg;
   background-color: transparent;
   border:1px solid;
@@ -58,7 +78,7 @@
 
 // scss-lint:disable QualifyingElement
 // Add hover effects, but only for links
-a.tag:not([class^="tag-o"]) {
+a.tag:not([class*="tag-o"]){
   @include hover-focus {
     opacity: .75;
     text-decoration: none;
@@ -67,47 +87,23 @@ a.tag:not([class^="tag-o"]) {
   }
 }
 
+a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
+  @include hover-focus {
+    color:currentColor;
+  }
+}
+
 // Pill tags
 //
 // Make them extra rounded with a modifier to replace v3's badges.
-
-.tag-p,.tag-op {
+.tag.tag-p,.tags.tag-p .tag {
+  background-color: $btn-primary-bg;
+}
+.tag.tag-p,.tag.tag-op,.tags.tag-p .tag,.tags.tag-op .tag {
   padding-right: $tag-pill-padding-x;
   padding-left: $tag-pill-padding-x;
   @include border-radius($tag-pill-border-radius);
 }
-
-
-.tag-group{
-  position: relative;
-  display: inline-block;
-
-  > img {
-    height: 1.125em;
-    width: auto;
-    vertical-align: text-bottom;
-  }
-}
-
-// Prevent double borders when buttons are next to each other
-.tag-group {
-  :not(:first-child) {
-    margin-left: 0;
-  }
-}
-
-.tag-group > :not(:first-child):not(:last-child){
-  border-radius: 0;
-}
-
-.tag-group > :first-child:not(:last-child) {
-  border-radius: 0.25em 0 0 0.25em;
-}
-
-.tag-group > :last-child:not(:first-child) {
-  border-radius:  0 0.25em 0.25em 0;
-}
-
 
 .tag-sup {
 	position: absolute;
@@ -116,28 +112,28 @@ a.tag:not([class^="tag-o"]) {
 	right: -.8em;
 }
 
-.tag-corner {
+.tag-c {
 	position: absolute;
 	display: block;
     top: 0;
     margin: 0;
     font-size: 1em;
-    padding:0.5em;
-    width: 3em;
-    height: 3em;
+    padding:0.2em 0.4rem;
+    width: 3.1em;
+    height: 3.1em;
     z-index: 1;
     background-color: transparent!important;
 }
-.left.tag-corner {
+.left.tag-c {
     left: 0;
     text-align: left;
 }
 
-.right.tag-corner {
+.right.tag-c {
     right: 0;
     text-align: right;
 }
-.tag-corner:after {
+.tag-c:after {
     position: absolute;
     content: "";
     right: 0;
@@ -148,13 +144,13 @@ a.tag:not([class^="tag-o"]) {
     background-color: transparent!important;
 }
 
-.left.tag-corner:after {
-    border-left: 3em solid;
-    border-bottom: 3em solid transparent;
+.left.tag-c:after {
+    border-left: 3.1em solid;
+    border-bottom: 3.1em solid transparent;
     border-left-color: inherit;
 }
 
-.right.tag-corner:after {
+.right.tag-c:after {
     border-right: 3em solid;
     border-bottom: 3em solid transparent;
     border-right-color: inherit;
@@ -168,14 +164,14 @@ a.tag:not([class^="tag-o"]) {
     border-radius: 0;
 }
 .tag-r {
-    top: 0;
+    top: $grid-gutter-width/2;
 }
 .left.tag-r {
-    left: 0;
+    left: -$grid-gutter-width/2 + 1px;
 }
 
 .right.tag-r {
-    right: 0;
+    right: -$grid-gutter-width/2 + 1px;
 }
 .tag-r:before {
     position: absolute;
@@ -202,5 +198,16 @@ a.tag:not([class^="tag-o"]) {
     width: 100%;
     left: 0;
     right: 0;
+}
+
+.tags{
+  position: relative;
+  display: inline-block;
+
+  > img {
+    height: 1.125em;
+    width: auto;
+    vertical-align: text-bottom;
+  }
 }
 
