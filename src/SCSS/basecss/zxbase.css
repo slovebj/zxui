@@ -750,26 +750,33 @@ video.resp-video {
   height: 2em;
   border-radius: 50%; }
 
-.table {
-  width: 100%;
+.table, .tablex {
   max-width: 100%;
   margin-bottom: 1rem;
   border-radius: .285rem;
   text-align: left;
   background-color: white; }
   .table th,
-  .table td {
+  .table td, .tablex th,
+  .tablex td {
     padding: 0.75rem;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd; }
-  .table thead, .table tfoot {
-    background-color: rgba(0, 0, 0, 0.1);
-    .
-    vertical-align: bottom; }
-  .table thead {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .table thead, .table tfoot, .tablex thead, .tablex tfoot {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .table thead, .tablex thead {
     border-bottom: 2px solid #ddd; }
-  .table tbody + tbody, .table tfoot {
+  .table tbody + tbody, .table tfoot, .tablex tbody + tbody, .tablex tfoot {
     border-top: 2px solid #ddd; }
+
+.tablex {
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto; }
+
+.table-fixed {
+  table-layout: fixed; }
 
 .table-sm th,
 .table-sm td {
@@ -786,12 +793,6 @@ video.resp-video {
 
 .table-hover tbody tr:hover {
   background-color: rgba(0, 0, 0, 0.08); }
-
-.table-resp {
-  display: block;
-  width: 100%;
-  min-height: .01%;
-  overflow-x: auto; }
 
 .table-reflow thead, .table-reflow tr {
   float: left;
@@ -1289,9 +1290,6 @@ a.tag[class*="tag-o"]:focus, a.tag[class*="tag-o"]:hover, .tags.tag-o a.tag:focu
   z-index: 1;
   border-radius: 0; }
 
-.tag-r {
-  top: 15px; }
-
 .left.tag-r {
   left: -15px; }
 
@@ -1307,13 +1305,11 @@ a.tag[class*="tag-o"]:focus, a.tag[class*="tag-o"]:hover, .tags.tag-o a.tag:focu
   border-bottom: 15px solid transparent; }
 
 .right.tag-r:before {
-  border-left: 15px solid;
-  border-left-color: inherit;
+  border-left: 15px solid #146B63;
   right: 0; }
 
 .left.tag-r:before {
-  border-right: 15px solid;
-  border-right-color: inherit;
+  border-right: 15px solid #146B63;
   left: 0; }
 
 .tag-at:not([class*="l0"]):not([class*="r0"]) {

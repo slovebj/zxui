@@ -2,8 +2,7 @@
 // Basic table style
 //
 
-.table {
-  width: 100%;
+.table,.tablex {
   max-width: 100%;
   margin-bottom: $spacer;
   border-radius: .285rem;
@@ -12,13 +11,13 @@
   th,
   td {
     padding: $table-cell-padding;
-    vertical-align: top;
     border-bottom: $table-border-width solid $table-border-color;
+    overflow: hidden;
+    text-overflow:ellipsis;
   }
 
   thead,tfoot {
-    background-color: rgba(0,0,0,0.1);.
-    vertical-align: bottom;
+    background-color: rgba(0,0,0,0.1);
   }
 
   thead {
@@ -30,7 +29,26 @@
   }
 
 }
+// Responsive tables
+//
+// Wrap your tables in `.tablex` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
 
+.tablex {
+  width: 100%;
+  min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+  overflow-x: auto;
+
+  // TODO: find out if we need this still.
+  //
+  // border: $table-border-width solid $table-border-color;
+  // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+}
+
+.table-fixed {
+ table-layout: fixed;
+}
 
 //
 // Condensed table w/ half padding
@@ -80,23 +98,7 @@
   }
 }
 
-// Responsive tables
-//
-// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
-// by enabling horizontal scrolling. Only applies <768px. Everything above that
-// will display normally.
 
-.table-resp {
-  display: block;
-  width: 100%;
-  min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
-  overflow-x: auto;
-
-  // TODO: find out if we need this still.
-  //
-  // border: $table-border-width solid $table-border-color;
-  // -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
-}
 
 .table-reflow {
   

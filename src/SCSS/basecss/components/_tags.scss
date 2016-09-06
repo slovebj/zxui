@@ -162,9 +162,7 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
     z-index: 1;
     border-radius: 0;
 }
-.tag-r {
-    top: $grid-gutter-width/2;
-}
+
 .left.tag-r {
     left: -$grid-gutter-width/2;
 }
@@ -182,14 +180,12 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
 }
 
 .right.tag-r:before {
-    border-left: $grid-gutter-width/2 solid;
-    border-left-color: inherit;
+    border-left: $grid-gutter-width/2 solid #146B63;
     right: 0;
 }
 
 .left.tag-r:before {
-    border-right: $grid-gutter-width/2 solid;
-    border-right-color: inherit;
+    border-right: $grid-gutter-width/2 solid #146B63;
     left: 0;
 }
 

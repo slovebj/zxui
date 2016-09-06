@@ -2,9 +2,9 @@
 	<div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
 		<h1 class="page-title txt-color-blueDark">
 			<i class="fa fa-table fa-fw "></i> 
-				Table 
+				表格 
 			<span>> 
-				Normal Tables
+				普通表格
 			</span>
 		</h1>
 	</div>
@@ -58,7 +58,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-					<h2>Normal Table</h2>
+					<h2>普通表格</h2>
 
 				</header>
 
@@ -74,11 +74,9 @@
 
 					<!-- widget content -->
 					<div class="widget-body">
-						<p>Adds borders to any table row within <code>&lt;table&gt;</code> by adding the <code>.table-bordered</code> with the base class</p>
+						<p>只添加<code>.table/.tablex</code>是默认表格，换成<code>.tablex</code>变成响应式表格，100%宽度。单元格只有横边框，若要显示竖边框需添加<code>.table-bd</code>。同时可以给th添加网格系统的xs*来调整列宽。</p>
 						
-						<div class="table-responsive">
-						
-							<table class="table table-bordered">
+							<table class="tablex table-bd table-fixed">
 								<thead>
 									<tr>
 										<th>Column name</th>
@@ -89,16 +87,16 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Row 1</td>
-										<td>Row 2</td>
-										<td>Row 3</td>
+										<td><div class="tag tag-r">Row 1</div></td>
+										<td class="text-r">Row 2</td>
+										<td class="nowrap">文字很长，但是不换行，自动加大列宽，文字很长，但是不换行，自动加大列宽</td>
 										<td>Row 4</td>
 									</tr>
 									<tr>
 										<td>Row 1</td>
 										<td>Row 2</td>
 										<td>Row 3</td>
-										<td>Row 4</td>
+										<td>文字很长，自动换行，列宽不变，文字很长，自动换行，列宽不变，文字很长，自动换行，列宽不变，文字很长，自动换行，列宽不变</td>
 									</tr>
 									<tr>
 										<td>Row 1</td>
@@ -126,8 +124,6 @@
 									</tr>
 								</tbody>
 							</table>
-							
-						</div>
 					</div>
 					<!-- end widget content -->
 
@@ -154,7 +150,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-					<h2>No Padding</h2>
+					<h2>隔行着色</h2>
 				</header>
 
 				<!-- widget div-->
@@ -175,11 +171,9 @@
 								×
 							</button>
 							<i class="fa-fw fa fa-info"></i>
-							Adds zebra-striping to table row within <code>&lt;table&gt;</code> by adding the <code>.table-striped</code> with the base class
-						</div>
-						<div class="table-responsive">
-								
-							<table class="table table-bordered table-striped">
+							在<code>.table/.tablex</code>后添加 <code>.table-striped</code>使表格隔行着色
+						</div>					
+							<table class="tablex table-striped">
 								<thead>
 									<tr>
 										<th>Column name</th>
@@ -227,8 +221,6 @@
 									</tr>
 								</tbody>
 							</table>
-							
-						</div>
 					</div>
 					<!-- end widget content -->
 
@@ -261,7 +253,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-					<h2>Table hover states </h2>
+					<h2>鼠标经过突出显示</h2>
 
 				</header>
 
@@ -283,11 +275,9 @@
 								×
 							</button>
 							<i class="fa-fw fa fa-info"></i>
-							Enables hover effect <code>&lt;table&gt;</code> by adding the <code>.table-hover</code> with the base class
-						</div>
-						<div class="table-responsive">
-								
-							<table class="table table-hover">
+							在 <code>.table/.tablex</code> 后添加 <code>.table-hover</code> 使鼠标经过时突出显示。
+						</div>								
+							<table class="tablex table-hover">
 								<thead>
 									<tr>
 										<th>#</th>
@@ -323,8 +313,6 @@
 									</tr>
 								</tbody>
 							</table>
-							
-						</div>
 					</div>
 					<!-- end widget content -->
 
@@ -336,12 +324,11 @@
 
 		</article>
 		<!-- WIDGET END -->
-
 		<!-- NEW WIDGET START -->
 		<article class="col-sm-12 col-md-12 col-lg-6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
-			<div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-3" data-widget-editbutton="false">
+			<div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-2" data-widget-editbutton="false">
 				<!-- widget options:
 				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
 
@@ -357,7 +344,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-					<h2>Table TR with colors </h2>
+					<h2>转变表格方向</h2>
 
 				</header>
 
@@ -379,11 +366,191 @@
 								×
 							</button>
 							<i class="fa-fw fa fa-info"></i>
-							Add custom colors to your TR and TD <code>&lt;tr&gt;</code> by adding <code>.success</code>, <code>.danger</code>, <code>.warning</code> and <code>.info</code> respectively
-						</div>
-						<div class="table-responsive">
-							
-							<table class="table">
+							在 <code>.table/.tablex</code> 后添加 <code>.table-reflow</code> 转变数据方向，表头变成在左边竖排列，但不能100%宽度，表格的写法不变。
+						</div>								
+							<table class="tablex table-reflow">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Wise</td>
+										<td>Man</td>
+										<td>@myorange</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+				<!-- NEW WIDGET START -->
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-greenDark" id="wid-id-2" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+					<h2>紧凑型表格</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body no-padding">
+						
+						<div class="alert alert-info no-margin fade in">
+							<button class="close" data-dismiss="alert">
+								×
+							</button>
+							<i class="fa-fw fa fa-info"></i>
+							在 <code>.table/.tablex</code> 后添加 <code>.table-sm</code> 减少padding值。
+						</div>								
+							<table class="tablex table-sm">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>Wise</td>
+										<td>Man</td>
+										<td>@myorange</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+		<!-- NEW WIDGET START -->
+		<article class="col-sm-12 col-md-12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget jarviswidget-color-greenLight" id="wid-id-3" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+					<h2>表格自定义着色 </h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body no-padding">
+						
+						<div class="alert alert-info no-margin fade in">
+							<button class="close" data-dismiss="alert">
+								×
+							</button>
+							<i class="fa-fw fa fa-info"></i>
+							要使TR和TD具有自定义颜色，可以添加<code>.success</code>, <code>.danger</code>, <code>.warning</code> and <code>.info</code>等预定义颜色类。
+						</div>							
+							<table class="tablex">
 								<thead>
 									<tr>
 										<th>#</th>
@@ -411,16 +578,14 @@
 										<td>03/04/2012</td>
 										<td>Pending</td>
 									</tr>
-									<tr class="info">
+									<tr>
 										<td>4</td>
-										<td>TB - Monthly</td>
+										<td class="info">TB - Monthly</td>
 										<td>04/04/2012</td>
 										<td>Call in to confirm</td>
 									</tr>
 								</tbody>
 							</table>
-							
-						</div>
 					</div>
 					<!-- end widget content -->
 
@@ -461,7 +626,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-					<h2>Condenced table + combined prev. classes </h2>
+					<h2>反色表格</h2>
 
 				</header>
 
@@ -482,12 +647,11 @@
 								×
 							</button>
 							<i class="fa-fw fa fa-info"></i>
-							A combined table effect with all classes mentioned above added to <code>&lt;table&gt;</code>. <code> .table-bordered .table-striped .table-condensed .table-hover .smart-form .has-tickbox </code>
+							在<code>.table/.tablex</code>后添加<code> .table-inverse/.table-inverse .bg-* </code>使表格变得丰富多彩。
 						</div>
+		
 						
-						<div class="table-responsive">
-						
-							<table class="table table-bordered table-striped table-condensed table-hover smart-form has-tickbox">
+							<table class="tablex table-inverse">
 								<thead>
 									<tr>
 										<th>
@@ -576,9 +740,16 @@
 										<td>Row 4</td>
 									</tr>
 								</tbody>
+								<tfoot>
+									<tr>
+									<th></th>
+									<th colspan="4">
+										这是页脚
+									</th>
+									</tr>
+								</tfoot>
 							</table>
-							
-						</div>
+
 						
 					</div>
 					<!-- end widget content -->
