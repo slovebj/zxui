@@ -24,7 +24,7 @@
 }
 .tag-join img{
     width: auto;
-    height:1.25em;
+    height:1.26em;
     vertical-align: text-bottom;
 }
 .tag-join>.tag{
@@ -40,22 +40,21 @@
 .tag-a:before,.tags.tag-a .tag:before {
     position: absolute;
     content: '';
-    transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    transform: translateY(25.25%) translateX(50%) rotate(-45deg)scale(1.0635);
     right: 100%;
-    top: 50%;
     background-color: inherit;
-    width: 1.0em;
-    height: 1.0em;
+    width: 1em;
+    height: 1em;
 }
 
 .tag-a:after,.tags.tag-a .tag:after{
     position: absolute;
     content: '';
     left: 0;
-    margin-top: 0.56em;
+    margin-top: .56em;
     background-color: #FFF!important;
-    width: 0.4em;
-    height: 0.4em;
+    width: .4em;
+    height: .4em;
     box-shadow: 0 -1px 1px 0 rgba(0,0,0,.3);
     border-radius: 500rem;
 }
@@ -63,7 +62,7 @@
 .tag.tag-a,.tags.tag-a .tag{
 	padding-left: 1.2em;
 	padding-right: 1em;
-    margin-left: 0.7em;
+    margin-left: .75em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 
@@ -108,8 +107,8 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
 .tag-sup {
 	position: absolute;
 	z-index: 100;
-	top: -.8em;
-	right: -.8em;
+	top: -.7em;
+	right: -.85em;
 }
 
 .tag-c {
@@ -118,9 +117,9 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
     top: 0;
     margin: 0;
     font-size: 1em;
-    padding:0.2em 0.4rem;
-    width: 3.1em;
-    height: 3.1em;
+    padding:.2em .4em;
+    width: 3em;
+    height: 3em;
     z-index: 1;
     background-color: transparent!important;
 }
@@ -145,8 +144,8 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
 }
 
 .left.tag-c:after {
-    border-left: 3.1em solid;
-    border-bottom: 3.1em solid transparent;
+    border-left: 3em solid;
+    border-bottom: 3em solid transparent;
     border-left-color: inherit;
 }
 
@@ -159,7 +158,7 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
 .tag-r,.tag-at {
 	position: absolute;
 	display: block;
-    padding:0.5em 2em;
+    padding:.2em .5em;
     z-index: 1;
     border-radius: 0;
 }
@@ -167,11 +166,11 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
     top: $grid-gutter-width/2;
 }
 .left.tag-r {
-    left: -$grid-gutter-width/2 + 1px;
+    left: -$grid-gutter-width/2;
 }
 
 .right.tag-r {
-    right: -$grid-gutter-width/2 + 1px;
+    right: -$grid-gutter-width/2;
 }
 .tag-r:before {
     position: absolute;
@@ -203,11 +202,5 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
 .tags{
   position: relative;
   display: inline-block;
-
-  > img {
-    height: 1.125em;
-    width: auto;
-    vertical-align: text-bottom;
-  }
 }
 
