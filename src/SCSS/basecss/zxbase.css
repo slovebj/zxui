@@ -1727,7 +1727,8 @@ ol.list li[value]:before {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  }
   .form-ctrl::-ms-expand {
     background-color: transparent;
     border: 0; }
@@ -1921,7 +1922,8 @@ input[type="month"].form-ctrl {
 
 [type="radio"]:not(:checked) + label:before,
 [type="radio"]:not(:checked) + label:after {
-  border: 2px solid #5a5a5a; }
+  border: 2px solid #5a5a5a;
+  }
 
 [type="radio"]:not(:checked) + label:after {
   z-index: -1;
