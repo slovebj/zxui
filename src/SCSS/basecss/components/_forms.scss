@@ -107,7 +107,7 @@ select.form-ctrl {
 _::-webkit-full-page-media, // Hack to make this CSS be Safari-only; see http://browserbu.gs/css-hacks/webkit-full-page-media/
 input[type="date"],
 input[type="time"],
-input[type="datetime-local"],
+input[type="datetime-locale"],
 input[type="month"] {
   &.form-ctrl {
     line-height: $input-height;
