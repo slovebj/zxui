@@ -516,7 +516,8 @@ textarea {
   margin: 0;
   line-height: inherit;
   border-radius: 0;
-  font: inherit; }
+  font: inherit;
+  }
 
 textarea {
   overflow: auto;
@@ -1815,7 +1816,8 @@ input[type="month"].form-ctrl {
   border-radius: 0.3rem; }
 
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  }
 
 [class*="fg"] .form-ctrl {
   border-color: currentColor;
@@ -1823,13 +1825,10 @@ input[type="month"].form-ctrl {
 
 @media (min-width: 544px) {
   .form-inline .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle; }
+    display: inline-block; }
   .form-inline .form-ctrl {
     display: inline-block;
-    width: auto;
-    vertical-align: middle; }
+    width: auto; }
   .form-inline .form-ctrl-static {
     display: inline-block; }
   .form-inline .input-group {
@@ -2035,8 +2034,6 @@ form p:last-child {
     border: 2px solid #5a5a5a;
     z-index: 0; }
   [type="checkbox"]:not(.positive):checked + label:before {
-    top: 0;
-    left: 0;
     width: 0.45rem;
     height: 0.9rem;
     border-top: 2px solid transparent;

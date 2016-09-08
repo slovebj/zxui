@@ -285,15 +285,12 @@ input[type="month"] {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
-      margin-bottom: 0;
-      vertical-align: middle;
     }
 
     // Allow folks to *not* use `.form-group`
     .form-ctrl {
       display: inline-block;
       width: auto; // Prevent labels from stacking above inputs in `.form-group`
-      vertical-align: middle;
     }
 
     // Make static ctrls behave like regular ones
