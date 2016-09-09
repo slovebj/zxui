@@ -283,7 +283,7 @@ $table-border-color:            #ddd !default;
 
 $btn-padding-x:                  1rem !default;
 $btn-padding-y:                  .5rem !default;
-$btn-line-height:                1.25em !default;
+$btn-line-height:                1em !default;
 $btn-large-icon-font-size:       1.6rem !default;
 $btn-large-height:               54px !default;
 $btn-font-weight:                normal !default;
@@ -324,8 +324,8 @@ $btn-border-radius-xs:           $border-radius-xs !default;
 // Forms
 
 $input-padding-x:                .75rem !default;
-$input-padding-y:                .5rem !default;
-$input-line-height:              1.25 !default;
+$input-padding-y:                .25rem !default;
+$input-ctrl-height:              2rem !default;
 
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;

@@ -87,7 +87,26 @@
           </p>
         </form>
 
-
+		<article><p>为 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>、<code>&lt;select&gt;</code> 添加 <code>form-ctrl</code> 类即可得到统一外观的表单控件。</p><p>所有受支持的表单控件包括：</p>
+			<ul>
+				<li><code>&lt;select class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;textarea class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="text" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="password" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="datetime" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="datetime-local" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="date" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="month" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="time" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="week" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="number" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="email" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="url" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="search" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="tel" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="color" class="form-ctrl"&gt;</code></li>
+			</ul>
+		</article>
             <form>
         <fieldset class="form-group">
           <label for="exampleInputEmail1">Email address</label>
@@ -224,14 +243,14 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Text field</label>
 									<div class="col-md-10">
-										<input class="form-control" placeholder="Default Text Field" type="text">
+										<input class="form-ctrl" placeholder="Default Text Field" type="text">
 									</div>
 								</div>
 								
 								<div class="form-group">
 									<label class="col-md-2 control-label">Auto Complete</label>
 									<div class="col-md-10">
-										<input class="form-control" placeholder="Type somethine..." type="text"  list="list">
+										<input class="form-ctrl" placeholder="Type somethine..." type="text"  list="list">
 										<datalist id="list">
 											<option value="Alexandra">Alexandra</option>
 											<option value="Alice">Alice</option>
@@ -295,14 +314,14 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Password field</label>
 									<div class="col-md-10">
-										<input class="form-control" placeholder="Password field" type="password" value="mypassword">
+										<input class="form-ctrl" placeholder="Password field" type="password" value="mypassword">
 									</div>
 								</div>
 								
 								<div class="form-group">
 									<label class="col-md-2 control-label">Textarea</label>
 									<div class="col-md-10">
-										<textarea class="form-control" placeholder="Textarea" rows="4"></textarea>
+										<textarea class="form-ctrl" placeholder="Textarea" rows="4"></textarea>
 									</div>
 								</div>
 							
@@ -527,7 +546,7 @@
 									<label class="col-md-2 control-label" for="select-1">Select</label>
 									<div class="col-md-10">
 	
-										<select class="form-control" id="select-1">
+										<select class="form-ctrl" id="select-1">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -555,7 +574,7 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label" for="multiselect1">Multiple select</label>
 									<div class="col-md-10">
-										<select multiple="multiple" id="multiselect1" class="form-control custom-scroll" title="Click to Select a City">
+										<select multiple="multiple" id="multiselect1" class="form-ctrl custom-scroll" title="Click to Select a City">
 											<option>Amsterdam</option>
 											<option selected="selected">Atlanta</option>
 											<option>Baltimore</option>
@@ -588,7 +607,7 @@
 									<label class="col-md-2 control-label">Input warning</label>
 									<div class="col-md-10">
 										<div class="input-group">
-											<input class="form-control" type="text">
+											<input class="form-ctrl" type="text">
 											<span class="input-group-addon"><i class="fa fa-warning"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
@@ -600,7 +619,7 @@
 									<label class="col-md-2 control-label">Input error</label>
 									<div class="col-md-10">
 										<div class="input-group">
-											<input class="form-control" type="text">
+											<input class="form-ctrl" type="text">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
@@ -612,7 +631,7 @@
 									<div class="col-md-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-											<input class="form-control" type="text">
+											<input class="form-ctrl" type="text">
 											<span class="input-group-addon"><i class="fa fa-check"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
@@ -627,25 +646,25 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Extra Small Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-xs" placeholder=".input-xs" type="text">
+										<input class="form-ctrl input-xs" placeholder=".input-xs" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Small Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-sm" placeholder=".input-sm" type="text">
+										<input class="form-ctrl input-sm" placeholder=".input-sm" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Default Input</label>
 									<div class="col-md-10">
-										<input class="form-control" placeholder="Default input" type="text">
+										<input class="form-ctrl" placeholder="Default input" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Large Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-lg" placeholder=".input-lg" type="text">
+										<input class="form-ctrl input-lg" placeholder=".input-lg" type="text">
 									</div>
 								</div>
 
@@ -656,7 +675,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Small Select</label>
 									<div class="col-md-10">
-										<select class="form-control input-sm">
+										<select class="form-ctrl input-sm">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -683,7 +702,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Default Select</label>
 									<div class="col-md-10">
-										<select class="form-control">
+										<select class="form-ctrl">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -710,7 +729,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Large Select</label>
 									<div class="col-md-10">
-										<select class="form-control input-lg">
+										<select class="form-ctrl input-lg">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -747,7 +766,7 @@
 											<div class="col-sm-12">
 												<div class="input-group">
 													<span class="input-group-addon">@</span>
-													<input class="form-control" id="prepend" placeholder="Username" type="text">
+													<input class="form-ctrl" id="prepend" placeholder="Username" type="text">
 												</div>
 											</div>
 										</div>
@@ -768,7 +787,7 @@
 															</label>
 														</span>
 													</span>
-													<input class="form-control" placeholder="" type="text">
+													<input class="form-ctrl" placeholder="" type="text">
 												</div>
 											</div>
 										</div>
@@ -781,7 +800,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" placeholder="With switch" type="text">
+													<input class="form-ctrl" placeholder="With switch" type="text">
 													<span class="input-group-addon">
 														<span class="onoffswitch">
 															<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="st3">
@@ -811,7 +830,7 @@
 															</label>
 														</span>
 													</span>
-													<input class="form-control" placeholder="" type="text">
+													<input class="form-ctrl" placeholder="" type="text">
 													<span class="input-group-addon">
 														<span class="radio">
 															<label>
@@ -832,7 +851,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" id="append" type="text">
+													<input class="form-ctrl" id="append" type="text">
 													<span class="input-group-addon">.00</span>
 												</div>
 											</div>
@@ -847,7 +866,7 @@
 											<div class="col-sm-12">
 												<div class="input-group">
 													<span class="input-group-addon">$</span>
-													<input class="form-control" id="appendprepend" type="text">
+													<input class="form-ctrl" id="appendprepend" type="text">
 													<span class="input-group-addon">.00</span>
 												</div>
 											</div>
@@ -861,7 +880,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" id="appendbutton" type="text">
+													<input class="form-ctrl" id="appendbutton" type="text">
 													<div class="input-group-btn">
 														<button class="btn btn-default" type="button">
 															Search
@@ -883,7 +902,7 @@
 											<div class="col-sm-12">
 												
 												<div class="input-group">
-													<input type="text" class="form-control">
+													<input type="text" class="form-ctrl">
 													<div class="input-group-btn">
 														<button type="button" class="btn btn-default" tabindex="-1">Action</button>
 														<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1">
@@ -924,7 +943,7 @@
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
-													<input type="text" class="form-control">
+													<input type="text" class="form-ctrl">
 												</div>
 												
 											</div>
@@ -942,7 +961,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Large</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-lg">
-						                    <input type="text" placeholder="Email" class="form-control">
+						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -954,7 +973,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Medium</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-md">
-						                    <input type="text" placeholder="Email" class="form-control">
+						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -966,7 +985,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Small</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-sm">
-						                    <input type="text" placeholder="Email" class="form-control">
+						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -978,7 +997,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Large</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-lg">
-						                    <select class="form-control">
+						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -994,7 +1013,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Medium</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-md">
-						                    <select class="form-control">
+						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -1010,7 +1029,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Small</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-sm">
-						                    <select class="form-control">
+						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -1028,7 +1047,7 @@
 						                <div class="input-group input-group-lg">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-lg">
-						                        <input type="text" placeholder="Email" class="form-control">
+						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -1046,7 +1065,7 @@
 						                <div class="input-group input-group-md">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-md">
-						                        <input type="text" placeholder="Email" class="form-control">
+						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -1064,7 +1083,7 @@
 						                <div class="input-group input-group-sm">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-sm">
-						                        <input type="text" placeholder="Email" class="form-control">
+						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -1088,7 +1107,7 @@
 												
 												<div class="input-icon-left">
 													<i class="fa fa-microphone"></i>
-													<input class="form-control" placeholder="Left Icon" type="text">
+													<input class="form-ctrl" placeholder="Left Icon" type="text">
 												</div>
 												
 											</div>
@@ -1104,7 +1123,7 @@
 												
 												<div class="input-icon-right">
 													<i class="fa fa-microphone"></i>
-													<input class="form-control" placeholder="" type="text">
+													<input class="form-ctrl" placeholder="" type="text">
 												</div>
 												
 											</div>
@@ -1118,7 +1137,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												
-												<input class="form-control ui-autocomplete-loading" placeholder="" type="text">
+												<input class="form-ctrl ui-autocomplete-loading" placeholder="" type="text">
 
 											</div>
 										</div>
@@ -1194,19 +1213,19 @@
 								<input name="authenticity_token" type="hidden">
 								<div class="form-group">
 									<label>Text field</label>
-									<input class="form-control" placeholder="Text field" type="text">
+									<input class="form-ctrl" placeholder="Text field" type="text">
 								</div>
 								<div class="form-group">
 									<label>Password field</label>
-									<input class="form-control" placeholder="Password" type="password" value="mypassword">
+									<input class="form-ctrl" placeholder="Password" type="password" value="mypassword">
 								</div>
 								<div class="form-group">
 									<label>Textarea</label>
-									<textarea class="form-control" placeholder="Textarea" rows="3"></textarea>
+									<textarea class="form-ctrl" placeholder="Textarea" rows="3"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Readonly</label>
-									<span class="form-control">Read only text</span>
+									<span class="form-ctrl">Read only text</span>
 								</div>
 							</fieldset>
 							<div class="form-actions">
@@ -1273,11 +1292,11 @@
 							<fieldset>
 								<div class="form-group">
 									<label class="sr-only" for="exampleInputEmail2">Email address</label>
-									<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+									<input type="email" class="form-ctrl" id="exampleInputEmail2" placeholder="Enter email">
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="exampleInputPassword2">Password</label>
-									<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+									<input type="password" class="form-ctrl" id="exampleInputPassword2" placeholder="Password">
 								</div>
 								<div class="checkbox">
 									<label>
@@ -1347,13 +1366,13 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Text field</label>
 									<div class="col-md-10">
-										<input class="form-control" disabled="disabled" placeholder="Default Text Field" type="text">
+										<input class="form-ctrl" disabled="disabled" placeholder="Default Text Field" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-md-2 control-label">Auto Complete</label>
 									<div class="col-md-10">
-										<input class="form-control" disabled="disabled" placeholder="Type somethine..." type="text" list="list">
+										<input class="form-ctrl" disabled="disabled" placeholder="Type somethine..." type="text" list="list">
 										<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
 									</div>
 									
@@ -1362,13 +1381,13 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Password field</label>
 									<div class="col-md-10">
-										<input class="form-control" disabled="disabled" placeholder="Password field" type="password" value="mypassword">
+										<input class="form-ctrl" disabled="disabled" placeholder="Password field" type="password" value="mypassword">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-md-2 control-label">Textarea</label>
 									<div class="col-md-10">
-										<textarea class="form-control" disabled="disabled" placeholder="Textarea" rows="4"></textarea>
+										<textarea class="form-ctrl" disabled="disabled" placeholder="Textarea" rows="4"></textarea>
 									</div>
 								</div>
 							</fieldset>
@@ -1567,7 +1586,7 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Select</label>
 									<div class="col-md-10">
-										<select class="form-control" disabled="disabled">
+										<select class="form-ctrl" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1594,7 +1613,7 @@
 								<div class="form-group">
 									<label class="col-md-2 control-label">Multiple select</label>
 									<div class="col-md-10">
-										<select multiple="multiple" disabled="disabled" class="form-control custom-scroll" title="Click to Select a City">
+										<select multiple="multiple" disabled="disabled" class="form-ctrl custom-scroll" title="Click to Select a City">
 											<option>Amsterdam</option>
 											<option selected="selected">Atlanta</option>
 											<option>Baltimore</option>
@@ -1628,7 +1647,7 @@
 									<label class="col-md-2 control-label">Input warning</label>
 									<div class="col-md-10">
 										<div class="input-group">
-											<input class="form-control" disabled="disabled" type="text">
+											<input class="form-ctrl" disabled="disabled" type="text">
 											<span class="input-group-addon"><i class="fa fa-warning"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
@@ -1640,7 +1659,7 @@
 									<label class="col-md-2 control-label">Input error</label>
 									<div class="col-md-10">
 										<div class="input-group">
-											<input class="form-control" disabled="disabled" type="text">
+											<input class="form-ctrl" disabled="disabled" type="text">
 											<span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
@@ -1652,7 +1671,7 @@
 									<div class="col-md-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-											<input class="form-control" disabled="disabled" type="text">
+											<input class="form-ctrl" disabled="disabled" type="text">
 											<span class="input-group-addon"><i class="fa fa-check"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
@@ -1667,25 +1686,25 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Extra Small Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-xs" disabled="disabled" placeholder=".input-xs" type="text">
+										<input class="form-ctrl input-xs" disabled="disabled" placeholder=".input-xs" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Small Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-sm" disabled="disabled" placeholder=".input-sm" type="text">
+										<input class="form-ctrl input-sm" disabled="disabled" placeholder=".input-sm" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Default Input</label>
 									<div class="col-md-10">
-										<input class="form-control" disabled="disabled" placeholder="Default input" type="text">
+										<input class="form-ctrl" disabled="disabled" placeholder="Default input" type="text">
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="control-label col-md-2">Large Input</label>
 									<div class="col-md-10">
-										<input class="form-control input-lg" disabled="disabled" placeholder=".input-lg" type="text">
+										<input class="form-ctrl input-lg" disabled="disabled" placeholder=".input-lg" type="text">
 									</div>
 								</div>
 
@@ -1696,7 +1715,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Small Select</label>
 									<div class="col-md-10">
-										<select class="form-control input-sm" disabled="disabled">
+										<select class="form-ctrl input-sm" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1723,7 +1742,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Default Select</label>
 									<div class="col-md-10">
-										<select class="form-control" disabled="disabled">
+										<select class="form-ctrl" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1750,7 +1769,7 @@
 								<div class="form-group">
 									<label class="control-label col-md-2">Large Select</label>
 									<div class="col-md-10">
-										<select class="form-control input-lg" disabled="disabled">
+										<select class="form-ctrl input-lg" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1786,7 +1805,7 @@
 											<div class="col-sm-12">
 												<div class="input-group">
 													<span class="input-group-addon">@</span>
-													<input class="form-control" disabled="disabled" placeholder="Username" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="Username" type="text">
 												</div>
 											</div>
 										</div>
@@ -1799,7 +1818,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" disabled="disabled" type="text">
+													<input class="form-ctrl" disabled="disabled" type="text">
 													<span class="input-group-addon">.00</span>
 												</div>
 											</div>
@@ -1821,7 +1840,7 @@
 															</label>
 														</span>
 													</span>
-													<input class="form-control" disabled="disabled" placeholder="" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
 												</div>
 											</div>
 										</div>
@@ -1834,7 +1853,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" disabled="disabled" placeholder="With switch" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="With switch" type="text">
 													<span class="input-group-addon">
 														<span class="onoffswitch">
 															<input type="checkbox" name="start_interval" disabled="disabled" class="onoffswitch-checkbox" id="st3a">
@@ -1864,7 +1883,7 @@
 															</label>
 														</span>
 													</span>
-													<input class="form-control" disabled="disabled" placeholder="" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
 													<span class="input-group-addon">
 														<span class="radio">
 															<label>
@@ -1886,7 +1905,7 @@
 											<div class="col-sm-12">
 												<div class="input-group">
 													<span class="input-group-addon">$</span>
-													<input class="form-control" disabled="disabled" type="text">
+													<input class="form-ctrl" disabled="disabled" type="text">
 													<span class="input-group-addon">.00</span>
 												</div>
 											</div>
@@ -1900,7 +1919,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="input-group">
-													<input class="form-control" disabled="disabled" type="text">
+													<input class="form-ctrl" disabled="disabled" type="text">
 													<div class="input-group-btn">
 														<button class="btn btn-default" disabled="disabled" type="button">
 															Search
@@ -1922,7 +1941,7 @@
 											<div class="col-sm-12">
 												
 												<div class="input-group">
-													<input type="text" class="form-control" disabled="disabled">
+													<input type="text" class="form-ctrl" disabled="disabled">
 													<div class="input-group-btn">
 														<button type="button" class="btn btn-default" tabindex="-1" disabled="disabled">Action</button>
 														<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" tabindex="-1" disabled="disabled">
@@ -1963,7 +1982,7 @@
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
-													<input type="text" class="form-control" disabled="disabled">
+													<input type="text" class="form-ctrl" disabled="disabled">
 												</div>
 												
 											</div>
@@ -1981,7 +2000,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Large</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-lg">
-						                    <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -1993,7 +2012,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Medium</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-md">
-						                    <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -2005,7 +2024,7 @@
 									<label class="control-label col-md-2" for="prepend">Addon Small</label>
 									<div class="col-md-10">
 										<div class="icon-addon addon-sm">
-						                    <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
@@ -2017,7 +2036,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Large</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-lg">
-						                    <select class="form-control" disabled="disabled">
+						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -2033,7 +2052,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Medium</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-md">
-						                    <select class="form-control" disabled="disabled">
+						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -2049,7 +2068,7 @@
 									<label class="control-label col-md-2" for="prepend">Select Small</label>
 									<div class="col-md-10">
 						                <div class="icon-addon addon-sm">
-						                    <select class="form-control" disabled="disabled">
+						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
 						                        <option>Sample</option>
 						                        <option>Sample</option>
@@ -2067,7 +2086,7 @@
 						                <div class="input-group input-group-lg">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-lg">
-						                        <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -2085,7 +2104,7 @@
 						                <div class="input-group input-group-md">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-md">
-						                        <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -2103,7 +2122,7 @@
 						                <div class="input-group input-group-sm">
 						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-sm">
-						                        <input type="text" placeholder="Email" class="form-control" disabled="disabled">
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
 						                    </div>
 						                    <span class="input-group-btn">
@@ -2127,7 +2146,7 @@
 												
 												<div class="input-icon-left">
 													<i class="fa fa-microphone"></i>
-													<input class="form-control" disabled="disabled" placeholder="Left Icon" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="Left Icon" type="text">
 												</div>
 												
 											</div>
@@ -2143,7 +2162,7 @@
 												
 												<div class="input-icon-right">
 													<i class="fa fa-microphone"></i>
-													<input class="form-control" disabled="disabled" placeholder="" type="text">
+													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
 												</div>
 												
 											</div>
@@ -2157,7 +2176,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												
-												<input class="form-control ui-autocomplete-loading" disabled="disabled" placeholder="" type="text">
+												<input class="form-ctrl ui-autocomplete-loading" disabled="disabled" placeholder="" type="text">
 												
 											</div>
 										</div>
@@ -2230,19 +2249,19 @@
 								<input name="authenticity_token" type="hidden">
 								<div class="form-group">
 									<label>Text field</label>
-									<input class="form-control" disabled="disabled" placeholder="Text field" type="text">
+									<input class="form-ctrl" disabled="disabled" placeholder="Text field" type="text">
 								</div>
 								<div class="form-group">
 									<label>Password field</label>
-									<input class="form-control" disabled="disabled" placeholder="Password" type="password" value="mypassword">
+									<input class="form-ctrl" disabled="disabled" placeholder="Password" type="password" value="mypassword">
 								</div>
 								<div class="form-group">
 									<label>Textarea</label>
-									<textarea class="form-control" disabled="disabled" placeholder="Textarea" rows="3"></textarea>
+									<textarea class="form-ctrl" disabled="disabled" placeholder="Textarea" rows="3"></textarea>
 								</div>
 								<div class="form-group">
 									<label>Readonly</label>
-									<span class="form-control">Read only text</span>
+									<span class="form-ctrl">Read only text</span>
 								</div>
 							</fieldset>
 							<div class="form-actions">
@@ -2310,11 +2329,11 @@
 							<fieldset>
 								<div class="form-group">
 									<label class="sr-only">Email address</label>
-									<input type="email" class="form-control" disabled="disabled" placeholder="Enter email">
+									<input type="email" class="form-ctrl" disabled="disabled" placeholder="Enter email">
 								</div>
 								<div class="form-group">
 									<label class="sr-only">Password</label>
-									<input type="password" class="form-control" disabled="disabled" placeholder="Password">
+									<input type="password" class="form-ctrl" disabled="disabled" placeholder="Password">
 								</div>
 								<div class="checkbox">
 									<label>
@@ -2385,7 +2404,7 @@
 
 						<div class="row">
 							<div class="col-sm-12">
-								<input type="text" class="form-control" placeholder=".col-sm-12">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
 							</div>
 						</div>
 
@@ -2393,10 +2412,10 @@
 
 						<div class="row">
 							<div class="col-sm-6">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 						</div>
 
@@ -2404,13 +2423,13 @@
 
 						<div class="row">
 							<div class="col-sm-6">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 						</div>
 
@@ -2418,13 +2437,13 @@
 
 						<div class="row">
 							<div class="col-sm-3">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 							<div class="col-sm-3">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 
 						</div>
@@ -2433,13 +2452,13 @@
 
 						<div class="row">
 							<div class="col-sm-4">
-								<input type="text" class="form-control" placeholder=".col-sm-4">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
 							</div>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" placeholder=".col-sm-4">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
 							</div>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" placeholder=".col-sm-4">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
 							</div>
 
 						</div>
@@ -2448,22 +2467,22 @@
 
 						<div class="row">
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 							<div class="col-sm-2">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 						</div>
 
@@ -2524,7 +2543,7 @@
 
 						<div class="row">
 							<div class="col-sm-2 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 						</div>
 
@@ -2532,7 +2551,7 @@
 
 						<div class="row">
 							<div class="col-sm-3 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 						</div>
 
@@ -2540,7 +2559,7 @@
 
 						<div class="row">
 							<div class="col-sm-4 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-4">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
 							</div>
 						</div>
 
@@ -2548,7 +2567,7 @@
 
 						<div class="row">
 							<div class="col-sm-5 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-5">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-5">
 							</div>
 						</div>
 
@@ -2556,7 +2575,7 @@
 
 						<div class="row">
 							<div class="col-sm-6 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 						</div>
 
@@ -2564,7 +2583,7 @@
 
 						<div class="row">
 							<div class="col-sm-7 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-7">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-7">
 							</div>
 						</div>
 
@@ -2572,7 +2591,7 @@
 
 						<div class="row">
 							<div class="col-sm-8 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-8">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-8">
 							</div>
 						</div>
 
@@ -2580,7 +2599,7 @@
 
 						<div class="row">
 							<div class="col-sm-9 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-9">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-9">
 							</div>
 						</div>
 
@@ -2588,7 +2607,7 @@
 
 						<div class="row">
 							<div class="col-sm-10 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-10">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-10">
 							</div>
 						</div>
 
@@ -2596,7 +2615,7 @@
 
 						<div class="row">
 							<div class="col-sm-11 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-11">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-11">
 							</div>
 						</div>
 
@@ -2604,7 +2623,7 @@
 
 						<div class="row">
 							<div class="col-sm-12 pull-right">
-								<input type="text" class="form-control" placeholder=".col-sm-12">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
 							</div>
 						</div>
 
@@ -2661,7 +2680,7 @@
 
 						<div class="row">
 							<div class="col-sm-2 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-2">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
 							</div>
 						</div>
 
@@ -2669,7 +2688,7 @@
 
 						<div class="row">
 							<div class="col-sm-3 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-3">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
 							</div>
 						</div>
 
@@ -2677,7 +2696,7 @@
 
 						<div class="row">
 							<div class="col-sm-4 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-4">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
 							</div>
 						</div>
 
@@ -2685,7 +2704,7 @@
 
 						<div class="row">
 							<div class="col-sm-5 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-5">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-5">
 							</div>
 						</div>
 
@@ -2693,7 +2712,7 @@
 
 						<div class="row">
 							<div class="col-sm-6 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-6">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
 							</div>
 						</div>
 
@@ -2701,7 +2720,7 @@
 
 						<div class="row">
 							<div class="col-sm-7 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-7">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-7">
 							</div>
 						</div>
 
@@ -2709,7 +2728,7 @@
 
 						<div class="row">
 							<div class="col-sm-8 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-8">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-8">
 							</div>
 						</div>
 
@@ -2717,7 +2736,7 @@
 
 						<div class="row">
 							<div class="col-sm-9 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-9">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-9">
 							</div>
 						</div>
 
@@ -2725,7 +2744,7 @@
 
 						<div class="row">
 							<div class="col-sm-10 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-10">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-10">
 							</div>
 						</div>
 
@@ -2733,7 +2752,7 @@
 
 						<div class="row">
 							<div class="col-sm-11 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-11">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-11">
 							</div>
 						</div>
 
@@ -2741,7 +2760,7 @@
 
 						<div class="row">
 							<div class="col-sm-12 pull-left">
-								<input type="text" class="form-control" placeholder=".col-sm-12">
+								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
 							</div>
 						</div>
 

@@ -516,8 +516,7 @@ textarea {
   margin: 0;
   line-height: inherit;
   border-radius: 0;
-  font: inherit;
-  }
+  font: inherit; }
 
 textarea {
   overflow: auto;
@@ -823,7 +822,7 @@ video.resp-video {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
-  line-height: 1.25em;
+  line-height: 1em;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -1718,9 +1717,9 @@ ol.list li[value]:before {
 .form-ctrl {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
   font-size: 1rem;
-  line-height: 1.25;
   color: #55595c;
   background-color: #fff;
   background-image: none;
@@ -1745,19 +1744,20 @@ ol.list li[value]:before {
   .form-ctrl:disabled {
     cursor: not-allowed; }
 
-select.form-ctrl:not([size]):not([multiple]) {
-  height: 2.5rem; }
+select[multiple] {
+  height: auto;
+  overflow-y: scroll; }
 
 .form-ctrl-file,
 .form-ctrl-range {
   display: block; }
 
 .form-ctrl-label {
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   margin-bottom: 0; }
 
 .form-ctrl-legend {
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem; }
 
@@ -1766,7 +1766,7 @@ input[type="date"].form-ctrl,
 input[type="time"].form-ctrl,
 input[type="datetime-locale"].form-ctrl,
 input[type="month"].form-ctrl {
-  line-height: 2.5rem; }
+  line-height: 2rem; }
 _::-webkit-full-page-media.input-sm, .input-group-sm _::-webkit-full-page-media.form-ctrl,
 input[type="date"].input-sm, .input-group-sm
 input[type="date"].form-ctrl,
@@ -1789,9 +1789,9 @@ input[type="month"].form-ctrl {
   line-height: 3.16667rem; }
 
 .form-ctrl-static {
-  min-height: 2.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  min-height: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   margin-bottom: 0; }
   .form-ctrl-static.form-ctrl-sm, .input-group-sm > .form-ctrl-static.form-ctrl,
   .input-group-sm > .form-ctrl-static.input-addon,
@@ -1816,8 +1816,7 @@ input[type="month"].form-ctrl {
   border-radius: 0.3rem; }
 
 .form-group {
-  margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem; }
 
 [class*="fg"] .form-ctrl {
   border-color: currentColor;
@@ -2277,7 +2276,8 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   position: relative;
   width: 100%;
   display: table;
-  border-collapse: separate; }
+  border-collapse: separate;
+  }
   .input-group .form-ctrl {
     position: relative;
     z-index: 2;
@@ -2303,7 +2303,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   vertical-align: middle; }
 
 .input-addon {
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: normal;
