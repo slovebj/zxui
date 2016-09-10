@@ -1751,59 +1751,15 @@ select[multiple] {
   height: auto;
   overflow-y: scroll; }
 
-.form-ctrl-file,
-.form-ctrl-range {
-  display: block; }
-
 .form-ctrl-legend {
   padding: 0.25rem 0.75rem;
   margin-bottom: 0;
   font-size: 1rem; }
 
-_::-webkit-full-page-media.form-ctrl,
-input[type="date"].form-ctrl,
-input[type="time"].form-ctrl,
-input[type="datetime-locale"].form-ctrl,
-input[type="month"].form-ctrl {
-  line-height: 2rem; }
-_::-webkit-full-page-media.input-sm, .input-group-sm _::-webkit-full-page-media.form-ctrl,
-input[type="date"].input-sm, .input-group-sm
-input[type="date"].form-ctrl,
-input[type="time"].input-sm, .input-group-sm
-input[type="time"].form-ctrl,
-input[type="datetime-locale"].input-sm, .input-group-sm
-input[type="datetime-locale"].form-ctrl,
-input[type="month"].input-sm, .input-group-sm
-input[type="month"].form-ctrl {
-  line-height: 1.8125rem; }
-_::-webkit-full-page-media.input-lg, .input-group-lg _::-webkit-full-page-media.form-ctrl,
-input[type="date"].input-lg, .input-group-lg
-input[type="date"].form-ctrl,
-input[type="time"].input-lg, .input-group-lg
-input[type="time"].form-ctrl,
-input[type="datetime-locale"].input-lg, .input-group-lg
-input[type="datetime-locale"].form-ctrl,
-input[type="month"].input-lg, .input-group-lg
-input[type="month"].form-ctrl {
-  line-height: 3.16667rem; }
-
-.form-ctrl-static {
-  min-height: 2rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  margin-bottom: 0; }
-  .form-ctrl-static.form-ctrl-sm, .input-group-sm > .form-ctrl-static.form-ctrl,
-  .input-group-sm > .form-ctrl-static.input-addon,
-  .input-group-sm > .input-btn > .form-ctrl-static.btn, .form-ctrl-static.form-ctrl-lg, .input-group-lg > .form-ctrl-static.form-ctrl,
-  .input-group-lg > .form-ctrl-static.input-addon,
-  .input-group-lg > .input-btn > .form-ctrl-static.btn {
-    padding-right: 0;
-    padding-left: 0; }
-
 .form-ctrl-sm, .input-group-sm > .form-ctrl,
 .input-group-sm > .input-addon,
 .input-group-sm > .input-btn > .btn {
-  padding: 0.25rem 0.5rem;
+  height: 1.5rem !important;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
@@ -1811,7 +1767,8 @@ input[type="month"].form-ctrl {
 .input-group-lg > .input-addon,
 .input-group-lg > .input-btn > .btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  height: 3rem  !important;
+  font-size: 1.5rem;
   border-radius: 0.3rem; }
 
 .form-group {
@@ -1829,8 +1786,6 @@ input[type="month"].form-ctrl {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
-  .form-inline .form-ctrl-static {
-    display: inline-block; }
   .form-inline .input-group {
     display: inline-table;
     vertical-align: middle; }
@@ -1839,9 +1794,7 @@ input[type="month"].form-ctrl {
     .form-inline .input-group .form-ctrl {
       width: auto; }
   .form-inline .input-group > .form-ctrl {
-    width: 100%; }
-  .form-inline .has-feedback .form-ctrl-feedback {
-    top: 0; } }
+    width: 100%; } }
 
 .custom-ctrls-stacked .custom-ctrl {
   display: inline; }

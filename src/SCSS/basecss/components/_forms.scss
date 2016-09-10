@@ -64,13 +64,6 @@ select[multiple]{
     overflow-y: scroll;
 }
 
-// Make file inputs better match text inputs by forcing them to new lines.
-.form-ctrl-file,
-.form-ctrl-range {
-  display: block;
-}
-
-
 //
 // Legends
 //
@@ -84,58 +77,6 @@ select[multiple]{
 }
 
 
-// Todo: clear this up
-
-// Special styles for iOS temporal inputs
-//
-// In Mobile Safari, setting `display: block` on temporal inputs causes the
-// text within the input to become vertically misaligned. As a workaround, we
-// set a pixel line-height that matches the given height of the input, but only
-// for Safari. See https://bugs.webkit.org/show_bug.cgi?id=139848
-//
-// Note that as of 8.3, iOS doesn't support `week`.
-
-_::-webkit-full-page-media, // Hack to make this CSS be Safari-only; see http://browserbu.gs/css-hacks/webkit-full-page-media/
-input[type="date"],
-input[type="time"],
-input[type="datetime-locale"],
-input[type="month"] {
-  &.form-ctrl {
-    line-height: $input-height;
-  }
-
-  &.input-sm,
-  .input-group-sm &.form-ctrl {
-    line-height: $input-height-sm;
-  }
-
-  &.input-lg,
-  .input-group-lg &.form-ctrl {
-    line-height: $input-height-lg;
-  }
-}
-
-
-// Static form ctrl text
-//
-// Apply class to an element to make any string of text align with labels in a
-// horizontal form layout.
-
-.form-ctrl-static {
-  min-height: $input-height;
-  // Size it appropriately next to real form ctrls
-  padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
-  // Remove default margin from `p`
-  margin-bottom: 0;
-
-  &.form-ctrl-sm,
-  &.form-ctrl-lg {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 
 // Form ctrl sizing
 //
@@ -146,14 +87,15 @@ input[type="month"] {
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
 .form-ctrl-sm {
-  padding: $input-padding-y-sm $input-padding-x-sm;
+  height: 1.5rem !important;
   font-size: $font-size-sm;
   @include border-radius($input-border-radius-sm);
 }
 
 .form-ctrl-lg {
   padding: $input-padding-y-lg $input-padding-x-lg;
-  font-size: $font-size-lg;
+  height: 3rem  !important;
+  font-size: 1.5rem;
   @include border-radius($input-border-radius-lg);
 }
 
@@ -198,11 +140,6 @@ input[type="month"] {
       vertical-align: middle;
     }
 
-    // Make static ctrls behave like regular ones
-    .form-ctrl-static {
-      display: inline-block;
-    }
-
     .input-group {
       display: inline-table;
       vertical-align: middle;
@@ -219,10 +156,5 @@ input[type="month"] {
       width: 100%;
     }
 
-
-    // Re-override the feedback icon.
-    .has-feedback .form-ctrl-feedback {
-      top: 0;
-    }
   }
 }

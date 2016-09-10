@@ -147,11 +147,11 @@
         </fieldset>
         <fieldset class="form-group">
           <label for="exampleInputFile">File input</label>
-          <input type="file" class="form-ctrl-file" id="exampleInputFile">
+          <input type="file" class="block" id="exampleInputFile">
           <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
         </fieldset>
        
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn">Submit</button>
       </form>
    
       <form class="form-inline">
@@ -163,7 +163,7 @@
           <label for="exampleInputEmail2">Email</label>
           <input type="email" class="form-ctrl" id="exampleInputEmail2" placeholder="jane.doe@example.com">
         </div>
-        <button type="submit" class="btn btn-primary">Send invitation</button>
+        <button type="submit" class="btn">Send invitation</button>
       </form>
 
       <form class="form-inline">
@@ -175,21 +175,21 @@
             <div class="input-addon">.00</div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Transfer cash</button>
+        <button type="submit" class="btn">Transfer cash</button>
       </form>
 
 
       <div class="form-group sccess">
-          <label class="form-ctrl-label" for="inputSuccess1">Input with success</label>
+          <label class="" for="inputSuccess1">Input with success</label>
           <input type="text" class="form-ctrl" id="inputSuccess1">
         </div>
         <div class="form-group warning">
-          <label class="form-ctrl-label" for="inputWarning1">Input with warning</label>
-          <input type="text" class="form-ctrl form-ctrl-warning" id="inputWarning1">
+          <label class="" for="inputWarning1">Input with warning</label>
+          <input type="text" class="form-ctrl" id="inputWarning1">
         </div>
         <div class="form-group danger">
-          <label class="form-ctrl-label" for="inputError1">Input with error</label>
-          <input type="text" class="form-ctrl form-ctrl-danger" id="inputError1">
+          <label class="" for="inputError1">Input with error</label>
+          <input type="text" class="form-ctrl" id="inputError1">
         </div>
         
         <div class="progress">
@@ -204,7 +204,7 @@
 	<div class="row">
 
 		<!-- NEW WIDGET START -->
-		<article class="col lg6">
+		<article>
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false">
@@ -240,315 +240,13 @@
 					<!-- widget content -->
 					<div class="widget-body">
 
-						<form class="form-horizontal">
-							
-							<fieldset>
-								<legend>Default Form Elements</legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Text field</label>
-									<div class="col-md-10">
-										<input class="form-ctrl" placeholder="Default Text Field" type="text">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Auto Complete</label>
-									<div class="col-md-10">
-										<input class="form-ctrl" placeholder="Type somethine..." type="text"  list="list">
-										<datalist id="list">
-											<option value="Alexandra">Alexandra</option>
-											<option value="Alice">Alice</option>
-											<option value="Anastasia">Anastasia</option>
-											<option value="Avelina">Avelina</option>
-											<option value="Basilia">Basilia</option>
-											<option value="Beatrice">Beatrice</option>
-											<option value="Cassandra">Cassandra</option>
-											<option value="Cecil">Cecil</option>
-											<option value="Clemencia">Clemencia</option>
-											<option value="Desiderata">Desiderata</option>
-											<option value="Dionisia">Dionisia</option>
-											<option value="Edith">Edith</option>
-											<option value="Eleanora">Eleanora</option>
-											<option value="Elizabeth">Elizabeth</option>
-											<option value="Emma">Emma</option>
-											<option value="Felicia">Felicia</option>
-											<option value="Florence">Florence</option>
-											<option value="Galiana">Galiana</option>
-											<option value="Grecia">Grecia</option>
-											<option value="Helen">Helen</option>
-											<option value="Helewisa">Helewisa</option>
-											<option value="Idonea">Idonea</option>
-											<option value="Isabel">Isabel</option>
-											<option value="Joan">Joan</option>
-											<option value="Juliana">Juliana</option>
-											<option value="Karla">Karla</option>
-											<option value="Karyn">Karyn</option>
-											<option value="Kate">Kate</option>
-											<option value="Lakisha">Lakisha</option>
-											<option value="Lana">Lana</option>
-											<option value="Laura">Laura</option>
-											<option value="Leona">Leona</option>
-											<option value="Mandy">Mandy</option>
-											<option value="Margaret">Margaret</option>
-											<option value="Maria">Maria</option>
-											<option value="Nanacy">Nanacy</option>
-											<option value="Nicole">Nicole</option>
-											<option value="Olga">Olga</option>
-											<option value="Pamela">Pamela</option>
-											<option value="Patricia">Patricia</option>
-											<option value="Qiana">Qiana</option>
-											<option value="Rachel">Rachel</option>
-											<option value="Ramona">Ramona</option>
-											<option value="Samantha">Samantha</option>
-											<option value="Sandra">Sandra</option>
-											<option value="Tanya">Tanya</option>
-											<option value="Teresa">Teresa</option>
-											<option value="Ursula">Ursula</option>
-											<option value="Valerie">Valerie</option>
-											<option value="Veronica">Veronica</option>
-											<option value="Wilma">Wilma</option>
-											<option value="Yasmin">Yasmin</option>
-											<option value="Zelma">Zelma</option>
-										</datalist>
-										<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
-									</div>
-									
-								</div>
-	
-								<div class="form-group">
-									<label class="col-md-2 control-label">Password field</label>
-									<div class="col-md-10">
-										<input class="form-ctrl" placeholder="Password field" type="password" value="mypassword">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Textarea</label>
-									<div class="col-md-10">
-										<textarea class="form-ctrl" placeholder="Textarea" rows="4"></textarea>
-									</div>
-								</div>
-							
-							
-							</fieldset>
-							
-							<fieldset>
-								<legend>Unstyled Checkbox</legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Checkbox default</label>
-									<div class="col-md-10">
-										<div class="checkbox">
-											<label>
-												<input type="checkbox">
-												Checkbox 1 </label>
-										</div>
-										<div class="checkbox">
-											<label>
-												<input type="checkbox">
-												Checkbox 2 </label>
-										</div>
-										<div class="checkbox">
-											<label>
-												<input type="checkbox">
-												Checkbox 3 </label>
-										</div>
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="checkbox-inline">
-											<input type="checkbox">
-											Checkbox 2 </label>
-										<label class="checkbox-inline">
-											<input type="checkbox">
-											Checkbox 2 </label>
-										<label class="checkbox-inline">
-											<input type="checkbox">
-											Checkbox 3 </label>
-									</div>
-								</div>
-								
-							</fieldset>
-
-							<fieldset>
-								<legend>Unstyled Radiobox</legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Radios default</label>
-									<div class="col-md-10">
-										<div class="radio">
-											<label>
-												<input type="radio">
-												Radiobox 1 </label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio">
-												Radiobox 2 </label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio">
-												Radiobox 3 </label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="radio radio-inline">
-											<input type="radio">
-											Radiobox 1 </label>
-										<label class="radio radio-inline">
-											<input type="radio">
-											Radiobox 2 </label>
-										<label class="radio radio-inline">
-											<input type="radio">
-											Radiobox 3 </label>
-									</div>
-								</div>
-
-
-							
-							</fieldset>
-
-							<fieldset>
-								<legend>File inputs</legend>
-							
-								<div class="form-group">
-									<label class="col-md-2 control-label">File input</label>
-									<div class="col-md-10">
-										<input type="file" class="btn btn-default" id="exampleInputFile1">
-										<p class="help-block">
-											some help text here.
-										</p>
-									</div>
-								</div>
-								
-							</fieldset>
-
-							<fieldset class="demo-switcher-1">
-								<legend>Styled Checkbox and Radiobox</legend>
-								
-								<span class="toggle-demo">
-									<span>Styles: </span>
-									<span class="btn-group btn-group-justified" data-toggle="buttons">
-								        <label class="btn btn-default btn-xs active">
-								          <input type="radio" name="demo-switcher-1" id="style-0"> 1
-								        </label>
-								        <label class="btn btn-default btn-xs">
-								          <input type="radio" name="demo-switcher-1" id="style-1"> 2
-								        </label>
-								        <label class="btn btn-default btn-xs">
-								          <input type="radio" name="demo-switcher-1" id="style-2"> 3
-								        </label>
-								        <label class="btn btn-default btn-xs">
-								          <input type="radio" name="demo-switcher-1" id="style-3"> 4
-								        </label>
-								    </span>
-								</span>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Checkbox Styles</label>
-									<div class="col-md-10">
-										
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0" checked="checked">
-											  <span>Checkbox 1</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0">
-											  <span>Checkbox 2</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0">
-											  <span>Checkbox 3</span>
-											</label>
-										</div>
-
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0">
-											  <span>Checkbox 1</span>
-										</label>
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0">
-											  <span>Checkbox 2</span>
-										</label>
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0">
-											  <span>Checkbox 3</span>
-										</label>
-									</div>
-								</div>
-								
-							</fieldset>
-
-							<fieldset class="demo-switcher-1">
-								<legend></legend>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Radios Styles</label>
-									<div class="col-md-10">
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" checked="checked" name="style-0">
-												<span>Radiobox 1</span> 
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" name="style-0">
-												<span>Radiobox 2</span> 
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" name="style-0">
-												<span>Radiobox 3</span> 
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="radio radio-inline">
-											
-											<input type="radio" class="radiobox" name="style-0a">
-											<span>Radiobox 1</span> 
-											
-										</label>
-										<label class="radio radio-inline">
-											<input type="radio" class="radiobox" name="style-0a">
-											<span>Radiobox 2</span>  
-										</label>
-										<label class="radio radio-inline">
-											<input type="radio" class="radiobox" name="style-0a">
-											<span>Radiobox 3</span> 
-										</label>
-									</div>
-								</div>
-							
-							</fieldset>
+						<form class="">
 							
 							<fieldset>
 								<legend>Unstyled Select</legend>
 								<div class="form-group">
-									<label class="col-md-2 control-label" for="select-1">Select</label>
-									<div class="col-md-10">
+									<label class="xs2" for="select-1">Select</label>
+									<div class="xs10">
 	
 										<select class="form-ctrl" id="select-1">
 											<option>Amsterdam</option>
@@ -576,8 +274,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-2 control-label" for="multiselect1">Multiple select</label>
-									<div class="col-md-10">
+									<label class="xs2" for="multiselect1">Multiple select</label>
+									<div class="xs10">
 										<select multiple="multiple" id="multiselect1" class="form-ctrl custom-scroll" title="Click to Select a City">
 											<option>Amsterdam</option>
 											<option selected="selected">Atlanta</option>
@@ -607,36 +305,36 @@
 							<fieldset>
 								<legend>Input States</legend>
 								
-								<div class="form-group has-warning">
-									<label class="col-md-2 control-label">Input warning</label>
-									<div class="col-md-10">
+								<div class="form-group warning">
+									<label class="xs2">Input warning</label>
+									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" type="text">
-											<span class="input-group-addon"><i class="fa fa-warning"></i></span>
+											<span class="input-addon"><i class="fa fa-warning"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
 									</div>
 
 								</div>
 								
-								<div class="form-group has-error">
-									<label class="col-md-2 control-label">Input error</label>
-									<div class="col-md-10">
+								<div class="form-group error">
+									<label class="xs2">Input error</label>
+									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" type="text">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+											<span class="input-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
 									</div>
 								</div>
 								
-								<div class="form-group has-success">
-									<label class="col-md-2 control-label">Input success</label>
-									<div class="col-md-10">
+								<div class="form-group success">
+									<label class="xs2">Input success</label>
+									<div class="xs10">
 										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+											<span class="input-addon"><i class="fa fa-dollar"></i></span>
 											<input class="form-ctrl" type="text">
-											<span class="input-group-addon"><i class="fa fa-check"></i></span>
+											<span class="input-addon"><i class="fa fa-check"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
 									</div>
@@ -648,27 +346,21 @@
 								<legend>Input sizes</legend>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2">Extra Small Input</label>
-									<div class="col-md-10">
-										<input class="form-ctrl input-xs" placeholder=".input-xs" type="text">
+									<label class="xs2">Small Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-sm" placeholder=".form-ctrl-sm" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Small Input</label>
-									<div class="col-md-10">
-										<input class="form-ctrl input-sm" placeholder=".input-sm" type="text">
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="control-label col-md-2">Default Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Default Input</label>
+									<div class="xs10">
 										<input class="form-ctrl" placeholder="Default input" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Large Input</label>
-									<div class="col-md-10">
-										<input class="form-ctrl input-lg" placeholder=".input-lg" type="text">
+									<label class="xs2">Large Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-lg" placeholder=".form-ctrl-lg" type="text">
 									</div>
 								</div>
 
@@ -677,9 +369,9 @@
 							<fieldset>
 								<legend>Select Sizes</legend>
 								<div class="form-group">
-									<label class="control-label col-md-2">Small Select</label>
-									<div class="col-md-10">
-										<select class="form-ctrl input-sm">
+									<label class="xs2">Small Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-sm">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -704,8 +396,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Default Select</label>
-									<div class="col-md-10">
+									<label class="xs2">Default Select</label>
+									<div class="xs10">
 										<select class="form-ctrl">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
@@ -731,9 +423,9 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Large Select</label>
-									<div class="col-md-10">
-										<select class="form-ctrl input-lg">
+									<label class="xs2">Large Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-lg">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -764,12 +456,12 @@
 								<legend>Prepend &amp; Append</legend>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2" for="prepend">Prepended Input</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Input</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">@</span>
+													<span class="input-addon">@</span>
 													<input class="form-ctrl" id="prepend" placeholder="Username" type="text">
 												</div>
 											</div>
@@ -778,15 +470,15 @@
 								</div>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2" for="prepend">W/ input &amp; radios</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">W/ input &amp; radios</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="checkbox">
 															<label>
-															  <input type="checkbox" class="checkbox style-0" checked="checked">
+															  <input type="checkbox" class="checkbox" checked="checked">
 															  <span></span>
 															</label>
 														</span>
@@ -799,13 +491,13 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" placeholder="With switch" type="text">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="onoffswitch">
 															<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="st3">
 															<label class="onoffswitch-label" for="st3"> 
@@ -821,24 +513,24 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="radio">
 															<label>
-																<input type="radio" class="radiobox style-0" name="style-0a2">
+																<input type="radio" class="radiobox" name="style-0a2">
 																<span> Left</span> 
 															</label>
 														</span>
 													</span>
 													<input class="form-ctrl" placeholder="" type="text">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="radio">
 															<label>
-																<input type="radio" class="radiobox style-0" name="style-0a2">
+																<input type="radio" class="radiobox" name="style-0a2">
 																<span> Right</span> 
 															</label>
 														</span>
@@ -850,13 +542,13 @@
 								</div>
 									
 								<div class="form-group">
-									<label class="control-label col-md-2" for="append">Appended Input</label>
-									<div class="col-md-10">
+									<label class="xs2" for="append">Appended Input</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" id="append" type="text">
-													<span class="input-group-addon">.00</span>
+													<span class="input-addon">.00</span>
 												</div>
 											</div>
 										</div>
@@ -864,14 +556,14 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2" for="appendprepend">Combined</label>
-									<div class="col-md-10">
+									<label class="xs2" for="appendprepend">Combined</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">$</span>
+													<span class="input-addon">$</span>
 													<input class="form-ctrl" id="appendprepend" type="text">
-													<span class="input-group-addon">.00</span>
+													<span class="input-addon">.00</span>
 												</div>
 											</div>
 										</div>
@@ -879,10 +571,10 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2" for="appendbutton">With buttons</label>
-									<div class="col-md-10">
+									<label class="xs2" for="appendbutton">With buttons</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" id="appendbutton" type="text">
 													<div class="input-group-btn">
@@ -900,10 +592,10 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2">With dropdowns</label>
-									<div class="col-md-10">
+									<label class="xs2">With dropdowns</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-group">
 													<input type="text" class="form-ctrl">
@@ -928,10 +620,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-group">
 													<div class="input-group-btn">
@@ -962,8 +654,8 @@
 								
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Large</label>
+									<div class="xs10">
 										<div class="icon-addon addon-lg">
 						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -974,8 +666,8 @@
 								
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Medium</label>
+									<div class="xs10">
 										<div class="icon-addon addon-md">
 						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -986,8 +678,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Small</label>
+									<div class="xs10">
 										<div class="icon-addon addon-sm">
 						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -998,8 +690,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Large</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-lg">
 						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
@@ -1014,8 +706,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Medium</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-md">
 						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
@@ -1030,8 +722,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Small</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-sm">
 						                    <select class="form-ctrl">
 						                        <option>Select Option</option>
@@ -1046,10 +738,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Large</label>
+									<div class="xs10">
 						                <div class="input-group input-group-lg">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-lg">
 						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -1064,10 +756,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Medium</label>
+									<div class="xs10">
 						                <div class="input-group input-group-md">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-md">
 						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -1082,10 +774,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Small</label>
+									<div class="xs10">
 						                <div class="input-group input-group-sm">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-sm">
 						                        <input type="text" placeholder="Email" class="form-ctrl">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -1104,10 +796,10 @@
 								<legend>Simple input with icons</legend>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2">Input with icon</label>
-									<div class="col-md-10">
+									<label class="xs2">Input with icon</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-icon-left">
 													<i class="fa fa-microphone"></i>
@@ -1120,10 +812,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2">With right icon</label>
-									<div class="col-md-10">
+									<label class="xs2">With right icon</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-icon-right">
 													<i class="fa fa-microphone"></i>
@@ -1136,10 +828,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2">Input with spinner</label>
-									<div class="col-md-10">
+									<label class="xs2">Input with spinner</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<input class="form-ctrl ui-autocomplete-loading" placeholder="" type="text">
 
@@ -1154,11 +846,11 @@
 							
 							<div class="form-actions">
 								<div class="row">
-									<div class="col-md-12">
+									<div class="xs12">
 										<button class="btn btn-default" type="submit">
 											Cancel
 										</button>
-										<button class="btn btn-primary" type="submit">
+										<button class="btn" type="submit">
 											<i class="fa fa-save"></i>
 											Submit
 										</button>
@@ -1233,7 +925,7 @@
 								</div>
 							</fieldset>
 							<div class="form-actions">
-								<div class="btn btn-primary btn-lg">
+								<div class="btn btn-lg">
 									<i class="fa fa-save"></i>
 									Submit
 								</div>
@@ -1307,7 +999,7 @@
 										<input type="checkbox" class="checkbox">
 										<span>Remember me </span></label>
 								</div>
-								<button type="submit" class="btn btn-primary">
+								<button type="submit" class="btn">
 									Sign in
 								</button>
 							</fieldset>
@@ -1327,7 +1019,7 @@
 		<!-- WIDGET END -->
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12 col-md-12 col-lg-6">
+		<article class="col sm12 xs12 col-lg-6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false">
@@ -1368,14 +1060,14 @@
 							<fieldset>
 								<legend>Disabled Form Elements</legend>
 								<div class="form-group">
-									<label class="col-md-2 control-label">Text field</label>
-									<div class="col-md-10">
+									<label class="xs2">Text field</label>
+									<div class="xs10">
 										<input class="form-ctrl" disabled="disabled" placeholder="Default Text Field" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-2 control-label">Auto Complete</label>
-									<div class="col-md-10">
+									<label class="xs2">Auto Complete</label>
+									<div class="xs10">
 										<input class="form-ctrl" disabled="disabled" placeholder="Type somethine..." type="text" list="list">
 										<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
 									</div>
@@ -1383,300 +1075,54 @@
 								</div>
 								
 								<div class="form-group">
-									<label class="col-md-2 control-label">Password field</label>
-									<div class="col-md-10">
+									<label class="xs2">Password field</label>
+									<div class="xs10">
 										<input class="form-ctrl" disabled="disabled" placeholder="Password field" type="password" value="mypassword">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-md-2 control-label">Textarea</label>
-									<div class="col-md-10">
+									<label class="xs2">Textarea</label>
+									<div class="xs10">
 										<textarea class="form-ctrl" disabled="disabled" placeholder="Textarea" rows="4"></textarea>
 									</div>
 								</div>
 							</fieldset>
-							
-							<fieldset>
-								<legend>Unstyled Checkbox <small>(disabled)</small></legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Checkbox</label>
-									<div class="col-md-10">
-										
-										<div class="checkbox">
-											<label>
-												<input type="checkbox" disabled="disabled" name="checkbox-3" value="">
-												Checkbox 1 </label>
-										</div>
-										<div class="checkbox">
-											<label>
-												<input type="checkbox" disabled="disabled" name="checkbox-3" value="">
-												Checkbox 2 </label>
-										</div>
-										<div class="checkbox">
-											<label>
-												<input type="checkbox" disabled="disabled" name="checkbox-3" value="">
-												Checkbox 3 </label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline Checkbox</label>
-									<div class="col-md-10">
-										<label class="checkbox-inline">
-											<input type="checkbox" disabled="disabled" name="checkbox-4" value="">
-											Checkbox 1 </label>
-										<label class="checkbox-inline">
-											<input type="checkbox" disabled="disabled" name="checkbox-4" value="">
-											Checkbox 2 </label>
-										<label class="checkbox-inline">
-											<input type="checkbox" disabled="disabled" name="checkbox-4" value="">
-											Checkbox 3 </label>
-									</div>
-								</div>
-							</fieldset>
-							
-							<fieldset>
-								<legend>Unstyled Radiobox <small>(disabled)</small></legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Radios</label>
-									<div class="col-md-10">
-										<div class="radio">
-											<label>
-												<input type="radio" disabled="disabled" name="radio-3" value="">
-												Radiobox 1 </label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" disabled="disabled" name="radio-3" value="">
-												Radiobox 2 </label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" disabled="disabled" name="radio-3" value="">
-												Radiobox 3 </label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline Radiobox</label>
-									<div class="col-md-10">
-										<label class="radio radio-inline">
-											<input type="radio" disabled="disabled" name="radio-4" value="">
-											Radiobox 1 </label>
-										<label class="radio radio-inline">
-											<input type="radio" disabled="disabled" name="radio-4" value="">
-											Radiobox 2 </label>
-										<label class="radio radio-inline">
-											<input type="radio" disabled="disabled" name="radio-4" value="">
-											Radiobox 3 </label>
-									</div>
-								</div>
-							</fieldset>
+						
 
-							<fieldset>
-								<legend>File inputs <small>(disabled)</small></legend>
-							
-								<div class="form-group">
-									<label class="col-md-2 control-label">File input</label>
-									<div class="col-md-10">
-										<input type="file" class="btn btn-default" disabled="disabled" id="exampleInputFile2">
-										<p class="help-block">
-											some help text here.
-										</p>
-									</div>
-								</div>
-								
-							</fieldset>
-
-							<fieldset class="demo-switcher-1">
-								<legend>Styled Checkbox and Radiobox <small>(disabled)</small></legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Checkbox Styles</label>
-									<div class="col-md-10">
-										
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0" checked="checked" disabled="disabled">
-											  <span>Checkbox 1</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0" disabled="disabled">
-											  <span>Checkbox 2</span>
-											</label>
-										</div>
-
-										<div class="checkbox">
-											<label>
-											  <input type="checkbox" class="checkbox style-0" disabled="disabled">
-											  <span>Checkbox 3</span>
-											</label>
-										</div>
-
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0" disabled="disabled">
-											  <span>Checkbox 1</span>
-										</label>
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0" disabled="disabled">
-											  <span>Checkbox 2</span>
-										</label>
-										<label class="checkbox-inline">
-											  <input type="checkbox" class="checkbox style-0" disabled="disabled">
-											  <span>Checkbox 3</span>
-										</label>
-									</div>
-								</div>
-								
-							</fieldset>
-							
-							<fieldset class="demo-switcher-1">
-								<legend></legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Radios Styles</label>
-									<div class="col-md-10">
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" checked="checked" disabled="disabled" name="style-0">
-												<span>Radiobox 1</span> 
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" disabled="disabled" name="style-0">
-												<span>Radiobox 2</span> 
-											</label>
-										</div>
-										<div class="radio">
-											<label>
-												<input type="radio" class="radiobox style-0" disabled="disabled" name="style-0">
-												<span>Radiobox 3</span> 
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Inline</label>
-									<div class="col-md-10">
-										<label class="radio radio-inline">
-											
-											<input type="radio" class="radiobox style-0" disabled="disabled" name="style-0a">
-											<span>Radiobox 1</span> 
-											
-										</label>
-										<label class="radio radio-inline">
-											<input type="radio" class="radiobox style-0" disabled="disabled" name="style-0a">
-											<span>Radiobox 2</span>  
-										</label>
-										<label class="radio radio-inline">
-											<input type="radio" class="radiobox style-0" disabled="disabled" name="style-0a">
-											<span>Radiobox 3</span> 
-										</label>
-									</div>
-								</div>
-							
-							</fieldset>
-							
-							<fieldset>
-								<legend>Unstyled Select</legend>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Select</label>
-									<div class="col-md-10">
-										<select class="form-ctrl" disabled="disabled">
-											<option>Amsterdam</option>
-											<option>Atlanta</option>
-											<option>Baltimore</option>
-											<option>Boston</option>
-											<option>Buenos Aires</option>
-											<option>Calgary</option>
-											<option>Chicago</option>
-											<option>Denver</option>
-											<option>Dubai</option>
-											<option>Frankfurt</option>
-											<option>Hong Kong</option>
-											<option>Honolulu</option>
-											<option>Houston</option>
-											<option>Kuala Lumpur</option>
-											<option>London</option>
-											<option>Los Angeles</option>
-											<option>Melbourne</option>
-											<option>Mexico City</option>
-											<option>Miami</option>
-											<option>Minneapolis</option>
-										</select>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-2 control-label">Multiple select</label>
-									<div class="col-md-10">
-										<select multiple="multiple" disabled="disabled" class="form-ctrl custom-scroll" title="Click to Select a City">
-											<option>Amsterdam</option>
-											<option selected="selected">Atlanta</option>
-											<option>Baltimore</option>
-											<option>Boston</option>
-											<option>Buenos Aires</option>
-											<option>Calgary</option>
-											<option selected="selected">Chicago</option>
-											<option>Denver</option>
-											<option>Dubai</option>
-											<option>Frankfurt</option>
-											<option>Hong Kong</option>
-											<option>Honolulu</option>
-											<option>Houston</option>
-											<option>Kuala Lumpur</option>
-											<option>London</option>
-											<option>Los Angeles</option>
-											<option>Melbourne</option>
-											<option>Mexico City</option>
-											<option>Miami</option>
-											<option>Minneapolis</option>
-										</select>
-									</div>
-								</div>
-								
-							</fieldset>
 							
 							<fieldset>
 								<legend>Input States <small>(disabled)</small></legend>
 								
-								<div class="form-group has-warning">
-									<label class="col-md-2 control-label">Input warning</label>
-									<div class="col-md-10">
+								<div class="form-group warning">
+									<label class="xs2">Input warning</label>
+									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" disabled="disabled" type="text">
-											<span class="input-group-addon"><i class="fa fa-warning"></i></span>
+											<span class="input-addon"><i class="fa fa-warning"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
 									</div>
 
 								</div>
 								
-								<div class="form-group has-error">
-									<label class="col-md-2 control-label">Input error</label>
-									<div class="col-md-10">
+								<div class="form-group error">
+									<label class="xs2">Input error</label>
+									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" disabled="disabled" type="text">
-											<span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+											<span class="input-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
 									</div>
 								</div>
 								
-								<div class="form-group has-success">
-									<label class="col-md-2 control-label">Input success</label>
-									<div class="col-md-10">
+								<div class="form-group success">
+									<label class="xs2">Input success</label>
+									<div class="xs10">
 										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+											<span class="input-addon"><i class="fa fa-dollar"></i></span>
 											<input class="form-ctrl" disabled="disabled" type="text">
-											<span class="input-group-addon"><i class="fa fa-check"></i></span>
+											<span class="input-addon"><i class="fa fa-check"></i></span>
 										</div>
 										<span class="help-block">Something may have gone wrong</span>
 									</div>
@@ -1688,26 +1134,26 @@
 								<legend>Input sizes <small>(disabled)</small></legend>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2">Extra Small Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Extra Small Input</label>
+									<div class="xs10">
 										<input class="form-ctrl input-xs" disabled="disabled" placeholder=".input-xs" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Small Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Small Input</label>
+									<div class="xs10">
 										<input class="form-ctrl input-sm" disabled="disabled" placeholder=".input-sm" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Default Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Default Input</label>
+									<div class="xs10">
 										<input class="form-ctrl" disabled="disabled" placeholder="Default input" type="text">
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Large Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Large Input</label>
+									<div class="xs10">
 										<input class="form-ctrl input-lg" disabled="disabled" placeholder=".input-lg" type="text">
 									</div>
 								</div>
@@ -1717,8 +1163,8 @@
 							<fieldset>
 								<legend>Select Sizes <small>(disabled)</small></legend>
 								<div class="form-group">
-									<label class="control-label col-md-2">Small Select</label>
-									<div class="col-md-10">
+									<label class="xs2">Small Select</label>
+									<div class="xs10">
 										<select class="form-ctrl input-sm" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
@@ -1744,8 +1190,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Default Select</label>
-									<div class="col-md-10">
+									<label class="xs2">Default Select</label>
+									<div class="xs10">
 										<select class="form-ctrl" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
@@ -1771,8 +1217,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-md-2">Large Select</label>
-									<div class="col-md-10">
+									<label class="xs2">Large Select</label>
+									<div class="xs10">
 										<select class="form-ctrl input-lg" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
@@ -1803,12 +1249,12 @@
 							<fieldset>
 								<legend>Prepend &amp; Append <small>(disabled)</small></legend>
 								<div class="form-group">
-									<label class="control-label col-md-2">Prepended Input</label>
-									<div class="col-md-10">
+									<label class="xs2">Prepended Input</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">@</span>
+													<span class="input-addon">@</span>
 													<input class="form-ctrl" disabled="disabled" placeholder="Username" type="text">
 												</div>
 											</div>
@@ -1817,13 +1263,13 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2" for="append">Appended Input</label>
-									<div class="col-md-10">
+									<label class="xs2" for="append">Appended Input</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" disabled="disabled" type="text">
-													<span class="input-group-addon">.00</span>
+													<span class="input-addon">.00</span>
 												</div>
 											</div>
 										</div>
@@ -1831,15 +1277,15 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2" for="prepend">W/ input &amp; radios</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">W/ input &amp; radios</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="checkbox">
 															<label>
-															  <input type="checkbox" disabled="disabled" class="checkbox style-0" checked="checked">
+															  <input type="checkbox" disabled="disabled" class="checkbox" checked="checked">
 															  <span></span>
 															</label>
 														</span>
@@ -1852,13 +1298,13 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" disabled="disabled" placeholder="With switch" type="text">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="onoffswitch">
 															<input type="checkbox" name="start_interval" disabled="disabled" class="onoffswitch-checkbox" id="st3a">
 															<label class="onoffswitch-label" for="st3a"> 
@@ -1874,24 +1320,24 @@
 								</div>	
 
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="radio">
 															<label>
-																<input type="radio" disabled="disabled" class="radiobox style-0" name="style-0t2a">
+																<input type="radio" disabled="disabled" class="radiobox" name="style-0t2a">
 																<span> Left</span> 
 															</label>
 														</span>
 													</span>
 													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
-													<span class="input-group-addon">
+													<span class="input-addon">
 														<span class="radio">
 															<label>
-																<input type="radio" disabled="disabled" class="radiobox style-0" name="style-0t2a">
+																<input type="radio" disabled="disabled" class="radiobox" name="style-0t2a">
 																<span> Right</span> 
 															</label>
 														</span>
@@ -1903,14 +1349,14 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2">Combined</label>
-									<div class="col-md-10">
+									<label class="xs2">Combined</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
-													<span class="input-group-addon">$</span>
+													<span class="input-addon">$</span>
 													<input class="form-ctrl" disabled="disabled" type="text">
-													<span class="input-group-addon">.00</span>
+													<span class="input-addon">.00</span>
 												</div>
 											</div>
 										</div>
@@ -1918,10 +1364,10 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2" for="appendbutton">With buttons</label>
-									<div class="col-md-10">
+									<label class="xs2" for="appendbutton">With buttons</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												<div class="input-group">
 													<input class="form-ctrl" disabled="disabled" type="text">
 													<div class="input-group-btn">
@@ -1939,10 +1385,10 @@
 								</div>
 	
 								<div class="form-group">
-									<label class="control-label col-md-2">With dropdowns</label>
-									<div class="col-md-10">
+									<label class="xs2">With dropdowns</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-group">
 													<input type="text" class="form-ctrl" disabled="disabled">
@@ -1967,10 +1413,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2"></label>
-									<div class="col-md-10">
+									<label class="xs2"></label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-group">
 													<div class="input-group-btn">
@@ -2001,8 +1447,8 @@
 								
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Large</label>
+									<div class="xs10">
 										<div class="icon-addon addon-lg">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2013,8 +1459,8 @@
 								
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Medium</label>
+									<div class="xs10">
 										<div class="icon-addon addon-md">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2025,8 +1471,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Addon Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Addon Small</label>
+									<div class="xs10">
 										<div class="icon-addon addon-sm">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2037,8 +1483,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Large</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-lg">
 						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
@@ -2053,8 +1499,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Medium</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-md">
 						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
@@ -2069,8 +1515,8 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Select Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Select Small</label>
+									<div class="xs10">
 						                <div class="icon-addon addon-sm">
 						                    <select class="form-ctrl" disabled="disabled">
 						                        <option>Select Option</option>
@@ -2085,10 +1531,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Large</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Large</label>
+									<div class="xs10">
 						                <div class="input-group input-group-lg">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-lg">
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2103,10 +1549,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Medium</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Medium</label>
+									<div class="xs10">
 						                <div class="input-group input-group-md">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-md">
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2121,10 +1567,10 @@
 
 								<div class="form-group">
 									
-									<label class="control-label col-md-2" for="prepend">Prepended Small</label>
-									<div class="col-md-10">
+									<label class="xs2" for="prepend">Prepended Small</label>
+									<div class="xs10">
 						                <div class="input-group input-group-sm">
-						                    <span class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></span>
+						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
 						                    <div class="icon-addon addon-sm">
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
 						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
@@ -2143,10 +1589,10 @@
 								<legend>Simple input with icons (disabled)</legend>
 								
 								<div class="form-group">
-									<label class="control-label col-md-2">Input with icon</label>
-									<div class="col-md-10">
+									<label class="xs2">Input with icon</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-icon-left">
 													<i class="fa fa-microphone"></i>
@@ -2159,10 +1605,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2">With right icon</label>
-									<div class="col-md-10">
+									<label class="xs2">With right icon</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<div class="input-icon-right">
 													<i class="fa fa-microphone"></i>
@@ -2175,10 +1621,10 @@
 								</div>
 
 								<div class="form-group">
-									<label class="control-label col-md-2">Input with spinner</label>
-									<div class="col-md-10">
+									<label class="xs2">Input with spinner</label>
+									<div class="xs10">
 										<div class="row">
-											<div class="col-sm-12">
+											<div class="col sm12">
 												
 												<input class="form-ctrl ui-autocomplete-loading" disabled="disabled" placeholder="" type="text">
 												
@@ -2191,8 +1637,8 @@
 
 							<div class="form-actions">
 								<div class="row">
-									<div class="col-md-12">
-										<button class="btn btn-primary" disabled="disabled" type="submit">
+									<div class="xs12">
+										<button class="btn" disabled="disabled" type="submit">
 											<i class="fa fa-save"></i>
 											Submit
 										</button>
@@ -2269,7 +1715,7 @@
 								</div>
 							</fieldset>
 							<div class="form-actions">
-								<button class="btn btn-primary btn-lg" disabled="disabled">
+								<button class="btn btn-lg" disabled="disabled">
 									<i class="fa fa-save"></i>
 									Submit
 								</button>
@@ -2344,7 +1790,7 @@
 										<input type="checkbox" class="checkbox" disabled="disabled">
 										<span>Remember me </span></label>
 								</div>
-								<button type="submit" disabled="disabled" class="btn btn-primary">
+								<button type="submit" disabled="disabled" class="btn">
 									Sign in
 								</button>
 							</fieldset>
@@ -2370,7 +1816,7 @@
 	<div class="row">
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12">
+		<article class="col sm12">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-8" data-widget-colorbutton="false" data-widget-editbutton="false">
@@ -2407,62 +1853,47 @@
 					<div class="widget-body">
 
 						<div class="row">
-							<div class="col-sm-12">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
+							<div class="col sm12">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-6">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
-							<div class="col-sm-6">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
-							</div>
-						</div>
-
-						<hr>
-
-						<div class="row">
-							<div class="col-sm-6">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
-							</div>
-							<div class="col-sm-3">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
-							</div>
-							<div class="col-sm-3">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-3">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
-							<div class="col-sm-3">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
-							<div class="col-sm-6">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
-
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-4">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
-							<div class="col-sm-4">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
-							<div class="col-sm-4">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
 
 						</div>
@@ -2470,23 +1901,38 @@
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
 							</div>
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
 							</div>
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
 							</div>
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
 							</div>
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
 							</div>
-							<div class="col-sm-2">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
 							</div>
 						</div>
 
@@ -2509,7 +1955,7 @@
 	<div class="row">
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12 col-md-12 col-lg-6">
+		<article class="col sm12 xs12 col-lg-6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-9" data-widget-colorbutton="false" data-widget-editbutton="false">
@@ -2546,88 +1992,88 @@
 					<div class="widget-body">
 
 						<div class="row">
-							<div class="col-sm-2 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm2 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-3 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
+							<div class="col sm3 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-4 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
+							<div class="col sm4 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-5 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-5">
+							<div class="col sm5 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm5">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-6 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
+							<div class="col sm6 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-7 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-7">
+							<div class="col sm7 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm7">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-8 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-8">
+							<div class="col sm8 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm8">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-9 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-9">
+							<div class="col sm9 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm9">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-10 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-10">
+							<div class="col sm10 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm10">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-11 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-11">
+							<div class="col sm11 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm11">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-12 pull-right">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
+							<div class="col sm12 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
 							</div>
 						</div>
 
@@ -2646,7 +2092,7 @@
 		<!-- WIDGET END -->
 
 		<!-- NEW WIDGET START -->
-		<article class="col-sm-12 col-md-12 col-lg-6">
+		<article class="col sm12 xs12 col-lg-6">
 
 			<!-- Widget ID (each widget will need unique ID)-->
 			<div class="jarviswidget" id="wid-id-10" data-widget-colorbutton="false" data-widget-editbutton="false">
@@ -2683,88 +2129,88 @@
 					<div class="widget-body">
 
 						<div class="row">
-							<div class="col-sm-2 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-2">
+							<div class="col sm2 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-3 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-3">
+							<div class="col sm3 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-4 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-4">
+							<div class="col sm4 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-5 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-5">
+							<div class="col sm5 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm5">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-6 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-6">
+							<div class="col sm6 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-7 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-7">
+							<div class="col sm7 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm7">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-8 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-8">
+							<div class="col sm8 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm8">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-9 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-9">
+							<div class="col sm9 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm9">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-10 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-10">
+							<div class="col sm10 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm10">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-11 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-11">
+							<div class="col sm11 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm11">
 							</div>
 						</div>
 
 						<hr>
 
 						<div class="row">
-							<div class="col-sm-12 pull-left">
-								<input type="text" class="form-ctrl" placeholder=".col-sm-12">
+							<div class="col sm12 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
 							</div>
 						</div>
 
