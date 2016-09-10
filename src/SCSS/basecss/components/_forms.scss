@@ -7,7 +7,7 @@
 .form-ctrl {
   display: block;
   width: 100%;
-  height: $input-ctrl-height;
+
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   // height: $input-height;
   padding: $input-padding-y $input-padding-x;
@@ -56,6 +56,9 @@
   }
 }
 
+.form-ctrl:not(textarea) {
+    height: $input-ctrl-height;
+}
 select[multiple]{
     height: auto;
     overflow-y: scroll;
@@ -67,17 +70,6 @@ select[multiple]{
   display: block;
 }
 
-
-//
-// Labels
-//
-
-// For use with horizontal and inline forms, when you need the label text to
-// align with the form ctrls.
-.form-ctrl-label {
-  padding: $input-padding-y $input-padding-x;
-  margin-bottom: 0; // Override the `<label>` default
-}
 
 //
 // Legends
@@ -196,12 +188,14 @@ input[type="month"] {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
+      height: 2rem;
     }
 
     // Allow folks to *not* use `.form-group`
     .form-ctrl {
       display: inline-block;
       width: auto; // Prevent labels from stacking above inputs in `.form-group`
+      vertical-align: middle;
     }
 
     // Make static ctrls behave like regular ones
@@ -223,11 +217,6 @@ input[type="month"] {
     // Input groups need that 100% width though
     .input-group > .form-ctrl {
       width: 100%;
-    }
-
-    .form-ctrl-label {
-      margin-bottom: 0;
-      vertical-align: middle;
     }
 
 

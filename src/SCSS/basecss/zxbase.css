@@ -503,7 +503,8 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem; }
+  margin: .25rem 0;
+  vertical-align: middle; }
 
 button:focus {
   outline: 1px dotted;
@@ -1717,7 +1718,6 @@ ol.list li[value]:before {
 .form-ctrl {
   display: block;
   width: 100%;
-  height: 2rem;
   padding: 0.25rem 0.75rem;
   font-size: 1rem;
   color: #55595c;
@@ -1744,6 +1744,9 @@ ol.list li[value]:before {
   .form-ctrl:disabled {
     cursor: not-allowed; }
 
+.form-ctrl:not(textarea) {
+  height: 2rem; }
+
 select[multiple] {
   height: auto;
   overflow-y: scroll; }
@@ -1751,10 +1754,6 @@ select[multiple] {
 .form-ctrl-file,
 .form-ctrl-range {
   display: block; }
-
-.form-ctrl-label {
-  padding: 0.25rem 0.75rem;
-  margin-bottom: 0; }
 
 .form-ctrl-legend {
   padding: 0.25rem 0.75rem;
@@ -1824,10 +1823,12 @@ input[type="month"].form-ctrl {
 
 @media (min-width: 544px) {
   .form-inline .form-group {
-    display: inline-block; }
+    display: inline-block;
+    height: 2rem; }
   .form-inline .form-ctrl {
     display: inline-block;
-    width: auto; }
+    width: auto;
+    vertical-align: middle; }
   .form-inline .form-ctrl-static {
     display: inline-block; }
   .form-inline .input-group {
@@ -1839,9 +1840,6 @@ input[type="month"].form-ctrl {
       width: auto; }
   .form-inline .input-group > .form-ctrl {
     width: 100%; }
-  .form-inline .form-ctrl-label {
-    margin-bottom: 0;
-    vertical-align: middle; }
   .form-inline .has-feedback .form-ctrl-feedback {
     top: 0; } }
 
@@ -2276,8 +2274,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   position: relative;
   width: 100%;
   display: table;
-  border-collapse: separate;
-  }
+  border-collapse: separate; }
   .input-group .form-ctrl {
     position: relative;
     z-index: 2;
