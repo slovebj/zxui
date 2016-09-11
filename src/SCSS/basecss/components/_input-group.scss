@@ -71,12 +71,15 @@
 .input-group-lg > .form-ctrl,
 .input-group-lg > .input-addon,
 .input-group-lg > .input-btn > .btn {
-  @extend .form-ctrl-lg;
+  padding: 0 $input-padding-x-lg;
+  height: 3rem  !important;
+  font-size: 1.5rem;
 }
 .input-group-sm > .form-ctrl,
 .input-group-sm > .input-addon,
 .input-group-sm > .input-btn > .btn {
-  @extend .form-ctrl-sm;
+  height: 1.5rem !important;
+  font-size: $font-size-sm;
 }
 
 
@@ -85,28 +88,15 @@
 //
 
 .input-addon {
-  padding: $input-padding-y $input-padding-x;
+  padding: 0 $input-padding-x;
   margin-bottom: 0; // Allow use of <label> elements by overriding our default margin-bottom
-  font-size: $font-size-base;
   font-weight: normal;
-  line-height: $input-line-height;
+  height: $input-ctrl-height;
   color: $input-color;
   text-align: center;
   background-color: $input-addon-bg;
   border: $input-btn-border-width solid $input-addon-border-color;
   @include border-radius($border-radius);
-
-  // Sizing
-  &.form-ctrl-sm {
-    padding: $input-padding-y-sm $input-padding-x-sm;
-    font-size: $font-size-sm;
-    @include border-radius($border-radius-sm);
-  }
-  &.form-ctrl-lg {
-    padding: $input-padding-y-lg $input-padding-x-lg;
-    font-size: $font-size-lg;
-    @include border-radius($border-radius-lg);
-  }
 
   // scss-lint:disable QualifyingElement
   // Nuke default margins from checkboxes and radios to vertically center within.
@@ -155,15 +145,17 @@
   position: relative;
   // Jankily prevent input button groups from wrapping with `white-space` and
   // `font-size` in combination with `inline-block` on buttons.
-  font-size: 0;
+  font-size: 1rem;
   white-space: nowrap;
+  height: 2rem;
 
   // Negative margin for spacing, position for bringing hovered/focused/actived
   // element above the siblings.
   > .btn {
     position: relative;
+    margin: 0;
     + .btn {
-      margin-left: (-$input-btn-border-width);
+      margin-left: (-$input-btn-border-width*5);
     }
     // Bring the "active" button to the front
     @include hover-focus-active {
@@ -182,7 +174,6 @@
     > .btn,
     > .btn-group {
       z-index: 2;
-      margin-left: (-$input-btn-border-width);
       // Because specificity
       @include hover-focus-active {
         z-index: 3;

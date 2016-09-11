@@ -504,7 +504,8 @@ th {
 label {
   display: inline-block;
   margin: .25rem 0;
-  vertical-align: middle; }
+  vertical-align: middle;
+  }
 
 button:focus {
   outline: 1px dotted;
@@ -1756,23 +1757,52 @@ select[multiple] {
   margin-bottom: 0;
   font-size: 1rem; }
 
-.form-ctrl-sm, .input-group-sm > .form-ctrl,
-.input-group-sm > .input-addon,
-.input-group-sm > .input-btn > .btn {
+.form-ctrl-sm {
   height: 1.5rem !important;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
-.form-ctrl-lg, .input-group-lg > .form-ctrl,
-.input-group-lg > .input-addon,
-.input-group-lg > .input-btn > .btn {
+.form-ctrl-lg {
   padding: 0.75rem 1.5rem;
   height: 3rem  !important;
   font-size: 1.5rem;
   border-radius: 0.3rem; }
 
+.form-ctrl.icon-l {
+  padding-left: 2em; }
+
+.form-ctrl.icon-r {
+  padding-right: 2em; }
+
+.form-ctrl.icon-lr {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.form-ctrl ~ i {
+  display: inline-block;
+  position: absolute;
+  font-size: 1rem;
+  top: 0;
+  width: 2rem;
+  line-height: 2rem;
+  height: 2rem;
+  color: #55595c; }
+
+.form-ctrl-sm ~ i {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem; }
+
+.form-ctrl-lg ~ i {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  width: 3rem;
+  height: 3rem; }
+
 .form-group {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  position: relative; }
 
 [class*="fg"] .form-ctrl {
   border-color: currentColor;
@@ -1956,7 +1986,8 @@ form p:last-child {
     -khtml-user-select: none;
     /* webkit (konqueror) browsers */
     -ms-user-select: none;
-    /* IE10+ */ }
+    /* IE10+ */
+    }
   [type="checkbox"] + label:before,
   [type="checkbox"] + label:after {
     content: '';
@@ -2252,29 +2283,30 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   white-space: nowrap;
   vertical-align: middle; }
 
+.input-group-lg > .form-ctrl,
+.input-group-lg > .input-addon,
+.input-group-lg > .input-btn > .btn {
+  padding: 0 1.5rem;
+  height: 3rem  !important;
+  font-size: 1.5rem; }
+
+.input-group-sm > .form-ctrl,
+.input-group-sm > .input-addon,
+.input-group-sm > .input-btn > .btn {
+  height: 1.5rem !important;
+  font-size: 0.875rem; }
+
 .input-addon {
-  padding: 0.25rem 0.75rem;
+  padding: 0 0.75rem;
   margin-bottom: 0;
-  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.25;
+  height: 2rem;
   color: #55595c;
   text-align: center;
   background-color: #eceeef;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem; }
-  .input-addon.form-ctrl-sm,
-  .input-group-sm > .input-addon,
-  .input-group-sm > .input-btn > .input-addon.btn {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    border-radius: 0.2rem; }
-  .input-addon.form-ctrl-lg,
-  .input-group-lg > .input-addon,
-  .input-group-lg > .input-btn > .input-addon.btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
-    border-radius: 0.3rem; }
+  border-radius: 0.25rem;
+  }
   .input-addon input[type="radio"],
   .input-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -2307,12 +2339,14 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 .input-btn {
   position: relative;
-  font-size: 0;
-  white-space: nowrap; }
+  font-size: 1rem;
+  white-space: nowrap;
+  height: 2rem; }
   .input-btn > .btn {
-    position: relative; }
+    position: relative;
+    margin: 0; }
     .input-btn > .btn + .btn {
-      margin-left: -1px; }
+      margin-left: -5px; }
     .input-btn > .btn:focus, .input-btn > .btn:active, .input-btn > .btn:hover {
       z-index: 3; }
   .input-btn:not(:last-child) > .btn,
@@ -2320,8 +2354,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
     margin-right: -1px; }
   .input-btn:not(:first-child) > .btn,
   .input-btn:not(:first-child) > .btn-group {
-    z-index: 2;
-    margin-left: -1px; }
+    z-index: 2; }
     .input-btn:not(:first-child) > .btn:focus, .input-btn:not(:first-child) > .btn:active, .input-btn:not(:first-child) > .btn:hover,
     .input-btn:not(:first-child) > .btn-group:focus,
     .input-btn:not(:first-child) > .btn-group:active,

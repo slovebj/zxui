@@ -99,7 +99,38 @@ select[multiple]{
   @include border-radius($input-border-radius-lg);
 }
 
-
+.form-ctrl.icon-l {
+  padding-left: 2em;
+}
+.form-ctrl.icon-r {
+  padding-right: 2em;
+}
+.form-ctrl.icon-lr {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.form-ctrl~i {
+  display: inline-block;
+  position: absolute;
+  font-size: 1rem;
+  top: 0;
+  width: 2rem;
+  line-height: 2rem;
+  height: 2rem;
+  color: $input-color;
+}
+.form-ctrl-sm~i {
+  font-size: $font-size-sm;
+  line-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.form-ctrl-lg~i {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  width:3rem;
+  height: 3rem;
+}
 // Form groups
 //
 // Designed to help with the organization and spacing of vertical forms. For
@@ -107,6 +138,7 @@ select[multiple]{
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+  position: relative;
 }
 
 
