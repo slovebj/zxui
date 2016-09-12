@@ -504,8 +504,7 @@ th {
 label {
   display: inline-block;
   margin: .25rem 0;
-  vertical-align: middle;
-  }
+  vertical-align: middle; }
 
 button:focus {
   outline: 1px dotted;
@@ -1381,6 +1380,7 @@ a.tag[class*="tag-o"]:focus, a.tag[class*="tag-o"]:hover, .tags.tag-o a.tag:focu
   min-width: 100px;
   padding: 5px 0;
   margin: 2px 0 0;
+  font-size: 1rem;
   color: #373a3c;
   text-align: left;
   background-color: #fff;
@@ -1390,11 +1390,11 @@ a.tag[class*="tag-o"]:focus, a.tag[class*="tag-o"]:hover, .tags.tag-o a.tag:focu
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
 
 .drop-divider {
-  height: 2px;
+  height: 1px;
   margin: 0.25rem 0;
   padding: 0 !important;
   overflow: hidden;
-  background-color: #e5e5e5; }
+  background-color: #c3c3c3; }
 
 .drop-menu > li, .drop-menu > a {
   display: block;
@@ -1741,6 +1741,7 @@ ol.list li[value]:before {
     opacity: 1; }
   .form-ctrl:disabled, .form-ctrl[readonly] {
     background-color: #eceeef;
+    color: #9c9c9c;
     opacity: 1; }
   .form-ctrl:disabled {
     cursor: not-allowed; }
@@ -1758,12 +1759,12 @@ select[multiple] {
   font-size: 1rem; }
 
 .form-ctrl-sm {
+  padding: 0 0.75rem;
   height: 1.5rem !important;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
 
 .form-ctrl-lg {
-  padding: 0.75rem 1.5rem;
   height: 3rem  !important;
   font-size: 1.5rem;
   border-radius: 0.3rem; }
@@ -1809,7 +1810,7 @@ select[multiple] {
   color: inherit; }
 
 @media (min-width: 544px) {
-  .form-inline .form-group {
+  .form-inline.form-group {
     display: inline-block;
     height: 2rem; }
   .form-inline .form-ctrl {
@@ -1826,41 +1827,6 @@ select[multiple] {
   .form-inline .input-group > .form-ctrl {
     width: 100%; } }
 
-.custom-ctrls-stacked .custom-ctrl {
-  display: inline; }
-  .custom-ctrls-stacked .custom-ctrl::after {
-    display: block;
-    margin-bottom: 0.25rem;
-    content: ""; }
-  .custom-ctrls-stacked .custom-ctrl + .custom-ctrl {
-    margin-left: 0; }
-
-.c-select {
-  display: inline-block;
-  max-width: 100%;
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  padding-right: 0.75rem \9;
-  color: #55595c;
-  vertical-align: middle;
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
-  background-image: none \9;
-  background-size: 8px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-  -moz-appearance: none;
-  -webkit-appearance: none; }
-  .c-select:focus {
-    border-color: #51a7e8;
-    outline: none;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5); }
-  .c-select::-ms-expand {
-    opacity: 0; }
-
-.c-select-sm {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  font-size: 75%; }
-
 /* Radio Buttons
    ========================================================================== */
 [type="radio"] {
@@ -1870,7 +1836,7 @@ select[multiple] {
 
 [type="radio"] + label {
   position: relative;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   cursor: pointer;
   display: inline-block;
   height: 1.5rem;
@@ -1887,7 +1853,7 @@ select[multiple] {
   position: absolute;
   left: 0;
   top: 0;
-  margin: 0.3rem 0;
+  margin: 0.35rem 0;
   width: 1rem;
   height: 1rem;
   z-index: 0;
@@ -1973,7 +1939,7 @@ form p:last-child {
   /* checkbox aspect */ }
   [type="checkbox"] + label {
     position: relative;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     cursor: pointer;
     display: inline-block;
     height: 1.5rem;
@@ -1986,8 +1952,7 @@ form p:last-child {
     -khtml-user-select: none;
     /* webkit (konqueror) browsers */
     -ms-user-select: none;
-    /* IE10+ */
-    }
+    /* IE10+ */ }
   [type="checkbox"] + label:before,
   [type="checkbox"] + label:after {
     content: '';
@@ -2294,7 +2259,8 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 .input-group-sm > .input-addon,
 .input-group-sm > .input-btn > .btn {
   height: 1.5rem !important;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  padding: 0 .5rem; }
 
 .input-addon {
   padding: 0 0.75rem;
@@ -2305,11 +2271,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   text-align: center;
   background-color: #eceeef;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-  }
-  .input-addon input[type="radio"],
-  .input-addon input[type="checkbox"] {
-    margin-top: 0; }
+  border-radius: 0.25rem; }
 
 .input-group .form-ctrl:not(:last-child),
 .input-addon:not(:last-child),
@@ -2339,19 +2301,13 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 .input-btn {
   position: relative;
-  font-size: 1rem;
-  white-space: nowrap;
-  height: 2rem; }
+  font-size: 0;
+  white-space: nowrap; }
   .input-btn > .btn {
     position: relative;
     margin: 0; }
-    .input-btn > .btn + .btn {
-      margin-left: -5px; }
     .input-btn > .btn:focus, .input-btn > .btn:active, .input-btn > .btn:hover {
       z-index: 3; }
-  .input-btn:not(:last-child) > .btn,
-  .input-btn:not(:last-child) > .btn-group {
-    margin-right: -1px; }
   .input-btn:not(:first-child) > .btn,
   .input-btn:not(:first-child) > .btn-group {
     z-index: 2; }

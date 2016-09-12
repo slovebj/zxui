@@ -159,7 +159,7 @@
         <button type="submit" class="btn">Submit</button>
       </form>
    
-      <form class="form-inline">
+      <form class="">
         <div class="form-group">
           <label for="exampleInputName2">Name</label>
           <input type="text" class="form-ctrl" id="exampleInputName2" placeholder="Jane Doe">
@@ -171,7 +171,7 @@
         <button type="submit" class="btn">Send invitation</button>
       </form>
 
-      <form class="form-inline">
+      <form class="">
         <div class="form-group">
           <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
           <div class="input-group">
@@ -328,7 +328,7 @@
 									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" type="text">
-											<span class="input-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+											<span class="input-addon"><i class="fa fa-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
 									</div>
@@ -474,79 +474,7 @@
 										</div>
 									</div>
 								</div>
-								
-								<div class="form-group">
-									<label class="xs2" for="prepend">W/ input &amp; radios</label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<span class="input-addon">
-														<span class="checkbox">
-															<label>
-															  <input type="checkbox" class="checkbox" checked="checked">
-															  <span></span>
-															</label>
-														</span>
-													</span>
-													<input class="form-ctrl" placeholder="" type="text">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="xs2"></label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<input class="form-ctrl" placeholder="With switch" type="text">
-													<span class="input-addon">
-														<span class="onoffswitch">
-															<input type="checkbox" name="start_interval" class="onoffswitch-checkbox" id="st3">
-															<label class="onoffswitch-label" for="st3"> 
-																<span class="onoffswitch-inner" data-swchon-text="YES" data-swchoff-text="NO"></span> 
-																<span class="onoffswitch-switch"></span> 
-															</label> 
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="xs2"></label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<span class="input-addon">
-														<span class="radio">
-															<label>
-																<input type="radio" class="radiobox" name="style-0a2">
-																<span> Left</span> 
-															</label>
-														</span>
-													</span>
-													<input class="form-ctrl" placeholder="" type="text">
-													<span class="input-addon">
-														<span class="radio">
-															<label>
-																<input type="radio" class="radiobox" name="style-0a2">
-																<span> Right</span> 
-															</label>
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-									
+							
 								<div class="form-group">
 									<label class="xs2" for="append">Appended Input</label>
 									<div class="xs10">
@@ -614,7 +542,7 @@
 															<li><a href="javascript:void(0);">Action</a></li>
 															<li><a href="javascript:void(0);">Another action</a></li>
 															<li><a href="javascript:void(0);">Something else here</a></li>
-															<li class="divider"></li>
+															<li class="drop-divider"></li>
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
@@ -641,7 +569,7 @@
 															<li><a href="javascript:void(0);">Action</a></li>
 															<li><a href="javascript:void(0);">Another action</a></li>
 															<li><a href="javascript:void(0);">Something else here</a></li>
-															<li class="divider"></li>
+															<li class="drop-divider"></li>
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
@@ -657,101 +585,14 @@
 							
 							<fieldset>
 								<legend>Flexible Input fields with icons</legend>
-								
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Addon Large</label>
-									<div class="xs10">
-										<div class="icon-addon addon-lg">
-						                    <input type="text" placeholder="Email" class="form-ctrl">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
-								
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Addon Medium</label>
-									<div class="xs10">
-										<div class="icon-addon addon-md">
-						                    <input type="text" placeholder="Email" class="form-ctrl">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
-
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Addon Small</label>
-									<div class="xs10">
-										<div class="icon-addon addon-sm">
-						                    <input type="text" placeholder="Email" class="form-ctrl">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
-
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Select Large</label>
-									<div class="xs10">
-						                <div class="icon-addon addon-lg">
-						                    <select class="form-ctrl">
-						                        <option>Select Option</option>
-						                        <option>Sample</option>
-						                        <option>Sample</option>
-						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
-
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Select Medium</label>
-									<div class="xs10">
-						                <div class="icon-addon addon-md">
-						                    <select class="form-ctrl">
-						                        <option>Select Option</option>
-						                        <option>Sample</option>
-						                        <option>Sample</option>
-						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
-
-								<div class="form-group">
-									
-									<label class="xs2" for="prepend">Select Small</label>
-									<div class="xs10">
-						                <div class="icon-addon addon-sm">
-						                    <select class="form-ctrl">
-						                        <option>Select Option</option>
-						                        <option>Sample</option>
-						                        <option>Sample</option>
-						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                </div>
-									</div>
-									
-								</div>
 
 								<div class="form-group">
 									
 									<label class="xs2" for="prepend">Prepended Large</label>
 									<div class="xs10">
 						                <div class="input-group input-group-lg">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-lg">
-						                        <input type="text" placeholder="Email" class="form-ctrl">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <span class="input-btn">
 						                        <button class="btn" type="button">Go!</button>
 						                    </span>
@@ -762,15 +603,12 @@
 
 								<div class="form-group">
 									
-									<label class="xs2" for="prepend">Prepended Medium</label>
+									<label class="xs2" for="prepend">Prepended Default</label>
 									<div class="xs10">
-						                <div class="input-group input-group-md">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-md">
-						                        <input type="text" placeholder="Email" class="form-ctrl">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
-						                    <span class="input-btn">
+						                <div class="input-group">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
+						                        <span class="input-btn">
 						                        <button class="btn" type="button">Go!</button>
 						                    </span>
 						                </div>
@@ -783,86 +621,18 @@
 									<label class="xs2" for="prepend">Prepended Small</label>
 									<div class="xs10">
 						                <div class="input-group input-group-sm">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-sm">
-						                        <input type="text" placeholder="Email" class="form-ctrl">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
 						                    <span class="input-btn">
 						                        <button class="btn" type="button">Go!</button>
 						                    </span>
 						                </div>
 									</div>
 									
+									
 								</div>
 								
 							</fieldset>
-							
-							<fieldset>
-								<legend>Simple input with icons</legend>
-								
-								<div class="form-group">
-									<label class="xs2">Input with icon</label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												
-												<div class="input-icon-left">
-													<i class="fa fa-microphone"></i>
-													<input class="form-ctrl" placeholder="Left Icon" type="text">
-												</div>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="xs2">With right icon</label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												
-												<div class="input-icon-right">
-													<i class="fa fa-microphone"></i>
-													<input class="form-ctrl" placeholder="" type="text">
-												</div>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="xs2">Input with spinner</label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												
-												<input class="form-ctrl ui-autocomplete-loading" placeholder="" type="text">
-
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								
-								
-							</fieldset>
-							
-							<div class="form-actions">
-								<div class="row">
-									<div class="xs12">
-										<button class="btn" type="submit">
-											Cancel
-										</button>
-										<button class="btn" type="submit">
-											<i class="fa fa-save"></i>
-											Submit
-										</button>
-									</div>
-								</div>
-							</div>
 
 						</form>
 
@@ -930,7 +700,7 @@
 									<span class="form-ctrl">Read only text</span>
 								</div>
 							</fieldset>
-							<div class="form-actions">
+							<div class="form-group">
 								<div class="btn btn-lg">
 									<i class="fa fa-save"></i>
 									Submit
@@ -986,17 +756,17 @@
 								×
 							</button>
 							<i class="fa-fw fa-lg fa fa-exclamation"></i>
-							<strong>Hey hey!</strong> This is an inline form!
+							<strong>行内控件</strong>
 						</div>
 
-						<form class="form-inline" role="form">
+						<form class="" role="form">
 							
 							<fieldset>
-								<div class="form-group">
+								<div class="form-group form-inline">
 									<label class="sr-only" for="exampleInputEmail2">Email address</label>
 									<input type="email" class="form-ctrl" id="exampleInputEmail2" placeholder="Enter email">
 								</div>
-								<div class="form-group">
+								<div class="form-group form-inline">
 									<label class="sr-only" for="exampleInputPassword2">Password</label>
 									<input type="password" class="form-ctrl" id="exampleInputPassword2" placeholder="Password">
 								</div>
@@ -1116,7 +886,7 @@
 									<div class="xs10">
 										<div class="input-group">
 											<input class="form-ctrl" disabled="disabled" type="text">
-											<span class="input-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+											<span class="input-addon"><i class="fa fa-remove-circle"></i></span>
 										</div>
 										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
 									</div>
@@ -1140,15 +910,9 @@
 								<legend>Input sizes <small>(disabled)</small></legend>
 								
 								<div class="form-group">
-									<label class="xs2">Extra Small Input</label>
-									<div class="xs10">
-										<input class="form-ctrl input-xs" disabled="disabled" placeholder=".input-xs" type="text">
-									</div>
-								</div>
-								<div class="form-group">
 									<label class="xs2">Small Input</label>
 									<div class="xs10">
-										<input class="form-ctrl input-sm" disabled="disabled" placeholder=".input-sm" type="text">
+										<input class="form-ctrl form-ctrl-sm" disabled="disabled" placeholder=".form-ctrl-sm" type="text">
 									</div>
 								</div>
 								<div class="form-group">
@@ -1160,7 +924,7 @@
 								<div class="form-group">
 									<label class="xs2">Large Input</label>
 									<div class="xs10">
-										<input class="form-ctrl input-lg" disabled="disabled" placeholder=".input-lg" type="text">
+										<input class="form-ctrl form-ctrl-lg" disabled="disabled" placeholder=".form-ctrl-lg" type="text">
 									</div>
 								</div>
 
@@ -1171,7 +935,7 @@
 								<div class="form-group">
 									<label class="xs2">Small Select</label>
 									<div class="xs10">
-										<select class="form-ctrl input-sm" disabled="disabled">
+										<select class="form-ctrl form-ctrl-sm" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1225,7 +989,7 @@
 								<div class="form-group">
 									<label class="xs2">Large Select</label>
 									<div class="xs10">
-										<select class="form-ctrl input-lg" disabled="disabled">
+										<select class="form-ctrl form-ctrl-lg" disabled="disabled">
 											<option>Amsterdam</option>
 											<option>Atlanta</option>
 											<option>Baltimore</option>
@@ -1282,77 +1046,6 @@
 									</div>
 								</div>
 
-								<div class="form-group">
-									<label class="xs2" for="prepend">W/ input &amp; radios</label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<span class="input-addon">
-														<span class="checkbox">
-															<label>
-															  <input type="checkbox" disabled="disabled" class="checkbox" checked="checked">
-															  <span></span>
-															</label>
-														</span>
-													</span>
-													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-	
-								<div class="form-group">
-									<label class="xs2"></label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<input class="form-ctrl" disabled="disabled" placeholder="With switch" type="text">
-													<span class="input-addon">
-														<span class="onoffswitch">
-															<input type="checkbox" name="start_interval" disabled="disabled" class="onoffswitch-checkbox" id="st3a">
-															<label class="onoffswitch-label" for="st3a"> 
-																<span class="onoffswitch-inner" data-swchon-text="YES" data-swchoff-text="NO"></span> 
-																<span class="onoffswitch-switch"></span> 
-															</label> 
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>	
-
-								<div class="form-group">
-									<label class="xs2"></label>
-									<div class="xs10">
-										<div class="row">
-											<div class="col sm12">
-												<div class="input-group">
-													<span class="input-addon">
-														<span class="radio">
-															<label>
-																<input type="radio" disabled="disabled" class="radiobox" name="style-0t2a">
-																<span> Left</span> 
-															</label>
-														</span>
-													</span>
-													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
-													<span class="input-addon">
-														<span class="radio">
-															<label>
-																<input type="radio" disabled="disabled" class="radiobox" name="style-0t2a">
-																<span> Right</span> 
-															</label>
-														</span>
-													</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 	
 								<div class="form-group">
 									<label class="xs2">Combined</label>
@@ -1407,7 +1100,7 @@
 															<li><a href="javascript:void(0);">Action</a></li>
 															<li><a href="javascript:void(0);">Another action</a></li>
 															<li><a href="javascript:void(0);">Something else here</a></li>
-															<li class="divider"></li>
+															<li class="drop-divider"></li>
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
@@ -1434,7 +1127,7 @@
 															<li><a href="javascript:void(0);">Action</a></li>
 															<li><a href="javascript:void(0);">Another action</a></li>
 															<li><a href="javascript:void(0);">Something else here</a></li>
-															<li class="divider"></li>
+															<li class="drop-divider"></li>
 															<li><a href="javascript:void(0);">Cancel</a></li>
 														</ul>
 													</div>
@@ -1457,7 +1150,7 @@
 									<div class="xs10">
 										<div class="icon-addon addon-lg">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1469,7 +1162,7 @@
 									<div class="xs10">
 										<div class="icon-addon addon-md">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1481,7 +1174,7 @@
 									<div class="xs10">
 										<div class="icon-addon addon-sm">
 						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1497,7 +1190,7 @@
 						                        <option>Sample</option>
 						                        <option>Sample</option>
 						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1513,7 +1206,7 @@
 						                        <option>Sample</option>
 						                        <option>Sample</option>
 						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1529,7 +1222,7 @@
 						                        <option>Sample</option>
 						                        <option>Sample</option>
 						                    </select>
-						                    <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
 						                </div>
 									</div>
 									
@@ -1540,11 +1233,11 @@
 									<label class="xs2" for="prepend">Prepended Large</label>
 									<div class="xs10">
 						                <div class="input-group input-group-lg">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-lg">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
+						                       
+						                 
 						                    <span class="input-btn">
 						                        <button class="btn" type="button" disabled="disabled">Go!</button>
 						                    </span>
@@ -1557,12 +1250,12 @@
 									
 									<label class="xs2" for="prepend">Prepended Medium</label>
 									<div class="xs10">
-						                <div class="input-group input-group-md">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-md">
+						                <div class="input-group">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                   
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
+						                       <span class="input-addon"><i class="fa fa-search"></i></span>
+						                 
 						                    <span class="input-btn">
 						                        <button class="btn" type="button" disabled="disabled">Go!</button>
 						                    </span>
@@ -1576,11 +1269,11 @@
 									<label class="xs2" for="prepend">Prepended Small</label>
 									<div class="xs10">
 						                <div class="input-group input-group-sm">
-						                    <span class="input-addon"><i class="glyphicon glyphicon-filter"></i></span>
-						                    <div class="icon-addon addon-sm">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    
 						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
-						                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
-						                    </div>
+						                      
+						                   
 						                    <span class="input-btn">
 						                        <button class="btn" type="button" disabled="disabled">Go!</button>
 						                    </span>
@@ -1601,8 +1294,8 @@
 											<div class="col sm12">
 												
 												<div class="input-icon-left">
-													<i class="fa fa-microphone"></i>
-													<input class="form-ctrl" disabled="disabled" placeholder="Left Icon" type="text">
+													<i class="fa fa-microphone l0"></i>
+													<input class="form-ctrl icon-l" disabled="disabled" placeholder="Left Icon" type="text">
 												</div>
 												
 											</div>
@@ -1641,7 +1334,7 @@
 								
 							</fieldset>							
 
-							<div class="form-actions">
+							<div class="form-group">
 								<div class="row">
 									<div class="xs12">
 										<button class="btn" disabled="disabled" type="submit">
@@ -1720,7 +1413,7 @@
 									<span class="form-ctrl">Read only text</span>
 								</div>
 							</fieldset>
-							<div class="form-actions">
+							<div class="form-group">
 								<button class="btn btn-lg" disabled="disabled">
 									<i class="fa fa-save"></i>
 									Submit
@@ -1780,14 +1473,14 @@
 							<strong>Hey hey!</strong> I am disabled!
 						</div>
 
-						<form class="form-inline" role="form">
+						<form class="" role="form">
 							
 							<fieldset>
-								<div class="form-group">
+								<div class="form-group form-inline">
 									<label class="sr-only">Email address</label>
 									<input type="email" class="form-ctrl" disabled="disabled" placeholder="Enter email">
 								</div>
-								<div class="form-group">
+								<div class="form-group form-inline">
 									<label class="sr-only">Password</label>
 									<input type="password" class="form-ctrl" disabled="disabled" placeholder="Password">
 								</div>

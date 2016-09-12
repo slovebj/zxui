@@ -47,6 +47,7 @@
   &:disabled,
   &[readonly] {
     background-color: $input-bg-disabled;
+    color: #9c9c9c;
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
@@ -87,13 +88,13 @@ select[multiple]{
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
 .form-ctrl-sm {
+  padding: 0 $input-padding-x;
   height: 1.5rem !important;
   font-size: $font-size-sm;
   @include border-radius($input-border-radius-sm);
 }
 
 .form-ctrl-lg {
-  padding: $input-padding-y-lg $input-padding-x-lg;
   height: 3rem  !important;
   font-size: 1.5rem;
   @include border-radius($input-border-radius-lg);
@@ -160,7 +161,7 @@ select[multiple]{
   // Kick in the inline
   @include media-breakpoint-up(sm) {
     // Inline-block all the things for "inline"
-    .form-group {
+    &.form-group {
       display: inline-block;
       height: 2rem;
     }

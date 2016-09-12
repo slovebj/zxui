@@ -80,6 +80,7 @@
 .input-group-sm > .input-btn > .btn {
   height: 1.5rem !important;
   font-size: $font-size-sm;
+  padding: 0 .5rem;
 }
 
 
@@ -97,14 +98,6 @@
   background-color: $input-addon-bg;
   border: $input-btn-border-width solid $input-addon-border-color;
   @include border-radius($border-radius);
-
-  // scss-lint:disable QualifyingElement
-  // Nuke default margins from checkboxes and radios to vertically center within.
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-top: 0;
-  }
-  // scss-lint:enable QualifyingElement
 }
 
 
@@ -145,9 +138,8 @@
   position: relative;
   // Jankily prevent input button groups from wrapping with `white-space` and
   // `font-size` in combination with `inline-block` on buttons.
-  font-size: 1rem;
+  font-size: 0;
   white-space: nowrap;
-  height: 2rem;
 
   // Negative margin for spacing, position for bringing hovered/focused/actived
   // element above the siblings.
@@ -155,7 +147,7 @@
     position: relative;
     margin: 0;
     + .btn {
-      margin-left: (-$input-btn-border-width*5);
+      //margin-left: (-$input-btn-border-width);
     }
     // Bring the "active" button to the front
     @include hover-focus-active {
@@ -167,7 +159,7 @@
   &:not(:last-child) {
     > .btn,
     > .btn-group {
-      margin-right: (-$input-btn-border-width);
+      //margin-right: (-$input-btn-border-width);
     }
   }
   &:not(:first-child) {
