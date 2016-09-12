@@ -114,8 +114,8 @@
 
 					<!-- widget content -->
 					<div class="widget-body">
-						<p class="alert alert-info no-margin">
-							All progress bars contain a base class of
+						<p>
+							使用一些额外的类和一些巧妙的浏览器特有的CSS，样式化HTML5 的< progress > 元素。确保你阅读了浏览器支持。所有进度条使用一个基础的类
 							<code>
 								.progress
 							</code>
@@ -377,7 +377,11 @@
 							<div class="col sm12">
 								<hr class="simple">
 								<h3>Default Progress Bars</h3>
-
+								<progress class="progress" value="0" max="100">0%</progress>
+								<progress class="progress" value="25" max="100">25%</progress>
+								<progress class="progress" value="50" max="100">50%</progress>
+								<progress class="progress" value="75" max="100">75%</progress>
+								<progress class="progress" value="100" max="100">100%</progress>
 								<p>
 									Micro progress bar <code>
 										.progress-micro</code>

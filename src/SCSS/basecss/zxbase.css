@@ -600,7 +600,7 @@ output {
 /*--------------
    Horizontal progress bar
 ---------------*/
-.progress {
+.progress, progress {
   display: block;
   background-color: #BDBDBD;
   width: 100%;
