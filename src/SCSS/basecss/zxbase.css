@@ -65,8 +65,7 @@ audio:not([controls]) {
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline;
-  }
+  vertical-align: baseline; }
 
 /**
  * Add the correct display in IE 10-.
@@ -612,8 +611,7 @@ output {
   background: #d8d8d8;
   padding: 0em;
   border-radius: 0.25rem;
-  overflow: hidden;
-  }
+  overflow: hidden; }
 
 .progress:first-child {
   margin: 0em 0em 2.5em; }
@@ -6363,8 +6361,7 @@ mark,
   font-style: italic; }
 
 .justify {
-  text-align: justify !important;
-  }
+  text-align: justify !important; }
 
 .text-l {
   text-align: left !important; }
