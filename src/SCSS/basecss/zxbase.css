@@ -65,7 +65,8 @@ audio:not([controls]) {
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  }
 
 /**
  * Add the correct display in IE 10-.
@@ -597,26 +598,253 @@ output {
   height: 1em;
   vertical-align: middle; }
 
-/*--------------
-   Horizontal progress bar
----------------*/
-.progress, progress {
+/*******************************
+            Progress
+*******************************/
+.progress {
+  position: relative;
   display: block;
-  background-color: #BDBDBD;
-  width: 100%;
-  height: 0.8rem;
-  font-size: 0.8rem;
-  text-align: center;
-  line-height: 100%;
-  color: white; }
+  height: 1.5em;
+  max-width: 100%;
+  border: none;
+  margin: 1em 0em 2.5em;
+  box-shadow: none;
+  background: #d8d8d8;
+  padding: 0em;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  }
 
-.progress::before {
-  content: "30%";
-  display: block;
-  width: 30%;
+.progress:first-child {
+  margin: 0em 0em 2.5em; }
+
+.progress:last-child {
+  margin: 0em 0em 1.5em; }
+
+/*******************************
+            Content
+*******************************/
+/* Activity Bar */
+.progress .bar {
+  display: inline-block;
+  white-space: nowrap;
   height: 100%;
-  background-color: #26A69A; }
+  color: #fff;
+  text-align: right;
+  background: #0074d9;
+  transition: width 0.1s ease, background-color 0.1s ease; }
 
+/* Label */
+.progress > .label {
+  position: absolute;
+  width: 100%;
+  font-size: 1em;
+  top: 100%;
+  right: auto;
+  left: 0%;
+  bottom: auto;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+  text-shadow: none;
+  margin-top: 0.2em;
+  text-align: center;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease; }
+
+/*******************************
+            Types
+*******************************/
+/* Indicating */
+.indicating.progress[data-percent^="1"] .bar,
+.indicating.progress[data-percent^="2"] .bar {
+  background-color: #d95c5c; }
+
+.indicating.progress[data-percent^="3"] .bar {
+  background-color: #efbc72; }
+
+.indicating.progress[data-percent^="4"] .bar,
+.indicating.progress[data-percent^="5"] .bar {
+  background-color: #e6bb48; }
+
+.indicating.progress[data-percent^="6"] .bar {
+  background-color: #ddc928; }
+
+.indicating.progress[data-percent^="7"] .bar,
+.indicating.progress[data-percent^="8"] .bar {
+  background-color: #b4d95c; }
+
+.indicating.progress[data-percent^="9"] .bar,
+.indicating.progress[data-percent^="100"] .bar {
+  background-color: #66da81; }
+
+/* Indicating Label */
+.indicating.progress[data-percent^="1"] .label,
+.indicating.progress[data-percent^="2"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+.indicating.progress[data-percent^="3"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+.indicating.progress[data-percent^="4"] .label,
+.indicating.progress[data-percent^="5"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+.indicating.progress[data-percent^="6"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+.indicating.progress[data-percent^="7"] .label,
+.indicating.progress[data-percent^="8"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+.indicating.progress[data-percent^="9"] .label,
+.indicating.progress[data-percent^="100"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+/* Single Digits */
+.indicating.progress[data-percent="1"] .bar,
+.indicating.progress[data-percent="2"] .bar,
+.indicating.progress[data-percent="3"] .bar,
+.indicating.progress[data-percent="4"] .bar,
+.indicating.progress[data-percent="5"] .bar,
+.indicating.progress[data-percent="6"] .bar,
+.indicating.progress[data-percent="7"] .bar,
+.indicating.progress[data-percent="8"] .bar,
+.indicating.progress[data-percent="9"] .bar {
+  background-color: #d95c5c; }
+
+.indicating.progress[data-percent="1"] .label,
+.indicating.progress[data-percent="2"] .label,
+.indicating.progress[data-percent="3"] .label,
+.indicating.progress[data-percent="4"] .label,
+.indicating.progress[data-percent="5"] .label,
+.indicating.progress[data-percent="6"] .label,
+.indicating.progress[data-percent="7"] .label,
+.indicating.progress[data-percent="8"] .label,
+.indicating.progress[data-percent="9"] .label {
+  color: rgba(0, 0, 0, 0.87); }
+
+/* Indicating Success */
+.indicating.progress.success .label {
+  color: #1a531b; }
+
+/*--------------
+     Active
+---------------*/
+.active.progress .bar {
+  position: relative;
+  min-width: 2em; }
+
+.active.progress .bar::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #ffffff;
+  border-radius: 0.28571429rem;
+  animation: progress-active 2s ease infinite; }
+
+@-webkit-keyframes progress-active {
+  0% {
+    opacity: 0.3;
+    width: 0; }
+  100% {
+    opacity: 0;
+    width: 100%; } }
+@keyframes progress-active {
+  0% {
+    opacity: 0.3;
+    width: 0; }
+  100% {
+    opacity: 0;
+    width: 100%; } }
+/*--------------
+    Disabled
+---------------*/
+.disabled.progress {
+  opacity: 0.35; }
+
+.disabled.progress .bar,
+.disabled.progress .bar::after {
+  animation: none !important; }
+
+/*******************************
+           Variations
+*******************************/
+/*--------------
+    Inverted
+---------------*/
+.inverted.progress {
+  background: rgba(255, 255, 255, 0.08);
+  border: none; }
+
+.inverted.progress .bar {
+  background: #888888; }
+
+.inverted.progress .bar > .progress {
+  color: #f9fafb; }
+
+.inverted.progress > .label {
+  color: #ffffff; }
+
+.inverted.progress.success > .label {
+  color: #21ba45; }
+
+.inverted.progress.warning > .label {
+  color: #f2c037; }
+
+.inverted.progress.error > .label {
+  color: #db2828; }
+
+/*--------------
+    Attached
+---------------*/
+/* bottom attached */
+.progress.attached {
+  background: transparent;
+  position: relative;
+  border: none;
+  margin: 0em; }
+
+.progress.attached,
+.progress.attached .bar {
+  display: block;
+  height: 0.2rem;
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 0em 0em 0.28571429rem 0.28571429rem; }
+
+.progress.attached .bar {
+  border-radius: 0em; }
+
+/* top attached */
+.progress.top.attached,
+.progress.top.attached .bar {
+  top: 0px;
+  border-radius: 0.28571429rem 0.28571429rem 0em 0em; }
+
+.progress.top.attached .bar {
+  border-radius: 0em; }
+
+/* Coupling */
+.segment > .attached.progress,
+.card > .attached.progress {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 100%;
+  width: 100%; }
+
+.segment > .bottom.attached.progress,
+.card > .bottom.attached.progress {
+  top: 100%;
+  bottom: auto; }
+
+/*******************************
+            Progress
+*******************************/
 .close {
   float: right;
   font-size: 1.5rem;
@@ -6135,7 +6363,8 @@ mark,
   font-style: italic; }
 
 .justify {
-  text-align: justify !important; }
+  text-align: justify !important;
+  }
 
 .text-l {
   text-align: left !important; }

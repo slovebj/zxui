@@ -1,27 +1,3 @@
-/*--------------
-   Horizontal progress bar
----------------*/
-
-.progress,progress {
-  display: block;
-  background-color: $input-disabled-solid-color;
-  width:100%;
-  height: 0.8rem;
-  font-size: 0.8rem;
-  text-align: center;
-  line-height: 100%;
-  color: white;
-}
-.progress::before {
-  content: "30%";
-  display: block;
-  width: 30%;
-  height: 100%;
-  background-color: $secondary-color;
-
-}
-
-
 /*******************************
             Progress
 *******************************/
@@ -29,13 +5,15 @@
 .progress {
   position: relative;
   display: block;
+  height: 1.5em;
   max-width: 100%;
   border: none;
   margin: 1em 0em 2.5em;
   box-shadow: none;
-  background: rgba(0, 0, 0, 0.1);
+  background: $progress-bg;
   padding: 0em;
-  border-radius: 0.28571429rem;
+  border-radius: $progress-border-radius;
+  overflow: hidden;
 }
 
 .progress:first-child {
@@ -53,33 +31,14 @@
 /* Activity Bar */
 
 .progress .bar {
-  display: block;
-  line-height: 1;
-  position: relative;
-  width: 0%;
-  min-width: 2em;
-  background: #888888;
-  border-radius: 0.28571429rem;
-  -webkit-transition: width 0.1s ease, background-color 0.1s ease;
-  transition: width 0.1s ease, background-color 0.1s ease;
-}
-
-/* Percent Complete */
-
-.progress .bar > .progress {
+  display: inline-block;
   white-space: nowrap;
-  position: absolute;
-  width: auto;
-  font-size: 0.92857143em;
-  top: 50%;
-  right: 0.5em;
-  left: auto;
-  bottom: auto;
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: none;
-  margin-top: -0.5em;
-  font-weight: bold;
-  text-align: left;
+  height: 100%;
+  color: #fff;
+  text-align: right;
+  background: $progress-bar-color;
+  transition: width 0.1s ease, background-color 0.1s ease;
+
 }
 
 /* Label */
@@ -196,63 +155,6 @@
 .indicating.progress.success .label {
   color: #1a531b;
 }
-/*******************************
-             States
-*******************************/
-
-/*--------------
-     Success
----------------*/
-
-.progress.success .bar {
-  background-color: #21ba45 !important;
-}
-
-.progress.success .bar,
-.progress.success .bar::after {
-  -webkit-animation: none !important;
-  animation: none !important;
-}
-
-.progress.success > .label {
-  color: #1a531b;
-}
-
-/*--------------
-     Warning
----------------*/
-
-.progress.warning .bar {
-  background-color: #f2c037 !important;
-}
-
-.progress.warning .bar,
-.progress.warning .bar::after {
-  -webkit-animation: none !important;
-  animation: none !important;
-}
-
-.progress.warning > .label {
-  color: #794b02;
-}
-
-/*--------------
-     Error
----------------*/
-
-.progress.error .bar {
-  background-color: #db2828 !important;
-}
-
-.progress.error .bar,
-.progress.error .bar::after {
-  -webkit-animation: none !important;
-  animation: none !important;
-}
-
-.progress.error > .label {
-  color: #912d2b;
-}
 
 /*--------------
      Active
@@ -273,7 +175,6 @@
   bottom: 0px;
   background: #ffffff;
   border-radius: 0.28571429rem;
-  -webkit-animation: progress-active 2s ease infinite;
   animation: progress-active 2s ease infinite;
 }
 
@@ -311,7 +212,6 @@
 
 .disabled.progress .bar,
 .disabled.progress .bar::after {
-  -webkit-animation: none !important;
   animation: none !important;
 }
 
@@ -407,183 +307,6 @@
   bottom: auto;
 }
 
-/*--------------
-     Colors
----------------*/
-
-/* Red */
-
-.red.progress .bar {
-  background-color: #db2828;
-}
-
-.red.inverted.progress .bar {
-  background-color: #ff695e;
-}
-
-/* Orange */
-
-.orange.progress .bar {
-  background-color: #f2711c;
-}
-
-.orange.inverted.progress .bar {
-  background-color: #ff851b;
-}
-
-/* Yellow */
-
-.yellow.progress .bar {
-  background-color: #fbbd08;
-}
-
-.yellow.inverted.progress .bar {
-  background-color: #ffe21f;
-}
-
-/* Olive */
-
-.olive.progress .bar {
-  background-color: #b5cc18;
-}
-
-.olive.inverted.progress .bar {
-  background-color: #d9e778;
-}
-
-/* Green */
-
-.green.progress .bar {
-  background-color: #21ba45;
-}
-
-.green.inverted.progress .bar {
-  background-color: #2ecc40;
-}
-
-/* Teal */
-
-.teal.progress .bar {
-  background-color: #00b5ad;
-}
-
-.teal.inverted.progress .bar {
-  background-color: #6dffff;
-}
-
-/* Blue */
-
-.blue.progress .bar {
-  background-color: #2185d0;
-}
-
-.blue.inverted.progress .bar {
-  background-color: #54c8ff;
-}
-
-/* Violet */
-
-.violet.progress .bar {
-  background-color: #6435c9;
-}
-
-.violet.inverted.progress .bar {
-  background-color: #a291fb;
-}
-
-/* Purple */
-
-.purple.progress .bar {
-  background-color: #a333c8;
-}
-
-.purple.inverted.progress .bar {
-  background-color: #dc73ff;
-}
-
-/* Pink */
-
-.pink.progress .bar {
-  background-color: #e03997;
-}
-
-.pink.inverted.progress .bar {
-  background-color: #ff8edf;
-}
-
-/* Brown */
-
-.brown.progress .bar {
-  background-color: #a5673f;
-}
-
-.brown.inverted.progress .bar {
-  background-color: #d67c1c;
-}
-
-/* Grey */
-
-.grey.progress .bar {
-  background-color: #767676;
-}
-
-.grey.inverted.progress .bar {
-  background-color: #dcddde;
-}
-
-/* Black */
-
-.black.progress .bar {
-  background-color: #1b1c1d;
-}
-
-.black.inverted.progress .bar {
-  background-color: #545454;
-}
-
-/*--------------
-     Sizes
----------------*/
-
-.tiny.progress {
-  font-size: 0.85714286rem;
-}
-
-.tiny.progress .bar {
-  height: 0.5em;
-}
-
-.small.progress {
-  font-size: 0.92857143rem;
-}
-
-.small.progress .bar {
-  height: 1em;
-}
-
-.progress {
-  font-size: 1rem;
-}
-
-.progress .bar {
-  height: 1.75em;
-}
-
-.large.progress {
-  font-size: 1.14285714rem;
-}
-
-.large.progress .bar {
-  height: 2.5em;
-}
-
-.big.progress {
-  font-size: 1.28571429rem;
-}
-
-.big.progress .bar {
-  height: 3.5em;
-}
 
 /*******************************
             Progress
