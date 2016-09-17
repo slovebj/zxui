@@ -35,7 +35,7 @@
 
 		<!-- NEW WIDGET START -->
 		<article class="col sm12">
-
+			<h4 class="divider"><i class="fa fa-fw fa-desktop"></i>这是一个带文字的分割线</h4>
 			<div class="alert alert-warning fade in">
 				<button class="close" data-dismiss="alert">
 					×
@@ -98,7 +98,7 @@
 				-->
 				<header>
 					<span class="widget-icon"> <i class="fa fa-align-justify"></i> </span>
-					<h2>Standard Progress Bars </h2>
+					<h2>进度条 </h2>
 
 				</header>
 
@@ -119,35 +119,12 @@
 							<code>
 								.progress
 							</code>
-							. Control the size of the progress bar with
-							<code>
-								.progress-xs
-							</code>
-							,
-							<code>
-								.progress-sm
-							</code>
-							,
-							<code>
-								.progress-lg
-							</code>
-							or leave as is for the default size.
+							。通过设置字体可以改变进度条的高度，比如在progress类后附加上f3。
 						</p>
 
 						<div class="row">
 
-							<div class="col sm12">
-								<h3>Transitional Progress Bars</h3>
-								<p>
-									<span class="label bg-color-darken txt-color-white">JS required</span> This nifty animated progress bars run on CSS combined with javascript
-								</p>
-								<p>
-									You will simply need to add in the value
-									<code>
-										aria-valuetransitiongoal="25"
-									</code>
-									after the <strong>.progress-bar</strong> class
-								</p>
+							<div class="col sm12">							
 								<div class="row">
 
 									<div class="col sm6">
@@ -159,14 +136,15 @@
 											</code>
 										</p>
 										<div class="well no-padding">
-											<div class="progress">
-													<div class="bar bg-teal5" style="width: 20%">20%</div>												
-											</div>
-											<div class="progress">
-													<div class="bar bg-blue5" style="width: 50%">50%</div>
-											</div>
-											<div class="progress">
+											<div class="progress progress-o" data-label="总进度：60%">
+													<div class="bar bg-blue5" style="width: 20%">20%</div>
+													<div class="bar bg-pink5" style="width: 40%">40%</div>
+													</div>
+											<div class="progress f3">
 													<div class="bar bg-red3" style="width: 100%">100%</div>
+											</div>
+											<div class="progress line">
+													<div class="bar bg-teal5" style="width: 20%"></div>												
 											</div>
 										</div>
 									</div>
@@ -178,12 +156,12 @@
 										<div class="well no-padding">
 
 											<div class="progress">
-													<div class="bar bg-teal5 text-l" style="width: 20%">20%</div>												
+													<div class="bar bar-striped active bg-teal5 text-l" style="width: 20%">20%</div>												
 											</div>
-											<div class="progress">
-													<div class="bar bg-blue5 text-c" style="width: 50%">50%</div>
+											<div class="progress active">
+													<div class="bar text-c" style="width: 50%">50%</div>
 											</div>
-											<div class="progress">
+											<div class="progress circle">
 													<div class="bar bg-red3" style="width: 100%">100%</div>
 											</div>
 											
@@ -196,285 +174,16 @@
 
 						</div>
 
-						<hr class="simple">
-
-						<div class="row">
-
-							<div class="col sm12">
-								<h3><small>Transitional Progress Bars continued...</small></h3>
-								<div class="row">
-
-									<div class="col sm6 col md6 col lg3">
-										<p>
-											Add an overlapping div to progress-bar with the base css of
-											<code>
-												.progress .vertical
-											</code>
-										</p>
-
-										<div class="well no-padding">
-
-											<ul class="vertical-bars">
-												<li>
-													<div class="progress vertical">
-														<div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical">
-														<div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical">
-														<div class="progress-bar bg-color-blue" aria-valuetransitiongoal="75"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical">
-														<div class="progress-bar bg-color-redLight" aria-valuetransitiongoal="100"></div>
-													</div>
-												</li>
-											</ul>
-
-										</div>
-									</div>
-
-									<div class="col sm6 col md6 col lg3">
-										<p>
-											Add an overlapping div to progress-bar with the base css of
-											<code>
-												.progress .vertical .bottom
-											</code>
-										</p>
-
-										<div class="well no-padding">
-											<ul class="vertical-bars">
-												<li>
-													<div class="progress vertical bottom">
-														<div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom">
-														<div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom">
-														<div class="progress-bar bg-color-blue" aria-valuetransitiongoal="75"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom">
-														<div class="progress-bar bg-color-redLight" aria-valuetransitiongoal="100"></div>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="col sm6 col md6 col lg3">
-										<p>
-											Add an overlapping div to progress-bar with the base css of
-											<code>
-												.progress .vertical .wide-bar
-											</code>
-										</p>
-
-										<div class="well no-padding">
-
-											<ul class="vertical-bars">
-												<li>
-													<div class="progress vertical wide-bar">
-														<div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical wide-bar">
-														<div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical wide-bar">
-														<div class="progress-bar bg-color-blue" aria-valuetransitiongoal="75"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical wide-bar">
-														<div class="progress-bar bg-color-redLight" aria-valuetransitiongoal="100"></div>
-													</div>
-												</li>
-											</ul>
-
-										</div>
-									</div>
-
-									<div class="col sm6 col md6 col lg3">
-
-										<p>
-											Add an overlapping div to progress-bar with the base css of
-											<code>
-												.bottom .wide-bar
-											</code>
-										</p>
-
-										<div class="well no-padding">
-											<ul class="vertical-bars">
-												<li>
-													<div class="progress vertical bottom wide-bar">
-														<div class="progress-bar bg-color-teal" aria-valuetransitiongoal="25"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom wide-bar">
-														<div class="progress-bar bg-color-blueLight" aria-valuetransitiongoal="50"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom wide-bar">
-														<div class="progress-bar bg-color-blue" aria-valuetransitiongoal="75"></div>
-													</div>
-												</li>
-												<li>
-													<div class="progress vertical bottom wide-bar">
-														<div class="progress-bar bg-color-redLight" aria-valuetransitiongoal="100"></div>
-													</div>
-												</li>
-											</ul>
-										</div>
-									</div>
-
-								</div>
-							</div>
-
-						</div>
 
 						<div class="row">
 							<div class="col sm12">
-								<hr class="simple">
+								<hr>
 								<h3>Default Progress Bars</h3>
 								<progress class="progress" value="0" max="100">0%</progress>
 								<progress class="progress" value="25" max="100">25%</progress>
 								<progress class="progress" value="50" max="100">50%</progress>
 								<progress class="progress" value="75" max="100">75%</progress>
 								<progress class="progress" value="100" max="100">100%</progress>
-								<p>
-									Micro progress bar <code>
-										.progress-micro</code>
-									with
-									<code>
-										.progress-bar-primary
-									</code>
-
-								</p>
-								<div class="progress progress-micro">
-									<div class="progress-bar progress-bar-primary" role="progressbar" style="width: 44%;"></div>
-								</div>
-
-								<p>
-									Extra small progress bar <code>
-										.progress-xs</code>
-									with
-									<code>
-										.bg-color-blue
-									</code>
-									<span class="txt-color-blue pull-right"><i class="fa fa-lg fa-check"></i></span>
-								</p>
-								<div class="progress progress-xs">
-									<div class="progress-bar bg-color-blue" role="progressbar" style="width: 60%;"></div>
-								</div>
-
-								<p>
-									Small progress bar <code>
-										.progress-sm</code>
-									with
-									<code>
-										.bg-color-greenLight
-									</code>
-									<span class="txt-color-green pull-right"><i class="fa fa-save"></i></span>
-								</p>
-								<div class="progress progress-sm">
-									<div class="progress-bar bg-color-greenLight" role="progressbar" style="width: 40%"></div>
-								</div>
-
-								<p>
-									Default progress bar with
-									<code>
-										.bg-color-redLight
-									</code>
-									<span class="txt-color-red pull-right"><i class="fa fa-lg fa-times"></i></span>
-								</p>
-								<div class="progress">
-									<div class="progress-bar bg-color-redLight" role="progressbar" style="width: 60%"></div>
-								</div>
-
-								<p>
-									Large progress bars <code>
-										.progress-lg</code>
-									with
-									<code>
-										.bg-color-blueLight
-									</code>
-									<span class="txt-color-blueLight pull-right"><i class="fa fa-2x fa-check"></i></span>
-								</p>
-								<div class="progress progress-lg">
-									<div class="progress-bar bg-color-blueLight" role="progressbar" style="width: 80%"></div>
-								</div>
-								<hr class="simple">
-
-								<h3>Stripped Progress Bars</h3>
-								<p>
-									Sriped Progress bars made with CSS3 gradients, by adding the
-									<code>
-										.progress-striped
-									</code> class to the base class
-
-								</p>
-								<p>
-									<span class="label label-info">Info!</span> Please be aware that this will not work in archaic browsers such as IE9 <span class="txt-color-purple pull-right"><i class="fa fa-warning"></i> 80% Complete</span>
-								</p>
-								<div class="progress">
-
-									<div class="progress progress-striped">
-										<div class="progress-bar bg-color-purple" role="progressbar" style="width: 77%"></div>
-									</div>
-
-								</div>
-
-								<p>
-									Activate and animate a progress bar by adding the class
-									<code>
-										.progress-striped .active
-									</code>
-								</p>
-								<p>
-									Dark progress bar with class
-									<code>
-										.bg-color-darken
-									</code>
-									<span class="txt-color-orange pull-right"><i class="fa fa-lg fa-times"></i></span>
-								</p>
-								<div class="progress progress-sm progress-striped active">
-									<div class="progress-bar bg-color-darken"  role="progressbar" style="width: 45%"></div>
-								</div>
-								<hr class="simple">
-								<h3>Stacking Progress Bars</h3>
-								<p>
-									Stack one progressbar on top of another by including all in one
-									<code>
-										div.progress
-									</code>
-
-									<span class="sparkline inline-block pull-right" data-sparkline-type='pie' data-sparkline-piecolor='["#71843F", "#C79121", "#A90329", "#ccc"]' data-sparkline-offset="90" data-sparkline-piesize="23px"> 35,20,10,35 </span>
-
-								</p>
-								<div class="progress progress-sm">
-									<div class="progress-bar bg-color-greenLight" style="width: 35%"></div>
-									<div class="progress-bar bg-color-yellow" style="width: 20%"></div>
-									<div class="progress-bar bg-color-redLight" style="width: 10%"></div>
-								</div>
-
 							</div>
 						</div>
 
