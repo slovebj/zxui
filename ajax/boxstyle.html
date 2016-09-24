@@ -14,9 +14,40 @@
   color: #fff;
 }
 </style>
+<h2 class="header">DISPLAY</h2>
+<p>特别制定几个display属性</p>
+<div class="row">
+          <div class="col xs12 sm6 md4 lg2 bd-xy">
+            <p class="block">block</p>前面是p标签的内容，添加.block变为块级元素。
+          </div>
+          <div class="col xs12 sm6 md4 lg2 bd-xy">
+            <div class="inline-block">inline-block。</div><div class="inline-block">inline-block。</div>
+          </div>
+          <div class="col xs12 sm6 md4 lg2 bd-xy">
+            <div class="inline">inline。</div><div class="inline">行内div。</div>
+          </div>
+          
+</div>
+
+<h2 class="header">浮动、对齐与边距</h2>
+<p>.left .right分别为左右浮动，而添加.clearfix为清除浮动。</p>
+<p>.center定义display为block，使块级水平居中。</p>
+<p>.v-top .v-middle .v-bottom分别为垂直顶端、居中、底部对齐，对应vertical-align属性。</p>
+<p>.l0 .r0 .lr0 .t0 .b0 .tb0分别定义各边距离为0。l、r、t、b分别为left、right、top、bottom缩写。</p>
+
+<h2 class="header">margin和padding</h2>
+<p>分别定义margin和padding值</p>
+<p>采用m(p)-a(l、r、lr、t、b、tb)-0(1、2、3)的简写形式。m、p分别是margin和padding的缩写，a代表各个方向，为all的缩写，其他方向缩写同上面，最后的数字代表数值，单位rem。</p>
+
+<h2 class="header">可见性</h2>
+<p>.invisible定义visibility: hidden !important;</p>
+<p>.print-block、.print-inline、.print-inline-block定义只在打印时才显示。.hidden-print定义打印时不显示。</p>
+<p>.sr-only .sr-only-focusable针对屏幕阅读器</p>
+
 <h2 class="header">阴影</h2>
 <p>使用.zdepth0~.zdepth6设置无阴影到深度阴影。</p>
 <div class="row">
+
           <div class="col xs12 sm6 md4 lg2">
             <p class="zdepth0 shadow-demo">zdepth0</p>
           </div>
@@ -42,6 +73,34 @@
             <p class="hoverable shadow-demo">使用hoverable类，鼠标经过添加阴影</p>
           </div>
 </div>
+
+<h2 class="header">透明度</h2>
+<p>opacity0(2、4、5、6、8、10)定义opacity值分别为0、0.2、0.4、0.5、0.6、0.8、1.0。</p>
+<div class="row">
+
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity0 shadow-demo fg-black">opacity0</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity2 shadow-demo">opacity2</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity4 shadow-demo">opacity4</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity5 shadow-demo">opacity5</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity6 shadow-demo">opacity6</p>
+          </div>
+          <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity8 shadow-demo">opacity8</p>
+          </div>
+		  <div class="col xs12 sm6 md4 lg2">
+            <p class="opacity10 shadow-demo">opacity10</p>
+          </div>
+</div>
+
 <h2 class="header">圆角</h2>
 <p>使用.radius0~.radius5设置圆角，.circle为圆形。</p>
 <div class="row">

@@ -588,16 +588,6 @@ output {
   border-bottom: 1px solid currentColor;
   transform: scaleX(0.9); }
 
-/*--------------
-      Icon
----------------*/
-.divider > i.fa {
-  /* margin: 0; */
-  /* font-size: 1em; */
-  /* height: 1em; */
-  /* vertical-align: middle; */
-  }
-
 /*******************************
             Progress
 *******************************/
@@ -720,11 +710,10 @@ output {
   float: right;
   font-size: 1.5rem;
   font-weight: bold;
-  /* line-height: 1; */
+  line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: .2;
-  }
+  opacity: .2; }
   .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
@@ -736,8 +725,7 @@ button.close {
   cursor: pointer;
   background: transparent;
   border: 0;
-  -webkit-appearance: none;
-  }
+  -webkit-appearance: none; }
 
 code,
 kbd,
@@ -6030,7 +6018,7 @@ button.danger {
   box-shadow: none !important; }
 
 .zdepth1, .btn-z, .btn-pz, .btn-cz {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .zdepth2, .btn-z:hover, .btn-pz:hover, .btn-cz:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
@@ -6042,10 +6030,10 @@ button.danger {
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 .zdepth5 {
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21); }
 
 .zdepth6 {
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22); }
 
 .hoverable {
   transition: box-shadow .25s;
