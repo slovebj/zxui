@@ -572,7 +572,6 @@ output {
 .divider {
   display: table;
   white-space: nowrap;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   height: auto;
   overflow: hidden;
@@ -806,7 +805,7 @@ video.resp-video {
   max-width: 100%;
   height: auto; }
 
-.img-fluid {
+.img-resp {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -6540,13 +6539,6 @@ dl.row > dd + dt {
 .p-tb-3 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important; }
-
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030; }
 
 .invisible {
   visibility: hidden !important; }
