@@ -1,6 +1,5 @@
 /*!
- * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * zxui v1.0.0
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -182,19 +181,6 @@ svg:not(:root) {
 
 /* Grouping content
    ========================================================================== */
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
 /**
  * Add the correct margin in IE 8.
  
@@ -461,10 +447,6 @@ a:not([href]) {
   a:not([href]):focus {
     outline: none; }
 
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem; }
-
 figure {
   margin: 0 0 1rem; }
 
@@ -730,20 +712,18 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: #284350;
+  color: #ff9c9c;
+  font-size: 90%; }
 
 code {
-  padding: 0.2rem 0.4rem;
-  font-size: 90%;
-  color: #bd4147;
-  background-color: #f7f7f9;
+  padding: 0.05em 0.4em;
   border-radius: 0.25rem; }
 
 kbd {
-  padding: 0.2rem 0.4rem;
-  font-size: 90%;
+  padding: 0.05em 0.4em;
   color: #fff;
-  background-color: #333;
   border-radius: 0.2rem;
   box-shadow: inset 0 -0.1rem 0 rgba(0, 0, 0, 0.25); }
   kbd kbd {
@@ -756,13 +736,11 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 90%;
-  color: #373a3c; }
+  color: #72D6BE; }
   pre code {
     padding: 0;
     font-size: inherit;
     color: inherit;
-    background-color: transparent;
     border-radius: 0; }
 
 .pre-scrollable {
@@ -906,6 +884,72 @@ video.resp-video {
   .table-inverse thead, .table-inverse tfoot, .table-inverse td, .table-inverse th {
     border-color: rgba(255, 255, 255, 0.08) !important; }
 
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 10px; }
+
+  ::-webkit-scrollbar-button {
+    height: 0;
+    width: 0; }
+
+  ::-webkit-scrollbar-button:start:decrement,
+  ::-webkit-scrollbar-button:end:increment {
+    display: block; }
+
+  ::-webkit-scrollbar-button:vertical:start:increment,
+  ::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none; }
+
+  ::-webkit-scrollbar-track:vertical,
+  ::-webkit-scrollbar-track:horizontal,
+  ::-webkit-scrollbar-thumb:vertical,
+  ::-webkit-scrollbar-thumb:horizontal,
+  ::-webkit-scrollbar-track:vertical,
+  ::-webkit-scrollbar-track:horizontal,
+  ::-webkit-scrollbar-thumb:vertical,
+  ::-webkit-scrollbar-thumb:horizontal {
+    border-style: solid;
+    border-color: transparent; }
+
+  ::-webkit-scrollbar-track:vertical::-webkit-scrollbar-track:horizontal {
+    background-clip: padding-box;
+    background-color: #fff; }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    min-height: 28px;
+    padding-top: 100; }
+
+  ::-webkit-scrollbar-thumb:hover {
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.4); }
+
+  ::-webkit-scrollbar-thumb:active {
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.5); }
+
+  ::-webkit-scrollbar-track:vertical,
+  ::-webkit-scrollbar-track:horizontal,
+  ::-webkit-scrollbar-thumb:vertical,
+  ::-webkit-scrollbar-thumb:horizontal {
+    border-width: 0; }
+
+  ::-webkit-scrollbar-track:hover {
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05); }
+
+  ::-webkit-scrollbar-track:active {
+    -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.14), inset -1px -1px 0 rgba(0, 0, 0, 0.07);
+    background-color: rgba(0, 0, 0, 0.05); }
+
+  .scrollbar-hover::-webkit-scrollbar, .scrollbar-hover::-webkit-scrollbar-button, .scrollbar-hover::-webkit-scrollbar-track, .scrollbar-hover::-webkit-scrollbar-thumb {
+    visibility: hidden; }
+  .scrollbar-hover:hover::-webkit-scrollbar, .scrollbar-hover:hover::-webkit-scrollbar-button, .scrollbar-hover:hover::-webkit-scrollbar-track, .scrollbar-hover:hover::-webkit-scrollbar-thumb {
+    visibility: visible; } }
 .btn {
   position: relative;
   display: inline-block;
