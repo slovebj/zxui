@@ -11,7 +11,7 @@
         <!-- 这里仅包含基础css文件，ajax加载的页面片段内不共享的css在页面片段加载时加载 -->
         <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
         <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.v3.3.css"> -->
-        <link rel="stylesheet" type="text/css" media="screen" href="src/SCSS/basecss/zxbase.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="src-css/SCSS/basecss/zxbase.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
         <!-- ZXUI Styles : Caution! DO NOT change the order -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/zxui-plugins.min.css">
@@ -737,8 +737,10 @@
             </script>
             <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.6.5/js/jquery.mmenu.all.min.js"></script>-->
             <script src="js/plugin/mmenu/jquery.mmenu.min.all.js"></script>
-            <script src="js/vue.min.js"></script>
-            
+            <!--<script src="js/vue.min.js"></script>-->
+            <script src="//unpkg.com/vue@2.0.0-rc.6/dist/vue.js"></script>
+            <script src="lib/vue-com.js"></script>
+            <!--<script src="//unpkg.com/element-ui@1.0.0-rc.3/lib/index.js"></script>-->
             <!-- IMPORTANT: APP CONFIG -->
             <script src="js/app.config.js"></script>
             <!-- JS TOUCH : include this plugin for mobile drag / drop touch events-->
@@ -782,7 +784,7 @@
             <script src="js/smart-chat-ui/smart.chat.ui.js"></script>
             <script src="js/smart-chat-ui/smart.chat.manager.js"></script>
             <script>
-                var leftMenu = new Vue({
+                new Vue({
                     el: '#leftMenu',
                     data: {
                         items: [
@@ -805,6 +807,7 @@
                         ]
                     }
                 })
+                
             </script>
         </body>
     </html>

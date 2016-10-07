@@ -1,0 +1,2016 @@
+<div class="row">
+	<div class="col">
+		<h1 class="page-title txt-color-blueDark">
+			<i class="fa fa-pencil-square-o fa-fw "></i> 
+				表单
+			<span>> 
+				基础表单
+			</span>
+		</h1>
+	</div>
+</div>
+
+<div class="row">
+
+          <form action="#">
+            <input name="group1" type="radio" id="test1" />
+            <label for="test1">这是默认的radio，checked时为实心的圆</label>
+          <p>
+            <input name="group1" type="radio" id="test2" />
+            <label for="test2">将此默认radio包含于p标签中，具有10px的下页边距。</label>
+          </p>
+          <p>
+            <input class="filled tabbed" name="group1" type="radio" id="test3"  />
+            <label for="test3">radio在input中加入filled类，为圆环套圆形，加tabbed类选中时有阴影。</label>
+            <input name="group1" type="radio" id="test4" disabled="disabled" />
+            <label for="test4">禁用的radio样式</label>
+          </p>
+        </form>
+
+        <form action="#">
+          <p>
+            <input type="checkbox" id="test5" />
+            <label for="test5">Red</label>
+          </p>
+          <p>
+            <input type="checkbox"  class="tabbed" id="test6" checked="checked" />
+            <label for="test6">indeterminate</label>
+          </p>
+		  <p>
+            <input type="checkbox"  class="indeterminate" id="test9" checked="checked" />
+            <label for="test9">indeterminate</label>
+          </p>
+          <p>
+            <input type="checkbox" class="positive" id="filled-in-box" checked="checked" />
+            <label for="filled-in-box">Filled in</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+            <label for="test7">Green</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test8" disabled="disabled" />
+            <label for="test8">Brown</label>
+          </p>
+        </form>
+
+        <div class="switch">
+          <label>
+            Off
+            <input type="checkbox">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+
+        <div class="switch">
+          <label>
+            Off
+            <input disabled type="checkbox">
+            <span class="lever"></span>
+            On
+          </label>
+        </div>
+
+        <form action="#">
+          <div class="file-field input-field" >
+            <div class="btn">
+              <input type="file" />
+            </div>
+          </div>
+        </form>
+
+        <form action="#">
+          <p class="range-field">
+            <input type="range" id="test5" min="0" max="100" />
+          </p>
+        </form>
+
+		<article><p>为 <code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>、<code>&lt;select&gt;</code> 添加 <code>form-ctrl</code> 类即可得到统一外观的表单控件。</p><p>所有受支持的表单控件包括：</p>
+			<ul>
+				<li><code>&lt;select class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;textarea class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="text" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="password" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="datetime" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="datetime-local" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="date" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="month" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="time" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="week" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="number" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="email" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="url" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="search" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="tel" class="form-ctrl"&gt;</code></li>
+				<li><code>&lt;input type="color" class="form-ctrl"&gt;</code></li>
+			</ul>
+		</article>
+            <form>
+        <fieldset class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-ctrl" id="exampleInputEmail1" placeholder="Enter email">
+		  <small class="text-muted">We'll never share your email with anyone else.</small>
+        </fieldset>
+		<fieldset class="form-group">
+          <input type="email" class="form-ctrl icon-lr" id="exampleInputEmail1" placeholder="input内部带图标，可以设置左、右、左右三种图标位置">
+          <i class="fa-fw fa-lg fa fa-file l0"></i>
+		  <i class="fa-fw fa-lg fa fa-desktop r0"></i>
+        </fieldset>
+		<fieldset class="form-group">
+          <label for="exampleInputColor">Color picker</label>
+          <input type="color" class="form-ctrl" id="exampleInputColor">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-ctrl" id="exampleInputPassword1" placeholder="Password">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="exampleSelect1">Example select</label>
+          <select class="form-ctrl" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="exampleSelect2">Example multiple select</label>
+          <select multiple="true" class="form-ctrl" id="exampleSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="exampleTextarea">Example textarea</label>
+          <textarea class="form-ctrl" id="exampleTextarea" rows="3"></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" class="block" id="exampleInputFile">
+          <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </fieldset>
+       
+        <button type="submit" class="btn">Submit</button>
+      </form>
+   
+      <form class="">
+        <div class="form-group">
+          <label for="exampleInputName2">Name</label>
+          <input type="text" class="form-ctrl" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail2">Email</label>
+          <input type="email" class="form-ctrl" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+        </div>
+        <button type="submit" class="btn">Send invitation</button>
+      </form>
+
+      <form class="">
+        <div class="form-group">
+          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+          <div class="input-group">
+            <div class="input-addon">$</div>
+            <input type="text" class="form-ctrl" id="exampleInputAmount" placeholder="Amount">
+            <div class="input-addon">.00</div>
+			<div class="input-btn"><button type="submit" class="btn">Transfer cash</button></div>
+          </div>
+        </div>
+        <button type="submit" class="btn">Transfer cash</button>
+      </form>
+
+
+      <div class="form-group sccess">
+          <label class="" for="inputSuccess1">Input with success</label>
+          <input type="text" class="form-ctrl" id="inputSuccess1">
+        </div>
+        <div class="form-group warning">
+          <label class="" for="inputWarning1">Input with warning</label>
+          <input type="text" class="form-ctrl" id="inputWarning1">
+        </div>
+        <div class="form-group danger">
+          <label class="" for="inputError1">Input with error</label>
+          <input type="text" class="form-ctrl" id="inputError1">
+        </div>
+        
+</div>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article>
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+					<h2>Default Elements</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<form class="">
+							
+							<fieldset>
+								<legend>Unstyled Select</legend>
+								<div class="form-group">
+									<label class="xs2" for="select-1">Select</label>
+									<div class="xs10">
+	
+										<select class="form-ctrl" id="select-1">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select> 
+	
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2" for="multiselect1">Multiple select</label>
+									<div class="xs10">
+										<select multiple="multiple" id="multiselect1" class="form-ctrl custom-scroll" title="Click to Select a City">
+											<option>Amsterdam</option>
+											<option selected="selected">Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option selected="selected">Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+							</fieldset>
+							
+							<fieldset>
+								<legend>Input States</legend>
+								
+								<div class="form-group warning">
+									<label class="xs2">Input warning</label>
+									<div class="xs10">
+										<div class="input-group">
+											<input class="form-ctrl" type="text">
+											<span class="input-addon"><i class="fa fa-warning"></i></span>
+										</div>
+										<span class="help-block">Something may have gone wrong</span>
+									</div>
+
+								</div>
+								
+								<div class="form-group error">
+									<label class="xs2">Input error</label>
+									<div class="xs10">
+										<div class="input-group">
+											<input class="form-ctrl" type="text">
+											<span class="input-addon"><i class="fa fa-remove-circle"></i></span>
+										</div>
+										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
+									</div>
+								</div>
+								
+								<div class="form-group success">
+									<label class="xs2">Input success</label>
+									<div class="xs10">
+										<div class="input-group">
+											<span class="input-addon"><i class="fa fa-dollar"></i></span>
+											<input class="form-ctrl" type="text">
+											<span class="input-addon"><i class="fa fa-check"></i></span>
+										</div>
+										<span class="help-block">Something may have gone wrong</span>
+									</div>
+								</div>
+								
+							</fieldset>	
+							
+							<fieldset>
+								<legend>Input sizes</legend>
+								
+								<div class="form-group">
+									<label class="xs2">Small Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-sm" placeholder=".form-ctrl-sm" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Default Input</label>
+									<div class="xs10">
+										<input class="form-ctrl" placeholder="Default input" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Large Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-lg" placeholder=".form-ctrl-lg" type="text">
+									</div>
+								</div>
+
+							</fieldset>
+							
+							<fieldset>
+								<legend>Select Sizes</legend>
+								<div class="form-group">
+									<label class="xs2">Small Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-sm">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Default Select</label>
+									<div class="xs10">
+										<select class="form-ctrl">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Large Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-lg">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+
+							</fieldset>
+							
+							<fieldset>
+								<legend>Prepend &amp; Append</legend>
+								
+								<div class="form-group">
+									<label class="xs2" for="prepend">Prepended Input</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<span class="input-addon">@</span>
+													<input class="form-ctrl" id="prepend" placeholder="Username" type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+								<div class="form-group">
+									<label class="xs2" for="append">Appended Input</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<input class="form-ctrl" id="append" type="text">
+													<span class="input-addon">.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2" for="appendprepend">Combined</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<span class="input-addon">$</span>
+													<input class="form-ctrl" id="appendprepend" type="text">
+													<span class="input-addon">.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2" for="appendbutton">With buttons</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<input class="form-ctrl" id="appendbutton" type="text">
+													<div class="input-btn">
+														<button class="btn" type="button">
+															Search
+														</button>
+														<button class="btn" type="button">
+															Options
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2">With dropdowns</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-group">
+													<input type="text" class="form-ctrl">
+													<div class="input-btn">
+														<button type="button" class="btn" tabindex="-1">Action</button>
+														<button type="button" class="btn drop-toggle" data-toggle="dropdown" tabindex="-1">
+															<span class="caret"></span>
+														</button>
+														<ul class="drop-menu drop-menu-r" role="menu">
+															<li><a href="javascript:void(0);">Action</a></li>
+															<li><a href="javascript:void(0);">Another action</a></li>
+															<li><a href="javascript:void(0);">Something else here</a></li>
+															<li class="drop-divider"></li>
+															<li><a href="javascript:void(0);">Cancel</a></li>
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="xs2"></label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-group">
+													<div class="input-btn">
+														<button type="button" class="btn" tabindex="-1">Action</button>
+														<button type="button" class="btn drop-toggle" data-toggle="dropdown" tabindex="-1">
+															<span class="caret"></span>
+														</button>
+														<ul class="drop-menu" role="menu">
+															<li><a href="javascript:void(0);">Action</a></li>
+															<li><a href="javascript:void(0);">Another action</a></li>
+															<li><a href="javascript:void(0);">Something else here</a></li>
+															<li class="drop-divider"></li>
+															<li><a href="javascript:void(0);">Cancel</a></li>
+														</ul>
+													</div>
+													<input type="text" class="form-ctrl">
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</fieldset>
+							
+							<fieldset>
+								<legend>Flexible Input fields with icons</legend>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Large</label>
+									<div class="xs10">
+						                <div class="input-group input-group-lg">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
+						                    <span class="input-btn">
+						                        <button class="btn" type="button">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Default</label>
+									<div class="xs10">
+						                <div class="input-group">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
+						                        <span class="input-btn">
+						                        <button class="btn" type="button">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Small</label>
+									<div class="xs10">
+						                <div class="input-group input-group-sm">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    <input type="text" placeholder="Email" class="form-ctrl">
+						                    <span class="input-btn">
+						                        <button class="btn" type="button">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+									
+								</div>
+								
+							</fieldset>
+
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-2" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+					<h2>Horizontal Form</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<form>
+							
+							<fieldset>
+								<input name="authenticity_token" type="hidden">
+								<div class="form-group">
+									<label>Text field</label>
+									<input class="form-ctrl" placeholder="Text field" type="text">
+								</div>
+								<div class="form-group">
+									<label>Password field</label>
+									<input class="form-ctrl" placeholder="Password" type="password" value="mypassword">
+								</div>
+								<div class="form-group">
+									<label>Textarea</label>
+									<textarea class="form-ctrl" placeholder="Textarea" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Readonly</label>
+									<span class="form-ctrl">Read only text</span>
+								</div>
+							</fieldset>
+							<div class="form-group">
+								<div class="btn btn-lg">
+									<i class="fa fa-save"></i>
+									Submit
+								</div>
+							</div>
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-4" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+					<h2>Inline Form</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="alert adjusted alert-info fade in">
+							<button class="close" data-dismiss="alert">
+								×
+							</button>
+							<i class="fa-fw fa-lg fa fa-exclamation"></i>
+							<strong>行内控件</strong>
+						</div>
+
+						<form class="" role="form">
+							
+							<fieldset>
+								<div class="form-group form-inline">
+									<label class="sr-only" for="exampleInputEmail2">Email address</label>
+									<input type="email" class="form-ctrl" id="exampleInputEmail2" placeholder="Enter email">
+								</div>
+								<div class="form-group form-inline">
+									<label class="sr-only" for="exampleInputPassword2">Password</label>
+									<input type="password" class="form-ctrl" id="exampleInputPassword2" placeholder="Password">
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="checkbox">
+										<span>Remember me </span></label>
+								</div>
+								<button type="submit" class="btn">
+									Sign in
+								</button>
+							</fieldset>
+							
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+		<!-- NEW WIDGET START -->
+		<article class="col sm12 xs12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye-slash"></i> </span>
+					<h2>Disabled Elements</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<form class="form-horizontal">
+							
+							<fieldset>
+								<legend>Disabled Form Elements</legend>
+								<div class="form-group">
+									<label class="xs2">Text field</label>
+									<div class="xs10">
+										<input class="form-ctrl" disabled="disabled" placeholder="Default Text Field" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Auto Complete</label>
+									<div class="xs10">
+										<input class="form-ctrl" disabled="disabled" placeholder="Type somethine..." type="text" list="list">
+										<p class="note"><strong>Note:</strong> works in Chrome, Firefox, Opera and IE10.</p>
+									</div>
+									
+								</div>
+								
+								<div class="form-group">
+									<label class="xs2">Password field</label>
+									<div class="xs10">
+										<input class="form-ctrl" disabled="disabled" placeholder="Password field" type="password" value="mypassword">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Textarea</label>
+									<div class="xs10">
+										<textarea class="form-ctrl" disabled="disabled" placeholder="Textarea" rows="4"></textarea>
+									</div>
+								</div>
+							</fieldset>
+						
+
+							
+							<fieldset>
+								<legend>Input States <small>(disabled)</small></legend>
+								
+								<div class="form-group warning">
+									<label class="xs2">Input warning</label>
+									<div class="xs10">
+										<div class="input-group">
+											<input class="form-ctrl" disabled="disabled" type="text">
+											<span class="input-addon"><i class="fa fa-warning"></i></span>
+										</div>
+										<span class="help-block">Something may have gone wrong</span>
+									</div>
+
+								</div>
+								
+								<div class="form-group error">
+									<label class="xs2">Input error</label>
+									<div class="xs10">
+										<div class="input-group">
+											<input class="form-ctrl" disabled="disabled" type="text">
+											<span class="input-addon"><i class="fa fa-remove-circle"></i></span>
+										</div>
+										<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
+									</div>
+								</div>
+								
+								<div class="form-group success">
+									<label class="xs2">Input success</label>
+									<div class="xs10">
+										<div class="input-group">
+											<span class="input-addon"><i class="fa fa-dollar"></i></span>
+											<input class="form-ctrl" disabled="disabled" type="text">
+											<span class="input-addon"><i class="fa fa-check"></i></span>
+										</div>
+										<span class="help-block">Something may have gone wrong</span>
+									</div>
+								</div>
+								
+							</fieldset>
+							
+							<fieldset>
+								<legend>Input sizes <small>(disabled)</small></legend>
+								
+								<div class="form-group">
+									<label class="xs2">Small Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-sm" disabled="disabled" placeholder=".form-ctrl-sm" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Default Input</label>
+									<div class="xs10">
+										<input class="form-ctrl" disabled="disabled" placeholder="Default input" type="text">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Large Input</label>
+									<div class="xs10">
+										<input class="form-ctrl form-ctrl-lg" disabled="disabled" placeholder=".form-ctrl-lg" type="text">
+									</div>
+								</div>
+
+							</fieldset>
+							
+							<fieldset>
+								<legend>Select Sizes <small>(disabled)</small></legend>
+								<div class="form-group">
+									<label class="xs2">Small Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-sm" disabled="disabled">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Default Select</label>
+									<div class="xs10">
+										<select class="form-ctrl" disabled="disabled">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="xs2">Large Select</label>
+									<div class="xs10">
+										<select class="form-ctrl form-ctrl-lg" disabled="disabled">
+											<option>Amsterdam</option>
+											<option>Atlanta</option>
+											<option>Baltimore</option>
+											<option>Boston</option>
+											<option>Buenos Aires</option>
+											<option>Calgary</option>
+											<option>Chicago</option>
+											<option>Denver</option>
+											<option>Dubai</option>
+											<option>Frankfurt</option>
+											<option>Hong Kong</option>
+											<option>Honolulu</option>
+											<option>Houston</option>
+											<option>Kuala Lumpur</option>
+											<option>London</option>
+											<option>Los Angeles</option>
+											<option>Melbourne</option>
+											<option>Mexico City</option>
+											<option>Miami</option>
+											<option>Minneapolis</option>
+										</select>
+									</div>
+								</div>
+
+							</fieldset>
+							
+							<fieldset>
+								<legend>Prepend &amp; Append <small>(disabled)</small></legend>
+								<div class="form-group">
+									<label class="xs2">Prepended Input</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<span class="input-addon">@</span>
+													<input class="form-ctrl" disabled="disabled" placeholder="Username" type="text">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2" for="append">Appended Input</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<input class="form-ctrl" disabled="disabled" type="text">
+													<span class="input-addon">.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+	
+								<div class="form-group">
+									<label class="xs2">Combined</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<span class="input-addon">$</span>
+													<input class="form-ctrl" disabled="disabled" type="text">
+													<span class="input-addon">.00</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2" for="appendbutton">With buttons</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												<div class="input-group">
+													<input class="form-ctrl" disabled="disabled" type="text">
+													<div class="input-btn">
+														<button class="btn" disabled="disabled" type="button">
+															Search
+														</button>
+														<button class="btn" disabled="disabled" type="button">
+															Options
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<div class="form-group">
+									<label class="xs2">With dropdowns</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-group">
+													<input type="text" class="form-ctrl" disabled="disabled">
+													<div class="input-btn">
+														<button type="button" class="btn" tabindex="-1" disabled="disabled">Action</button>
+														<button type="button" class="btn drop-toggle" data-toggle="dropdown" tabindex="-1" disabled="disabled">
+															<span class="caret"></span>
+														</button>
+														<ul class="drop-menu drop-menu-r" role="menu">
+															<li><a href="javascript:void(0);">Action</a></li>
+															<li><a href="javascript:void(0);">Another action</a></li>
+															<li><a href="javascript:void(0);">Something else here</a></li>
+															<li class="drop-divider"></li>
+															<li><a href="javascript:void(0);">Cancel</a></li>
+														</ul>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="xs2"></label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-group">
+													<div class="input-btn">
+														<button type="button" class="btn" disabled="disabled" tabindex="-1">Action</button>
+														<button type="button" class="btn drop-toggle" disabled="disabled" data-toggle="dropdown" tabindex="-1">
+															<span class="caret"></span>
+														</button>
+														<ul class="drop-menu" role="menu">
+															<li><a href="javascript:void(0);">Action</a></li>
+															<li><a href="javascript:void(0);">Another action</a></li>
+															<li><a href="javascript:void(0);">Something else here</a></li>
+															<li class="drop-divider"></li>
+															<li><a href="javascript:void(0);">Cancel</a></li>
+														</ul>
+													</div>
+													<input type="text" class="form-ctrl" disabled="disabled">
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</fieldset>
+
+							<fieldset>
+								<legend>Flexible Input fields with icons</legend>
+								
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Addon Large</label>
+									<div class="xs10">
+										<div class="icon-addon addon-lg">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+								
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Addon Medium</label>
+									<div class="xs10">
+										<div class="icon-addon addon-md">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Addon Small</label>
+									<div class="xs10">
+										<div class="icon-addon addon-sm">
+						                    <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Select Large</label>
+									<div class="xs10">
+						                <div class="icon-addon addon-lg">
+						                    <select class="form-ctrl" disabled="disabled">
+						                        <option>Select Option</option>
+						                        <option>Sample</option>
+						                        <option>Sample</option>
+						                    </select>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Select Medium</label>
+									<div class="xs10">
+						                <div class="icon-addon addon-md">
+						                    <select class="form-ctrl" disabled="disabled">
+						                        <option>Select Option</option>
+						                        <option>Sample</option>
+						                        <option>Sample</option>
+						                    </select>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Select Small</label>
+									<div class="xs10">
+						                <div class="icon-addon addon-sm">
+						                    <select class="form-ctrl" disabled="disabled">
+						                        <option>Select Option</option>
+						                        <option>Sample</option>
+						                        <option>Sample</option>
+						                    </select>
+						                    <label for="email" class="fa fa-search" rel="tooltip" title="email"></label>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Large</label>
+									<div class="xs10">
+						                <div class="input-group input-group-lg">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                       
+						                 
+						                    <span class="input-btn">
+						                        <button class="btn" type="button" disabled="disabled">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Medium</label>
+									<div class="xs10">
+						                <div class="input-group">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                   
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                       <span class="input-addon"><i class="fa fa-search"></i></span>
+						                 
+						                    <span class="input-btn">
+						                        <button class="btn" type="button" disabled="disabled">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+								</div>
+
+								<div class="form-group">
+									
+									<label class="xs2" for="prepend">Prepended Small</label>
+									<div class="xs10">
+						                <div class="input-group input-group-sm">
+						                    <span class="input-addon"><i class="fa fa-filter"></i></span>
+						                    
+						                        <input type="text" placeholder="Email" class="form-ctrl" disabled="disabled">
+						                      
+						                   
+						                    <span class="input-btn">
+						                        <button class="btn" type="button" disabled="disabled">Go!</button>
+						                    </span>
+						                </div>
+									</div>
+									
+								</div>
+								
+							</fieldset>
+							
+							<fieldset>
+								<legend>Simple input with icons (disabled)</legend>
+								
+								<div class="form-group">
+									<label class="xs2">Input with icon</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-icon-left">
+													<i class="fa fa-microphone l0"></i>
+													<input class="form-ctrl icon-l" disabled="disabled" placeholder="Left Icon" type="text">
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="xs2">With right icon</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<div class="input-icon-right">
+													<i class="fa fa-microphone"></i>
+													<input class="form-ctrl" disabled="disabled" placeholder="" type="text">
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="xs2">Input with spinner</label>
+									<div class="xs10">
+										<div class="row">
+											<div class="col sm12">
+												
+												<input class="form-ctrl ui-autocomplete-loading" disabled="disabled" placeholder="" type="text">
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</fieldset>							
+
+							<div class="form-group">
+								<div class="row">
+									<div class="xs12">
+										<button class="btn" disabled="disabled" type="submit">
+											<i class="fa fa-save"></i>
+											Submit
+										</button>
+										<button class="btn" disabled="disabled" type="submit">
+											Cancel
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye-slash"></i> </span>
+					<h2>Disabled Horizontal Form</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<form>
+							<fieldset>
+								<input name="authenticity_token" type="hidden">
+								<div class="form-group">
+									<label>Text field</label>
+									<input class="form-ctrl" disabled="disabled" placeholder="Text field" type="text">
+								</div>
+								<div class="form-group">
+									<label>Password field</label>
+									<input class="form-ctrl" disabled="disabled" placeholder="Password" type="password" value="mypassword">
+								</div>
+								<div class="form-group">
+									<label>Textarea</label>
+									<textarea class="form-ctrl" disabled="disabled" placeholder="Textarea" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Readonly</label>
+									<span class="form-ctrl">Read only text</span>
+								</div>
+							</fieldset>
+							<div class="form-group">
+								<button class="btn btn-lg" disabled="disabled">
+									<i class="fa fa-save"></i>
+									Submit
+								</button>
+							</div>
+							
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-5" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-eye-slash"></i> </span>
+					<h2>Inline Form Disabled</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="alert adjusted alert-warning fade in">
+							<button class="close" data-dismiss="alert">
+								×
+							</button>
+							<i class="fa fa-fw fa-lg fa-exclamation"></i>
+							<strong>Hey hey!</strong> I am disabled!
+						</div>
+
+						<form class="" role="form">
+							
+							<fieldset>
+								<div class="form-group form-inline">
+									<label class="sr-only">Email address</label>
+									<input type="email" class="form-ctrl" disabled="disabled" placeholder="Enter email">
+								</div>
+								<div class="form-group form-inline">
+									<label class="sr-only">Password</label>
+									<input type="password" class="form-ctrl" disabled="disabled" placeholder="Password">
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="checkbox" disabled="disabled">
+										<span>Remember me </span></label>
+								</div>
+								<button type="submit" disabled="disabled" class="btn">
+									Sign in
+								</button>
+							</fieldset>
+						</form>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+	</div>
+
+	<!-- end row -->
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article class="col sm12">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-8" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-columns"></i> </span>
+					<h2>Column sizing</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="row">
+							<div class="col sm12">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+							<div class="col sm3">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+							<div class="col sm6">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
+							</div>
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
+							</div>
+							<div class="col sm4">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+							<div class="col sm2">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+						</div>
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+	</div>
+	<!-- end row -->
+
+	<!-- row -->
+	<div class="row">
+
+		<!-- NEW WIDGET START -->
+		<article class="col sm12 xs12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-9" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-columns"></i> </span>
+					<h2>Right Aligned</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="row">
+							<div class="col sm2 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm3 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm4 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm5 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm5">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm6 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm7 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm7">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm8 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm8">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm9 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm9">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm10 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm10">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm11 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm11">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm12 pull-right">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
+							</div>
+						</div>
+
+				
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+		<!-- NEW WIDGET START -->
+		<article class="col sm12 xs12 col-lg-6">
+
+			<!-- Widget ID (each widget will need unique ID)-->
+			<div class="jarviswidget" id="wid-id-10" data-widget-colorbutton="false" data-widget-editbutton="false">
+				<!-- widget options:
+				usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+				data-widget-colorbutton="false"
+				data-widget-editbutton="false"
+				data-widget-togglebutton="false"
+				data-widget-deletebutton="false"
+				data-widget-fullscreenbutton="false"
+				data-widget-custombutton="false"
+				data-widget-collapsed="true"
+				data-widget-sortable="false"
+
+				-->
+				<header>
+					<span class="widget-icon"> <i class="fa fa-columns"></i> </span>
+					<h2>Left Align</h2>
+
+				</header>
+
+				<!-- widget div-->
+				<div>
+
+					<!-- widget edit box -->
+					<div class="jarviswidget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
+					<!-- widget content -->
+					<div class="widget-body">
+
+						<div class="row">
+							<div class="col sm2 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm2">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm3 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm3">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm4 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm4">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm5 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm5">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm6 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm6">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm7 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm7">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm8 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm8">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm9 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm9">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm10 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm10">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm11 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm11">
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="row">
+							<div class="col sm12 pull-left">
+								<input type="text" class="form-ctrl" placeholder=".col sm12">
+							</div>
+						</div>
+
+						
+
+					</div>
+					<!-- end widget content -->
+
+				</div>
+				<!-- end widget div -->
+
+			</div>
+			<!-- end widget -->
+
+		</article>
+		<!-- WIDGET END -->
+
+	</div>
+	<!-- end row -->		
+
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+
+	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
+	 *
+	 * pageSetUp(); WILL CALL THE FOLLOWING FUNCTIONS
+	 *
+	 * // activate tooltips
+	 * $("[rel=tooltip]").tooltip();
+	 *
+	 * // activate popovers
+	 * $("[rel=popover]").popover();
+	 *
+	 * // activate popovers with hover states
+	 * $("[rel=popover-hover]").popover({ trigger: "hover" });
+	 *
+	 * // activate inline charts
+	 * runAllCharts();
+	 *
+	 * // setup widgets
+	 * setup_widgets_desktop();
+	 *
+	 * // run form elements
+	 * runAllForms();
+	 *
+	 ********************************
+	 *
+	 * pageSetUp() is needed whenever you load a page.
+	 * It initializes and checks for all basic elements of the page
+	 * and makes rendering easier.
+	 *
+	 */
+
+	pageSetUp();
+	
+	/*
+	 * ALL PAGE RELATED SCRIPTS CAN GO BELOW HERE
+	 * eg alert("my home function");
+	 * 
+	 * var pagefunction = function() {
+	 *   ...
+	 * }
+	 * loadScript("js/plugin/_PLUGIN_NAME_.js", pagefunction);
+	 * 
+	 * TO LOAD A SCRIPT:
+	 * var pagefunction = function (){ 
+	 *  loadScript("../../plugin.js", run_after_loaded);	
+	 * }
+	 * 
+	 * OR
+	 * 
+	 * loadScript("../../plugin.js", run_after_loaded);
+	 */
+
+	// PAGE RELATED SCRIPTS
+
+	// pagefunction
+	
+	var pagefunction = function() {
+		
+		// class switcher for radio and checkbox
+		$('input[name="demo-switcher-1"]').change( function() {
+		  //alert($(this).val())
+		  $this = $(this);
+		  
+		  myNewClass = $this.attr('id');
+		  
+		  $('.demo-switcher-1 input[type="checkbox"]').removeClass();
+		  $('.demo-switcher-1 input[type="checkbox"]').addClass("checkbox "+ myNewClass);
+		  
+		  $('.demo-switcher-1 input[type="radio"]').removeClass();
+		  $('.demo-switcher-1 input[type="radio"]').addClass("radiobox "+ myNewClass);
+		  
+		});
+		
+	};
+	
+	// end pagefunction
+	
+	// run pagefunction on load
+	
+	pagefunction();
+	
+</script>
