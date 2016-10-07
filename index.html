@@ -392,7 +392,7 @@
                     </ul>
                 </li>
                 <li v-for="level1 in items">
-                        <a :href="level1.href"><i class="fa fa-lg fa-fw" :class="level1.fa"></i> {{level1.title}}</a>
+                        <a :href="level1.href" :data-options="level1.options"><i class="fa fa-lg fa-fw" :class="level1.fa"></i> {{level1.title}}</a>
                         <ul v-if="level1.level2">
                           <li v-for="level2 in level1.level2">
                             <a :href="level2.href" :data-options="level2.options"><i class="fa fa-lg fa-fw" :class="level2.fa"></i>{{level2.title}} </a>
@@ -739,7 +739,7 @@
             <script src="js/plugin/mmenu/jquery.mmenu.min.all.js"></script>
             <!--<script src="js/vue.min.js"></script>-->
             <script src="//unpkg.com/vue@2.0.0-rc.6/dist/vue.js"></script>
-            <script src="lib/vue-com.js"></script>
+            <script src="lib/index.js"></script>
             <!--<script src="//unpkg.com/element-ui@1.0.0-rc.3/lib/index.js"></script>-->
             <!-- IMPORTANT: APP CONFIG -->
             <script src="js/app.config.js"></script>
@@ -799,11 +799,13 @@
                             { href: 'ajax/boxstyle.html',options:"{id:'boxstyle'}", fa:'fa-cube',title:'BOX样式'},
                             { href: 'ajax/image.html',options:"{id:'image'}", fa:'fa-file-image-o',title:'图片'},
                             { href: 'ajax/code.html',options:"{id:'code'}", fa:'fa-code',title:'代码'},
+                            { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
                             { href: '#', fa:'fa-calendar',title:'二级菜单',level3:[
                                 { href: 'ajax/calendar.html',options:"{id:'calendar'}", fa:'fa-cube',title:'日历'}, 
                                 ]},
                             ]},
                         { href: '#', fa:'fa-windows',title:'一级菜单',level2:[{ href: 'level243', fa:'fa-windows'} ]},
+                        { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
                         ]
                     }
                 })

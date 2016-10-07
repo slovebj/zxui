@@ -2,10 +2,10 @@ var cooking = require('cooking');
 var path = require('path');
 
 cooking.set({
-  entry: 'plugins/markcook/index.js',
-  dist: path.join(__dirname, 'plugins/markcook'),
-  filename: 'markcook.js',
+  entry: './plugins/markcook/src/main.js',
+  dist: './plugins/markcook/build',
   template: false,
+  minimize: false,
   extends: ['vue2']
 });
 

@@ -1,0 +1,17 @@
+{
+  "name": "markcook2.0",
+  "description": "Markcook version 2.0",
+  "author": "Jrain Lau <jrainlau@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "marked": "^0.3.6"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3"
+  }
+}

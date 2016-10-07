@@ -9,8 +9,9 @@
     "packages"
   ],
   "scripts": {
+    "server": "cooking watch -c build/cooking.demo.js -p",
     "new": "node build/bin/new.js",
-    "markcook": "cooking build -c plugins/markcook/cooking.conf.js",
+    "markcook": "cooking build -c build/cooking.markcook.js",
     "md2html": "node build/bin/md2html.js",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",
     "dev": "npm run bootstrap && npm run build:file && cooking watch -c build/cooking.demo.js -p",
@@ -80,6 +81,7 @@
     "vue-markdown-loader": "^0.5.1",
     "vue-popup": "^0.2.5",
     "vue-router": "^2.0.0",
+    "vuex": "^2.0.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1",
     "wind-dom": "0.0.3"
