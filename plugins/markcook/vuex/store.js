@@ -1,5 +1,3 @@
-const Vue = require('vue');
-const Vuex = require('vuex');
 const striptags = require('../../../build/strip-tags.js');
 const hljs = require('highlight.js');
 const md = require('markdown-it')({
@@ -44,8 +42,6 @@ function convert(str) {
   });
   return str;
 }
-
-Vue.use(Vuex);
 
 const createID = () => {
 	let t = ''
