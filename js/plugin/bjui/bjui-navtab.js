@@ -400,7 +400,7 @@
         } else {
             var tabFrag = '<li><a href="javascript:" title="#title#"><span>#title#</span></a><span class="close">&times;</span></li>'
             var $tab = $(tabFrag.replaceAll('#title#', options.title))
-            var $panel = $('<div class="navtabPage"></div>')
+            var $panel = $('<div class="navtabPage" id="'+options.id+'"></div>')
             var $more  = $('<li><a href="javascript:" title="#title#">#title#</a></li>'.replaceAll('#title#', options.title))
             
             $tab.appendTo($tabs)
