@@ -5,15 +5,11 @@
  */
 
 // Core variables and mixins
-@import "variables";
 @import "custom"; // custom variable overrides
-
 // Libraries (Remove if not needed)
 @import "library/flags/flags";
 @import "library/cursors/cursors";
-
 // Individual pages, sections, and components.  You can remove any of these sections you don't use
-
 // Main THEME (Imports by order - do not change order)
 @import "zxui/main";
 @import "zxui/main-progress";

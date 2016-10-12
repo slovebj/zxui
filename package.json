@@ -11,6 +11,8 @@
   "scripts": {
     "server": "cooking watch -c build/cooking.markcook.js -p",
     "new": "node build/bin/new.js",
+    "zxui:c": "sass src-css/SCSS/basecss/zx-components.scss src-css/SCSS/basecss/zx-components.css",
+    "zxui": "sass src-css/SCSS/basecss/zxbase.scss src-css/SCSS/basecss/zxbase.css",
     "markcook": "cooking build -c build/cooking.markcook.js",
     "md2html": "node build/bin/md2html.js",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js",

@@ -1,26 +1,35 @@
 // List Groups
-
 @mixin color-variant($state, $background, $color) {
-  .#{$state} {
-    color: $color;
-    background-color: $background;
-  }
-
-  a.#{$state},
-  button.#{$state} {
-    color: $color;
-
-    @include hover-focus {
-      color: $color;
-      background-color: darken($background, 5%);
+    .#{$state} {
+        color: $color;
+        background-color: $background;
+        @include hover-focus {
+            color: $color;
+            background-color: darken($background, 5%);
+        }
+        &.active {
+            @include plain-hover-focus {
+                color: #fff;
+                background-color: darken($background, 5%);
+                border-color: darken($background, 5%);
+            }
+        }
     }
+}
 
-    &.active {
-      @include plain-hover-focus {
-        color: #fff;
-        background-color: $color;
-        border-color: $color;
-      }
+@mixin fg-variant($parent, $color) {
+    #{$parent} {
+        color: $color !important;
     }
-  }
+    a#{$parent} {
+        @include hover-focus {
+            color: darken($color, 10%);
+        }
+    }
+}
+
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        background-color: $color !important;
+    }
 }

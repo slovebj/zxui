@@ -1,256 +1,307 @@
 // Base class
 // Lists
 //
+ul.disc {
+    list-style-type: disc;
+}
 
-ul.disc {list-style-type:disc;}
-ul.circle {list-style-type:circle;}
-ul.square {list-style-type:square;}
-ol.lower-roman {list-style-type:lower-roman;}
-ol.upper-roman {list-style-type:upper-roman;}
-ol.lower-alpha {list-style-type:lower-alpha;}
-ol.upper-alpha {list-style-type:upper-alpha;}
-ol.cn {list-style-type:cjk-ideographic;}
+ul.circle {
+    list-style-type: circle;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+ol.lower-roman {
+    list-style-type: lower-roman;
+}
+
+ol.upper-roman {
+    list-style-type: upper-roman;
+}
+
+ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+
+ol.cn {
+    list-style-type: cjk-ideographic;
+}
 
 // Inline turns list items into inline-block
 .list-inline {
-  padding-left: 0;
+    padding-left: 0;
 }
-.list-inline > li,.list-inline > .li-simple,.list-inline > .li-complex {
-  display: inline-block;
-  &:not(:last-child) {
-    margin-right: $list-inline-padding;
-  }
+
+.list-inline>li,
+.list-inline>.li-simple,
+.list-inline>.li-complex {
+    display: inline-block;
+    &:not(:last-child) {
+        margin-right: $list-inline-padding;
+    }
 }
+
 @include media-breakpoint-up(md) {
     .dl-h dt {
-      width:15%;
-      display:inline-block;
-      float:left;
-      text-align:right;
-      white-space:nowrap;
-      text-overflow:ellipsis;
-      overflow:hidden
+        width: 15%;
+        display: inline-block;
+        float: left;
+        text-align: right;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden
     }
     .dl-h dd {
-      width:85%;
-      display:inline-block;
-      float:left;
-      padding:0 0 15px 15px
+        width: 85%;
+        display: inline-block;
+        float: left;
+        padding: 0 0 15px 15px
     }
 }
+
 //
 // Easily usable on <ul>, <ol>, or <div>.
 //
-ul.list,ol.list,.list {
-  // No need to set list-style: none; since .li is block level
-  list-style-type: none;
-  padding: 0; // reset padding because ul and ol
-  margin: 1em 0em;
+ul.list,
+ol.list,
+.list {
+    // No need to set list-style: none; since .li is block level
+    list-style-type: none;
+    padding: 0; // reset padding because ul and ol
+    margin: 1em 0em;
 }
 
-ul.list li,ol.list li,.li-simple,.li-complex {
+ul.list li,
+ol.list li,
+.li-simple,
+.li-complex {
     display: list-item;
     table-layout: fixed;
     list-style-type: none;
     list-style-position: outside;
     line-height: 1.5em;
 }
+
 .list .list>.li-simple {
-  padding-left: 1.5em;
+    padding-left: 1.5em;
 }
+
+
 /* Child List */
 
 ul.list ul,
 ol.list ol,
 .list .list {
-  clear: both;
-  margin: 0;
-  padding: 0;
+    clear: both;
+    margin: 0;
+    padding: 0;
 }
 
 ul.list:first-child,
 ol.list:first-child,
 .list:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 ul.list:last-child,
 ol.list:last-child,
 .list:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-
 
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list` parent.
-
 .li-complex {
-  width:100%;
-  padding: $list-item-padding-y $list-item-padding-x;
-  // Place the border on the list items and negative margin up for better styling
-  margin-bottom: -$list-border-width;
-  color: $list-link-color;
-  background-color: $list-bg;
-  border: $list-border-width solid $list-border-color;
-  text-align: left;
-  &:first-child {
-    @include border-top-radius($list-border-radius);
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-    @include border-bottom-radius($list-border-radius);
-  }
-  .li-header {
+    width: 100%;
+    padding: $list-item-padding-y $list-item-padding-x;
+    // Place the border on the list items and negative margin up for better styling
+    margin-bottom: -$list-border-width;
+    color: $list-link-color;
+    background-color: $list-bg;
+    text-align: left;
+    &:first-child {
+        @include border-top-radius($list-border-radius);
+    }
+    &:last-child {
+        margin-bottom: 0;
+        @include border-bottom-radius($list-border-radius);
+    }
+    .li-header {
         color: $list-link-header-color;
-      }
-  // Hover state
-  @include hover-focus {
-    color: $list-link-hover-color;
-    text-decoration: none;
-    background-color: $list-hover-bg;
-  }
-  &.disabled {
-    @include plain-hover-focus {
-      color: $list-disabled-color;
-      cursor: $cursor-disabled;
-      background-color: $list-disabled-bg;
-
-      // Force color to inherit for custom content
-      .li-header {
-        color: inherit;
-      }
-      .li-text {
-        color: $list-disabled-text-color;
-      }
     }
-  }
-
-  &.active {
-    @include plain-hover-focus {
-      z-index: 2; // Place active items above their siblings for proper border styling
-      color: $list-active-color;
-      text-decoration: none; // Repeat here because it inherits global a:hover otherwise
-      background-color: $list-active-bg;
-      border-color: $list-active-border;
-
-      // Force color to inherit for custom content
-      .li-header{
-        color: inherit;
-      }
-      .li-text {
-        color: $list-active-text-color;
-      }
+    // Hover state
+    @include hover-focus {
+        color: $list-link-hover-color;
+        text-decoration: none;
+        background-color: $list-hover-bg;
     }
-  }
+    &.disabled {
+        @include plain-hover-focus {
+            color: $list-disabled-color;
+            cursor: $cursor-disabled;
+            background-color: $list-disabled-bg;
+            // Force color to inherit for custom content
+            .li-header {
+                color: inherit;
+            }
+            .li-text {
+                color: $list-disabled-text-color;
+            }
+        }
+    }
+    &.active {
+        @include plain-hover-focus {
+            z-index: 2; // Place active items above their siblings for proper border styling
+            color: $list-active-color;
+            text-decoration: none; // Repeat here because it inherits global a:hover otherwise
+            background-color: $list-active-bg;
+            border-color: $list-active-border;
+            // Force color to inherit for custom content
+            .li-header {
+                color: inherit;
+            }
+            .li-text {
+                color: $list-active-text-color;
+            }
+        }
+    }
 }
+
+button.li-complex {
+    border: $list-border-width solid $list-border-color;
+    outline: none;
+}
+
 
 /* Child Item */
 
-.list .list > .li-complex {
-  border: none;
+.list .list>.li-complex {
+    border: none;
 }
-.list .content>.list > .li-simple,
-.list .content>.list > .li-complex {
-  padding: 0;
+
+.list .content>.list>.li-simple,
+.list .content>.list>.li-complex {
+    padding: 0;
 }
 
 .list.radius0 {
-  .li-complex {
-    border-radius: 0;
-  }
+    .li-complex {
+        border-radius: 0;
+    }
 }
 
-.li-simple>i.fa, .li-complex>i.fa,.li-simple>.image, .li-complex>.image{
+.li-simple>i.fa,
+.li-complex>i.fa,
+.li-simple>.image,
+.li-complex>.image {
     display: table-cell;
     padding-top: .1em;
     margin: 0;
 }
-.li-simple > i.fa:only-child,
-.li-simple > .image:only-child,
-.li-simple > img.image,
-.li-complex > i.fa:only-child,
-.li-complex > .image:only-child,
-.li-complex > img.image {
-  display: inline-block;
+
+.li-simple>i.fa:only-child,
+.li-simple>.image:only-child,
+.li-simple>img.image,
+.li-complex>i.fa:only-child,
+.li-complex>.image:only-child,
+.li-complex>img.image {
+    display: inline-block;
 }
-.li-simple>.image, .li-complex>.image, .li-simple>.image img, .li-complex>.image img {
-  vertical-align: top;
+
+.li-simple>.image,
+.li-complex>.image,
+.li-simple>.image img,
+.li-complex>.image img {
+    vertical-align: top;
 }
-.li-simple>.fa+.content, .li-simple>.image+.content, .li-complex>.fa+.content, .li-complex>.image+.content{
+
+.li-simple>.fa+.content,
+.li-simple>.image+.content,
+.li-complex>.fa+.content,
+.li-complex>.image+.content {
     display: table-cell;
     padding: 0 0 0 .2em;
 }
-.li-simple > img.image + .content, .li-complex > img.image + .content {
-  display: inline-block;
+
+.li-simple>img.image+.content,
+.li-complex>img.image+.content {
+    display: inline-block;
 }
 
 // Custom content options
 //
 // Extra classes for creating well-formatted content within `.li`s.
-
 .li-header {
-  margin-top: 0;
-  margin-bottom: $list-item-header-margin-bottom;
+    margin-top: 0;
+    margin-bottom: $list-item-header-margin-bottom;
 }
+
 .li-text {
-  margin-bottom: 0;
-  line-height: 1.3;
+    margin-bottom: 0;
+    line-height: 1.3;
 }
 
 ol.list,
 .ordered.list,
 .ordered.list .list,
 ol.list ol {
-  counter-reset: ordered;
-  margin-left: 1.25rem;
-  list-style-type: none;
+    counter-reset: ordered;
+    margin-left: 1.25rem;
+    list-style-type: none;
 }
+
 ol.list li,
-.ordered.list .list> .li-simple,
-.ordered.list > .li-simple,
+.ordered.list .list>.li-simple,
+.ordered.list>.li-simple,
 {
-  list-style-type: none;
-  position: relative;
-  padding-left: .3em;
+    list-style-type: none;
+    position: relative;
+    padding-left: .3em;
 }
-.ordered.list .list> .li-complex, 
-.ordered.list > .li-complex
-{
-  list-style-type: none;
-  position: relative;
-  padding-left: 1.55em;
+
+.ordered.list .list>.li-complex,
+.ordered.list>.li-complex {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.55em;
 }
+
 ol.list li:before,
-.ordered.list .list> .li-simple:before,
-.ordered.list .list> .li-complex:before,
-.ordered.list > .li-simple:before,
-.ordered.list > .li-complex:before
- {
-  position: absolute;
-  top: auto;
-  left: auto;
-  user-select: none;
-  pointer-events: none;
-  margin-left: -1.55rem;
-  counter-increment: ordered;
-  content: counters(ordered, ".") " ";
-  text-align: right;
-  color: rgba(0, 0, 0, 0.87);
-  vertical-align: middle;
-  opacity: 0.8;
+.ordered.list .list>.li-simple:before,
+.ordered.list .list>.li-complex:before,
+.ordered.list>.li-simple:before,
+.ordered.list>.li-complex:before {
+    position: absolute;
+    top: auto;
+    left: auto;
+    user-select: none;
+    pointer-events: none;
+    margin-left: -1.55rem;
+    counter-increment: ordered;
+    content: counters(ordered, ".") " ";
+    text-align: right;
+    color: rgba(0, 0, 0, 0.87);
+    vertical-align: middle;
+    opacity: 0.8;
 }
+
 
 /* Value */
 
-.ordered.list .list > .li-simple[data-value]:before,
-.ordered.list > .li-simple[data-value]:before,
-.ordered.list .list > .li-complex[data-value]:before,
-.ordered.list > .li-complex[data-value]:before {
-  content: attr(data-value);
+.ordered.list .list>.li-simple[data-value]:before,
+.ordered.list>.li-simple[data-value]:before,
+.ordered.list .list>.li-complex[data-value]:before,
+.ordered.list>.li-complex[data-value]:before {
+    content: attr(data-value);
 }
 
 ol.list li[value]:before {
-  content: attr(value);
+    content: attr(value);
 }
