@@ -1,19 +1,14 @@
-<div id="demo-alert">
 <script>
-  export default {
-    methods: {
-      hello() {
-        alert('Hello World!');
-      }
-    }
-  }
+var DemoAlert = new Vue({
+      el: '#demo-alert',
+  });
 </script>
 <style>
-  .demo-box.demo-alert .el-alert {
+  .demo-box.demo-alert .c-alert {
     margin: 20px 0 0;
   }
 
-  .demo-box.demo-alert .el-alert:first-child {
+  .demo-box.demo-alert .c-alert:first-child {
     margin: 0;
   }
 </style>
@@ -22,191 +17,163 @@
 <h3>基本用法</h3>
 <p>页面中的非浮层元素，不会自动消失。</p>
 <demo-block class="demo-box">
-                    <div class="source"><template>
-  <el-alert title="成功提示的文案" type="success">
-  </el-alert>
-  <el-alert title="消息提示的文案" type="info">
-  </el-alert>
-  <el-alert title="警告提示的文案" type="warning">
-  </el-alert>
-  <el-alert title="错误提示的文案" type="error">
-  </el-alert>
-</template>
+                    <div class="source">  <c-alert title="成功提示的文案" type="success"></c-alert>
+  <c-alert title="消息提示的文案" type="info"></c-alert>
+  <c-alert title="警告提示的文案" type="warning">
+  </c-alert>
+  <c-alert title="错误提示的文案" type="error">
+  </c-alert>
+
 </div>
                     <div class="meta">
                       <div class="description"><p>Alert 组件提供四种主题，由<code>type</code>属性指定，默认值为<code>info</code>。</p>
 </div>
-                      <pre><code  class="hljs"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
-    <span class="hljs-attr">title</span>=<span class="hljs-string">"成功提示的文案"</span>
-    <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
-    <span class="hljs-attr">title</span>=<span class="hljs-string">"消息提示的文案"</span>
-    <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"成功提示的文案"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"消息提示的文案"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"警告提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"错误提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"error"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+
 </code></pre>
-</code></pre></div></demo-block>
+</div></div></demo-block>
 <h3>自定义关闭按钮</h3>
 <p>自定义关闭按钮为文字或其他符号。</p>
 <demo-block class="demo-box">
-                    <div class="source"><template>
-  <el-alert title="不可关闭的 alert" type="success" :closable="false">
-  </el-alert>
-  <el-alert title="自定义 close-text" type="info" close-text="知道了">
-  </el-alert>
-  <el-alert title="设置了回调的 alert" type="warning" @close="hello">
-  </el-alert>
-</template>
-
-
+                    <div class="source">
+  <c-alert title="不可关闭的 alert" type="success" :closable="false">
+  </c-alert>
+  <c-alert title="自定义 close-text" type="info" close-text="知道了">
+  </c-alert>
+  <c-alert title="设置了回调的 alert" type="warning" @close="hello">
+  </c-alert>
 </div>
                     <div class="meta">
                       <div class="description"><p>在 Alert 组件中，你可以设置是否可关闭，关闭按钮的文本以及关闭时的回调函数。<code>closable</code>属性决定是否可关闭，接受<code>boolean</code>，默认为<code>true</code>。你可以设置<code>close-text</code>属性来代替右侧的关闭图标，注意：<code>close-text</code>必须为文本。设置<code>close</code>事件来设置关闭时的回调。</p>
 </div>
-                      <pre><code  class="hljs"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+                      <div class="highlight"><pre><code class="language-html">
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"不可关闭的 alert"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
     <span class="hljs-attr">:closable</span>=<span class="hljs-string">"false"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"自定义 close-text"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>
     <span class="hljs-attr">close-text</span>=<span class="hljs-string">"知道了"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"设置了回调的 alert"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
     @<span class="hljs-attr">close</span>=<span class="hljs-string">"hello"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
-    <span class="hljs-attr">methods</span>: {
-      hello() {
-        alert(<span class="hljs-string">'Hello World!'</span>);
-      }
-    }
-  }
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
 </code></pre>
-</code></pre></div></demo-block>
+</div></div></demo-block>
 <h3>带有 icon</h3>
 <p>表示某种状态时提升可读性。</p>
 <demo-block class="demo-box">
-                    <div class="source"><template>
-  <el-alert title="成功提示的文案" type="success" show-icon="">
-  </el-alert>
-  <el-alert title="消息提示的文案" type="info" show-icon="">
-  </el-alert>
-  <el-alert title="警告提示的文案" type="warning" show-icon="">
-  </el-alert>
-  <el-alert title="错误提示的文案" type="error" show-icon="">
-  </el-alert>
-</template>
+                    <div class="source">  <c-alert title="成功提示的文案" type="success" show-icon="">
+  </c-alert>
+  <c-alert title="消息提示的文案" type="info" show-icon="">
+  </c-alert>
+  <c-alert title="警告提示的文案" type="warning" show-icon="">
+  </c-alert>
+  <c-alert title="错误提示的文案" type="error" show-icon="">
+  </c-alert>
 </div>
                     <div class="meta">
                       <div class="description"><p>通过设置<code>show-icon</code>属性来显示 Alert 的 icon，这能更有效地向用户展示你的显示意图。</p>
 </div>
-                      <pre><code  class="hljs"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"成功提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"消息提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"警告提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"错误提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"error"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
 </code></pre>
-</code></pre></div></demo-block>
+</div></div></demo-block>
 <h3>带有辅助性文字介绍</h3>
 <p>包含标题和内容，解释更详细的警告。</p>
 <demo-block class="demo-box">
-                    <div class="source"><template>
-  <el-alert title="带辅助性文字介绍" type="success" description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……">
-  </el-alert>
-</template>
+                    <div class="source">
+  <c-alert title="带辅助性文字介绍" type="success" description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……">
+  </c-alert>
+
 </div>
                     <div class="meta">
                       <div class="description"><p>除了必填的<code>title</code>属性外，你可以设置<code>description</code>属性来帮助你更好地介绍，我们称之为辅助性文字。辅助性文字只能存放单行文本，会自动换行显示。</p>
 </div>
-                      <pre><code  class="hljs"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+                      <div class="highlight"><pre><code class="language-html">
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"带辅助性文字介绍"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
     <span class="hljs-attr">description</span>=<span class="hljs-string">"这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……"</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+
 </code></pre>
-</code></pre></div></demo-block>
+</div></div></demo-block>
 <h3>带有 icon 和辅助性文字介绍</h3>
 <demo-block class="demo-box">
-                    <div class="source"><template>
-  <el-alert title="成功提示的文案" type="success" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
-  </el-alert>
-  <el-alert title="消息提示的文案" type="info" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
-  </el-alert>
-  <el-alert title="警告提示的文案" type="warning" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
-  </el-alert>
-  <el-alert title="错误提示的文案" type="error" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
-  </el-alert>
-</template>
+                    <div class="source">
+  <c-alert title="成功提示的文案" type="success" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
+  </c-alert>
+  <c-alert title="消息提示的文案" type="info" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
+  </c-alert>
+  <c-alert title="警告提示的文案" type="warning" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
+  </c-alert>
+  <c-alert title="错误提示的文案" type="error" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon="">
+  </c-alert>
+
 </div>
                     <div class="meta">
                       <div class="description"><p>最后，这是一个同时具有 icon 和辅助性文字的样例。</p>
 </div>
-                      <pre><code  class="hljs"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+                      <div class="highlight"><pre><code class="language-html">
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"成功提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"success"</span>
     <span class="hljs-attr">description</span>=<span class="hljs-string">"文字说明文字说明文字说明文字说明文字说明文字说明"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"消息提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"info"</span>
     <span class="hljs-attr">description</span>=<span class="hljs-string">"文字说明文字说明文字说明文字说明文字说明文字说明"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"警告提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"warning"</span>
     <span class="hljs-attr">description</span>=<span class="hljs-string">"文字说明文字说明文字说明文字说明文字说明文字说明"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">el-alert</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-alert</span>
     <span class="hljs-attr">title</span>=<span class="hljs-string">"错误提示的文案"</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"error"</span>
     <span class="hljs-attr">description</span>=<span class="hljs-string">"文字说明文字说明文字说明文字说明文字说明文字说明"</span>
     <span class="hljs-attr">show-icon</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">el-alert</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-alert</span>&gt;</span>
+
 </code></pre>
-</code></pre></div></demo-block>
+</div></div></demo-block>
 <h3>Attributes</h3>
 <table>
 <thead>
@@ -280,4 +247,3 @@
 </tr>
 </tbody>
 </table>
-</div>

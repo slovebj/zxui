@@ -1,11 +1,11 @@
 <template>
-  <transition name="el-alert-fade">
-    <div class="el-alert" :class="[ typeClass ]" v-show="visible">
-      <i class="el-alert__icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
-      <div class="el-alert__content">
-        <span class="el-alert__title" :class="[ isBoldTitle ]" v-if="title">{{ title }}</span>
-        <p class="el-alert__description" v-if="description">{{ description }}</p>
-        <i class="el-alert__closebtn" :class="{ 'is-customed': closeText !== '', 'el-icon-close': closeText === '' }" v-show="closable" @click="close()">{{closeText}}</i>
+  <transition name="c-alert-fade">
+    <div class="c-alert" :class="[ typeClass ]" v-show="visible">
+      <i class="c-alert-icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
+      <div class="c-alert-content">
+        <span class="c-alert-title" :class="[ isBoldTitle ]" v-if="title">{{ title }}</span>
+        <p class="c-alert-description" v-if="description">{{ description }}</p>
+        <i class="c-alert-closebtn" :class="{ 'is-customed': closeText !== '', 'c-icon-close': closeText === '' }" v-show="closable" @click="close()">{{closeText}}</i>
       </div>
     </div>
   </transition>
@@ -13,12 +13,12 @@
 
 <script type="text/babel">
   const TYPE_CLASSES_MAP = {
-    'success': 'el-icon-circle-check',
-    'warning': 'el-icon-warning',
-    'error': 'el-icon-circle-cross'
+    'success': 'icon-circle-check',
+    'warning': 'icon-warning',
+    'error': 'icon-circle-cross'
   };
   export default {
-    name: 'el-alert',
+    name: 'c-alert',
 
     props: {
       title: {
@@ -63,19 +63,19 @@
 
     computed: {
       typeClass() {
-        return `el-alert--${ this.type }`;
+        return this.type;
       },
 
       iconClass() {
-        return TYPE_CLASSES_MAP[this.type] || 'el-icon-information';
+        return TYPE_CLASSES_MAP[this.type] || 'info';
       },
 
       isBigIcon() {
-        return this.description ? 'is-big' : '';
+        return this.description ? 'f2' : '';
       },
 
       isBoldTitle() {
-        return this.description ? 'is-bold' : '';
+        return this.description ? 'bold' : '';
       }
     }
   };

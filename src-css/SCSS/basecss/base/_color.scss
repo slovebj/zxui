@@ -86,13 +86,13 @@ $color_value in $shades {
 @include bg-variant('.bg-success', $color-success);
 @include bg-variant('.bg-info', $color-info);
 @include bg-variant('.bg-warning', $color-warning);
-@include bg-variant('.bg-danger', $color-danger);
+@include bg-variant('.bg-error', $color-error);
 // front-ground colors
 @include fg-variant('.text-primary', $color-primary);
 @include fg-variant('.text-success', $color-success);
 @include fg-variant('.text-info', $color-info);
 @include fg-variant('.text-warning', $color-warning);
-@include fg-variant('.text-danger', $color-danger);
+@include fg-variant('.text-error', $color-error);
 // Contextual variants
 //
 // Add modifier classes to change text and background color on individual items.
@@ -101,4 +101,4 @@ $color_value in $shades {
 @include color-variant('success', $color-success, #fff);
 @include color-variant('info', $color-info, #fff);
 @include color-variant('warning', $color-warning, #fff);
-@include color-variant('danger', $color-danger, #fff);
+@include color-variant('error', $color-error, #fff);

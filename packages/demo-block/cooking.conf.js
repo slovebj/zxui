@@ -3,12 +3,12 @@ var path = require('path');
 
 cooking.set({
   entry: {
-    alert: path.join(__dirname, 'index.js')
+    index: path.join(__dirname, 'index.js')
   },
   dist: path.join(__dirname, 'lib'),
   template: false,
   format: 'umd',
-  moduleName: 'CAlert',
+  moduleName: 'DemoBlock',
   extends: ['vue2']
 });
 

@@ -35,6 +35,8 @@ pre {
     margin-top: 0;
     margin-bottom: 1rem;
     color: $pre-color;
+    padding: 0 1rem;
+    overflow-x: scroll;
 }
 
 // Enable scrollable blocks of code

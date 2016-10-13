@@ -425,12 +425,12 @@ blockquote {
   margin: 0 0 1rem; }
 
 a {
-  color: #26a69a;
+  color: #373a3c;
   background-color: transparent;
   text-decoration: none; }
   a:focus, a:hover {
-    color: #186860;
-    text-decoration: underline;
+    color: #0275d8;
+    text-decoration: none;
     outline: none; }
   a:focus {
     outline: thin dotted;
@@ -736,7 +736,9 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #72D6BE; }
+  color: #72D6BE;
+  padding: 0 1rem;
+  overflow-x: scroll; }
 
 .pre-scrollable {
   max-height: 340px;
@@ -1119,7 +1121,7 @@ video.resp-video {
 
 .btn-link {
   font-weight: normal;
-  color: #26a69a;
+  color: #373a3c;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link:disabled {
     background-color: transparent;
@@ -1129,8 +1131,8 @@ video.resp-video {
   .btn-link:hover {
     border-color: transparent; }
   .btn-link:focus, .btn-link:hover {
-    color: #186860;
-    text-decoration: underline;
+    color: #0275d8;
+    text-decoration: none;
     background-color: transparent; }
   .btn-link:disabled:focus, .btn-link:disabled:hover {
     color: #818a91;
@@ -1541,7 +1543,7 @@ a.tag[class*="tag-o"]:focus, a.tag[class*="tag-o"]:hover, .tags.tag-o a.tag:focu
   .drop-menu > li.active, .drop-menu > li.active:focus, .drop-menu > li.active:hover, .drop-menu > a.active, .drop-menu > a.active:focus, .drop-menu > a.active:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #26a69a;
+    background-color: #0275d8;
     outline: 0; }
   .drop-menu > li.disabled, .drop-menu > li.disabled:focus, .drop-menu > li.disabled:hover, .drop-menu > a.disabled, .drop-menu > a.disabled:focus, .drop-menu > a.disabled:hover {
     color: #818a91; }
@@ -1710,12 +1712,12 @@ ol.list:last-child,
     z-index: 2;
     color: #fff;
     text-decoration: none;
-    background-color: #26a69a;
-    border-color: #26a69a; }
+    background-color: #0275d8;
+    border-color: #0275d8; }
     .li-complex.active .li-header, .li-complex.active:focus .li-header, .li-complex.active:hover .li-header {
       color: inherit; }
     .li-complex.active .li-text, .li-complex.active:focus .li-text, .li-complex.active:hover .li-text {
-      color: #acece6; }
+      color: #a8d6fe; }
 
 button.li-complex {
   border: 1px solid #ddd;
@@ -5930,11 +5932,11 @@ a.bg-info:focus, a.bg-info:hover {
 a.bg-warning:focus, a.bg-warning:hover {
   background-color: #ec971f !important; }
 
-.bg-danger {
+.bg-error {
   color: #fff !important;
   background-color: #d9534f !important; }
 
-a.bg-danger:focus, a.bg-danger:hover {
+a.bg-error:focus, a.bg-error:hover {
   background-color: #c9302c !important; }
 
 .text-primary {
@@ -5961,10 +5963,10 @@ a.text-info:focus, a.text-info:hover {
 a.text-warning:focus, a.text-warning:hover {
   color: #ec971f; }
 
-.text-danger {
+.text-error {
   color: #d9534f !important; }
 
-a.text-danger:focus, a.text-danger:hover {
+a.text-error:focus, a.text-error:hover {
   color: #c9302c; }
 
 .primary {
@@ -6011,13 +6013,13 @@ a.text-danger:focus, a.text-danger:hover {
     background-color: #eea236;
     border-color: #eea236; }
 
-.danger {
+.error {
   color: #fff;
   background-color: #d9534f; }
-  .danger:focus, .danger:hover {
+  .error:focus, .error:hover {
     color: #fff;
     background-color: #d43f3a; }
-  .danger.active, .danger.active:focus, .danger.active:hover {
+  .error.active, .error.active:focus, .error.active:hover {
     color: #fff;
     background-color: #d43f3a;
     border-color: #d43f3a; }

@@ -50,9 +50,9 @@ const md = require('markdown-it')({
                     <div class="source">${html}</div>
                     <div class="meta">
                       ${descriptionHTML}
-                      <pre><code  class="hljs">`;
+                      <div class="highlight">`;
         }
-        return '</code></pre></div></demo-block>\n';
+        return '</div></div></demo-block>\n';
       }
     });
 

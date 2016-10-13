@@ -11,6 +11,7 @@
         <!-- 这里仅包含基础css文件，ajax加载的页面片段内不共享的css在页面片段加载时加载 -->
         <!--<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">-->
         <!--<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.v3.3.css"> -->
+        <link rel="stylesheet" type="text/css" media="screen" href="src-css/SCSS/basecss/zx-components.css">
         <link rel="stylesheet" type="text/css" media="screen" href="src-css/SCSS/basecss/zxbase.css">
         <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
         <!-- ZXUI Styles : Caution! DO NOT change the order -->
@@ -22,6 +23,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/bjui.css">
         <!-- 只用于Demo目的: 设计自己的WebApp时可以删除这个css文件 -->
         <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
         <!-- #FAVICONS -->
         <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
         <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -740,7 +742,7 @@
             <!--<script src="js/vue.min.js"></script>-->
             <script src="//unpkg.com/vue@2.0.1/dist/vue.js"></script>
             <script src="//unpkg.com/vuex@2.0.0/dist/vuex.js"></script>
-            <!--<script src="lib/index.js"></script>-->
+            <script src="lib/index.js"></script>
             <!--<script src="//unpkg.com/element-ui@1.0.0-rc.3/lib/index.js"></script>-->
             <!-- IMPORTANT: APP CONFIG -->
             <script src="js/app.config.js"></script>
@@ -789,24 +791,29 @@
                     el: '#leftMenu',
                     data: {
                         items: [
-                        { href: '#', fa:'fa-desktop',title:'UI元素',level2:[
-                            { href: 'ajax/general-el.html',options:"{id:'general-el'}", fa:'fa-cube',title:'通用元素'},
-                            { href: 'ajax/grid.html',options:"{id:'grid'}", fa:'fa-cube',title:'栅格系统'},
-                            { href: 'ajax/typography.html',options:"{id:'typography'}", fa:'fa-desktop',title:'排版'},
-                            { href: 'ajax/list.html',options:"{id:'list'}", fa:'fa-list',title:'列表'},
-                            { href: 'ajax/buttons.html',options:"{id:'buttons'}", fa:'fa-th-large',title:'按钮'},
-                            { href: 'ajax/tags.html',options:"{id:'tags'}", fa:'fa-tags',title:'标签'},
-                            { href: 'ajax/colors.html',options:"{id:'colors'}", fa:'fa-eyedropper',title:'颜色'},
-                            { href: 'ajax/boxstyle.html',options:"{id:'boxstyle'}", fa:'fa-cube',title:'BOX样式'},
-                            { href: 'ajax/image.html',options:"{id:'image'}", fa:'fa-file-image-o',title:'图片'},
-                            { href: 'ajax/code.html',options:"{id:'code'}", fa:'fa-code',title:'代码'},
-                            { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
-                            { href: '#', fa:'fa-calendar',title:'二级菜单',level3:[
-                                { href: 'ajax/calendar.html',options:"{id:'calendar'}", fa:'fa-cube',title:'日历'}, 
-                                ]},
+                            { href: '#', fa:'fa-desktop',title:'UI元素',level2:[
+                                { href: 'ajax/general-el.html',options:"{id:'general-el'}", fa:'fa-cube',title:'通用元素'},
+                                { href: 'ajax/grid.html',options:"{id:'grid'}", fa:'fa-cube',title:'栅格系统'},
+                                { href: 'ajax/typography.html',options:"{id:'typography'}", fa:'fa-desktop',title:'排版'},
+                                { href: 'ajax/list.html',options:"{id:'list'}", fa:'fa-list',title:'列表'},
+                                { href: 'ajax/buttons.html',options:"{id:'buttons'}", fa:'fa-th-large',title:'按钮'},
+                                { href: 'ajax/tags.html',options:"{id:'tags'}", fa:'fa-tags',title:'标签'},
+                                { href: 'ajax/colors.html',options:"{id:'colors'}", fa:'fa-eyedropper',title:'颜色'},
+                                { href: 'ajax/boxstyle.html',options:"{id:'boxstyle'}", fa:'fa-cube',title:'BOX样式'},
+                                { href: 'ajax/image.html',options:"{id:'image'}", fa:'fa-file-image-o',title:'图片'},
+                                { href: 'ajax/code.html',options:"{id:'code'}", fa:'fa-code',title:'代码'},
+                                { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
+                                { href: '#', fa:'fa-calendar',title:'二级菜单',level3:[
+                                    { href: 'ajax/calendar.html',options:"{id:'calendar'}", fa:'fa-cube',title:'日历'}, 
+                                    ]},
                             ]},
-                        { href: '#', fa:'fa-windows',title:'一级菜单',level2:[{ href: 'level243', fa:'fa-windows'} ]},
-                        { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
+
+                            { href: '#', fa:'fa-windows',title:'VUE组件',level2:[
+                                { href: 'ajax/demo/alert.html',options:"{id:'demo-alert'}", fa:'fa-windows',title:'Alert'}
+                                ]
+                            },
+
+                            { href: 'ajax/markcook.html',options:"{id:'markcook'}", fa:'fa-windows',title:'Markdown编辑器'},
                         ]
                     }
                 })
