@@ -10,6 +10,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'c-message',
     props: {
       type: {
         type: String,
