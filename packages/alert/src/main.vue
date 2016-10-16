@@ -1,11 +1,11 @@
 <template>
   <transition name="c-alert-fade">
     <div class="c-alert" :class="[ typeClass ]" v-show="visible">
-      <i class="c-alert-icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
+      <i class="iconfont" :class="[ iconClass, iconSize ]" v-if="showIcon"></i>
       <div class="c-alert-content">
-        <span class="c-alert-title" :class="[ isBoldTitle ]" v-if="title">{{ title }}</span>
+        <span class="c-alert-title" :class="[ titleBold ]" v-if="title">{{ title }}</span>
         <p class="c-alert-description" v-if="description">{{ description }}</p>
-        <i class="c-alert-closebtn" :class="{ 'is-customed': closeText !== '', 'c-icon-close': closeText === '' }" v-show="closable" @click="close()">{{closeText}}</i>
+        <span class="c-alert-closebtn" v-show="closeText!==''" @click="close()">{{closeText}}</span>
       </div>
     </div>
   </transition>
@@ -13,9 +13,10 @@
 
 <script type="text/babel">
   const TYPE_CLASSES_MAP = {
-    'success': 'icon-circle-check',
+    'success': 'icon-success',
+    'info': 'icon-info',
     'warning': 'icon-warning',
-    'error': 'icon-circle-cross'
+    'error': 'icon-error'
   };
   export default {
     name: 'c-alert',
@@ -32,15 +33,11 @@
       },
       type: {
         type: String,
-        default: 'info'
-      },
-      closable: {
-        type: Boolean,
-        default: true
+        default: ''
       },
       closeText: {
         type: String,
-        default: ''
+        default: '×'
       },
       showIcon: {
         type: Boolean,
@@ -67,14 +64,14 @@
       },
 
       iconClass() {
-        return TYPE_CLASSES_MAP[this.type] || 'info';
+        return TYPE_CLASSES_MAP[this.type] || 'icon-message';
       },
 
-      isBigIcon() {
-        return this.description ? 'f2' : '';
+      iconSize() {
+        return this.description ? 'f5' : '';
       },
 
-      isBoldTitle() {
+      titleBold() {
         return this.description ? 'bold' : '';
       }
     }

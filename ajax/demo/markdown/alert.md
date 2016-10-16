@@ -1,17 +1,8 @@
 <script>
 var DemoAlert = new Vue({
-      el: '#demo-alert',
+      el: '#demo-alert'
   });
 </script>
-<style>
-  .demo-box.demo-alert .c-alert {
-    margin: 20px 0 0;
-  }
-
-  .demo-box.demo-alert .c-alert:first-child {
-    margin: 0;
-  }
-</style>
 
 ## Alert 警告
 
@@ -21,44 +12,27 @@ var DemoAlert = new Vue({
 
 页面中的非浮层元素，不会自动消失。
 
-::: demo Alert 组件提供四种主题，由`type`属性指定，默认值为`info`。
+::: demo Alert 组件提供四种主题，由`type`属性指定，默认值为空。
 ```html
+  <c-alert title="默认提示的文案"></c-alert>
   <c-alert title="成功提示的文案" type="success"></c-alert>
   <c-alert title="消息提示的文案" type="info"></c-alert>
-  <c-alert
-    title="警告提示的文案"
-    type="warning">
-  </c-alert>
-  <c-alert
-    title="错误提示的文案"
-    type="error">
-  </c-alert>
+  <c-alert title="警告提示的文案" type="warning"></c-alert>
+  <c-alert title="错误提示的文案" type="error"></c-alert>
 
 ```
 :::
 
 ### 自定义关闭按钮
 
-自定义关闭按钮为文字或其他符号。
+自定义关闭按钮为文字。
 
-::: demo 在 Alert 组件中，你可以设置是否可关闭，关闭按钮的文本以及关闭时的回调函数。`closable`属性决定是否可关闭，接受`boolean`，默认为`true`。你可以设置`close-text`属性来代替右侧的关闭图标，注意：`close-text`必须为文本。设置`close`事件来设置关闭时的回调。
+::: demo 在 Alert 组件中，你可以设置是否可关闭，关闭按钮的文本以及关闭时的回调函数。你可以设置`close-text`属性来改变关闭文本，默认为'×',注意：`close-text`必须为文本。设置`close`事件来设置关闭时的回调。
 ```html
-
-  <c-alert
-    title="不可关闭的 alert"
-    type="success"
-    :closable="false">
-  </c-alert>
-  <c-alert
-    title="自定义 close-text"
-    type="info"
-    close-text="知道了">
-  </c-alert>
-  <c-alert
-    title="设置了回调的 alert"
-    type="warning"
-    @close="hello">
-  </c-alert>
+  <c-alert title="不可关闭的 alert" close-text=""></c-alert>
+  <c-alert title="不可关闭的 alert" type="success" close-text=""></c-alert>
+  <c-alert title="自定义 close-text" type="info" close-text="知道了"></c-alert>
+  <c-alert title="设置了回调的 alert" type="warning" @close="close"></c-alert>
 ```
 :::
 
@@ -68,6 +42,7 @@ var DemoAlert = new Vue({
 
 ::: demo 通过设置`show-icon`属性来显示 Alert 的 icon，这能更有效地向用户展示你的显示意图。
 ```html
+  <c-alert title="默认提示的文案" show-icon></c-alert>
   <c-alert
     title="成功提示的文案"
     type="success"
@@ -111,7 +86,8 @@ var DemoAlert = new Vue({
 
 ::: demo 最后，这是一个同时具有 icon 和辅助性文字的样例。
 ```html
-
+  <c-alert title="成功提示的文案" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+  </c-alert>
   <c-alert
     title="成功提示的文案"
     type="success"
@@ -146,8 +122,7 @@ var DemoAlert = new Vue({
 | **title** | 标题，**必选参数** | string | — | — |
 | type | 主题 | string | success/warning/info/error | info |
 | description | 辅助性文字 | string | — | — |
-| closable | 是否可关闭 | boolean | — | true |
-| close-text | 关闭按钮自定义文本 | string | — | — |
+| close-text | 关闭按钮自定义文本 | string | — | × |
 | show-icon | 是否显示图标 | boolean | — | false |
 
 

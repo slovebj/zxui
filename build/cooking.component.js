@@ -5,6 +5,12 @@ var config = require('./config');
 cooking.set({
   entry: Components,
   dist: './lib',
+  devServer: {
+    port: 8085,
+    log: false,
+    publicPath: '/'
+  },
+  minimize: true,
   clean: false,
   format: 'umd',
   extends: ['vue2'],

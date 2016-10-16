@@ -1,33 +1,42 @@
 <template>
-  <transition name="el-message-fade">
-    <div class="el-message" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
-      <img class="el-message__icon" :src="typeImg" alt="">
-      <div class="el-message__group">
-        <p>{{ message }}</p>
-        <div v-if="showClose" class="el-message__closeBtn el-icon-close" @click="handleClose"></div>
-      </div>
+  <transition name="c-message-fade">
+    <div class="c-message" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
+        <i class="iconfont" :class="iconClass"></i>
+        <span >{{ message }}</span>
+        <span class="c-message-closebtn" v-show="closeText!==''" @click="handleClose">{{closeText}}</span>
     </div>
   </transition>
 </template>
 
 <script type="text/babel">
   export default {
+    props: {
+      type: {
+        type: String,
+        default: ''
+      },
+      message: {
+        type: String,
+        default: ''
+      },
+      closeText: {
+        type: String,
+        default: '×'
+      }
+    },
     data() {
       return {
         visible: false,
-        message: '',
         duration: 3000,
-        type: 'info',
         onClose: null,
-        showClose: false,
         closed: false,
         timer: null
       };
     },
 
     computed: {
-      typeImg() {
-        return require(`../assets/${ this.type }.svg`);
+      iconClass() {
+        return this.type ? 'icon'+this.type : 'icon-message';
       }
     },
 
