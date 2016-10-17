@@ -1,7 +1,7 @@
 <template>
   <transition name="c-message-fade">
-    <div class="c-message" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
-        <i class="iconfont" :class="iconClass"></i>
+    <div class="c-message" :class="type" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
+        <i class="iconfont f4" :class="iconClass"></i>
         <span >{{ message }}</span>
         <span class="c-message-closebtn" v-show="closeText!==''" @click="handleClose">{{closeText}}</span>
     </div>
@@ -11,33 +11,22 @@
 <script type="text/babel">
   export default {
     name: 'c-message',
-    props: {
-      type: {
-        type: String,
-        default: ''
-      },
-      message: {
-        type: String,
-        default: ''
-      },
-      closeText: {
-        type: String,
-        default: '×'
-      }
-    },
     data() {
       return {
         visible: false,
+        message: '',
+        type: '',
         duration: 3000,
-        onClose: null,
         closed: false,
-        timer: null
+        closeText: '',
+        timer: null,
+        onClose: null
       };
     },
 
     computed: {
       iconClass() {
-        return this.type ? 'icon'+this.type : 'icon-message';
+        return (this.type ? 'icon-' + this.type : 'icon-message');
       }
     },
 

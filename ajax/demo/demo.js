@@ -56,6 +56,7 @@ function convert(str) {
 const Files = [
     { filename: 'alert', convert: 1 },
     { filename: 'dialog', convert: 0 },
+    { filename: 'message', convert: 1 },
 ];
 
 var counter = 0;

@@ -1,5 +1,5 @@
 <script>
-var DemoAlert = new Vue({
+var demoAlert = new Vue({
       el: '#demo-alert'
   });
 </script>

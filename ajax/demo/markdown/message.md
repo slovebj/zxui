@@ -1,5 +1,6 @@
 <script>
-  module.exports = {
+  var demoMessage = new Vue({
+    el: '#demo-message',
     methods: {
       open() {
         this.$message('这是一条消息提示');
@@ -29,7 +30,9 @@
       open5() {
         this.$message({
           showClose: true,
-          message: '这是一条消息提示'
+          message: '这是一条消息提示',
+          duration: 0,
+          closeText: '×'
         });
       },
 
@@ -57,16 +60,8 @@
         });
       }
     }
-  };
+  });
 </script>
-
-<style>
-  .demo-box.demo-message {
-    .el-button + .el-button {
-      margin-left: 10px;
-    }
-  }
-</style>
 
 ## Message 消息提示
 
@@ -79,9 +74,9 @@
 :::demo Message 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释，文末有 options 列表，可以结合 Notification 的文档理解它们。Element 注册了一个`$message`方法用于调用，Message 可以接收一个字符串作为参数，它会被显示为正文内容。
 
 ```html
-<template>
-  <el-button :plain="true" @click.native="open">打开消息提示</el-button>
-</template>
+
+  <button type="button" @click="open">打开消息提示</button>
+
 
 <script>
   export default {
@@ -101,12 +96,10 @@
 
 :::demo 当需要自定义更多属性时，Message 也可以接收一个对象为参数。比如，设置`type`字段可以定义不同的状态，默认为`info`。此时正文内容以`message`的值传入。
 ```html
-<template>
-  <el-button :plain="true" @click.native="open2">成功</el-button>
-  <el-button :plain="true" @click.native="open3">警告</el-button>
-  <el-button :plain="true" @click.native="open">消息</el-button>
-  <el-button :plain="true" @click.native="open4">错误</el-button>
-</template>
+  <button type="button" @click="open2">成功</button>
+  <button type="button" @click="open3">警告</button>
+  <button type="button" @click="open">消息</button>
+  <button type="button" @click="open4">错误</button>
 
 <script>
   export default {
@@ -143,12 +136,12 @@
 
 :::demo 默认的 Message 是不可以被人工关闭的，如果需要可手动关闭的 Message，可以使用`showClose`字段。此外，和 Notification 一样，Message 拥有可控的`duration`，设置`0`为不会被自动关闭，默认为 3000 毫秒。
 ```html
-<template>
-  <el-button :plain="true" @click.native="open5">消息</el-button>
-  <el-button :plain="true" @click.native="open6">成功</el-button>
-  <el-button :plain="true" @click.native="open7">警告</el-button>
-  <el-button :plain="true" @click.native="open8">错误</el-button>
-</template>
+
+  <button type="button" @click="open5">消息</button>
+  <button type="button" @click="open6">成功</button>
+  <button type="button" @click="open7">警告</button>
+  <button type="button" @click="open8">错误</button>
+
 
 <script>
   export default {
