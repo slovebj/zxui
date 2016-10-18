@@ -1,25 +1,25 @@
 import Vue from 'vue';
-let MessageConstructor = Vue.extend(require('./main.vue'));
+let MsgConstructor = Vue.extend(require('./main.vue'));
 
 let instance;
 let instances = [];
 let seed = 1;
 
-var Message = function(options) {
+var Msg = function(options) {
   options = options || {};
   if (typeof options === 'string') {
     options = {
-      message: options
+      msg: options
     };
   }
   let userOnClose = options.onClose;
-  let id = 'message_' + seed++;
+  let id = 'msg_' + seed++;
 
   options.onClose = function() {
-    Message.close(id, userOnClose);
+    Msg.close(id, userOnClose);
   };
 
-  instance = new MessageConstructor({
+  instance = new MsgConstructor({
     data: options
   });
   instance.id = id;
@@ -30,7 +30,7 @@ var Message = function(options) {
   instances.push(instance);
 };
 
-Message.close = function(id, userOnClose) {
+Msg.close = function(id, userOnClose) {
   for (let i = 0, len = instances.length; i < len; i++) {
     if (id === instances[i].id) {
       if (typeof userOnClose === 'function') {
@@ -42,4 +42,4 @@ Message.close = function(id, userOnClose) {
   }
 };
 
-export default Message;
+export default Msg;

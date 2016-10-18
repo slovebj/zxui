@@ -1,14 +1,14 @@
 {
-  "name": "el-message-box",
+  "name": "c-msg-box",
   "version": "0.0.0",
-  "description": "A message-box component for Vue.js.",
+  "description": "A msg-box component for Vue.js.",
   "keywords": [
     "element",
     "vue",
     "component"
   ],
   "main": "./lib/index.js",
-  "repository": "https://github.com/element-component/element/tree/master/packages/message-box",
+  "repository": "https://github.com/element-component/element/tree/master/packages/msg-box",
   "author": "elemefe",
   "license": "MIT",
   "dependencies": {

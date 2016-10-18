@@ -16,12 +16,12 @@ const install = function(Vue) {
 
   Vue.use(Loading);
 
-  Vue.prototype.$msgbox = MessageBox;
-  Vue.prototype.$alert = MessageBox.alert;
-  Vue.prototype.$confirm = MessageBox.confirm;
-  Vue.prototype.$prompt = MessageBox.prompt;
+  Vue.prototype.$msgbox = MsgBox;
+  Vue.prototype.$alert = MsgBox.alert;
+  Vue.prototype.$confirm = MsgBox.confirm;
+  Vue.prototype.$prompt = MsgBox.prompt;
   Vue.prototype.$notify = Notification;
-  Vue.prototype.$message = Message;
+  Vue.prototype.$msg = Msg;
 };
 
 // auto install
@@ -52,7 +52,7 @@ ComponentNames.forEach(name => {
     package: name
   }));
 
-  if (['Loading', 'MessageBox', 'Notification'].indexOf(componentName) === -1) {
+  if (['Loading', 'MsgBox', 'Notification'].indexOf(componentName) === -1) {
     installTemplate.push(render(ISNTALL_COMPONENT_TEMPLATE, {
       name: componentName,
       component: name

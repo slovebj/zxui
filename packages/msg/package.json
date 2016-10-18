@@ -1,14 +1,14 @@
 {
-  "name": "el-message",
+  "name": "c-msg",
   "version": "0.0.0",
-  "description": "A message component for Vue.js.",
+  "description": "A msg component for Vue.js.",
   "keywords": [
     "element",
     "vue",
     "component"
   ],
   "main": "./lib/index.js",
-  "repository": "https://github.com/element-component/element/tree/master/packages/message",
+  "repository": "https://github.com/element-component/element/tree/master/packages/msg",
   "author": "elemefe",
   "license": "MIT",
   "dependencies": {}

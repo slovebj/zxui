@@ -1,20 +1,20 @@
 <template>
-  <div class="el-message-box__wrapper">
+  <div class="c-msg-box__wrapper">
     <transition name="msgbox-bounce">
-      <div class="el-message-box" v-show="value">
-        <div class="el-message-box__header" v-if="title !== ''">
-          <div class="el-message-box__title">{{ title }}</div>
-          <i class="el-message-box__close el-icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
+      <div class="c-msg-box" v-show="value">
+        <div class="c-msg-box__header" v-if="title !== ''">
+          <div class="c-msg-box__title">{{ title }}</div>
+          <i class="c-msg-box__close el-icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
         </div>
-        <div class="el-message-box__content" v-if="message !== ''">
-          <div class="el-message-box__status" :class="[ typeClass ]"></div>
-          <div class="el-message-box__message" :style="{ 'margin-left': typeClass ? '50px' : '0' }"><p>{{ message }}</p></div>
-          <div class="el-message-box__input" v-show="showInput">
+        <div class="c-msg-box__content" v-if="message !== ''">
+          <div class="c-msg-box__status" :class="[ typeClass ]"></div>
+          <div class="c-msg-box__message" :style="{ 'margin-left': typeClass ? '50px' : '0' }"><p>{{ message }}</p></div>
+          <div class="c-msg-box__input" v-show="showInput">
             <el-input v-model="inputValue" :placeholder="inputPlaceholder" ref="input"></el-input>
-            <div class="el-message-box__errormsg" :style="{ visibility: !!editorErrorMessage ? 'visible' : 'hidden' }">{{ editorErrorMessage }}</div>
+            <div class="c-msg-box__errormsg" :style="{ visibility: !!editorErrorMsg ? 'visible' : 'hidden' }">{{ editorErrorMsg }}</div>
           </div>
         </div>
-        <div class="el-message-box__btns">
+        <div class="c-msg-box__btns">
           <el-button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click.native="handleAction('cancel')">{{ cancelButtonText }}</el-button>
           <el-button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click.native="handleAction('confirm')" type="primary">{{ confirmButtonText }}</el-button>
         </div>
@@ -107,7 +107,7 @@
         if (this.$type === 'prompt') {
           var inputPattern = this.inputPattern;
           if (inputPattern && !inputPattern.test(this.inputValue || '')) {
-            this.editorErrorMessage = this.inputErrorMessage || '输入的数据不合法!';
+            this.editorErrorMsg = this.inputErrorMsg || '输入的数据不合法!';
             this.$refs.input.$el.querySelector('input').classList.add('invalid');
             return false;
           }
@@ -115,17 +115,17 @@
           if (typeof inputValidator === 'function') {
             var validateResult = inputValidator(this.inputValue);
             if (validateResult === false) {
-              this.editorErrorMessage = this.inputErrorMessage || '输入的数据不合法!';
+              this.editorErrorMsg = this.inputErrorMsg || '输入的数据不合法!';
               this.$refs.input.$el.querySelector('input').classList.add('invalid');
               return false;
             }
             if (typeof validateResult === 'string') {
-              this.editorErrorMessage = validateResult;
+              this.editorErrorMsg = validateResult;
               return false;
             }
           }
         }
-        this.editorErrorMessage = '';
+        this.editorErrorMsg = '';
         this.$refs.input.$el.querySelector('input').classList.remove('invalid');
         return true;
       }
@@ -159,7 +159,7 @@
         inputPlaceholder: '',
         inputPattern: null,
         inputValidator: null,
-        inputErrorMessage: '',
+        inputErrorMsg: '',
         showConfirmButton: true,
         showCancelButton: false,
         confirmButtonText: CONFIRM_TEXT,
@@ -168,7 +168,7 @@
         confirmButtonDisabled: false,
         cancelButtonClass: '',
 
-        editorErrorMessage: null,
+        editorErrorMsg: null,
         callback: null
       };
     }

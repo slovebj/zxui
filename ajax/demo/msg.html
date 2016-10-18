@@ -1,68 +1,68 @@
 <script>
-  var demoMessage = new Vue({
-    el: '#demo-message',
+  var demoMsg = new Vue({
+    el: '#demo-msg',
     methods: {
       open() {
-        this.$message('这是一条消息提示');
+        this.$msg('这是一条消息提示');
       },
 
       open2() {
-        this.$message({
-          message: '恭喜你，这是一条成功消息',
+        this.$msg({
+          msg: '恭喜你，这是一条成功消息',
           type: 'success'
         });
       },
 
       open3() {
-        this.$message({
-          message: '警告哦，这是一条警告消息',
+        this.$msg({
+          msg: '警告哦，这是一条警告消息',
           type: 'warning'
         });
       },
 
       open4() {
-        this.$message({
-          message: '错了哦，这是一条错误消息',
+        this.$msg({
+          msg: '错了哦，这是一条错误消息',
           type: 'error'
         });
       },
 
       open5() {
-        this.$message({
+        this.$msg({
           showClose: true,
-          message: '这是一条消息提示',
+          msg: '这是一条消息提示',
           duration: 0,
           closeText: '×'
         });
       },
 
       open6() {
-        this.$message({
+        this.$msg({
           showClose: true,
-          message: '恭喜你，这是一条成功消息',
+          msg: '恭喜你，这是一条成功消息',
           type: 'success'
         });
       },
 
       open7() {
-        this.$message({
+        this.$msg({
           showClose: true,
-          message: '警告哦，这是一条警告消息',
+          msg: '警告哦，这是一条警告消息',
           type: 'warning'
         });
       },
 
       open8() {
-        this.$message({
+        this.$msg({
           showClose: true,
-          message: '错了哦，这是一条错误消息',
+          msg: '错了哦，这是一条错误消息',
           type: 'error'
         });
       }
     }
   });
 </script>
-<h2>Message 消息提示</h2>
+<h2>Msg 消息提示</h2>
 <p>常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。</p>
 <h3>基础用法</h3>
 <p>从顶部出现，3 秒后自动消失。</p>
@@ -74,7 +74,7 @@
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>Message 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释，文末有 options 列表，可以结合 Notification 的文档理解它们。Element 注册了一个<code>$message</code>方法用于调用，Message 可以接收一个字符串作为参数，它会被显示为正文内容。</p>
+                      <div class="description"><p>Msg 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释，文末有 options 列表，可以结合 Notification 的文档理解它们。Element 注册了一个<code>$msg</code>方法用于调用，Msg 可以接收一个字符串作为参数，它会被显示为正文内容。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open"</span>&gt;</span>打开消息提示<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -84,7 +84,7 @@
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     <span class="hljs-attr">methods</span>: {
       open() {
-        <span class="hljs-keyword">this</span>.$message(<span class="hljs-string">'这是一条消息提示'</span>);
+        <span class="hljs-keyword">this</span>.$msg(<span class="hljs-string">'这是一条消息提示'</span>);
       }
     }
   }
@@ -102,7 +102,7 @@
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>当需要自定义更多属性时，Message 也可以接收一个对象为参数。比如，设置<code>type</code>字段可以定义不同的状态，默认为<code>info</code>。此时正文内容以<code>message</code>的值传入。</p>
+                      <div class="description"><p>当需要自定义更多属性时，Msg 也可以接收一个对象为参数。比如，设置<code>type</code>字段可以定义不同的状态，默认为<code>info</code>。此时正文内容以<code>msg</code>的值传入。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open2"</span>&gt;</span>成功<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open3"</span>&gt;</span>警告<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -113,22 +113,22 @@
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     <span class="hljs-attr">methods</span>: {
       open2() {
-        <span class="hljs-keyword">this</span>.$message({
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'恭喜你，这是一条成功消息'</span>,
+        <span class="hljs-keyword">this</span>.$msg({
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'恭喜你，这是一条成功消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'success'</span>
         });
       },
 
       open3() {
-        <span class="hljs-keyword">this</span>.$message({
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'警告哦，这是一条警告消息'</span>,
+        <span class="hljs-keyword">this</span>.$msg({
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'警告哦，这是一条警告消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'warning'</span>
         });
       },
 
       open4() {
-        <span class="hljs-keyword">this</span>.$message({
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
+        <span class="hljs-keyword">this</span>.$msg({
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'error'</span>
         });
       }
@@ -150,7 +150,7 @@
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>默认的 Message 是不可以被人工关闭的，如果需要可手动关闭的 Message，可以使用<code>showClose</code>字段。此外，和 Notification 一样，Message 拥有可控的<code>duration</code>，设置<code>0</code>为不会被自动关闭，默认为 3000 毫秒。</p>
+                      <div class="description"><p>默认的 Msg 是不可以被人工关闭的，如果需要可手动关闭的 Msg，可以使用<code>showClose</code>字段。此外，和 Notification 一样，Msg 拥有可控的<code>duration</code>，设置<code>0</code>为不会被自动关闭，默认为 3000 毫秒。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open5"</span>&gt;</span>消息<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -163,32 +163,32 @@
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     <span class="hljs-attr">methods</span>: {
       open5() {
-        <span class="hljs-keyword">this</span>.$message({
+        <span class="hljs-keyword">this</span>.$msg({
           <span class="hljs-attr">showClose</span>: <span class="hljs-literal">true</span>,
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'恭喜你，这是一条成功消息'</span>
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'恭喜你，这是一条成功消息'</span>
         });
       },
 
       open6() {
-        <span class="hljs-keyword">this</span>.$message({
+        <span class="hljs-keyword">this</span>.$msg({
           <span class="hljs-attr">showClose</span>: <span class="hljs-literal">true</span>,
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'警告哦，这是一条警告消息'</span>,
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'警告哦，这是一条警告消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'warning'</span>
         });
       },
 
       open7() {
-        <span class="hljs-keyword">this</span>.$message({
+        <span class="hljs-keyword">this</span>.$msg({
           <span class="hljs-attr">showClose</span>: <span class="hljs-literal">true</span>,
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'error'</span>
         });
       },
 
       open8() {
-        <span class="hljs-keyword">this</span>.$message({
+        <span class="hljs-keyword">this</span>.$msg({
           <span class="hljs-attr">showClose</span>: <span class="hljs-literal">true</span>,
-          <span class="hljs-attr">message</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
+          <span class="hljs-attr">msg</span>: <span class="hljs-string">'错了哦，这是一条错误消息'</span>,
           <span class="hljs-attr">type</span>: <span class="hljs-string">'error'</span>
         });
       }
@@ -198,12 +198,12 @@
 </code></pre>
 </div></div></demo-block>
 <h3>全局方法</h3>
-<p>element 为 Vue.prototype 添加了全局方法 $message。因此在 vue instance 中可以采用本页面中的方式调用 <code>Message</code>。</p>
+<p>element 为 Vue.prototype 添加了全局方法 $msg。因此在 vue instance 中可以采用本页面中的方式调用 <code>Msg</code>。</p>
 <h3>单独引用</h3>
-<p>单独引入 <code>Message</code>：</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { Message } <span class="hljs-keyword">from</span> <span class="hljs-string">'element-ui'</span>;
+<p>单独引入 <code>Msg</code>：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { Msg } <span class="hljs-keyword">from</span> <span class="hljs-string">'element-ui'</span>;
 </code></pre>
-<p>此时调用方法为 <code>Message(options)</code>。</p>
+<p>此时调用方法为 <code>Msg(options)</code>。</p>
 <h3>Options</h3>
 <table>
 <thead>
@@ -217,7 +217,7 @@
 </thead>
 <tbody>
 <tr>
-<td>message</td>
+<td>msg</td>
 <td>消息文字</td>
 <td>string</td>
 <td>—</td>
@@ -246,7 +246,7 @@
 </tr>
 <tr>
 <td>onClose</td>
-<td>关闭时的回调函数, 参数为被关闭的 message 实例</td>
+<td>关闭时的回调函数, 参数为被关闭的 msg 实例</td>
 <td>function</td>
 <td>—</td>
 <td>—</td>

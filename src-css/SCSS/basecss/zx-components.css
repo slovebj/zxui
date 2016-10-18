@@ -174,14 +174,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-alert-fade-leave-active {
   opacity: 0; }
 
-.c-message {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
-  min-width: 300px;
-  padding: 10px 12px;
-  border-radius: 2px;
+.c-msg {
+  padding: 10px 0 10px 16px;
   position: fixed;
   left: 50%;
-  top: 20px;
   transform: translateX(-50%);
   background-color: #5c5c5c;
   color: #fff;
@@ -189,11 +185,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   overflow: hidden;
   z-index: 9999; }
 
-.c-message .c-message-closebtn {
-  float: right; }
+.c-msg.top {
+  top: 20px; }
 
-.c-message-fade-enter,
-.c-message-fade-leave-active {
+.c-msg.bottom {
+  bottom: 24px; }
+
+.c-msg > * {
+  vertical-align: middle;
+  margin-right: 16px; }
+
+.c-msg .c-msg-closebtn {
+  cursor: pointer; }
+
+.c-msg-fade-enter,
+.c-msg-fade-leave-active {
   opacity: 0;
   transform: translate(-50%, -100%); }
 

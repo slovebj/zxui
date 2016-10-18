@@ -1,8 +1,8 @@
 {
-  "message-box": "./packages/message-box/index.js",
+  "msg-box": "./packages/msg-box/index.js",
   "alert": "./packages/alert/index.js",
   "loading": "./packages/loading/index.js",
   "notification": "./packages/notification/index.js",
-  "message": "./packages/message/index.js",
+  "msg": "./packages/msg/index.js",
   "demo-block": "./packages/demo-block/index.js"
 }

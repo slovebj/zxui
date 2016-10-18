@@ -1,21 +1,22 @@
 <template>
-  <transition name="c-message-fade">
-    <div class="c-message" :class="type" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
+  <transition name="c-msg-fade">
+    <div class="c-msg" :class="[type,atTop]" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
         <i class="iconfont f4" :class="iconClass"></i>
-        <span >{{ message }}</span>
-        <span class="c-message-closebtn" v-show="closeText!==''" @click="handleClose">{{closeText}}</span>
+        <span >{{ msg }}</span>
+        <span class="c-msg-closebtn" v-show="closeText!==''" @click="handleClose">{{closeText}}</span>
     </div>
   </transition>
 </template>
 
 <script type="text/babel">
   export default {
-    name: 'c-message',
+    name: 'c-msg',
     data() {
       return {
         visible: false,
-        message: '',
+        msg: '',
         type: '',
+        top: '',
         duration: 3000,
         closed: false,
         closeText: '',
@@ -26,7 +27,10 @@
 
     computed: {
       iconClass() {
-        return (this.type ? 'icon-' + this.type : 'icon-message');
+        return (this.type ? 'icon-' + this.type : 'icon-msg');
+      },
+      atTop() {
+        return (this.top ? 'top' : 'bottom');
       }
     },
 
