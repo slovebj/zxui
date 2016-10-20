@@ -57,6 +57,7 @@ const Files = [
     { filename: 'alert', convert: 1 },
     { filename: 'dialog', convert: 0 },
     { filename: 'msg', convert: 1 },
+    { filename: 'notification', convert: 1 },
 ];
 
 var counter = 0;

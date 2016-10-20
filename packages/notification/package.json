@@ -1,9 +1,9 @@
 {
-  "name": "el-notification",
+  "name": "c-notification",
   "version": "0.0.0",
   "description": "A notification component for Vue.js.",
   "keywords": [
-    "element",
+    "zxui",
     "vue",
     "component"
   ],

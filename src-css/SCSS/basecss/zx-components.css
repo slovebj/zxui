@@ -203,4 +203,40 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   opacity: 0;
   transform: translate(-50%, -100%); }
 
+.c-notification {
+  width: 330px;
+  padding: 20px;
+  position: fixed;
+  right: 1rem;
+  background-color: #5c5c5c;
+  color: #fff;
+  transition: opacity 0.3s, transform .3s, right .3s, top 0.4s;
+  overflow: hidden;
+  z-index: 9999; }
+  .c-notification .iconfont {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1; }
+
+.c-notification-group p {
+  font-size: .9rem;
+  line-height: 1.4rem;
+  margin: 10px 0 0 0;
+  text-align: justify; }
+
+.c-notification-closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.6rem; }
+
+.c-notification-fade-enter {
+  transform: translateX(100%);
+  right: 0; }
+
+.c-notification-fade-leave-active {
+  opacity: 0; }
+
 /*# sourceMappingURL=zx-components.css.map */
