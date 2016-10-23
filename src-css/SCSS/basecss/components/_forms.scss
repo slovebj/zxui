@@ -106,27 +106,23 @@ select[multiple]{
 .form-ctrl.icon-r {
   padding-right: 2em;
 }
-.form-ctrl.icon-lr {
-  padding-left: 2em;
-  padding-right: 2em;
-}
-.form-ctrl~i {
+.form-ctrl ~ i {
   display: inline-block;
   position: absolute;
-  font-size: 1rem;
   top: 0;
-  width: 2rem;
-  line-height: 2rem;
-  height: 2rem;
+  width: 2em;
+  line-height: 2em;
+  height: 2em;
   color: $input-color;
+  text-align: center;
 }
-.form-ctrl-sm~i {
+.form-ctrl-sm ~ i {
   font-size: $font-size-sm;
   line-height: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
 }
-.form-ctrl-lg~i {
+.form-ctrl-lg ~ i {
   font-size: 1.5rem;
   line-height: 3rem;
   width:3rem;

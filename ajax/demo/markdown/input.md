@@ -1,5 +1,4 @@
 <script>
-  var Vue = require('vue');
   Vue.component('my-item', {
     functional: true,
     render: function (h, ctx) {
@@ -13,7 +12,9 @@
       item: { type: Object, required: true }
     }
   });
-  export default {
+
+  var demoInput=new Vue({
+    el : '#demo-input',
     data() {
       return {
         input: '',
@@ -114,48 +115,48 @@
     mounted() {
       this.restaurants = this.loadAll();
     }
-  };
+  });
 </script>
 
 <style>
   .demo-input {
-    .el-select .el-input {
+    .c-select .c-input {
       width: 100px;
     }
     .text {
       font-size: 14px;
       color: #8492a6;
     }
-    .el-input {
+    .c-input {
       width: 180px;
 
-      & + .el-input,
-      & + .el-textarea {
+      & + .c-input,
+      & + .c-textarea {
         margin-top: 15px;
       }
     }
-    .el-textarea {
+    .c-textarea {
       width: 414px;
     }
-    .el-input-group {
+    .c-input-group {
       min-width: 260px;
     }
-    .el-input-group + .el-input-group {
+    .c-input-group + .c-input-group {
       margin-top: 15px;
     }
-    .el-autocomplete {
+    .c-autocomplete {
       display: inline-block;
     }
     .inline-input {
-      .el-input {
+      .c-input {
         display: inline-block;
         vertical-align: top;
         margin: 10px 5px;
       }
-      .el-autocomplete {
+      .c-autocomplete {
         margin: 10px 0 0;
 
-        .el-input {
+        .c-input {
           margin: 0;
         }
       }
@@ -163,12 +164,12 @@
     .tac {
       text-align: center;
 
-      .el-autocomplete {
+      .c-autocomplete {
         text-align: left;
       }
     }
-    .el-row.border-grid {
-      .el-col:not(:last-child) {
+    .c-row.border-grid {
+      .c-col:not(:last-child) {
         border-right: 1px solid rgba(224,230,237,0.50);
       }
     }
@@ -198,10 +199,10 @@
 
 ::: demo
 ```html
-<el-input
+<c-input
   placeholder="请输入内容"
   v-model="input">
-</el-input>
+</c-input>
 ```
 :::
 
@@ -210,11 +211,11 @@
 
 ::: demo 通过 `disabled` 属性指定是否禁用 input 组件
 ```html
-<el-input
+<c-input
   placeholder="请输入内容"
   v-model="input1"
   :disabled="true">
-</el-input>
+</c-input>
 ```
 :::
 
@@ -224,11 +225,36 @@
 
 ::: demo 可以通过 `icon` 属性在 input 组件尾部增加显示图标。
 ```html
-<el-input
+<c-input
   placeholder="请选择日期"
-  icon="time"
+  icon-l="success"
   v-model="input2">
-</el-input>
+</c-input>
+<c-input
+  placeholder="请选择日期"
+  icon-r="plus"
+  v-model="input2">
+</c-input>
+<c-input
+  placeholder="请选择日期"
+  icon-l="success"
+  icon-r="plus"
+  v-model="input2">
+</c-input>
+<c-input
+  placeholder="请选择日期"
+  icon-l="success"
+  icon-r="plus"
+  size="sm"
+  v-model="input2">
+</c-input>
+<c-input
+  placeholder="请选择日期"
+  icon-l="success"
+  icon-r="plus"
+  size="lg"
+  v-model="input2">
+</c-input>
 ```
 :::
 
@@ -238,10 +264,10 @@
 
 ::: demo 通过将 `type` 属性的值指定为 textarea。
 ```html
-<el-input
+<c-input
   type="textarea"
   v-model="textarea">
-</el-input>
+</c-input>
 ```
 :::
 
@@ -251,20 +277,38 @@
 
 ::: demo 可通过 slot 来指定在 input 中前置或者后置内容。
 ```html
-<el-input placeholder="请输入内容" v-model="input3">
-  <template slot="prepend">Http://</template>
-</el-input>
-<el-input placeholder="请输入内容" v-model="input4">
-  <template slot="append">.com</template>
-</el-input>
-<el-input placeholder="请输入内容" v-model="input5" style="width: 300px;">
-  <el-select v-model="select" slot="prepend">
-    <el-option label="餐厅名" value="1"></el-option>
-    <el-option label="订单号" value="2"></el-option>
-    <el-option label="用户电话" value="3"></el-option>
-  </el-select>
-  <el-button slot="append" icon="search"></el-button>
-</el-input>
+<c-input placeholder="请输入内容" v-model="input3">
+  <template slot="addon1">Http://</template><template slot="addon2">www</template>
+</c-input>
+<c-input placeholder="请输入内容" v-model="input4">
+  <template slot="addon2">.com</template>
+</c-input>
+<c-input placeholder="请输入内容" v-model="input4">
+  <template slot="btn1">
+    <button class="btn" type="button">
+     前置
+    </button>
+    <button class="btn" type="button">
+      Options
+    </button>
+  </template>
+  <template slot="btn2">
+    <button class="btn" type="button">
+      Search
+    </button>
+    <button class="btn" type="button">
+      Options
+    </button>
+  </template>
+</c-input>
+<c-input placeholder="请输入内容" v-model="input5" style="width: 300px;">
+  <c-select v-model="select" slot="prepend">
+    <c-option label="餐厅名" value="1"></c-option>
+    <c-option label="订单号" value="2"></c-option>
+    <c-option label="用户电话" value="3"></c-option>
+  </c-select>
+  <c-button slot="append" icon="search"></c-button>
+</c-input>
 ```
 :::
 
@@ -273,25 +317,20 @@
 ::: demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、small 和 mini 三种尺寸。
 ```html
 <div class="inline-input">
-  <el-input
-    size="large"
+  <c-input
+    size="lg"
     placeholder="请输入内容"
     v-model="input6">
-  </el-input>
-  <el-input
+  </c-input>
+  <c-input
     placeholder="请输入内容"
     v-model="input7">
-  </el-input>
-  <el-input
-    size="small"
+  </c-input>
+  <c-input
+    size="sm"
     placeholder="请输入内容"
     v-model="input8">
-  </el-input>
-  <el-input
-    size="mini"
-    placeholder="请输入内容"
-    v-model="input9">
-  </el-input>
+  </c-input>
 </div>
 ```
 :::
@@ -302,27 +341,27 @@
 
 ::: demo autocomplete 是一个可带输入建议的输入框组件，`fetch-suggestions` 是一个返回输入建议的方法属性，如 querySearch(queryString, cb)，在该方法中你可以在你的输入建议数据准备好时通过 cb(data) 返回到 autocomplete 组件中。
 ```html
-<el-row class="inline-input border-grid">
-  <el-col :span="12" class="tac">
+<c-row class="inline-input border-grid">
+  <c-col :span="12" class="tac">
     <div class="text">激活即列出输入建议</div>
-    <el-autocomplete
+    <c-autocomplete
       v-model="state1"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
-  <el-col :span="12" class="tac">
+    ></c-autocomplete>
+  </c-col>
+  <c-col :span="12" class="tac">
     <div class="text">输入后匹配输入建议</div>
-    <el-autocomplete
+    <c-autocomplete
       v-model="state2"
       :fetch-suggestions="querySearch"
       placeholder="请输入内容"
       :trigger-on-focus="false"
       @select="handleSelect"
-    ></el-autocomplete>
-  </el-col>
-</el-row>
+    ></c-autocomplete>
+  </c-col>
+</c-row>
 <script>
   export default {
     data() {
@@ -414,14 +453,14 @@
 
 ::: demo 
 ```html
-<el-autocomplete
+<c-autocomplete
   class="my-autocomplete"
   v-model="state3"
   :fetch-suggestions="querySearch"
   custom-item="my-item"
   placeholder="请输入内容"
   @select="handleSelect"
-></el-autocomplete>
+></c-autocomplete>
 
 <script>
   var Vue = require('vue');
@@ -527,12 +566,12 @@
 
 ::: demo 
 ```html
-<el-autocomplete
+<c-autocomplete
   v-model="state4"
   :fetch-suggestions="querySearchAsync"
   placeholder="请输入内容"
   @select="handleSelect"
-></el-autocomplete>
+></c-autocomplete>
 <script>
   export default {
     data() {

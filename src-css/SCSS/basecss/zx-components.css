@@ -239,4 +239,66 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-notification-fade-leave-active {
   opacity: 0; }
 
+.c-input {
+  position: relative; }
+
+.form-ctrl ~ .icon-loading {
+  animation: validating-rotating 1s linear infinite; }
+
+.c-input-append,
+.c-input-prepend {
+  background-color: #f9fafc;
+  color: #99a9bf;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  border: 1px solid #C0CCDA;
+  border-radius: 4px;
+  padding: 0 10px;
+  width: 1%;
+  white-space: nowrap; }
+
+.c-input-append .c-button,
+.c-input-append .c-select,
+.c-input-prepend .c-button,
+.c-input-prepend .c-select {
+  display: block;
+  margin: -10px; }
+
+.c-input-append .c-button,
+.c-input-append .c-select .c-input-inner,
+.c-input-append .c-select:hover .c-input-inner,
+.c-input-prepend .c-button,
+.c-input-prepend .c-select .c-input-inner,
+.c-input-prepend .c-select:hover .c-input-inner {
+  border-color: transparent;
+  background-color: transparent;
+  color: inherit;
+  border-top: 0;
+  border-bottom: 0; }
+
+.c-input-append .c-button,
+.c-input-append .c-input,
+.c-input-prepend .c-button,
+.c-input-prepend .c-input {
+  font-size: inherit; }
+
+.c-input-prepend {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.c-input-append {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+@keyframes validating-rotating {
+  0% {
+    -webkit-transform: translate(0, -50%) rotateZ(0);
+    transform: translate(0, -50%) rotateZ(0); }
+  100% {
+    -webkit-transform: translate(0, -50%) rotateZ(360deg);
+    transform: translate(0, -50%) rotateZ(360deg); } }
+
 /*# sourceMappingURL=zx-components.css.map */

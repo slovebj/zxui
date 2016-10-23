@@ -1,11 +1,11 @@
 <template>
-  <div class="el-input-number"
+  <div class="c-input-number"
     :class="[
       size ? 'is-' + size : '',
       { 'is-disabled': disabled }
     ]"
   >
-    <el-input
+    <c-input
       v-model="currentValue"
       :disabled="disabled"
       :size="size"
@@ -13,9 +13,9 @@
       :class="{
         'is-active': inputActive
       }">
-    </el-input>
+    </c-input>
     <span
-      class="el-input-number__decrease el-icon-minus"
+      class="c-input-number__decrease icon-minus"
       :class="{'is-disabled': minDisabled}"
       v-repeat-click="decrease"
       @mouseenter="activeInput(minDisabled)"
@@ -23,7 +23,7 @@
     >
     </span>
     <span
-      class="el-input-number__increase el-icon-plus"
+      class="c-input-number__increase icon-plus"
       :class="{'is-disabled': maxDisabled}"
       v-repeat-click="increase"
       @mouseenter="activeInput(maxDisabled)"

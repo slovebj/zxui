@@ -1,7 +1,7 @@
-const ElInputNumber = require('./src/input-number');
+const CInputNumber = require('./src/input-number');
 
-ElInputNumber.install = function(Vue) {
-  Vue.component(ElInputNumber.name, ElInputNumber);
+CInputNumber.install = function(Vue) {
+  Vue.component(CInputNumber.name, CInputNumber);
 };
 
-module.exports = ElInputNumber;
+module.exports = CInputNumber;

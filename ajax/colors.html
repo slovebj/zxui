@@ -15,6 +15,12 @@
 	<div v-for="cc in colors1" class="col xs12 sm6 md4 lg3">
 		<div :class="'bg-'+cc">bg-{{cc}}</div>
 	</div>
+	<div v-for="cd in common" class="col xs12 sm6 md4 lg3">
+		<div class="fg-white" :class="'bg-'+cd.type">bg-{{cd.type}}，{{cd.use}}</div>
+	</div>
+	<div v-for="ce in combination" class="col xs12 sm6 md4 lg3">
+		<div :class="ce.type">{{ce.type}}，{{ce.use}}</div>
+	</div>
 </div>
 <script type="text/javascript">
 	/* DO NOT REMOVE : GLOBAL FUNCTIONS!
@@ -103,13 +109,29 @@
                         ],
 						colors10: [
 							"brown",
-							"blue-grey",
-							"grey"
+							"blue-gray",
+							"gray"
                         ],
 						colors1: [
 							"white",
 							"black",
-							"transparent"
+							"transparent",
+                        ],
+						common: [
+							{type:"teal6", use:"#009688，通常用于按钮、及任何修饰元素"},
+							{type:"active", use:"#5FB878，一般用于选中状态"},
+							{type:"nav", use:"#393D49，通常用于导航"},
+							{type:"side", use:"#2F4056，侧边或底部普遍采用的颜色"},
+							{type:"orange-d13", use:"#FF5722，比较引人注意的颜色"},
+							{type:"gray8", use:"通常用于显示普通信息的背景色"},
+                        ],
+						combination: [
+							{type:"primary", use:"预定义的主色调，鼠标经过颜色变深，设置文字为白色（下同）"},
+							{type:"success", use:"通常用于显示成功的提示信息"},
+							{type:"warning", use:"通常用于显示警告的提示信息"},
+							{type:"info", use:"通常用于显示重要的信息"},
+							{type:"error", use:"通常用于显示错误的提示信息"},
+							
                         ]
                     }
                 })

@@ -3,7 +3,7 @@
 //
 //}
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
-$red: ( "1": #FFEBEE, "2": #FFCDD2, "3": #EF9A9A, "4": #E57373, "5": #EF5350, "6": #F44336, "7": #F44336, "8": #D32F2F, "9": #C62828, "10": #B71C1C, "11": #FF8A80, "12": #FF5252, "13": #FF1744, "14": #D50000);
+$red: ( "1": #FFEBEE, "2": #FFCDD2, "3": #EF9A9A, "4": #E57373, "5": #EF5350, "6": #F44336, "7": #EF3232, "8": #D32F2F, "9": #C62828, "10": #B71C1C, "11": #FF8A80, "12": #FF5252, "13": #FF1744, "14": #D50000);
 $pink: ( "1": #fce4ec, "2": #f8bbd0, "3": #f48fb1, "4": #f06292, "5": #ec407a, "6": #e91e63, "7": #d81b60, "8": #c2185b, "9": #ad1457, "10": #880e4f, "11": #ff80ab, "12": #ff4081, "13": #f50057, "14": #c51162);
 $purple: ( "1": #f3e5f5, "2": #e1bee7, "3": #ce93d8, "4": #ba68c8, "5": #ab47bc, "6": #9c27b0, "7": #8e24aa, "8": #7b1fa2, "9": #6a1b9a, "10": #4a148c, "11": #ea80fc, "12": #e040fb, "13": #d500f9, "14": #aa00ff);
 $deep-purple: ( "1": #ede7f6, "2": #d1c4e9, "3": #b39ddb, "4": #9575cd, "5": #7e57c2, "6": #673ab7, "7": #5e35b1, "8": #512da8, "9": #4527a0, "10": #311b92, "11": #b388ff, "12": #7c4dff, "13": #651fff, "14": #6200ea);
@@ -18,12 +18,13 @@ $lime: ( "1": #f9fbe7, "2": #f0f4c3, "3": #e6ee9c, "4": #dce775, "5": #d4e157, "
 $yellow: ( "1": #fffde7, "2": #fff9c4, "3": #fff59d, "4": #fff176, "5": #ffee58, "6": #ffeb3b, "7": #fdd835, "8": #fbc02d, "9": #f9a825, "10": #f57f17, "11": #ffff8d, "12": #ffff00, "13": #ffea00, "14": #ffd600);
 $amber: ( "1": #fff8e1, "2": #ffecb3, "3": #ffe082, "4": #ffd54f, "5": #ffca28, "6": #ffc107, "7": #ffb300, "8": #ffa000, "9": #ff8f00, "10": #ff6f00, "11": #ffe57f, "12": #ffd740, "13": #ffc400, "14": #ffab00);
 $orange: ( "1": #fff3e0, "2": #ffe0b2, "3": #ffcc80, "4": #ffb74d, "5": #ffa726, "6": #ff9800, "7": #fb8c00, "8": #f57c00, "9": #ef6c00, "10": #e65100, "11": #ffd180, "12": #ffab40, "13": #ff9100, "14": #ff6d00);
-$deep-orange: ( "1": #fbe9e7, "2": #ffccbc, "3": #ffab91, "4": #ff8a65, "5": #ff7043, "6": #ff5722, "7": #f4511e, "8": #e64a19, "9": #d84315, "10": #bf360c, "11": #ff9e80, "12": #ff6e40, "13": #ff3d00, "14": #dd2c00);
+$deep-orange: ( "1": #fbe9e7, "2": #ffccbc, "3": #ffab91, "4": #ff8a65, "5": #ff7043, "6": #ff5722, "7": #f4511e, "8": #e64a19, "9": #d84315, "10": #bf360c, "11": #ff9e80, "12": #ff6e40, "13": #ff5722, "14": #dd2c00);
 $brown: ( "1": #efebe9, "2": #d7ccc8, "3": #bcaaa4, "4": #a1887f, "5": #8d6e63, "6": #795548, "7": #6d4c41, "8": #5d4037, "9": #4e342e, "10": #3e2723);
-$blue-grey: ( "1": #eceff1, "2": #cfd8dc, "3": #b0bec5, "4": #90a4ae, "5": #78909c, "6": #607d8b, "7": #546e7a, "8": #455a64, "9": #37474f, "10": #263238);
-$grey: ( "1": #fafafa, "2": #f5f5f5, "3": #eeeeee, "4": #e0e0e0, "5": #bdbdbd, "6": #9e9e9e, "7": #757575, "8": #616161, "9": #424242, "10": #212121);
+$blue-gray: ( "1": #eceff1, "2": #cfd8dc, "3": #b0bec5, "4": #90a4ae, "5": #78909c, "6": #607d8b, "7": #546e7a, "8": #455a64, "9": #37474f, "10": #263238);
+$gray: ( "1": #fafafa, "2": #f2f2f2, "3": #eaeaea, "4": #e0e0e0, "5": #cccccc, "6": #9e9e9e, "7": #757575, "8": #5C5C5C, "9": #424242, "10": #2D2D2D);
 $shades: ( "black": #000000, "white": #FFFFFF, "transparent": transparent);
-$colors: ( "red": $red, "pink": $pink, "purple": $purple, "purple-d": $deep-purple, "indigo": $indigo, "blue": $blue, "blue-l": $light-blue, "cyan": $cyan, "teal": $teal, "green": $green, "green-l": $light-green, "lime": $lime, "yellow": $yellow, "amber": $amber, "orange": $orange, "orange-d": $deep-orange, "brown": $brown, "blue-grey": $blue-grey, "grey": $grey, );
+$common: ( "active": #5FB878,"nav": #393D49,"side": #2F4056);
+$colors: ( "red": $red, "pink": $pink, "purple": $purple, "purple-d": $deep-purple, "indigo": $indigo, "blue": $blue, "blue-l": $light-blue, "cyan": $cyan, "teal": $teal, "green": $green, "green-l": $light-green, "lime": $lime, "yellow": $yellow, "amber": $amber, "orange": $orange, "orange-d": $deep-orange, "brown": $brown, "blue-gray": $blue-gray, "gray": $gray, );
 // Color Classes
 @each $color_name,
 $color in $colors {
@@ -55,6 +56,16 @@ $color_value in $shades {
     }
 }
 
+// Shade classes
+@each $common-color,
+$color_value in $common {
+    .bg-#{$common-color} {
+        background-color: $color_value !important;
+    }
+    .bd-#{$common-color} {
+        border-color: $color_value !important;
+    }
+}
 // usage: color("name_of_color", "type_of_color")
 // to avoid to repeating map-get($colors, ...)
 @function color($color, $type) {

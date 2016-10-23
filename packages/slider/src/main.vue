@@ -32,7 +32,7 @@
   import { getStyle } from 'wind-dom/src/style';
 
   export default {
-    name: 'ElSlider',
+    name: 'CSlider',
 
     props: {
       min: {

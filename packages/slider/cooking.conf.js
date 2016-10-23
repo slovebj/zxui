@@ -8,7 +8,7 @@ cooking.set({
   dist: path.join(__dirname, 'lib'),
   template: false,
   format: 'umd',
-  moduleName: 'ElSlider',
+  moduleName: 'CSlider',
   extends: ['vue2']
 });
 

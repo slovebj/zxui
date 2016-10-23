@@ -4,6 +4,7 @@ import Loading from '../packages/loading/index.js';
 import Notification from '../packages/notification/index.js';
 import Msg from '../packages/msg/index.js';
 import DemoBlock from '../packages/demo-block/index.js';
+import Input from '../packages/input/index.js';
 
 const install = function(Vue) {
   if (install.installed) return;
@@ -11,6 +12,7 @@ const install = function(Vue) {
   Vue.component(Alert.name, Alert);
   Vue.component(Msg.name, Msg);
   Vue.component(DemoBlock.name, DemoBlock);
+  Vue.component(Input.name, Input);
 
   Vue.use(Loading);
 
@@ -35,5 +37,6 @@ module.exports = {
   Loading,
   Notification,
   Msg,
-  DemoBlock
+  DemoBlock,
+  Input
 };

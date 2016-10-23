@@ -4,5 +4,6 @@
   "loading": "./packages/loading/index.js",
   "notification": "./packages/notification/index.js",
   "msg": "./packages/msg/index.js",
-  "demo-block": "./packages/demo-block/index.js"
+  "demo-block": "./packages/demo-block/index.js",
+  "input": "./packages/input/index.js"
 }
