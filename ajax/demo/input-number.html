@@ -1,0 +1,137 @@
+<script>
+  var demoInputNumber=new Vue({
+    el: '#demo-input-number',
+    data() {
+      return {
+        num1: 1,
+        num2: 1,
+        num3: 5
+      }
+    },
+    methods: {
+      handleChange(value) {
+        console.log(value);
+      }
+    }
+  });
+</script>
+<h2>Input Number 数字输入框</h2>
+<p>仅允许输入标准的数字值，可定义范围</p>
+<h3>基础用法</h3>
+<demo-block class="demo-box">
+                    <div class="source"><template>
+  <c-input-number v-model="num1" @change="handleChange"></c-input-number>
+</template>
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>要使用它，只需要在<code>c-input-number</code>元素中使用<code>v-model</code>绑定变量即可，变量的初始值即为默认值。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-input-number</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"num1"</span> @<span class="hljs-attr">change</span>=<span class="hljs-string">"handleChange"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-input-number</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">num1</span>: <span class="hljs-number">1</span>
+      };
+    }
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>禁用状态</h3>
+<demo-block class="demo-box">
+                    <div class="source"><c-input-number v-model="num1" :disabled="true" class="col sm6"></c-input-number>
+</div>
+                    <div class="meta">
+                      <div class="description"><p><code>disabled</code>属性接受一个<code>Boolean</code>，设置为<code>true</code>即可禁用整个组件，如果你只需要控制数值在某一范围内，可以设置<code>min</code>属性和<code>max</code>属性，不设置<code>min</code>和<code>max</code>时，最小值为 0。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-input-number</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"num1"</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col sm6"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-input-number</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>步数</h3>
+<p>允许定义递增递减的步数控制</p>
+<demo-block class="demo-box">
+                    <div class="source"><c-input-number v-model="num2" :step="2" class="inline-block"></c-input-number>
+</div>
+                    <div class="meta">
+                      <div class="description"><p>设置<code>step</code>属性可以控制步长，接受一个<code>Number</code>。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-input-number</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"num2"</span> <span class="hljs-attr">:step</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inline-block"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-input-number</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>绑定值</td>
+<td>number</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>min</td>
+<td>设置计数器允许的最小值</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>设置计数器允许的最大值</td>
+<td>number</td>
+<td>—</td>
+<td>Infinity</td>
+</tr>
+<tr>
+<td>step</td>
+<td>计数器步长</td>
+<td>number</td>
+<td>—</td>
+<td>1</td>
+</tr>
+<tr>
+<td>size</td>
+<td>计数器尺寸</td>
+<td>string</td>
+<td>large, small</td>
+<td>—</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>是否禁用计数器</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h3>Events</h3>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>change</td>
+<td>绑定值被改变时触发</td>
+<td>最后变更的值</td>
+</tr>
+</tbody>
+</table>

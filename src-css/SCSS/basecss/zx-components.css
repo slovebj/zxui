@@ -300,16 +300,257 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   100% {
     -webkit-transform: translate(0, -50%) rotateZ(360deg);
     transform: translate(0, -50%) rotateZ(360deg); } }
-.c-input-number {
+.el-tooltip,
+.el-tooltip__rel {
+  display: inline-block; }
+
+.el-tooltip__rel {
+  position: relative; }
+
+.el-tooltip__popper {
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 2000;
+  font-size: 12px;
+  line-height: 1.2; }
+
+.el-tooltip__popper .popper__arrow,
+.el-tooltip__popper .popper__arrow::after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+
+.el-tooltip__popper .popper__arrow {
+  border-width: 6px; }
+
+.el-tooltip__popper .popper__arrow::after {
+  content: " ";
+  border-width: 5px; }
+
+.el-tooltip__popper[x-placement^=top] {
+  margin-bottom: 12px; }
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow {
+  bottom: -6px;
+  left: 50%;
+  margin-right: 3px;
+  border-top-color: #1f2d3d;
+  border-bottom-width: 0; }
+
+.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+  bottom: 1px;
+  margin-left: -5px;
+  border-top-color: #1f2d3d;
+  border-bottom-width: 0; }
+
+.el-tooltip__popper[x-placement^=bottom] {
+  margin-top: 12px; }
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+  top: -6px;
+  left: 50%;
+  margin-right: 3px;
+  border-top-width: 0;
+  border-bottom-color: #1f2d3d; }
+
+.el-tooltip__popper[x-placement^=bottom] .popper__arrow::after {
+  top: 1px;
+  margin-left: -5px;
+  border-top-width: 0;
+  border-bottom-color: #1f2d3d; }
+
+.el-tooltip__popper[x-placement^=right] {
+  margin-left: 12px; }
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow {
+  top: 50%;
+  left: -6px;
+  margin-bottom: 3px;
+  border-right-color: #1f2d3d;
+  border-left-width: 0; }
+
+.el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+  bottom: -5px;
+  left: 1px;
+  border-right-color: #1f2d3d;
+  border-left-width: 0; }
+
+.el-tooltip__popper[x-placement^=left] {
+  margin-right: 12px; }
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow {
+  top: 50%;
+  right: -6px;
+  margin-bottom: 3px;
+  border-right-width: 0;
+  border-left-color: #1f2d3d; }
+
+.el-tooltip__popper[x-placement^=left] .popper__arrow::after {
+  right: 1px;
+  bottom: -5px;
+  margin-left: -5px;
+  border-right-width: 0;
+  border-left-color: #1f2d3d; }
+
+.el-tooltip__popper.is-light {
+  background: #fff;
+  border: 1px solid #1f2d3d; }
+
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+  border-top-color: #1f2d3d; }
+
+.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow::after {
+  border-top-color: #fff; }
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+  border-bottom-color: #1f2d3d; }
+
+.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow::after {
+  border-bottom-color: #fff; }
+
+.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow {
+  border-left-color: #1f2d3d; }
+
+.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow::after {
+  border-left-color: #fff; }
+
+.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow {
+  border-right-color: #1f2d3d; }
+
+.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow::after {
+  border-right-color: #fff; }
+
+.el-tooltip__popper.is-dark {
+  background: #1f2d3d;
+  color: #fff; }
+
+.c-slider:after,
+.c-slider:before {
+  display: table;
+  content: ""; }
+
+.c-slider:after {
+  clear: both; }
+
+.c-slider .popper-fade-enter,
+.c-slider .popper-fade-leave-active {
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0; }
+
+.c-slider-runway {
+  width: 100%;
+  height: 4px;
+  margin: 20px 0;
+  background-color: #e5e9f2;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle; }
+
+.c-slider-runway.show-input {
+  margin-right: 160px;
+  width: auto; }
+
+.c-slider-input {
+  float: right;
+  margin-top: 7px; }
+
+.c-slider-input .c-input {
+  width: 130px; }
+
+.c-slider-bar {
+  height: 4px;
+  background-color: #20a0ff;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: absolute; }
+
+.c-slider-button-wrapper {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  z-index: 1001;
+  top: -16px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: transparent; }
+
+.c-slider-button {
+  width: 12px;
+  height: 12px;
+  background-color: #20a0ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: 0.2s; }
+
+.c-slider-button.dragging,
+.c-slider-button.hover,
+.c-slider-button:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  background-color: #1d8ce0; }
+
+.c-slider-pop {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-size: 12px;
+  line-height: 26px;
+  text-align: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #20a0ff;
+  color: #fff;
+  cursor: default;
+  z-index: 1000;
+  -webkit-transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom; }
+
+.c-slider-pop::after,
+.c-slider-pop::before {
   display: inline-block;
-  width: 1.25em;
-  cursor: pointer; }
+  width: 0;
+  height: 0;
+  left: 4px;
+  position: absolute; }
 
-input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
-  color: #BFBFBF;
-  cursor: not-allowed; }
+.c-slider-pop::before {
+  border: solid transparent;
+  border-width: 9px;
+  border-bottom-color: #20a0ff;
+  top: -14px; }
 
-.c-input-number:not([class*='is-disabled']):hover {
-  color: #5FB878; }
+.c-slider-pop::after {
+  border: solid transparent;
+  border-width: 9px;
+  border-top-color: #20a0ff;
+  bottom: -14px; }
+
+.c-slider-pop.bottom::before,
+.c-slider-pop.top::after {
+  content: ""; }
+
+.c-slider-stop {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #c0ccda;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 /*# sourceMappingURL=zx-components.css.map */

@@ -1,0 +1,228 @@
+<script>
+var demoSlider = new Vue({
+    el: "#demo-slider",
+    data() {
+      return {
+        value1: 0,
+        value2: 50,
+        value3: 0,
+        value4: 0,
+        value5: 0
+      };
+    }
+  });
+</script>
+<style>
+  .demo-box.demo-slider .source {
+    padding: 0;
+  }
+  
+  .demo-box.demo-slider .block {
+    padding: 30px 24px;
+    overflow: hidden;
+    border-bottom: solid 1px #EFF2F6;
+    &:last-child {
+      border-bottom: none;      
+    }
+  }
+  
+  .demo-box.demo-slider .demonstration {
+    font-size: 14px;
+    color: #8492a6;
+    line-height: 44px;
+  }
+  
+  .demo-box.demo-slider .demonstration + .c-slider {
+    float: right;
+    width: 70%;
+    margin-right: 20px;
+  }
+</style>
+<h2>Slider 滑块</h2>
+<p>通过拖动滑块在一个固定区间内进行选择</p>
+<h3>基础用法</h3>
+<p>在拖动滑块时，显示当前值</p>
+<demo-block class="demo-box">
+                    <div class="source">  <div class="block">
+    <span class="demonstration">默认</span>
+    <c-slider v-model="value1"></c-slider>  
+  </div>
+  <div class="block">
+    <span class="demonstration">自定义初始值</span>
+    <c-slider v-model="value2"></c-slider>
+  </div>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>通过设置绑定值自定义滑块的初始值</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demonstration"</span>&gt;</span>默认<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-slider</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-slider</span>&gt;</span>  
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demonstration"</span>&gt;</span>自定义初始值<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-slider</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-slider</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value1</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">value2</span>: <span class="hljs-number">50</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>离散值</h3>
+<p>选项可以是离散的</p>
+<demo-block class="demo-box">
+                    <div class="source">  <div class="block">
+    <span class="demonstration">不显示间断点</span>
+    <c-slider v-model="value3" :step="10">
+    </c-slider>  
+  </div>
+  <div class="block">
+    <span class="demonstration">显示间断点</span>
+    <c-slider v-model="value4" :step="10" show-stops="">
+    </c-slider>
+  </div>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>改变<code>step</code>的值可以改变步长，通过设置<code>show-step</code>属性可以显示间断点</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demonstration"</span>&gt;</span>不显示间断点<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-slider</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value3"</span>
+      <span class="hljs-attr">:step</span>=<span class="hljs-string">"10"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">c-slider</span>&gt;</span>  
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demonstration"</span>&gt;</span>显示间断点<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-slider</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value4"</span>
+      <span class="hljs-attr">:step</span>=<span class="hljs-string">"10"</span>
+      <span class="hljs-attr">show-stops</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">c-slider</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value3</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">value4</span>: <span class="hljs-number">0</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>带有输入框</h3>
+<p>通过输入框设置精确数值</p>
+<demo-block class="demo-box">
+                    <div class="source">
+  <div class="block">
+    <c-slider v-model="value5" show-input="">
+    </c-slider>  
+  </div>
+
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>设置<code>show-input</code>属性会在右侧显示一个输入框</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"block"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-slider</span>
+      <span class="hljs-attr">v-model</span>=<span class="hljs-string">"value5"</span>
+      <span class="hljs-attr">show-input</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">c-slider</span>&gt;</span>  
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">value5</span>: <span class="hljs-number">0</span>
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h2>Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>min</td>
+<td>最小值</td>
+<td>number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>max</td>
+<td>最大值</td>
+<td>number</td>
+<td>—</td>
+<td>100</td>
+</tr>
+<tr>
+<td>step</td>
+<td>步长</td>
+<td>number</td>
+<td>—</td>
+<td>1</td>
+</tr>
+<tr>
+<td>show-input</td>
+<td>是否显示输入框</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>show-stops</td>
+<td>是否显示间断点</td>
+<td>boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h2>Events</h2>
+<table>
+<thead>
+<tr>
+<th>事件名称</th>
+<th>说明</th>
+<th>回调参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>change</td>
+<td>值改变时触发</td>
+<td>改变后的值</td>
+</tr>
+</tbody>
+</table>

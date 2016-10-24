@@ -6,5 +6,7 @@
   "msg": "./packages/msg/index.js",
   "demo-block": "./packages/demo-block/index.js",
   "input": "./packages/input/index.js",
-  "input-number": "./packages/input-number/index.js"
+  "input-number": "./packages/input-number/index.js",
+  "tooltip": "./packages/tooltip/index.js",
+  "slider": "./packages/slider/index.js"
 }

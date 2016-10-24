@@ -6,6 +6,8 @@ import Msg from '../packages/msg/index.js';
 import DemoBlock from '../packages/demo-block/index.js';
 import Input from '../packages/input/index.js';
 import InputNumber from '../packages/input-number/index.js';
+import Tooltip from '../packages/tooltip/index.js';
+import Slider from '../packages/slider/index.js';
 
 const install = function(Vue) {
   if (install.installed) return;
@@ -15,6 +17,8 @@ const install = function(Vue) {
   Vue.component(DemoBlock.name, DemoBlock);
   Vue.component(Input.name, Input);
   Vue.component(InputNumber.name, InputNumber);
+  Vue.component(Tooltip.name, Tooltip);
+  Vue.component(Slider.name, Slider);
 
   Vue.use(Loading);
 
@@ -41,5 +45,7 @@ module.exports = {
   Msg,
   DemoBlock,
   Input,
-  InputNumber
+  InputNumber,
+  Tooltip,
+  Slider
 };

@@ -54,12 +54,14 @@ function convert(str) {
 }
 
 const Files = [
-    { filename: 'alert', convert: 1 },
+    { filename: 'alert', convert: 0 },
     { filename: 'dialog', convert: 0 },
-    { filename: 'msg', convert: 1 },
-    { filename: 'notification', convert: 1 },
-    { filename: 'input', convert: 1 },
+    { filename: 'msg', convert: 0 },
+    { filename: 'notification', convert: 0 },
+    { filename: 'input', convert: 0 },
     { filename: 'input-number', convert: 1 },
+    { filename: 'tooltip', convert: 1 },
+    { filename: 'slider', convert: 1 },
 ];
 
 var counter = 0;

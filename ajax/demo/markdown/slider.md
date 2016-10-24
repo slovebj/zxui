@@ -1,5 +1,6 @@
 <script>
-  export default {
+var demoSlider = new Vue({
+    el: "#demo-slider",
     data() {
       return {
         value1: 0,
@@ -9,7 +10,7 @@
         value5: 0
       };
     }
-  }
+  });
 </script>
 
 <style>
@@ -32,7 +33,7 @@
     line-height: 44px;
   }
   
-  .demo-box.demo-slider .demonstration + .el-slider {
+  .demo-box.demo-slider .demonstration + .c-slider {
     float: right;
     width: 70%;
     margin-right: 20px;
@@ -49,16 +50,14 @@
 
 :::demo 通过设置绑定值自定义滑块的初始值
 ```html
-<template>
   <div class="block">
     <span class="demonstration">默认</span>
-    <el-slider v-model="value1"></el-slider>  
+    <c-slider v-model="value1"></c-slider>  
   </div>
   <div class="block">
     <span class="demonstration">自定义初始值</span>
-    <el-slider v-model="value2"></el-slider>
+    <c-slider v-model="value2"></c-slider>
   </div>
-</template>
 
 <script>
   export default {
@@ -79,23 +78,21 @@
 
 :::demo 改变`step`的值可以改变步长，通过设置`show-step`属性可以显示间断点
 ```html
-<template>
   <div class="block">
     <span class="demonstration">不显示间断点</span>
-    <el-slider
+    <c-slider
       v-model="value3"
       :step="10">
-    </el-slider>  
+    </c-slider>  
   </div>
   <div class="block">
     <span class="demonstration">显示间断点</span>
-    <el-slider
+    <c-slider
       v-model="value4"
       :step="10"
       show-stops>
-    </el-slider>
+    </c-slider>
   </div>
-</template>
 
 <script>
   export default {
@@ -116,14 +113,14 @@
 
 :::demo 设置`show-input`属性会在右侧显示一个输入框
 ```html
-<template>
+
   <div class="block">
-    <el-slider
+    <c-slider
       v-model="value5"
       show-input>
-    </el-slider>  
+    </c-slider>  
   </div>
-</template>
+
 
 <script>
   export default {
