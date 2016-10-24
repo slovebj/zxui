@@ -5,6 +5,7 @@ import Notification from '../packages/notification/index.js';
 import Msg from '../packages/msg/index.js';
 import DemoBlock from '../packages/demo-block/index.js';
 import Input from '../packages/input/index.js';
+import InputNumber from '../packages/input-number/index.js';
 
 const install = function(Vue) {
   if (install.installed) return;
@@ -13,6 +14,7 @@ const install = function(Vue) {
   Vue.component(Msg.name, Msg);
   Vue.component(DemoBlock.name, DemoBlock);
   Vue.component(Input.name, Input);
+  Vue.component(InputNumber.name, InputNumber);
 
   Vue.use(Loading);
 
@@ -38,5 +40,6 @@ module.exports = {
   Notification,
   Msg,
   DemoBlock,
-  Input
+  Input,
+  InputNumber
 };

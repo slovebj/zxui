@@ -1,10 +1,4 @@
 <template>
-  <div class="c-input-number"
-    :class="[
-      size ? 'is-' + size : '',
-      { 'is-disabled': disabled }
-    ]"
-  >
     <c-input
       v-model="currentValue"
       :disabled="disabled"
@@ -13,31 +7,31 @@
       :class="{
         'is-active': inputActive
       }">
+
+    <template slot="addon2">
+      <i
+        class="c-input-number iconfont icon-minus"
+        :class="{'is-disabled': minDisabled}"
+        v-repeat-click="decrease"
+        @mouseenter="activeInput(minDisabled)"
+        @mouseleave="inactiveInput(minDisabled)"
+      ></i>
+      <i
+        class="c-input-number iconfont icon-plus"
+        :class="{'is-disabled': maxDisabled}"
+        v-repeat-click="increase"
+        @mouseenter="activeInput(maxDisabled)"
+        @mouseleave="inactiveInput(maxDisabled)"
+      ></i>
+    </template>
     </c-input>
-    <span
-      class="c-input-number__decrease icon-minus"
-      :class="{'is-disabled': minDisabled}"
-      v-repeat-click="decrease"
-      @mouseenter="activeInput(minDisabled)"
-      @mouseleave="inactiveInput(minDisabled)"
-    >
-    </span>
-    <span
-      class="c-input-number__increase icon-plus"
-      :class="{'is-disabled': maxDisabled}"
-      v-repeat-click="increase"
-      @mouseenter="activeInput(maxDisabled)"
-      @mouseleave="inactiveInput(maxDisabled)"
-    >
-    </span>
-  </div>
 </template>
 <script>
-  import ElInput from 'packages/input/index.js';
+  import CInput from 'packages/input/index.js';
   import { once, on } from 'wind-dom/src/event';
 
   export default {
-    name: 'ElInputNumber',
+    name: 'CInputNumber',
     props: {
       value: {
         default: 1
@@ -86,7 +80,7 @@
       }
     },
     components: {
-      ElInput
+      CInput
     },
     data() {
       return {

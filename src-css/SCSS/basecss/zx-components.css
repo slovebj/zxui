@@ -74,7 +74,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
+  color: #F1DA91;
   font-weight: bold; }
 
 .hljs-number,
@@ -300,5 +300,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   100% {
     -webkit-transform: translate(0, -50%) rotateZ(360deg);
     transform: translate(0, -50%) rotateZ(360deg); } }
+.c-input-number {
+  display: inline-block;
+  width: 1.25em;
+  cursor: pointer; }
+
+input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
+  color: #BFBFBF;
+  cursor: not-allowed; }
+
+.c-input-number:not([class*='is-disabled']):hover {
+  color: #5FB878; }
 
 /*# sourceMappingURL=zx-components.css.map */

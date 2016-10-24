@@ -173,3 +173,7 @@
     }
   }
 }
+
+.inline-block.input-group , .inline-block.input-group > * {
+  width:auto;
+}

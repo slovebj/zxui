@@ -1,6 +1,7 @@
 <template>
   <div :class="[
     size ? 'input-group-' + size : '',
+    inline ? 'inline-block' : '',
     $slots.addon1 || $slots.addon2 || $slots.btn1 || $slots.btn2 ? 'input-group': 'c-input'
      ]" >
     <template v-if="type !== 'textarea'">
@@ -71,6 +72,7 @@
     props: {
       value: [String, Number],
       placeholder: String,
+      inline: Boolean,
       size: String,
       readonly: Boolean,
       autofocus: Boolean,

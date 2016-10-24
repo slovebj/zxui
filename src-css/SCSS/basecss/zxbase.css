@@ -1870,7 +1870,7 @@ ol.list li[value]:before {
 .form-ctrl {
   display: block;
   width: 100%;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   font-size: 1rem;
   color: #5c5c5c;
   background-color: #fff;
@@ -1905,12 +1905,12 @@ select[multiple] {
   overflow-y: scroll; }
 
 .form-ctrl-legend {
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 0;
   font-size: 1rem; }
 
 .form-ctrl-sm {
-  padding: 0 0.75rem;
+  padding: 0 0.5rem;
   height: 1.5rem !important;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -2410,7 +2410,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
   font-size: 0.875rem; }
 
 .input-addon {
-  padding: 0 0.75rem;
+  padding: 0 0.5rem;
   margin-bottom: 0;
   font-weight: normal;
   height: 2rem;
@@ -2463,6 +2463,9 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
     .input-btn:not(:first-child) > .btn-group:active,
     .input-btn:not(:first-child) > .btn-group:hover {
       z-index: 3; }
+
+.inline-block.input-group, .inline-block.input-group > * {
+  width: auto; }
 
 .card {
   position: relative;
