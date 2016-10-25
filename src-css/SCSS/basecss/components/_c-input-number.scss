@@ -1,0 +1,13 @@
+.c-input-number {
+    display: inline-block;
+    width: 1.25em;
+    cursor: pointer;
+}
+
+input:disabled~.input-addon> .c-input-number , .c-input-number.is-disabled {
+    color: #BFBFBF;
+    cursor: not-allowed;
+}
+.c-input-number:not([class*='is-disabled']):hover{
+    color: #5FB878;
+}
