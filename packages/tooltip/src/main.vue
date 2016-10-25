@@ -1,15 +1,15 @@
 <template>
   <div
-    class="el-tooltip"
+    class="c-tooltip"
     @mouseenter="handleShowPopper"
     @mouseleave="handleClosePopper">
-    <div class="el-tooltip__rel" ref="reference">
+    <div class="c-tooltip-rel" ref="reference">
       <slot></slot>
     </div>
 
     <transition :name="transition" @after-leave="doDestroy">
       <div
-        class="el-tooltip__popper"
+        class="c-tooltip-popper"
         :class="['is-' + effect]"
         ref="popper"
         v-show="!disabled && showPopper">
@@ -23,7 +23,7 @@
 import Popper from 'main/utils/vue-popper';
 
 export default {
-  name: 'el-tooltip',
+  name: 'c-tooltip',
 
   mixins: [Popper],
 

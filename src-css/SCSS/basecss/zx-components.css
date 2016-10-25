@@ -300,14 +300,26 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   100% {
     -webkit-transform: translate(0, -50%) rotateZ(360deg);
     transform: translate(0, -50%) rotateZ(360deg); } }
-.el-tooltip,
-.el-tooltip__rel {
+.c-input-number {
+  display: inline-block;
+  width: 1.25em;
+  cursor: pointer; }
+
+input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
+  color: #BFBFBF;
+  cursor: not-allowed; }
+
+.c-input-number:not([class*='is-disabled']):hover {
+  color: #5FB878; }
+
+.c-tooltip,
+.c-tooltip-rel {
   display: inline-block; }
 
-.el-tooltip__rel {
+.c-tooltip-rel {
   position: relative; }
 
-.el-tooltip__popper {
+.c-tooltip-popper {
   position: absolute;
   border-radius: 4px;
   padding: 10px;
@@ -315,8 +327,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-size: 12px;
   line-height: 1.2; }
 
-.el-tooltip__popper .popper__arrow,
-.el-tooltip__popper .popper__arrow::after {
+.c-tooltip-popper .popper-arrow,
+.c-tooltip-popper .popper-arrow::after {
   position: absolute;
   display: block;
   width: 0;
@@ -324,107 +336,107 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   border-color: transparent;
   border-style: solid; }
 
-.el-tooltip__popper .popper__arrow {
+.c-tooltip-popper .popper-arrow {
   border-width: 6px; }
 
-.el-tooltip__popper .popper__arrow::after {
+.c-tooltip-popper .popper-arrow::after {
   content: " ";
   border-width: 5px; }
 
-.el-tooltip__popper[x-placement^=top] {
+.c-tooltip-popper[x-placement^=top] {
   margin-bottom: 12px; }
 
-.el-tooltip__popper[x-placement^=top] .popper__arrow {
+.c-tooltip-popper[x-placement^=top] .popper-arrow {
   bottom: -6px;
   left: 50%;
   margin-right: 3px;
   border-top-color: #1f2d3d;
   border-bottom-width: 0; }
 
-.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=top] .popper-arrow::after {
   bottom: 1px;
   margin-left: -5px;
   border-top-color: #1f2d3d;
   border-bottom-width: 0; }
 
-.el-tooltip__popper[x-placement^=bottom] {
+.c-tooltip-popper[x-placement^=bottom] {
   margin-top: 12px; }
 
-.el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+.c-tooltip-popper[x-placement^=bottom] .popper-arrow {
   top: -6px;
   left: 50%;
   margin-right: 3px;
   border-top-width: 0;
   border-bottom-color: #1f2d3d; }
 
-.el-tooltip__popper[x-placement^=bottom] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=bottom] .popper-arrow::after {
   top: 1px;
   margin-left: -5px;
   border-top-width: 0;
   border-bottom-color: #1f2d3d; }
 
-.el-tooltip__popper[x-placement^=right] {
+.c-tooltip-popper[x-placement^=right] {
   margin-left: 12px; }
 
-.el-tooltip__popper[x-placement^=right] .popper__arrow {
+.c-tooltip-popper[x-placement^=right] .popper-arrow {
   top: 50%;
   left: -6px;
   margin-bottom: 3px;
   border-right-color: #1f2d3d;
   border-left-width: 0; }
 
-.el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=right] .popper-arrow::after {
   bottom: -5px;
   left: 1px;
   border-right-color: #1f2d3d;
   border-left-width: 0; }
 
-.el-tooltip__popper[x-placement^=left] {
+.c-tooltip-popper[x-placement^=left] {
   margin-right: 12px; }
 
-.el-tooltip__popper[x-placement^=left] .popper__arrow {
+.c-tooltip-popper[x-placement^=left] .popper-arrow {
   top: 50%;
   right: -6px;
   margin-bottom: 3px;
   border-right-width: 0;
   border-left-color: #1f2d3d; }
 
-.el-tooltip__popper[x-placement^=left] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=left] .popper-arrow::after {
   right: 1px;
   bottom: -5px;
   margin-left: -5px;
   border-right-width: 0;
   border-left-color: #1f2d3d; }
 
-.el-tooltip__popper.is-light {
+.c-tooltip-popper.is-light {
   background: #fff;
   border: 1px solid #1f2d3d; }
 
-.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow {
   border-top-color: #1f2d3d; }
 
-.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow::after {
   border-top-color: #fff; }
 
-.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow {
   border-bottom-color: #1f2d3d; }
 
-.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow::after {
   border-bottom-color: #fff; }
 
-.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow {
   border-left-color: #1f2d3d; }
 
-.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow::after {
   border-left-color: #fff; }
 
-.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow {
   border-right-color: #1f2d3d; }
 
-.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow::after {
   border-right-color: #fff; }
 
-.el-tooltip__popper.is-dark {
+.c-tooltip-popper.is-dark {
   background: #1f2d3d;
   color: #fff; }
 
@@ -438,7 +450,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .c-slider .popper-fade-enter,
 .c-slider .popper-fade-leave-active {
-  -webkit-transform: scale(0.1);
   transform: scale(0.1);
   opacity: 0; }
 
@@ -446,22 +457,19 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   width: 100%;
   height: 4px;
   margin: 20px 0;
-  background-color: #e5e9f2;
+  background-color: #d4d8de;
   border-radius: 3px;
   position: relative;
   cursor: pointer;
   vertical-align: middle; }
 
 .c-slider-runway.show-input {
-  margin-right: 160px;
-  width: auto; }
+  width: 80%; }
 
 .c-slider-input {
   float: right;
-  margin-top: 7px; }
-
-.c-slider-input .c-input {
-  width: 130px; }
+  margin-top: 5px;
+  width: 20% !important; }
 
 .c-slider-bar {
   height: 4px;
@@ -476,7 +484,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   position: absolute;
   z-index: 1001;
   top: -16px;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   background-color: transparent; }
 
@@ -489,13 +496,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   top: 12px;
   left: 12px;
   cursor: pointer;
-  -webkit-transition: .2s;
   transition: 0.2s; }
 
 .c-slider-button.dragging,
 .c-slider-button.hover,
 .c-slider-button:hover {
-  -webkit-transform: scale(1.5);
   transform: scale(1.5);
   background-color: #1d8ce0; }
 
@@ -513,11 +518,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   color: #fff;
   cursor: default;
   z-index: 1000;
-  -webkit-transition: opacity .3s, -webkit-transform .3s;
-  transition: opacity .3s, -webkit-transform .3s;
+  transition: opacity .3s;
   transition: transform .3s, opacity .3s;
-  transition: transform .3s, opacity .3s, -webkit-transform .3s;
-  -webkit-transform-origin: center bottom;
+  transition: transform .3s, opacity .3s;
   transform-origin: center bottom; }
 
 .c-slider-pop::after,
@@ -549,8 +552,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #c0ccda;
-  -webkit-transform: translateX(-50%);
+  background-color: #9f9f9f;
   transform: translateX(-50%); }
 
 /*# sourceMappingURL=zx-components.css.map */

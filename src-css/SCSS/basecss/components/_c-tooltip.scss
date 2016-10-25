@@ -1,14 +1,13 @@
-@charset "UTF-8";
-.el-tooltip,
-.el-tooltip__rel {
+.c-tooltip,
+.c-tooltip-rel {
     display: inline-block
 }
 
-.el-tooltip__rel {
+.c-tooltip-rel {
     position: relative
 }
 
-.el-tooltip__popper {
+.c-tooltip-popper {
     position: absolute;
     border-radius: 4px;
     padding: 10px;
@@ -17,8 +16,8 @@
     line-height: 1.2
 }
 
-.el-tooltip__popper .popper__arrow,
-.el-tooltip__popper .popper__arrow::after {
+.c-tooltip-popper .popper-arrow,
+.c-tooltip-popper .popper-arrow::after {
     position: absolute;
     display: block;
     width: 0;
@@ -27,20 +26,20 @@
     border-style: solid
 }
 
-.el-tooltip__popper .popper__arrow {
+.c-tooltip-popper .popper-arrow {
     border-width: 6px
 }
 
-.el-tooltip__popper .popper__arrow::after {
+.c-tooltip-popper .popper-arrow::after {
     content: " ";
     border-width: 5px
 }
 
-.el-tooltip__popper[x-placement^=top] {
+.c-tooltip-popper[x-placement^=top] {
     margin-bottom: 12px
 }
 
-.el-tooltip__popper[x-placement^=top] .popper__arrow {
+.c-tooltip-popper[x-placement^=top] .popper-arrow {
     bottom: -6px;
     left: 50%;
     margin-right: 3px;
@@ -48,18 +47,18 @@
     border-bottom-width: 0
 }
 
-.el-tooltip__popper[x-placement^=top] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=top] .popper-arrow::after {
     bottom: 1px;
     margin-left: -5px;
     border-top-color: #1f2d3d;
     border-bottom-width: 0
 }
 
-.el-tooltip__popper[x-placement^=bottom] {
+.c-tooltip-popper[x-placement^=bottom] {
     margin-top: 12px
 }
 
-.el-tooltip__popper[x-placement^=bottom] .popper__arrow {
+.c-tooltip-popper[x-placement^=bottom] .popper-arrow {
     top: -6px;
     left: 50%;
     margin-right: 3px;
@@ -67,18 +66,18 @@
     border-bottom-color: #1f2d3d
 }
 
-.el-tooltip__popper[x-placement^=bottom] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=bottom] .popper-arrow::after {
     top: 1px;
     margin-left: -5px;
     border-top-width: 0;
     border-bottom-color: #1f2d3d
 }
 
-.el-tooltip__popper[x-placement^=right] {
+.c-tooltip-popper[x-placement^=right] {
     margin-left: 12px
 }
 
-.el-tooltip__popper[x-placement^=right] .popper__arrow {
+.c-tooltip-popper[x-placement^=right] .popper-arrow {
     top: 50%;
     left: -6px;
     margin-bottom: 3px;
@@ -86,18 +85,18 @@
     border-left-width: 0
 }
 
-.el-tooltip__popper[x-placement^=right] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=right] .popper-arrow::after {
     bottom: -5px;
     left: 1px;
     border-right-color: #1f2d3d;
     border-left-width: 0
 }
 
-.el-tooltip__popper[x-placement^=left] {
+.c-tooltip-popper[x-placement^=left] {
     margin-right: 12px
 }
 
-.el-tooltip__popper[x-placement^=left] .popper__arrow {
+.c-tooltip-popper[x-placement^=left] .popper-arrow {
     top: 50%;
     right: -6px;
     margin-bottom: 3px;
@@ -105,7 +104,7 @@
     border-left-color: #1f2d3d
 }
 
-.el-tooltip__popper[x-placement^=left] .popper__arrow::after {
+.c-tooltip-popper[x-placement^=left] .popper-arrow::after {
     right: 1px;
     bottom: -5px;
     margin-left: -5px;
@@ -113,44 +112,44 @@
     border-left-color: #1f2d3d
 }
 
-.el-tooltip__popper.is-light {
+.c-tooltip-popper.is-light {
     background: #fff;
     border: 1px solid #1f2d3d
 }
 
-.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow {
     border-top-color: #1f2d3d
 }
 
-.el-tooltip__popper.is-light[x-placement^=top] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow::after {
     border-top-color: #fff
 }
 
-.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow {
     border-bottom-color: #1f2d3d
 }
 
-.el-tooltip__popper.is-light[x-placement^=bottom] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow::after {
     border-bottom-color: #fff
 }
 
-.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow {
     border-left-color: #1f2d3d
 }
 
-.el-tooltip__popper.is-light[x-placement^=left] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow::after {
     border-left-color: #fff
 }
 
-.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow {
+.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow {
     border-right-color: #1f2d3d
 }
 
-.el-tooltip__popper.is-light[x-placement^=right] .popper__arrow::after {
+.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow::after {
     border-right-color: #fff
 }
 
-.el-tooltip__popper.is-dark {
+.c-tooltip-popper.is-dark {
     background: #1f2d3d;
     color: #fff
 }
