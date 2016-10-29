@@ -34,7 +34,7 @@
   };
 
   import Popup from 'vue-popup';
-  import ElInput from 'packages/input/index.js';
+  import CInput from 'packages/input/index.js';
 
   export default {
     mixins: [ Popup ],
@@ -56,7 +56,7 @@
     },
 
     components: {
-      ElInput
+      CInput
     },
 
     computed: {

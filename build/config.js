@@ -25,7 +25,12 @@ mixinsList.forEach(function(file) {
 });
 
 exports.externals = Object.assign({
-  vue: 'vue'
+  vue: {
+    root: 'Vue',
+    commonjs: 'vue',
+    commonjs2: 'vue',
+    amd: 'vue'
+  }
 }, externals);
 
 exports.alias = {
@@ -35,11 +40,5 @@ exports.alias = {
   zxui: path.resolve(__dirname, '../')
 };
 
-exports.vue = {
-  root: 'Vue',
-  commonjs: 'vue',
-  commonjs2: 'vue',
-  amd: 'vue'
-};
-
 exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date.\js/;
+

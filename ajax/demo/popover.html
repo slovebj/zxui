@@ -1,0 +1,323 @@
+<script>
+var demoPopover = new Vue({
+    el: '#demo-popover',
+    data() {
+      return {
+        visible2: false,
+        gridData: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }],
+        gridData2: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄',
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄',
+          $info: true
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄',
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄',
+          $positive: true
+        }],
+        gridData3: [{
+          tag: '家',
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '公司',
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '公司',
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '家',
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '公司',
+          date: '2016-05-08',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '家',
+          date: '2016-05-06',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          tag: '公司',
+          date: '2016-05-07',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }],
+        singleSelection: {},
+        multipleSelection: [],
+        model: ''
+      };
+    },
+
+    watch: {
+      singleSelection(val) {
+        console.log('selection: ', val);
+      },
+
+      multipleSelection(val) {
+        console.log('selection: ', val);
+      }
+    },
+
+    events: {
+      handleClick(row) {
+        console.log('you clicked ', row);
+      }
+    }
+  });
+</script>
+<style>
+  .demo-box.demo-popover {
+    .c-popover + .c-popover {
+      margin-left: 10px;
+    }
+    .c-input {
+      width: 360px;
+    }
+    .button type="button" class="btn" {
+      margin-left: 10px;
+    }
+  }
+</style>
+<h2>Popover 弹出框</h2>
+<h3>基础用法</h3>
+<p>Popover 的属性与 Tooltip 很类似，它们都是基于<code>Vue-popper</code>开发的，因此对于重复属性，请参考 Tooltip 的文档，在此文档中不做详尽解释。</p>
+<demo-block class="demo-box">
+                    <div class="source"><c-popover ref="popover1" placement="top-start" title="标题" width="200" trigger="hover" content="这是一段容,这是一段容,这是一段容,这是一段容。">
+</c-popover>
+
+<c-popover ref="popover2" placement="bottom" title="标题" width="200" trigger="click" content="这是一段容,这是一段容,这是一段容,这是一段容。">
+</c-popover>
+
+<button type="button" class="btn" v-popover:popover1="">hover 激活</button>
+<button type="button" class="btn" v-popover:popover2="">click 激活</button>
+<c-popover placement="right" title="标题" width="200" trigger="focus" content="这是一段容,这是一段容,这是一段容,这是一段容。">
+  <button type="button" class="btn" slot="reference">focus 激活</button>
+</c-popover>
+</div>
+                    <div class="meta">
+                      <div class="description"><p>设置索引<code>ref</code>，在按钮中，我们注册了自定义指令<code>v-popover</code>，指向索引ID。<code>trigger</code>属性用于设置何时触发 Popover ，提供三种触发方式：<code>hover</code>, <code>click</code> 和 <code>focus</code>。或者通过 <code>slot</code> 指定 reference。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-popover</span>
+  <span class="hljs-attr">ref</span>=<span class="hljs-string">"popover1"</span>
+  <span class="hljs-attr">placement</span>=<span class="hljs-string">"top-start"</span>
+  <span class="hljs-attr">title</span>=<span class="hljs-string">"标题"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span>
+  <span class="hljs-attr">trigger</span>=<span class="hljs-string">"hover"</span>
+  <span class="hljs-attr">content</span>=<span class="hljs-string">"这是一段容,这是一段容,这是一段容,这是一段容。"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">c-popover</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">c-popover</span>
+  <span class="hljs-attr">ref</span>=<span class="hljs-string">"popover2"</span>
+  <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span>
+  <span class="hljs-attr">title</span>=<span class="hljs-string">"标题"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span>
+  <span class="hljs-attr">trigger</span>=<span class="hljs-string">"click"</span>
+  <span class="hljs-attr">content</span>=<span class="hljs-string">"这是一段容,这是一段容,这是一段容,这是一段容。"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">c-popover</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">v-popover:popover1</span>&gt;</span>hover 激活<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">v-popover:popover2</span>&gt;</span>click 激活<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">c-popover</span>
+  <span class="hljs-attr">placement</span>=<span class="hljs-string">"right"</span>
+  <span class="hljs-attr">title</span>=<span class="hljs-string">"标题"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span>
+  <span class="hljs-attr">trigger</span>=<span class="hljs-string">"focus"</span>
+  <span class="hljs-attr">content</span>=<span class="hljs-string">"这是一段容,这是一段容,这是一段容,这是一段容。"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"reference"</span>&gt;</span>focus 激活<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">c-popover</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>嵌套信息</h3>
+<p>可以在 Popover 中嵌套多种类型信息，以下为嵌套表格的例子。</p>
+<demo-block class="demo-box">
+                    <div class="source"><c-popover ref="popover4" placement="right" width="400" trigger="click">
+  <c-table :data="gridData">
+    <c-table-column width="150" property="date" label="日期"></c-table-column>
+    <c-table-column width="100" property="name" label="姓名"></c-table-column>
+    <c-table-column width="300" property="address" label="地址"></c-table-column>
+  </c-table>
+</c-popover>
+
+<button type="button" class="btn" v-popover:popover4="">click 激活</button>
+</div>
+                    <div class="meta">
+                      <div class="description"><p>利用分发取代<code>content</code>属性</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-popover</span>
+  <span class="hljs-attr">ref</span>=<span class="hljs-string">"popover4"</span>
+  <span class="hljs-attr">placement</span>=<span class="hljs-string">"right"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"400"</span>
+  <span class="hljs-attr">trigger</span>=<span class="hljs-string">"click"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">c-table</span> <span class="hljs-attr">:data</span>=<span class="hljs-string">"gridData"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-table-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-table-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"姓名"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-table-column</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"300"</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"address"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"地址"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">c-table-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">c-table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">c-popover</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">v-popover:popover4</span>&gt;</span>click 激活<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>嵌套操作</h3>
+<p>当然，你还可以嵌套操作，这相比 Dialog 更为轻量：</p>
+<demo-block class="demo-box">
+                    <div class="source"><c-popover ref="popover5" placement="top" width="160" v-model="visible2">
+  <p>这是一段内容这是一段内容确定删除吗？</p>
+  <div style="text-align: right; margin: 0">
+    <button type="button" class="btn btn-sm" @click="visible2 = false">取消</button>
+    <button type="button" class="btn btn-sm" @click="visible2 = false">确定</button>
+  </div>
+</c-popover>
+
+<button type="button" class="btn" v-popover:popover5="">删除</button>
+</div>
+                    <div class="meta">
+                      
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-popover</span>
+  <span class="hljs-attr">ref</span>=<span class="hljs-string">"popover5"</span>
+  <span class="hljs-attr">placement</span>=<span class="hljs-string">"top"</span>
+  <span class="hljs-attr">width</span>=<span class="hljs-string">"160"</span>
+  <span class="hljs-attr">v-model</span>=<span class="hljs-string">"visible2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>这是一段内容这是一段内容确定删除吗？<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"text-align: right; margin: 0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"visible2 = false"</span>&gt;</span>取消<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"visible2 = false"</span>&gt;</span>确定<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">c-popover</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> <span class="hljs-attr">v-popover:popover5</span>&gt;</span>删除<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>trigger</td>
+<td>触发方式</td>
+<td>String</td>
+<td>click/focus/hover</td>
+<td>click</td>
+</tr>
+<tr>
+<td>title</td>
+<td>标题</td>
+<td>String</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>content</td>
+<td>显示的内容，也可以通过 <code>slot</code> 传入 DOM</td>
+<td>String</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>width</td>
+<td>宽度</td>
+<td>String, Number</td>
+<td>—</td>
+<td>最小宽度 150px</td>
+</tr>
+<tr>
+<td>placement</td>
+<td>出现位置</td>
+<td>String</td>
+<td>top/top-start/top-end/bottom/bottom-start/bottom-end/left/left-start/left-end/right/right-start/right-end</td>
+<td>bottom</td>
+</tr>
+<tr>
+<td>value(v-model)</td>
+<td>状态是否可见</td>
+<td>Boolean</td>
+<td>—</td>
+<td>false</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>出现位置的偏移量</td>
+<td>Number</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>transition</td>
+<td>定义渐变动画</td>
+<td>String</td>
+<td>—</td>
+<td>fade-in-linear</td>
+</tr>
+<tr>
+<td>visible-arrow</td>
+<td>是否显示 Tooltip 箭头，更多参数可见<a href="https://github.com/element-component/vue-popper">Vue-popper</a></td>
+<td>Boolean</td>
+<td>—</td>
+<td>true</td>
+</tr>
+<tr>
+<td>options</td>
+<td><a href="https://popper.js.org/documentation.html">popper.js</a> 的参数</td>
+<td>Object</td>
+<td>参考 <a href="https://popper.js.org/documentation.html">popper.js</a> 文档</td>
+<td><code>{ boundariesElement: 'body', gpuAcceleration: false }</code></td>
+</tr>
+</tbody>
+</table>
+<h3>Slot</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>Popover内嵌HTML文本</td>
+</tr>
+</tbody>
+</table>

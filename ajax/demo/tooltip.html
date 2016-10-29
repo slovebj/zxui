@@ -226,7 +226,7 @@ var demoTooltip = new Vue({
 <p>事实上，这是基于 <a href="https://github.com/element-component/vue-popper">Vue-popper</a> 的扩展，你可以自定义任意 Vue-popper 中允许定义的字段。</p>
 <p>当然，Tooltip 组件实际上十分强大，文末的API文档会做一一说明。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <c-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
+                    <div class="source">  <c-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom">
     <button type="button" @click="disabled=true">点击关闭 tooltip 功能</button>
   </c-tooltip>
 
@@ -245,7 +245,7 @@ var demoTooltip = new Vue({
 </div>
                     <div class="meta">
                       
-                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"点击关闭 tooltip 功能"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"light"</span>&gt;</span>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"点击关闭 tooltip 功能"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"disabled=true"</span>&gt;</span>点击关闭 tooltip 功能<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
 

@@ -17,13 +17,4 @@ cooking.add('resolve.alias', {
   'packages': path.join(__dirname, '../../packages')
 });
 
-cooking.add('externals', {
-  vue: {
-    root: 'Vue',
-    commonjs: 'vue',
-    commonjs2: 'vue',
-    amd: 'vue'
-  }
-});
-
 module.exports = cooking.resolve();

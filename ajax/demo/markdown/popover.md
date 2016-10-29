@@ -1,5 +1,6 @@
 <script>
-  export default {
+var demoPopover = new Vue({
+    el: '#demo-popover',
     data() {
       return {
         visible2: false,
@@ -96,18 +97,18 @@
         console.log('you clicked ', row);
       }
     }
-  };
+  });
 </script>
 
 <style>
   .demo-box.demo-popover {
-    .el-popover + .el-popover {
+    .c-popover + .c-popover {
       margin-left: 10px;
     }
-    .el-input {
+    .c-input {
       width: 360px;
     }
-    .el-button {
+    .button type="button" class="btn" {
       margin-left: 10px;
     }
   }
@@ -120,34 +121,34 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 :::demo 设置索引`ref`，在按钮中，我们注册了自定义指令`v-popover`，指向索引ID。`trigger`属性用于设置何时触发 Popover ，提供三种触发方式：`hover`, `click` 和 `focus`。或者通过 `slot` 指定 reference。
 ```html
-<el-popover
+<c-popover
   ref="popover1"
   placement="top-start"
   title="标题"
   width="200"
   trigger="hover"
   content="这是一段容,这是一段容,这是一段容,这是一段容。">
-</el-popover>
+</c-popover>
 
-<el-popover
+<c-popover
   ref="popover2"
   placement="bottom"
   title="标题"
   width="200"
   trigger="click"
   content="这是一段容,这是一段容,这是一段容,这是一段容。">
-</el-popover>
+</c-popover>
 
-<el-button v-popover:popover1>hover 激活</el-button>
-<el-button v-popover:popover2>click 激活</el-button>
-<el-popover
+<button type="button" class="btn" v-popover:popover1>hover 激活</button>
+<button type="button" class="btn" v-popover:popover2>click 激活</button>
+<c-popover
   placement="right"
   title="标题"
   width="200"
   trigger="focus"
   content="这是一段容,这是一段容,这是一段容,这是一段容。">
-  <el-button slot="reference">focus 激活</el-button>
-</el-popover>
+  <button type="button" class="btn" slot="reference">focus 激活</button>
+</c-popover>
 ```
 :::
 
@@ -157,19 +158,19 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 :::demo 利用分发取代`content`属性
 ```html
-<el-popover
+<c-popover
   ref="popover4"
   placement="right"
   width="400"
   trigger="click">
-  <el-table :data="gridData">
-    <el-table-column width="150" property="date" label="日期"></el-table-column>
-    <el-table-column width="100" property="name" label="姓名"></el-table-column>
-    <el-table-column width="300" property="address" label="地址"></el-table-column>
-  </el-table>
-</el-popover>
+  <c-table :data="gridData">
+    <c-table-column width="150" property="date" label="日期"></c-table-column>
+    <c-table-column width="100" property="name" label="姓名"></c-table-column>
+    <c-table-column width="300" property="address" label="地址"></c-table-column>
+  </c-table>
+</c-popover>
 
-<el-button v-popover:popover4>click 激活</el-button>
+<button type="button" class="btn" v-popover:popover4>click 激活</button>
 ```
 :::
 
@@ -179,19 +180,19 @@ Popover 的属性与 Tooltip 很类似，它们都是基于`Vue-popper`开发的
 
 :::demo
 ```html
-<el-popover
+<c-popover
   ref="popover5"
   placement="top"
   width="160"
   v-model="visible2">
   <p>这是一段内容这是一段内容确定删除吗？</p>
   <div style="text-align: right; margin: 0">
-    <el-button size="mini" type="text" @click.native="visible2 = false">取消</el-button>
-    <el-button type="primary" size="mini" @click.native="visible2 = false">确定</el-button>
+    <button type="button" class="btn btn-sm" @click="visible2 = false">取消</button>
+    <button type="button" class="btn btn-sm" @click="visible2 = false">确定</button>
   </div>
-</el-popover>
+</c-popover>
 
-<el-button v-popover:popover5>删除</el-button>
+<button type="button" class="btn" v-popover:popover5>删除</button>
 ```
 :::
 

@@ -26,7 +26,9 @@
         "pub": "sh build/release.sh",
         "build:utils": "babel src/utils --out-dir lib/utils",
         "clean": "rimraf lib && rimraf packages/*/lib",
-        "lint": "eslint src/**/*.js packages/**/*.{js,vue} build/bin/*.js --quiet"
+        "lint": "eslint src/**/*.js packages/**/*.{js,vue} build/bin/*.js --quiet",
+        "test:watch": "karma start test/unit/karma.conf.js",
+        "test": "npm run lint && karma start test/unit/karma.conf.js --single-run"
     },
     "repository": {
         "type": "git",

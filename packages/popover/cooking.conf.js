@@ -1,5 +1,6 @@
 var cooking = require('cooking');
 var path = require('path');
+var config = require('../../build/config');
 
 cooking.set({
   entry: {
@@ -8,22 +9,12 @@ cooking.set({
   dist: path.join(__dirname, 'lib'),
   template: false,
   format: 'umd',
-  moduleName: 'ElPopover',
-  extends: ['vue2']
+  moduleName: 'CPopover',
+  extends: ['vue2'],
+  externals: { vue: config.vue }
 });
-
 cooking.add('resolve.alias', {
-  'main': path.join(__dirname, '../../src'),
-  'packages': path.join(__dirname, '../../packages')
-});
-
-cooking.add('externals', {
-  vue: {
-    root: 'Vue',
-    commonjs: 'vue',
-    commonjs2: 'vue',
-    amd: 'vue'
-  }
+  'main': path.join(__dirname, '../../src')
 });
 
 module.exports = cooking.resolve();

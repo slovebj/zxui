@@ -8,5 +8,6 @@
   "input": "./packages/input/index.js",
   "input-number": "./packages/input-number/index.js",
   "tooltip": "./packages/tooltip/index.js",
+  "popover": "./packages/popover/index.js",
   "slider": "./packages/slider/index.js"
 }

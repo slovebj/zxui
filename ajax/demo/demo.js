@@ -59,9 +59,10 @@ const Files = [
     { filename: 'msg', convert: 0 },
     { filename: 'notification', convert: 0 },
     { filename: 'input', convert: 0 },
-    { filename: 'input-number', convert: 1 },
-    { filename: 'tooltip', convert: 1 },
-    { filename: 'slider', convert: 1 },
+    { filename: 'input-number', convert: 0 },
+    { filename: 'tooltip', convert: 0 },
+    { filename: 'popover', convert: 1 },
+    { filename: 'slider', convert: 0 },
 ];
 
 var counter = 0;
