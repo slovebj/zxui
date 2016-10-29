@@ -27,17 +27,17 @@ var demoTooltip = new Vue({
       text-align: center;
     }
 
-    .left {
+    .at-left {
       float: left;
       width: 60px;
     }
 
-    .right {
+    .at-right {
       float: right;
       width: 60px;
     }
 
-    .bottom {
+    .at-bottom {
       clear: both;
       text-align: center;
     }
@@ -46,56 +46,56 @@ var demoTooltip = new Vue({
       margin: 4px;
     }
     
-    .left .c-tooltip__popper,
-    .right .c-tooltip__popper {
+    .at-left .c-tooltip-popper,
+    .at-right .c-tooltip-popper {
       padding: 8px 10px;
     }
   }
 </style>
 
 <div class="box">
-  <div class="top">
-    <c-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+  <div class="at-top">
+    <c-tooltip class="item" content="Top Left 提示文字" placement="top-start">
       <button type="button">上左</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
+    <c-tooltip class="item" content="Top Center 提示文字" placement="top">
       <button type="button">上边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
+    <c-tooltip class="item" content="Top Right 提示文字" placement="top-end">
       <button type="button">上右</button>
     </c-tooltip>
   </div>
-  <div class="left">
-    <c-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
+  <div class="at-left">
+    <c-tooltip class="item" content="Left Top 提示文字" placement="left-start">
       <button type="button">左上</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
+    <c-tooltip class="item" content="Left Center 提示文字" placement="left">
       <button type="button">左边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
+    <c-tooltip class="item" content="Left Bottom 提示文字" placement="left-end">
       <button type="button">左下</button>
     </c-tooltip>
   </div>
 
-  <div class="right">
-    <c-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
+  <div class="at-right">
+    <c-tooltip class="item" content="Right Top 提示文字" placement="right-start">
       <button type="button">右上</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
+    <c-tooltip class="item" content="Right Center 提示文字" placement="right">
       <button type="button">右边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
+    <c-tooltip class="item" content="Right Bottom 提示文字" placement="right-end">
       <button type="button">右下</button>
     </c-tooltip>
   </div>
-  <div class="bottom">
-    <c-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
+  <div class="at-bottom">
+    <c-tooltip class="item" content="Bottom Left 提示文字" placement="bottom-start">
       <button type="button">下左</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+    <c-tooltip class="item" content="Bottom Center 提示文字" placement="bottom">
       <button type="button">下边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
+    <c-tooltip class="item" content="Bottom Right 提示文字" placement="bottom-end">
       <button type="button">下右</button>
     </c-tooltip>
   </div>
@@ -105,16 +105,16 @@ var demoTooltip = new Vue({
 
 ### 主题
 
-Tooltip 组件提供了两个不同的主题：`dark`和`light`。
+Tooltip 通过添加`color`属性自定义背景色或前景色。
 
 
-:::demo 通过设置`effect`属性来改变主题，默认为`dark`。
+:::demo 通过设置`color`属性来改变主题，默认背景颜色为`#1f2d3d`，前景色为白色。
 ```html
 <c-tooltip content="Top center" placement="top">
-  <button type="button">Dark</button>
+  <button type="button">默认</button>
 </c-tooltip>
-<c-tooltip content="Bottom center" placement="bottom" effect="light">
-  <button type="button">Light</button>
+<c-tooltip content="Bottom center" placement="bottom" color="bg-red6 fg-black">
+  <button type="button">红色背景，黑色文字</button>
 </c-tooltip>
 ```
 :::
@@ -146,8 +146,8 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 
 :::demo
 ```html
-  <c-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
-    <button type="button" @click.native="disabled=true">点击关闭 tooltip 功能</button>
+  <c-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom">
+    <button type="button" @click="disabled=true">点击关闭 tooltip 功能</button>
   </c-tooltip>
 
 <style>
@@ -168,7 +168,7 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 ### Attributes
 | 参数               | 说明                                                     | 类型              | 可选值      | 默认值 |
 |--------------------|----------------------------------------------------------|-------------------|-------------|--------|
-|  effect        |  默认提供的主题  | String            | `dark`, `light`  | dark  |
+|  color        |  默认提供的主题  | String            | `bg-*`, `bg-* fg-*`  | 黑底白字  |
 |  content        |  显示的内容，也可以通过 `slot#content` 传入 DOM  | String            | — | — |
 |  placement        |  Tooltip 的出现位置  | String           |  `top`, `top-start`, `top-end`, `bottom`, `bottom-start`, `bottom-end`, `left`, `left-start`, `left-end`, `right`, `right-start`, `right-end` |  bottom |
 |  value(v-model)        |  状态是否可见  | Boolean           | — |  false |
@@ -178,3 +178,4 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 |  visible-arrow   |  是否显示 Tooltip 箭头，更多参数可见[Vue-popper](https://github.com/element-component/vue-popper) | Boolean | — | true |
 |  options        | [popper.js](https://popper.js.org/documentation.html) 的参数 | Object            | 参考 [popper.js](https://popper.js.org/documentation.html) 文档 | `{ boundariesElement: 'body', gpuAcceleration: false }` |
 | openDelay | 延迟出现，单位毫秒 | Number | — | 0 |
+| manual | 手动控制模式，设置为 true 后，mouseenter 和 mouseleave 事件将不会生效 | Boolean | true,false| false |

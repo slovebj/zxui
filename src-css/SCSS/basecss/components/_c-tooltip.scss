@@ -13,143 +13,52 @@
     padding: 10px;
     z-index: 2000;
     font-size: 12px;
-    line-height: 1.2
-}
-
-.c-tooltip-popper .popper-arrow,
-.c-tooltip-popper .popper-arrow::after {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid
+    line-height: 1.2;
+    background-color: #1f2d3d;
+    color: #fff;
 }
 
 .c-tooltip-popper .popper-arrow {
-    border-width: 6px
-}
-
-.c-tooltip-popper .popper-arrow::after {
-    content: " ";
-    border-width: 5px
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: inherit;
+    transform: rotate(-45deg);
 }
 
 .c-tooltip-popper[x-placement^=top] {
-    margin-bottom: 12px
+    margin-bottom: 10px;
 }
 
 .c-tooltip-popper[x-placement^=top] .popper-arrow {
-    bottom: -6px;
+    bottom: -4px;
     left: 50%;
-    margin-right: 3px;
-    border-top-color: #1f2d3d;
-    border-bottom-width: 0
-}
-
-.c-tooltip-popper[x-placement^=top] .popper-arrow::after {
-    bottom: 1px;
-    margin-left: -5px;
-    border-top-color: #1f2d3d;
-    border-bottom-width: 0
 }
 
 .c-tooltip-popper[x-placement^=bottom] {
-    margin-top: 12px
+    margin-top: 10px;
 }
 
 .c-tooltip-popper[x-placement^=bottom] .popper-arrow {
-    top: -6px;
+    top: -4px;
     left: 50%;
-    margin-right: 3px;
-    border-top-width: 0;
-    border-bottom-color: #1f2d3d
-}
-
-.c-tooltip-popper[x-placement^=bottom] .popper-arrow::after {
-    top: 1px;
-    margin-left: -5px;
-    border-top-width: 0;
-    border-bottom-color: #1f2d3d
 }
 
 .c-tooltip-popper[x-placement^=right] {
-    margin-left: 12px
+    margin-left: 10px;
 }
 
 .c-tooltip-popper[x-placement^=right] .popper-arrow {
     top: 50%;
-    left: -6px;
-    margin-bottom: 3px;
-    border-right-color: #1f2d3d;
-    border-left-width: 0
-}
-
-.c-tooltip-popper[x-placement^=right] .popper-arrow::after {
-    bottom: -5px;
-    left: 1px;
-    border-right-color: #1f2d3d;
-    border-left-width: 0
+    left: -4px;
 }
 
 .c-tooltip-popper[x-placement^=left] {
-    margin-right: 12px
+    margin-right: 10px;
 }
 
 .c-tooltip-popper[x-placement^=left] .popper-arrow {
     top: 50%;
-    right: -6px;
-    margin-bottom: 3px;
-    border-right-width: 0;
-    border-left-color: #1f2d3d
-}
-
-.c-tooltip-popper[x-placement^=left] .popper-arrow::after {
-    right: 1px;
-    bottom: -5px;
-    margin-left: -5px;
-    border-right-width: 0;
-    border-left-color: #1f2d3d
-}
-
-.c-tooltip-popper.is-light {
-    background: #fff;
-    border: 1px solid #1f2d3d
-}
-
-.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow {
-    border-top-color: #1f2d3d
-}
-
-.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow::after {
-    border-top-color: #fff
-}
-
-.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow {
-    border-bottom-color: #1f2d3d
-}
-
-.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow::after {
-    border-bottom-color: #fff
-}
-
-.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow {
-    border-left-color: #1f2d3d
-}
-
-.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow::after {
-    border-left-color: #fff
-}
-
-.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow {
-    border-right-color: #1f2d3d
-}
-
-.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow::after {
-    border-right-color: #fff
-}
-
-.c-tooltip-popper.is-dark {
-    background: #1f2d3d;
-    color: #fff
+    right: -4px;
 }

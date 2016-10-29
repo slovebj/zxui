@@ -1,4 +1,6 @@
 import PopperJS from './popper';
+import { PopupManager } from 'vue-popup';
+PopupManager.zIndex = 2000;
 
 /**
  * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
@@ -18,18 +20,24 @@ export default {
       type: Number,
       default: 5
     },
-    reference: Object,
-    popper: Object,
+    reference: {},
+    popper: {},
     offset: {
       default: 0
     },
     value: Boolean,
     visibleArrow: Boolean,
     transition: String,
+    appendToBody: {
+      type: Boolean,
+      default: true
+    },
     options: {
       type: Object,
       default() {
-        return {};
+        return {
+          gpuAcceleration: false
+        };
       }
     }
   },
@@ -62,59 +70,56 @@ export default {
       }
 
       const options = this.options;
-      const popper = this.popper || this.$refs.popper;
-      const reference = this.reference || this.$refs.reference || this.$slots.reference[0].elm;
+      const popper = this.popperElm = this.popperElm || this.popper || this.$refs.popper;
+      let reference = this.referenceElm = this.referenceElm || this.reference || this.$refs.reference;
 
-      if (!popper || !reference) return;
-      if (this.visibleArrow) {
-        this.appendArrow(popper);
+      if (!reference &&
+          this.$slots.reference &&
+          this.$slots.reference[0]) {
+        reference = this.referenceElm = this.$slots.reference[0].elm;
       }
-
-      if (this.popperJS && this.popperJS.hasOwnProperty('destroy')) {
+      if (!popper || !reference) return;
+      if (this.visibleArrow) this.appendArrow(popper);
+      if (this.appendToBody) document.body.appendChild(this.popperElm);
+      if (this.popperJS && this.popperJS.destroy) {
         this.popperJS.destroy();
       }
 
       options.placement = this.placement;
       options.offset = this.offset;
-
-      this.$nextTick(() => {
-        this.popperJS = new PopperJS(
-          reference,
-          popper,
-          options
-        );
-        this.popperJS.onCreate(popper => {
-          this.resetTransformOrigin(popper);
-          this.$emit('created', this);
-        });
+      this.popperJS = new PopperJS(reference, popper, options);
+      this.popperJS.onCreate(_ => {
+        this.$emit('created', this);
+        this.resetTransformOrigin();
+        this.$nextTick(this.updatePopper);
       });
+      this.popperJS._popper.style.zIndex = PopupManager.nextZIndex();
     },
 
     updatePopper() {
-      if (this.popperJS) {
-        this.popperJS.update();
-      } else {
-        this.createPopper();
-      }
+      this.popperJS ? this.popperJS.update() : this.createPopper();
     },
 
     doDestroy() {
-      if (this.showPopper) return;
+      /* istanbul ignore if */
+      if (this.showPopper || !this.popperJS) return;
       this.popperJS.destroy();
       this.popperJS = null;
     },
 
     destroyPopper() {
       if (this.popperJS) {
-        this.resetTransformOrigin(this.popperJS);
+        this.resetTransformOrigin();
       }
     },
 
-    resetTransformOrigin(popper) {
+    resetTransformOrigin() {
       let placementMap = { top: 'bottom', bottom: 'top', left: 'right', right: 'left' };
-      let placement = popper._popper.getAttribute('x-placement').split('-')[0];
+      let placement = this.popperJS._popper.getAttribute('x-placement').split('-')[0];
       let origin = placementMap[placement];
-      popper._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1 ? `center ${ origin }` : `${ origin } center`;
+      this.popperJS._popper.style.transformOrigin = ['top', 'bottom'].indexOf(placement) > -1
+        ? `center ${ origin }`
+        : `${ origin } center`;
     },
 
     appendArrow(element) {
@@ -138,14 +143,15 @@ export default {
         arrow.setAttribute(hash, '');
       }
       arrow.setAttribute('x-arrow', '');
-      arrow.className = 'popper__arrow';
+      arrow.className = 'popper-arrow';
       element.appendChild(arrow);
     }
   },
 
   beforeDestroy() {
-    if (this.popperJS) {
-      this.popperJS.destroy();
-    }
+    this.doDestroy();
+    this.popperElm &&
+    this.popperElm.parentNode === document.body &&
+    document.body.removeChild(this.popperElm);
   }
 };

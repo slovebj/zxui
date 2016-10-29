@@ -1,3 +1,11 @@
+import { on } from 'wind-dom/src/event';
+
+const nodeList = [];
+const ctx = '@@clickoutsideContext';
+
+on(document, 'click', e => {
+  nodeList.forEach(node => node[ctx].documentHandler(e));
+});
 /**
  * v-clickoutside
  * @desc 点击元素外面才会触发的事件
@@ -6,34 +14,45 @@
  * <div v-element-clickoutside="handleClose">
  * ```
  */
-const clickoutsideContext = '@@clickoutsideContext';
-
 export default {
   bind(el, binding, vnode) {
+    const id = nodeList.push(el) - 1;
     const documentHandler = function(e) {
-      if (vnode.context && !el.contains(e.target)) {
-        vnode.context[el[clickoutsideContext].methodName]();
+      if (!vnode.context ||
+        el.contains(e.target) ||
+        (vnode.context.popperElm &&
+        vnode.context.popperElm.contains(e.target))) return;
+
+      if (binding.expression) {
+        el[ctx].methodName &&
+          vnode.context[el[ctx].methodName] &&
+          vnode.context[el[ctx].methodName]();
+      } else {
+        el[ctx].bindingFn && el[ctx].bindingFn();
       }
     };
-    el[clickoutsideContext] = {
+    el[ctx] = {
+      id,
       documentHandler,
-      methodName: binding.expression
+      methodName: binding.expression,
+      bindingFn: binding.value
     };
-    document.addEventListener('click', documentHandler);
   },
 
   update(el, binding) {
-    el[clickoutsideContext].methodName = binding.expression;
+    el[ctx].methodName = binding.expression;
+    el[ctx].bindingFn = binding.value;
   },
 
   unbind(el) {
-    document.removeEventListener('click', el[clickoutsideContext].documentHandler);
-  },
+    let len = nodeList.length;
 
-  install(Vue) {
-    Vue.directive('clickoutside', {
-      bind: this.bind,
-      unbind: this.unbind
-    });
+    for (let i = 0; i < len; i++) {
+      if (nodeList[i][ctx].id === el[ctx].id) {
+        nodeList.splice(i, 1);
+        delete el[ctx];
+        break;
+      }
+    }
   }
 };

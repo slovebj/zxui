@@ -178,12 +178,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   padding: 10px 0 10px 16px;
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50.01%);
   background-color: #5c5c5c;
   color: #fff;
   transition: opacity 0.3s, transform .4s;
   overflow: hidden;
-  z-index: 9999; }
+  z-index: 3000; }
 
 .c-msg.top {
   top: 20px; }
@@ -201,7 +201,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-msg-fade-enter,
 .c-msg-fade-leave-active {
   opacity: 0;
-  transform: translate(-50%, -100%); }
+  transform: translate(-50.01%, -100%); }
+
+.c-msg-fade-enter.bottom,
+.c-msg-fade-leave-active.bottom {
+  transform: translate(-50.01%, 100%); }
 
 .c-notification {
   width: 330px;
@@ -325,120 +329,45 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
   padding: 10px;
   z-index: 2000;
   font-size: 12px;
-  line-height: 1.2; }
-
-.c-tooltip-popper .popper-arrow,
-.c-tooltip-popper .popper-arrow::after {
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid; }
+  line-height: 1.2;
+  background-color: #1f2d3d;
+  color: #fff; }
 
 .c-tooltip-popper .popper-arrow {
-  border-width: 6px; }
-
-.c-tooltip-popper .popper-arrow::after {
-  content: " ";
-  border-width: 5px; }
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: inherit;
+  transform: rotate(-45deg); }
 
 .c-tooltip-popper[x-placement^=top] {
-  margin-bottom: 12px; }
+  margin-bottom: 10px; }
 
 .c-tooltip-popper[x-placement^=top] .popper-arrow {
-  bottom: -6px;
-  left: 50%;
-  margin-right: 3px;
-  border-top-color: #1f2d3d;
-  border-bottom-width: 0; }
-
-.c-tooltip-popper[x-placement^=top] .popper-arrow::after {
-  bottom: 1px;
-  margin-left: -5px;
-  border-top-color: #1f2d3d;
-  border-bottom-width: 0; }
+  bottom: -4px;
+  left: 50%; }
 
 .c-tooltip-popper[x-placement^=bottom] {
-  margin-top: 12px; }
+  margin-top: 10px; }
 
 .c-tooltip-popper[x-placement^=bottom] .popper-arrow {
-  top: -6px;
-  left: 50%;
-  margin-right: 3px;
-  border-top-width: 0;
-  border-bottom-color: #1f2d3d; }
-
-.c-tooltip-popper[x-placement^=bottom] .popper-arrow::after {
-  top: 1px;
-  margin-left: -5px;
-  border-top-width: 0;
-  border-bottom-color: #1f2d3d; }
+  top: -4px;
+  left: 50%; }
 
 .c-tooltip-popper[x-placement^=right] {
-  margin-left: 12px; }
+  margin-left: 10px; }
 
 .c-tooltip-popper[x-placement^=right] .popper-arrow {
   top: 50%;
-  left: -6px;
-  margin-bottom: 3px;
-  border-right-color: #1f2d3d;
-  border-left-width: 0; }
-
-.c-tooltip-popper[x-placement^=right] .popper-arrow::after {
-  bottom: -5px;
-  left: 1px;
-  border-right-color: #1f2d3d;
-  border-left-width: 0; }
+  left: -4px; }
 
 .c-tooltip-popper[x-placement^=left] {
-  margin-right: 12px; }
+  margin-right: 10px; }
 
 .c-tooltip-popper[x-placement^=left] .popper-arrow {
   top: 50%;
-  right: -6px;
-  margin-bottom: 3px;
-  border-right-width: 0;
-  border-left-color: #1f2d3d; }
-
-.c-tooltip-popper[x-placement^=left] .popper-arrow::after {
-  right: 1px;
-  bottom: -5px;
-  margin-left: -5px;
-  border-right-width: 0;
-  border-left-color: #1f2d3d; }
-
-.c-tooltip-popper.is-light {
-  background: #fff;
-  border: 1px solid #1f2d3d; }
-
-.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow {
-  border-top-color: #1f2d3d; }
-
-.c-tooltip-popper.is-light[x-placement^=top] .popper-arrow::after {
-  border-top-color: #fff; }
-
-.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow {
-  border-bottom-color: #1f2d3d; }
-
-.c-tooltip-popper.is-light[x-placement^=bottom] .popper-arrow::after {
-  border-bottom-color: #fff; }
-
-.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow {
-  border-left-color: #1f2d3d; }
-
-.c-tooltip-popper.is-light[x-placement^=left] .popper-arrow::after {
-  border-left-color: #fff; }
-
-.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow {
-  border-right-color: #1f2d3d; }
-
-.c-tooltip-popper.is-light[x-placement^=right] .popper-arrow::after {
-  border-right-color: #fff; }
-
-.c-tooltip-popper.is-dark {
-  background: #1f2d3d;
-  color: #fff; }
+  right: -4px; }
 
 .c-slider:after,
 .c-slider:before {
@@ -469,7 +398,7 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
 .c-slider-input {
   float: right;
   margin-top: 5px;
-  width: 20% !important; }
+  width: 19% !important; }
 
 .c-slider-bar {
   height: 4px;
@@ -502,7 +431,8 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
 .c-slider-button.hover,
 .c-slider-button:hover {
   transform: scale(1.5);
-  background-color: #1d8ce0; }
+  background-color: #1d8ce0;
+  box-shadow: 0px 0px 4px 0px #20a0ff; }
 
 .c-slider-pop {
   -moz-user-select: none;

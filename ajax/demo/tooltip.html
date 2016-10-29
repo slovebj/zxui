@@ -21,17 +21,17 @@ var demoTooltip = new Vue({
       text-align: center;
     }
 
-    .left {
+    .at-left {
       float: left;
       width: 60px;
     }
 
-    .right {
+    .at-right {
       float: right;
       width: 60px;
     }
 
-    .bottom {
+    .at-bottom {
       clear: both;
       text-align: center;
     }
@@ -40,56 +40,56 @@ var demoTooltip = new Vue({
       margin: 4px;
     }
     
-    .left .c-tooltip__popper,
-    .right .c-tooltip__popper {
+    .at-left .c-tooltip-popper,
+    .at-right .c-tooltip-popper {
       padding: 8px 10px;
     }
   }
 </style>
 
 <div class="box">
-  <div class="top">
-    <c-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+  <div class="at-top">
+    <c-tooltip class="item" content="Top Left 提示文字" placement="top-start">
       <button type="button">上左</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
+    <c-tooltip class="item" content="Top Center 提示文字" placement="top">
       <button type="button">上边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
+    <c-tooltip class="item" content="Top Right 提示文字" placement="top-end">
       <button type="button">上右</button>
     </c-tooltip>
   </div>
-  <div class="left">
-    <c-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
+  <div class="at-left">
+    <c-tooltip class="item" content="Left Top 提示文字" placement="left-start">
       <button type="button">左上</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
+    <c-tooltip class="item" content="Left Center 提示文字" placement="left">
       <button type="button">左边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
+    <c-tooltip class="item" content="Left Bottom 提示文字" placement="left-end">
       <button type="button">左下</button>
     </c-tooltip>
   </div>
 
-  <div class="right">
-    <c-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
+  <div class="at-right">
+    <c-tooltip class="item" content="Right Top 提示文字" placement="right-start">
       <button type="button">右上</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
+    <c-tooltip class="item" content="Right Center 提示文字" placement="right">
       <button type="button">右边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
+    <c-tooltip class="item" content="Right Bottom 提示文字" placement="right-end">
       <button type="button">右下</button>
     </c-tooltip>
   </div>
-  <div class="bottom">
-    <c-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
+  <div class="at-bottom">
+    <c-tooltip class="item" content="Bottom Left 提示文字" placement="bottom-start">
       <button type="button">下左</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+    <c-tooltip class="item" content="Bottom Center 提示文字" placement="bottom">
       <button type="button">下边</button>
     </c-tooltip>
-    <c-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
+    <c-tooltip class="item" content="Bottom Right 提示文字" placement="bottom-end">
       <button type="button">下右</button>
     </c-tooltip>
   </div>
@@ -106,17 +106,17 @@ var demoTooltip = new Vue({
       text-align: center;
     }
 
-    .left {
+    .at-left {
       float: left;
       width: 60px;
     }
 
-    .right {
+    .at-right {
       float: right;
       width: 60px;
     }
 
-    .bottom {
+    .at-bottom {
       clear: both;
       text-align: center;
     }
@@ -125,56 +125,56 @@ var demoTooltip = new Vue({
       margin: 4px;
     }
     
-    .left .c-tooltip__popper,
-    .right .c-tooltip__popper {
+    .at-left .c-tooltip-popper,
+    .at-right .c-tooltip-popper {
       padding: 8px 10px;
     }
   }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"top"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Left 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top-start"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"at-top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Left 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top-start"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>上左<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>上边<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Right 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top-end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top Right 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top-end"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>上右<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"left"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Top 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left-start"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"at-left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Top 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left-start"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>左上<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>左边<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Bottom 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left-end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Left Bottom 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"left-end"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>左下<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"right"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Top 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right-start"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"at-right"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Top 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right-start"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>右上<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>右边<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Bottom 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right-end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Right Bottom 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"right-end"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>右下<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Left 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom-start"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"at-bottom"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Left 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom-start"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>下左<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Center 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>下边<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Right 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom-end"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom Right 提示文字"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom-end"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>下右<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -182,23 +182,23 @@ var demoTooltip = new Vue({
 </code></pre>
 </div></div></demo-block>
 <h3>主题</h3>
-<p>Tooltip 组件提供了两个不同的主题：<code>dark</code>和<code>light</code>。</p>
+<p>Tooltip 通过添加<code>color</code>属性自定义背景色或前景色。</p>
 <demo-block class="demo-box">
                     <div class="source"><c-tooltip content="Top center" placement="top">
-  <button type="button">Dark</button>
+  <button type="button">默认</button>
 </c-tooltip>
-<c-tooltip content="Bottom center" placement="bottom" effect="light">
-  <button type="button">Light</button>
+<c-tooltip content="Bottom center" placement="bottom" color="bg-red6 fg-black">
+  <button type="button">红色背景，黑色文字</button>
 </c-tooltip>
 </div>
                     <div class="meta">
-                      <div class="description"><p>通过设置<code>effect</code>属性来改变主题，默认为<code>dark</code>。</p>
+                      <div class="description"><p>通过设置<code>color</code>属性来改变主题，默认背景颜色为<code>#1f2d3d</code>，前景色为白色。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Top center"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"top"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Dark<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>默认<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom center"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"light"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Light<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"Bottom center"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"bg-red6 fg-black"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>红色背景，黑色文字<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
 </code></pre>
 </div></div></demo-block>
@@ -227,7 +227,7 @@ var demoTooltip = new Vue({
 <p>当然，Tooltip 组件实际上十分强大，文末的API文档会做一一说明。</p>
 <demo-block class="demo-box">
                     <div class="source">  <c-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
-    <button type="button" @click.native="disabled=true">点击关闭 tooltip 功能</button>
+    <button type="button" @click="disabled=true">点击关闭 tooltip 功能</button>
   </c-tooltip>
 
 <style>
@@ -246,7 +246,7 @@ var demoTooltip = new Vue({
                     <div class="meta">
                       
                       <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">c-tooltip</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">"disabled"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"点击关闭 tooltip 功能"</span> <span class="hljs-attr">placement</span>=<span class="hljs-string">"bottom"</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">"light"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click.native</span>=<span class="hljs-string">"disabled=true"</span>&gt;</span>点击关闭 tooltip 功能<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"disabled=true"</span>&gt;</span>点击关闭 tooltip 功能<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">c-tooltip</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
@@ -276,11 +276,11 @@ var demoTooltip = new Vue({
 </thead>
 <tbody>
 <tr>
-<td>effect</td>
+<td>color</td>
 <td>默认提供的主题</td>
 <td>String</td>
-<td><code>dark</code>, <code>light</code></td>
-<td>dark</td>
+<td><code>bg-*</code>, <code>bg-* fg-*</code></td>
+<td>黑底白字</td>
 </tr>
 <tr>
 <td>content</td>
@@ -344,6 +344,13 @@ var demoTooltip = new Vue({
 <td>Number</td>
 <td>—</td>
 <td>0</td>
+</tr>
+<tr>
+<td>manual</td>
+<td>手动控制模式，设置为 true 后，mouseenter 和 mouseleave 事件将不会生效</td>
+<td>Boolean</td>
+<td>true,false</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>

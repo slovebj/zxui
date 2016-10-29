@@ -2,12 +2,12 @@
     padding: 10px 0 10px 16px;
     position: fixed;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50.01%);
     background-color: $gray;
     color: #fff;
     transition: opacity 0.3s, transform .4s;
     overflow: hidden;
-    z-index: 9999;
+    z-index: 3000;
  }
 
 .c-msg.top {
@@ -26,8 +26,12 @@
 .c-msg .c-msg-closebtn {
   cursor: pointer;
 }
-  .c-msg-fade-enter,
-  .c-msg-fade-leave-active {
-    opacity: 0;
-    transform: translate(-50%, -100%);
-  }
+.c-msg-fade-enter,
+.c-msg-fade-leave-active {
+  opacity: 0;
+  transform: translate(-50.01%, -100%);
+}
+.c-msg-fade-enter.bottom,
+.c-msg-fade-leave-active.bottom {
+  transform: translate(-50.01%, 100%);
+}

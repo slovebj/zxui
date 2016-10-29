@@ -10,7 +10,7 @@
     <transition :name="transition" @after-leave="doDestroy">
       <div
         class="c-tooltip-popper"
-        :class="['is-' + effect]"
+        :class="color"
         ref="popper"
         v-show="!disabled && showPopper">
         <slot name="content"><div v-text="content"></div></slot>
@@ -20,24 +20,19 @@
 </template>
 
 <script>
-import Popper from 'main/utils/vue-popper';
-
+import Popper from '../../../src/utils/vue-popper';
 export default {
   name: 'c-tooltip',
-
   mixins: [Popper],
-
   props: {
     openDelay: {
       type: Number,
       default: 0
     },
     disabled: Boolean,
-    effect: {
-      type: String,
-      default: 'dark'
-    },
+    manual: Boolean,
     content: String,
+    color: String,
     visibleArrow: {
       default: true
     },
@@ -57,12 +52,14 @@ export default {
 
   methods: {
     handleShowPopper() {
+      if (this.manual) return;
       this.timeout = setTimeout(() => {
         this.showPopper = true;
       }, this.openDelay);
     },
 
     handleClosePopper() {
+      if (this.manual) return;
       clearTimeout(this.timeout);
       this.showPopper = false;
     }
