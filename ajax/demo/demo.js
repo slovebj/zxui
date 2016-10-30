@@ -61,7 +61,8 @@ const Files = [
     { filename: 'input', convert: 0 },
     { filename: 'input-number', convert: 0 },
     { filename: 'tooltip', convert: 0 },
-    { filename: 'popover', convert: 1 },
+    { filename: 'popover', convert: 0 },
+    { filename: 'loading', convert: 1 },
     { filename: 'slider', convert: 0 },
 ];
 

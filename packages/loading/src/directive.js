@@ -68,7 +68,7 @@ exports.install = Vue => {
       if (directive.originalPosition !== 'absolute') {
         parent.style.position = 'relative';
       }
-      if (binding.modifiers.fullscreen) {
+      if (binding.modifiers.fullscreen && binding.modifiers.lock) {
         parent.style.overflow = 'hidden';
       }
       directive.mask.style.display = 'block';
@@ -84,7 +84,7 @@ exports.install = Vue => {
   Vue.directive('loading', {
     bind: function(el, binding) {
       el.mask = document.createElement('div');
-      el.mask.className = 'el-loading-mask';
+      el.mask.className = 'c-loading-mask';
       el.maskStyle = {
         position: 'absolute',
         zIndex: '10000',
@@ -100,7 +100,9 @@ exports.install = Vue => {
     },
 
     update: function(el, binding) {
-      toggleLoading(el, binding);
+      if (binding.oldValue !== binding.value) {
+        toggleLoading(el, binding);
+      }
     },
 
     unbind: function(el, binding) {

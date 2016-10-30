@@ -1,0 +1,88 @@
+<script>
+var demoLoading = new Vue({
+    el: '#demo-loading',
+    data() {
+      return {
+        loading: true,
+        loading2: false,
+        fullscreenLoading: false
+      }
+    },
+
+    methods: {
+      openFullScreen() {
+        this.fullscreenLoading = true;
+        setTimeout(() => {
+          this.fullscreenLoading = false;
+        }, 3000);
+      }
+    }
+  });
+</script>
+<style>
+  .demo-box .loading-demo {
+    border: solid 1px #999;
+    border-radius: 4px;
+    height: 100px;
+  }
+</style>
+<h2>Loading 加载</h2>
+<p>加载数据时显示动效。</p>
+<h3>区域加载</h3>
+<p>在表格等容器中加载数据时显示。</p>
+<demo-block class="demo-box">
+                    <div class="source">  <div v-loading="loading" class="loading-demo"></div>
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>在 Loading 组件中，Zxui 准备了自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加<code>body</code>修饰符，可以使遮罩插入至 DOM 中的 body 上。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loading-demo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">loading</span>: <span class="hljs-literal">true</span>
+      };
+    }
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>整页加载</h3>
+<p>页面数据加载时显示。</p>
+<demo-block class="demo-box">
+                    <div class="source">  <button type="button" class="btn" @click="openFullScreen" v-loading.fullscreen="fullscreenLoading">
+    显示整页加载，3 秒后消失
+  </button>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>当需要全屏遮罩时，可使用<code>fullscreen</code>修饰符（此时遮罩会插入至 body 上）</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>
+    @<span class="hljs-attr">click</span>=<span class="hljs-string">"openFullScreen"</span>
+    <span class="hljs-attr">v-loading.fullscreen</span>=<span class="hljs-string">"fullscreenLoading"</span>&gt;</span>
+    显示整页加载，3 秒后消失
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">fullscreenLoading</span>: <span class="hljs-literal">false</span>
+      }
+    }
+    methods: {
+      openFullScreen() {
+        <span class="hljs-keyword">this</span>.fullscreenLoading = <span class="hljs-literal">true</span>;
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.fullscreenLoading = <span class="hljs-literal">false</span>;
+        }, <span class="hljs-number">3000</span>);
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>

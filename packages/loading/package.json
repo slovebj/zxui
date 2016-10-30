@@ -1,9 +1,9 @@
 {
-  "name": "el-loading",
-  "version": "0.0.0",
+  "name": "c-loading",
+  "version": "0.0.1",
   "description": "A loading component for Vue.js.",
   "keywords": [
-    "element",
+    "zxui",
     "vue",
     "component"
   ],
@@ -11,5 +11,7 @@
   "repository": "https://github.com/element-component/element/tree/master/packages/loading",
   "author": "elemefe",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "wind-dom": "0.0.3"
+  }
 }
