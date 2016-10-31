@@ -1,9 +1,9 @@
 {
-  "name": "el-dialog",
+  "name": "c-dialog",
   "version": "1.0.0",
   "description": "A dialog component for Vue.",
   "keywords": [
-    "element",
+    "zxui",
     "vue",
     "component"
   ],
@@ -12,6 +12,5 @@
   "author": "elemefe",
   "license": "MIT",
   "devDependencies": {
-    "vue-popup": "^0.2.5"
   }
 }

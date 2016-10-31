@@ -44,13 +44,13 @@ var merge = function(target) {
   return target;
 };
 
-var MsgBoxConstructor = Vue.extend(msgboxVue);
+var MsgboxConstructor = Vue.extend(msgboxVue);
 
 var currentMsg, instance;
 var msgQueue = [];
 
 var initInstance = function() {
-  instance = new MsgBoxConstructor({
+  instance = new MsgboxConstructor({
     el: document.createElement('div')
   });
 
@@ -113,7 +113,7 @@ var showNextMsg = function() {
   }
 };
 
-var MsgBox = function(options, callback) {
+var Msgbox = function(options, callback) {
   if (typeof options === 'string') {
     options = {
       title: options
@@ -131,7 +131,7 @@ var MsgBox = function(options, callback) {
   if (typeof Promise !== 'undefined') {
     return new Promise(function(resolve, reject) { // eslint-disable-line
       msgQueue.push({
-        options: merge({}, defaults, MsgBox.defaults || {}, options),
+        options: merge({}, defaults, Msgbox.defaults || {}, options),
         callback: callback,
         resolve: resolve,
         reject: reject
@@ -141,7 +141,7 @@ var MsgBox = function(options, callback) {
     });
   } else {
     msgQueue.push({
-      options: merge({}, defaults, MsgBox.defaults || {}, options),
+      options: merge({}, defaults, Msgbox.defaults || {}, options),
       callback: callback
     });
 
@@ -149,16 +149,16 @@ var MsgBox = function(options, callback) {
   }
 };
 
-MsgBox.setDefaults = function(defaults) {
-  MsgBox.defaults = defaults;
+Msgbox.setDefaults = function(defaults) {
+  Msgbox.defaults = defaults;
 };
 
-MsgBox.alert = function(msg, title, options) {
+Msgbox.alert = function(msg, title, options) {
   if (typeof title === 'object') {
     options = title;
     title = '';
   }
-  return MsgBox(merge({
+  return Msgbox(merge({
     title: title,
     msg: msg,
     $type: 'alert',
@@ -167,12 +167,12 @@ MsgBox.alert = function(msg, title, options) {
   }, options));
 };
 
-MsgBox.confirm = function(msg, title, options) {
+Msgbox.confirm = function(msg, title, options) {
   if (typeof title === 'object') {
     options = title;
     title = '';
   }
-  return MsgBox(merge({
+  return Msgbox(merge({
     title: title,
     msg: msg,
     $type: 'confirm',
@@ -180,12 +180,12 @@ MsgBox.confirm = function(msg, title, options) {
   }, options));
 };
 
-MsgBox.prompt = function(msg, title, options) {
+Msgbox.prompt = function(msg, title, options) {
   if (typeof title === 'object') {
     options = title;
     title = '';
   }
-  return MsgBox(merge({
+  return Msgbox(merge({
     title: title,
     msg: msg,
     showCancelButton: true,
@@ -194,11 +194,11 @@ MsgBox.prompt = function(msg, title, options) {
   }, options));
 };
 
-MsgBox.close = function() {
+Msgbox.close = function() {
   instance.value = false;
   msgQueue = [];
   currentMsg = null;
 };
 
-export default MsgBox;
-export { MsgBox };
+export default Msgbox;
+export { Msgbox };

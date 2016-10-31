@@ -1,9 +1,9 @@
 {
-  "name": "c-msg-box",
-  "version": "0.0.0",
+  "name": "c-msgbox",
+  "version": "0.0.1",
   "description": "A msg-box component for Vue.js.",
   "keywords": [
-    "element",
+    "zxui",
     "vue",
     "component"
   ],
@@ -12,6 +12,5 @@
   "author": "elemefe",
   "license": "MIT",
   "dependencies": {
-    "vue-popup": "^0.2.5"
   }
 }

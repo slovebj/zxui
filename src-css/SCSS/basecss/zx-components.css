@@ -244,6 +244,117 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-msg-fade-leave-active.bottom {
   transform: translate(-50.01%, 100%); }
 
+.c-msgbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+  width: 420px;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.c-msgbox-header {
+  padding: 20px 20px 0; }
+
+.c-msgbox-content {
+  padding: 30px 20px;
+  color: #475669;
+  font-size: 14px;
+  position: relative; }
+
+.c-msgbox-close {
+  display: inline-block;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  color: #999;
+  cursor: pointer;
+  line-height: 20px;
+  text-align: center; }
+
+.c-msgbox-close:hover {
+  color: #20a0ff; }
+
+.c-msgbox-input {
+  padding-top: 15px; }
+
+.c-msgbox-input input.invalid,
+.c-msgbox-input input.invalid:focus {
+  border-color: #ff4949; }
+
+.c-msgbox-errormsg {
+  color: red;
+  font-size: 12px;
+  min-height: 18px;
+  margin-top: 2px; }
+
+.c-msgbox-title {
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+  height: 18px;
+  color: #333; }
+
+.c-msgbox-message {
+  margin: 0; }
+
+.c-msgbox-message p {
+  margin: 0;
+  line-height: 1.4; }
+
+.c-msgbox-btns {
+  padding: 10px 20px 15px;
+  text-align: right; }
+
+.c-msgbox-btns button:nth-child(2) {
+  margin-left: 10px; }
+
+.c-msgbox-btns-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+
+.c-msgbox-status {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 36px !important; }
+
+.c-msgbox-status.c-icon-circle-check {
+  color: #13ce66; }
+
+.c-msgbox-status.c-icon-information {
+  color: #50bfff; }
+
+.c-msgbox-status.c-icon-warning {
+  color: #f7ba2a; }
+
+.c-msgbox-status.c-icon-circle-cross {
+  color: #ff4949; }
+
+.msgbox-bounce-enter-active {
+  animation: msgbox-bounce-in 0.3s cubic-bezier(0.3, 0, 0, 1.5); }
+
+.msgbox-bounce-leave-active {
+  animation: msgbox-bounce-out 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22); }
+
+@keyframes msgbox-bounce-in {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.8); }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(1); } }
+@keyframes msgbox-bounce-out {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(1); }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(0.7); } }
 .c-notification {
   width: 330px;
   padding: 20px;
@@ -500,6 +611,109 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
   padding-bottom: 6px;
   border-bottom: solid 1px #CCC; }
 
+.v-modal-enter {
+  animation: v-modal-in 0.2s ease; }
+
+.v-modal-leave {
+  animation: v-modal-out 0.2s ease forwards; }
+
+@keyframes v-modal-in {
+  0% {
+    opacity: 0; } }
+@keyframes v-modal-out {
+  to {
+    opacity: 0; } }
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  background: #000; }
+
+.c-dialog {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box; }
+
+.c-dialog-tiny {
+  width: 30%; }
+
+.c-dialog-small {
+  width: 50%; }
+
+.c-dialog-large {
+  width: 90%; }
+
+.c-dialog-full {
+  width: 100%;
+  top: 0;
+  height: 100%;
+  overflow: auto; }
+
+.c-dialog-wrapper {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  margin: 0; }
+
+.c-dialog-header {
+  padding: 20px 20px 0; }
+
+.c-dialog-close {
+  cursor: pointer;
+  color: #C0CCDA; }
+
+.c-dialog-close:hover {
+  color: #20a0ff; }
+
+.c-dialog-title {
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2d3d; }
+
+.c-dialog-body {
+  padding: 30px 20px;
+  color: #475669;
+  font-size: 14px; }
+
+.c-dialog-headerbtn {
+  float: right; }
+
+.c-dialog-footer {
+  padding: 10px 20px 15px;
+  text-align: right;
+  box-sizing: border-box; }
+
+.dialog-fade-enter-active {
+  animation: dialog-fade-in 0.3s; }
+
+.dialog-fade-leave-active {
+  animation: dialog-fade-out 0.3s; }
+
+@keyframes dialog-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0; }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; } }
+@keyframes dialog-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0; } }
 .c-slider:after,
 .c-slider:before {
   display: table;

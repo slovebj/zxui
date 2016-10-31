@@ -1,5 +1,6 @@
 <script>
-  export default {
+var demoMsgbox = new Vue({
+    el: '#demo-msgbox',
     methods: {
       open() {
         this.$alert('这是一段内容', '标题名称');
@@ -63,7 +64,7 @@
       }
 
     }
-  };
+  });
 </script>
 ## Message box 信息提示
 模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、成功提示、错误提示、询问信息。
@@ -74,9 +75,7 @@
 
 :::demo 调用`$alert`方法即可打开消息提示，它模拟了系统的 `alert`，无法通过按下 ESC 或点击框外关闭。此例中接收了两个参数，`message`和`title`。值得一提的是，窗口被关闭后，它会返回一个`Promise`对象便于进行后续操作的处理。
 ```html
-<template>
-  <el-button type="text" @click.native="open">点击打开 Message Box</el-button>
-</template>
+  <button type="button" class="btn" @click="open">点击打开 Message Box</button>
 
 <script>
   export default {
@@ -97,9 +96,7 @@
 :::demo 调用`$confirm`方法即可打开消息提示，它模拟了系统的 `confirm`。Message Box 组件也拥有极高的定制性，我们可以传入`options`作为第三个参数，它是一个字面量对象。`type`字段表明消息类型，可以为`success`，`error`，`info`和`warning`，无效的设置将会被忽略。注意，第二个参数`title`必须定义为`String`类型，如果是`Object`，会被理解为`options`。在这里我们用了 Promise 来处理后续响应。
 
 ```html
-<template>
-  <el-button type="text" @click.native="open2">点击打开 Message Box</el-button>
-</template>
+  <button type="button" class="btn" @click="open2">点击打开 Message Box</button>
 
 <script>
   export default {
@@ -133,7 +130,7 @@
 
 ```html
 <template>
-  <el-button type="text" @click.native="open3">点击打开 Message Box</el-button>
+  <button type="button" class="btn" @click="open3">点击打开 Message Box</button>
 </template>
 
 <script>
@@ -169,7 +166,7 @@
 
 ```html
 <template>
-  <el-button type="text" @click.native="open4">点击打开 Message Box</el-button>
+  <button type="button" class="btn" @click="open4">点击打开 Message Box</button>
 </template>
 
 <script>
@@ -195,24 +192,24 @@
 
 ### 全局方法
 
-Element 为 Vue.prototype 添加了如下全局方法：$msgbox, $alert, $confirm 和 $prompt。因此在 vue instance 中可以采用本页面中的方式调用 `MessageBox`。
+Element 为 Vue.prototype 添加了如下全局方法：$msgbox, $alert, $confirm 和 $prompt。因此在 vue instance 中可以采用本页面中的方式调用 `Msgbox`。
 
 ### 单独引用
 
-单独引入 `MessageBox`：
+单独引入 `Msgbox`：
 
 ```javascript
-import { MessageBox } from 'element-ui';
+import { Msgbox } from 'zxui';
 ```
 
-对应于上述四个全局方法的调用方法依次为：MessageBox, MessageBox.alert, MessageBox.confirm 和 MessageBox.prompt。
+对应于上述四个全局方法的调用方法依次为：Msgbox, Msgbox.alert, Msgbox.confirm 和 Msgbox.prompt。
 
 ### Options
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| title | MessageBox标题 | string | — | — |
-| message | MessageBox消息正文内容 | string | — | — |
+| title | Msgbox标题 | string | — | — |
+| message | Msgbox消息正文内容 | string | — | — |
 | type | 消息类型，用于显示图标 | string | success/info/<br>warning/error | — |
 | showCancelButton | 是否显示取消按钮 | boolean | — | false（以 confirm 和 prompt 方式调用时为 true） |
 | showConfirmButton | 是否显示确定按钮 | boolean | — | true |

@@ -1,7 +1,8 @@
-const ElDialog = require('./src/component');
+const CDialog = require('./src/component');
 
-ElDialog.install = function(Vue) {
-  Vue.component('el-dialog', ElDialog);
+/* istanbul ignore next */
+CDialog.install = function(Vue) {
+  Vue.component(CDialog.name, CDialog);
 };
 
-module.exports = ElDialog;
+module.exports = CDialog;

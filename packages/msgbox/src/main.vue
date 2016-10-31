@@ -1,22 +1,22 @@
 <template>
-  <div class="c-msg-box__wrapper">
+  <div class="c-msgbox-wrapper">
     <transition name="msgbox-bounce">
-      <div class="c-msg-box" v-show="value">
-        <div class="c-msg-box__header" v-if="title !== ''">
-          <div class="c-msg-box__title">{{ title }}</div>
-          <i class="c-msg-box__close el-icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
+      <div class="c-msgbox" v-show="value">
+        <div class="c-msgbox-header" v-if="title !== ''">
+          <div class="c-msgbox-title">{{ title }}</div>
+          <i class="c-msgbox-close c-icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
         </div>
-        <div class="c-msg-box__content" v-if="message !== ''">
-          <div class="c-msg-box__status" :class="[ typeClass ]"></div>
-          <div class="c-msg-box__message" :style="{ 'margin-left': typeClass ? '50px' : '0' }"><p>{{ message }}</p></div>
-          <div class="c-msg-box__input" v-show="showInput">
-            <el-input v-model="inputValue" :placeholder="inputPlaceholder" ref="input"></el-input>
-            <div class="c-msg-box__errormsg" :style="{ visibility: !!editorErrorMsg ? 'visible' : 'hidden' }">{{ editorErrorMsg }}</div>
+        <div class="c-msgbox-content" v-if="message !== ''">
+          <div class="c-msgbox-status" :class="[ typeClass ]"></div>
+          <div class="c-msgbox-message" :style="{ 'margin-left': typeClass ? '50px' : '0' }"><p>{{ message }}</p></div>
+          <div class="c-msgbox-input" v-show="showInput">
+            <c-input v-model="inputValue" :placeholder="inputPlaceholder" ref="input"></c-input>
+            <div class="c-msgbox-errormsg" :style="{ visibility: !!editorErrorMsg ? 'visible' : 'hidden' }">{{ editorErrorMsg }}</div>
           </div>
         </div>
-        <div class="c-msg-box__btns">
-          <el-button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click.native="handleAction('cancel')">{{ cancelButtonText }}</el-button>
-          <el-button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click.native="handleAction('confirm')" type="primary">{{ confirmButtonText }}</el-button>
+        <div class="c-msgbox-btns">
+          <button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</button>
+          <button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</button>
         </div>
       </div>
     </transition>
@@ -37,8 +37,8 @@
   import CInput from 'packages/input/index.js';
 
   export default {
+    name: 'c-msgbox',
     mixins: [ Popup ],
-
     props: {
       modal: {
         default: true
@@ -65,10 +65,10 @@
       },
 
       confirmButtonClasses() {
-        return `el-button el-button-primary ${ this.confirmButtonClass }`;
+        return `btn btn-primary ${ this.confirmButtonClass }`;
       },
       cancelButtonClasses() {
-        return `el-button el-button-default ${ this.cancelButtonClass }`;
+        return `btn ${ this.cancelButtonClass }`;
       }
     },
 

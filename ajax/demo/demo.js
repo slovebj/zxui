@@ -55,14 +55,15 @@ function convert(str) {
 
 const Files = [
     { filename: 'alert', convert: 0 },
-    { filename: 'dialog', convert: 0 },
+    { filename: 'dialog', convert: 1 },
     { filename: 'msg', convert: 0 },
+    { filename: 'msgbox', convert: 1 },
     { filename: 'notification', convert: 0 },
     { filename: 'input', convert: 0 },
     { filename: 'input-number', convert: 0 },
     { filename: 'tooltip', convert: 0 },
     { filename: 'popover', convert: 0 },
-    { filename: 'loading', convert: 1 },
+    { filename: 'loading', convert: 0 },
     { filename: 'slider', convert: 0 },
 ];
 

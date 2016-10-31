@@ -1,0 +1,323 @@
+<script>
+var demoMsgbox = new Vue({
+    el: '#demo-msgbox',
+    methods: {
+      open() {
+        this.$alert('这是一段内容', '标题名称');
+      },
+
+      open2() {
+        this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+          type: 'warning'
+        }).then(() => {
+          setTimeout(() => {
+            this.$message({
+              message: '删除成功!',
+              type: 'success'
+            });
+          }, 200);
+        }).catch(() => {
+          setTimeout(() => {
+            this.$message({
+              message: '已取消删除',
+              type: 'info'
+            });  
+          }, 200);
+        });
+      },
+
+      open3() {
+        this.$prompt('请输入邮箱', '提示', {
+          inputPattern: /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+          inputErrorMessage: '邮箱格式不正确'
+        }).then(({ value }) => {
+          setTimeout(() => {
+            this.$message({
+              type: 'success',
+              message: '你的邮箱是: ' + value
+            });
+          }, 200);
+        }).catch(() => {
+          setTimeout(() => {
+            this.$message({
+              type: 'info',
+              message: '取消输入'
+            });
+          }, 200);
+        });
+      },
+
+
+      open4() {
+        this.$msgbox({
+          title: '消息',
+          message: '这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容',
+          showCancelButton: true
+        }).then(action => {
+          setTimeout(() => {
+            this.$message({
+              type: 'info',
+              message: 'action: ' + action
+            });
+          }, 200);
+        });
+      }
+
+    }
+  });
+</script>
+<h2>Message box 信息提示</h2>
+<p>模拟系统的消息提示框而实现的一套模态对话框组件，用于消息提示、成功提示、错误提示、询问信息。</p>
+<h3>消息提示</h3>
+<p>当用户进行操作时会被触发，该对话框中断用户操作，直到用户确认知晓后才可关闭。</p>
+<demo-block class="demo-box">
+                    <div class="source">  <button type="button" class="btn" @click="open">点击打开 Message Box</button>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>调用<code>$alert</code>方法即可打开消息提示，它模拟了系统的 <code>alert</code>，无法通过按下 ESC 或点击框外关闭。此例中接收了两个参数，<code>message</code>和<code>title</code>。值得一提的是，窗口被关闭后，它会返回一个<code>Promise</code>对象便于进行后续操作的处理。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open"</span>&gt;</span>点击打开 Message Box<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      open() {
+        <span class="hljs-keyword">this</span>.$alert(<span class="hljs-string">'这是一段内容'</span>, <span class="hljs-string">'标题名称'</span>);
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>确认消息</h3>
+<p>提示用户确认其已经触发的动作，并询问是否进行此操作时会用到此对话框。</p>
+<demo-block class="demo-box">
+                    <div class="source">  <button type="button" class="btn" @click="open2">点击打开 Message Box</button>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>调用<code>$confirm</code>方法即可打开消息提示，它模拟了系统的 <code>confirm</code>。Message Box 组件也拥有极高的定制性，我们可以传入<code>options</code>作为第三个参数，它是一个字面量对象。<code>type</code>字段表明消息类型，可以为<code>success</code>，<code>error</code>，<code>info</code>和<code>warning</code>，无效的设置将会被忽略。注意，第二个参数<code>title</code>必须定义为<code>String</code>类型，如果是<code>Object</code>，会被理解为<code>options</code>。在这里我们用了 Promise 来处理后续响应。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open2"</span>&gt;</span>点击打开 Message Box<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      open2() {
+        <span class="hljs-keyword">this</span>.$confirm(<span class="hljs-string">'此操作将永久删除该文件, 是否继续?'</span>, <span class="hljs-string">'提示'</span>, {
+          <span class="hljs-attr">type</span>: <span class="hljs-string">'warning'</span>
+        }).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$message({
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'success'</span>,
+            <span class="hljs-attr">message</span>: <span class="hljs-string">'删除成功!'</span>
+          });
+        }).catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$message({
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'info'</span>,
+            <span class="hljs-attr">message</span>: <span class="hljs-string">'已取消删除'</span>
+          });          
+        });
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>提交内容</h3>
+<p>当用户进行操作时会被触发，中断用户操作，提示用户进行输入的对话框。</p>
+<demo-block class="demo-box">
+                    <div class="source"><template>
+  <button type="button" class="btn" @click="open3">点击打开 Message Box</button>
+</template>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>调用<code>$prompt</code>方法即可打开消息提示，它模拟了系统的 <code>prompt</code>。可以用<code>inputPattern</code>字段自己规定匹配模式，或者用<code>inputValidator</code>规定校验函数，可以返回<code>Boolean</code>或<code>String</code>，<code>Boolean</code>为<code>false</code>或字符串时均表示校验未通过，<code>String</code>相当于定义了<code>inputErrorMessage</code>字段。此外，可以用<code>inputPlaceholder</code>字段来定义输入框的占位符。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open3"</span>&gt;</span>点击打开 Message Box<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      open3() {
+        <span class="hljs-keyword">this</span>.$prompt(<span class="hljs-string">'请输入邮箱'</span>, <span class="hljs-string">'提示'</span>, {
+          <span class="hljs-attr">inputPattern</span>: <span class="hljs-regexp">/[\w!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[\w!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/</span>,
+          <span class="hljs-attr">inputErrorMessage</span>: <span class="hljs-string">'邮箱格式不正确'</span>
+        }).then(<span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$message({
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'success'</span>,
+            <span class="hljs-attr">message</span>: <span class="hljs-string">'你的邮箱是: '</span> + value
+          });
+        }).catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$message({
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'info'</span>,
+            <span class="hljs-attr">message</span>: <span class="hljs-string">'取消输入'</span>
+          });       
+        });
+      }
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>自定义</h3>
+<p>可自定义配置不同内容。</p>
+<demo-block class="demo-box">
+                    <div class="source"><template>
+  <button type="button" class="btn" @click="open4">点击打开 Message Box</button>
+</template>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>以上三个方法都是对<code>$msgbox</code>方法的再包装。本例直接调用<code>$msgbox</code>方法，使用了<code>showCancelButton</code>字段，用于显示取消按钮。另外可使用<code>cancelButtonClass</code>为其添加自定义样式，使用<code>cancelButtonText</code>来自定义按钮文本。Confirm 按钮也具有相同的字段，在文末的字段说明中有完整的字段列表。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"open4"</span>&gt;</span>点击打开 Message Box<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">methods</span>: {
+      open4() {
+        <span class="hljs-keyword">this</span>.$msgbox({
+          <span class="hljs-attr">title</span>: <span class="hljs-string">'消息'</span>,
+          <span class="hljs-attr">message</span>: <span class="hljs-string">'这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容'</span>,
+          <span class="hljs-attr">showCancelButton</span>: <span class="hljs-literal">true</span>
+        }).then(<span class="hljs-function"><span class="hljs-params">action</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.$message({
+            <span class="hljs-attr">type</span>: <span class="hljs-string">'info'</span>,
+            <span class="hljs-attr">message</span>: <span class="hljs-string">'action: '</span> + action
+          });
+        });
+      },
+    }
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>全局方法</h3>
+<p>Element 为 Vue.prototype 添加了如下全局方法：$msgbox, $alert, $confirm 和 $prompt。因此在 vue instance 中可以采用本页面中的方式调用 <code>Msgbox</code>。</p>
+<h3>单独引用</h3>
+<p>单独引入 <code>Msgbox</code>：</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { Msgbox } <span class="hljs-keyword">from</span> <span class="hljs-string">'zxui'</span>;
+</code></pre>
+<p>对应于上述四个全局方法的调用方法依次为：Msgbox, Msgbox.alert, Msgbox.confirm 和 Msgbox.prompt。</p>
+<h3>Options</h3>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>Msgbox标题</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Msgbox消息正文内容</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>type</td>
+<td>消息类型，用于显示图标</td>
+<td>string</td>
+<td>success/info/<br>warning/error</td>
+<td>—</td>
+</tr>
+<tr>
+<td>showCancelButton</td>
+<td>是否显示取消按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>false（以 confirm 和 prompt 方式调用时为 true）</td>
+</tr>
+<tr>
+<td>showConfirmButton</td>
+<td>是否显示确定按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>true</td>
+</tr>
+<tr>
+<td>cancelButtonText</td>
+<td>取消按钮的文本内容</td>
+<td>string</td>
+<td>—</td>
+<td>取消</td>
+</tr>
+<tr>
+<td>confirmButtonText</td>
+<td>确定按钮的文本内容</td>
+<td>string</td>
+<td>—</td>
+<td>确定</td>
+</tr>
+<tr>
+<td>cancelButtonClass</td>
+<td>取消按钮的自定义类名</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>confirmButtonClass</td>
+<td>确定按钮的自定义类名</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>showInput</td>
+<td>是否显示输入框</td>
+<td>boolean</td>
+<td>—</td>
+<td>false（以 prompt 方式调用时为 true）</td>
+</tr>
+<tr>
+<td>inputPlaceholder</td>
+<td>输入框的占位符</td>
+<td>string</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>inputPattern</td>
+<td>输入框的校验表达式</td>
+<td>regexp</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>inputValidator</td>
+<td>输入框的校验函数。可以返回布尔值或字符串，若返回一个字符串, 则返回结果会被赋值给 inputErrorMessage</td>
+<td>function</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>inputErrorMessage</td>
+<td>校验未通过时的提示文本</td>
+<td>string</td>
+<td>—</td>
+<td>输入的数据不合法!</td>
+</tr>
+</tbody>
+</table>

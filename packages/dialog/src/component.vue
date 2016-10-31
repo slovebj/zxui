@@ -1,15 +1,19 @@
 <template>
   <transition name="dialog-fade">
-    <div class="el-dialog__wrapper" v-show="value" @click.self="handleWrapperClick">
-      <div class="el-dialog" :class="[sizeClass, customClass]" ref="dialog" :style="{ 'margin-bottom': size !== 'full' ? '50px' : '', 'top': size !== 'full' ? dynamicTop + 'px' : '0' }">
-        <div class="el-dialog__header">
-          <span class="el-dialog__title">{{title}}</span>
-          <div class="el-dialog__headerbtn">
-            <i class="el-dialog__close el-icon el-icon-close" @click='close()'></i>
+    <div class="c-dialog-wrapper" v-show="value" @click.self="handleWrapperClick">
+      <div
+        class="c-dialog"
+        :class="[sizeClass, customClass]"
+        ref="dialog"
+        :style="style">
+        <div class="c-dialog-header">
+          <span class="c-dialog-title">{{title}}</span>
+          <div class="c-dialog-headerbtn">
+            <i class="c-dialog-close c-icon c-icon-close" @click='close()'></i>
           </div>
         </div>
-        <div class="el-dialog__body" v-if="rendered"><slot></slot></div>
-        <div class="el-dialog__footer" v-if="$slots.footer">
+        <div class="c-dialog-body" v-if="rendered"><slot></slot></div>
+        <div class="c-dialog-footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -21,9 +25,9 @@
   import Popup from 'vue-popup';
 
   export default {
-    name: 'el-dialog',
+    name: 'c-dialog',
 
-    mixins: [ Popup ],
+    mixins: [Popup],
 
     props: {
       title: {
@@ -32,6 +36,11 @@
       },
 
       modal: {
+        type: Boolean,
+        default: true
+      },
+
+      lockScroll: {
         type: Boolean,
         default: true
       },
@@ -54,13 +63,12 @@
       customClass: {
         type: String,
         default: ''
-      }
-    },
+      },
 
-    data() {
-      return {
-        dynamicTop: 0
-      };
+      top: {
+        type: String,
+        default: '15%'
+      }
     },
 
     watch: {
@@ -78,7 +86,10 @@
 
     computed: {
       sizeClass() {
-        return `el-dialog--${ this.size }`;
+        return `c-dialog-${ this.size }`;
+      },
+      style() {
+        return this.size === 'full' ? {} : { 'margin-bottom': '50px', 'top': this.top };
       }
     },
 
@@ -87,10 +98,6 @@
         if (this.closeOnClickModal) {
           this.$emit('input', false);
         }
-      },
-
-      resetTop() {
-        this.dynamicTop = Math.floor((window.innerHeight || document.documentElement.clientHeight) * 0.16);
       }
     },
 
@@ -99,12 +106,6 @@
         this.rendered = true;
         this.open();
       }
-      window.addEventListener('resize', this.resetTop);
-      this.resetTop();
-    },
-
-    beforeDestroy() {
-      window.removeEventListener('resize', this.resetTop);
     }
   };
 </script>

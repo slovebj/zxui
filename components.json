@@ -1,13 +1,14 @@
 {
-  "msg-box": "./packages/msg-box/index.js",
   "alert": "./packages/alert/index.js",
-  "loading": "./packages/loading/index.js",
-  "notification": "./packages/notification/index.js",
   "msg": "./packages/msg/index.js",
-  "demo-block": "./packages/demo-block/index.js",
-  "input": "./packages/input/index.js",
-  "input-number": "./packages/input-number/index.js",
+  "msgbox": "./packages/msgbox/index.js",
+  "notification": "./packages/notification/index.js",
   "tooltip": "./packages/tooltip/index.js",
   "popover": "./packages/popover/index.js",
-  "slider": "./packages/slider/index.js"
+  "loading": "./packages/loading/index.js",
+  "dialog": "./packages/dialog/index.js",
+  "slider": "./packages/slider/index.js",
+  "demo-block": "./packages/demo-block/index.js",
+  "input": "./packages/input/index.js",
+  "input-number": "./packages/input-number/index.js"
 }
