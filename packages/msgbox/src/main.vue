@@ -2,13 +2,13 @@
   <div class="c-msgbox-wrapper">
     <transition name="msgbox-bounce">
       <div class="c-msgbox" v-show="value">
-        <div class="c-msgbox-header" v-if="title !== ''">
-          <div class="c-msgbox-title">{{ title }}</div>
-          <i class="c-msgbox-close c-icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
+        <div class="c-msgbox-title" :class="color" v-if="title !== ''">
+          {{ title }}
+          <i class="c-msgbox-close iconfont icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
         </div>
-        <div class="c-msgbox-content" v-if="message !== ''">
-          <div class="c-msgbox-status" :class="[ typeClass ]"></div>
-          <div class="c-msgbox-message" :style="{ 'margin-left': typeClass ? '50px' : '0' }"><p>{{ message }}</p></div>
+        <div class="c-msgbox-content" v-if="msg !== ''">
+          <i class="c-msgbox-status iconfont" :class="[ icon,iconClass ]"></i>
+          <div :style="{ 'margin-left': iconClass ? '50px' : '0' }">{{ msg }}</div>
           <div class="c-msgbox-input" v-show="showInput">
             <c-input v-model="inputValue" :placeholder="inputPlaceholder" ref="input"></c-input>
             <div class="c-msgbox-errormsg" :style="{ visibility: !!editorErrorMsg ? 'visible' : 'hidden' }">{{ editorErrorMsg }}</div>
@@ -26,12 +26,6 @@
 <script type="text/babel">
   let CONFIRM_TEXT = '确定';
   let CANCEL_TEXT = '取消';
-  let typeMap = {
-    success: 'circle-check',
-    info: 'information',
-    warning: 'warning',
-    error: 'circle-cross'
-  };
 
   import Popup from 'vue-popup';
   import CInput from 'packages/input/index.js';
@@ -40,6 +34,7 @@
     name: 'c-msgbox',
     mixins: [ Popup ],
     props: {
+      color: String,
       modal: {
         default: true
       },
@@ -60,12 +55,12 @@
     },
 
     computed: {
-      typeClass() {
-        return this.type && typeMap[this.type] ? `el-icon-${ typeMap[this.type] }` : '';
+      iconClass() {
+        return (this.icon ? 'icon-' + this.icon : '');
       },
 
       confirmButtonClasses() {
-        return `btn btn-primary ${ this.confirmButtonClass }`;
+        return `btn btn-o ${ this.confirmButtonClass }`;
       },
       cancelButtonClasses() {
         return `btn ${ this.cancelButtonClass }`;
@@ -152,7 +147,7 @@
     data() {
       return {
         title: '',
-        message: '',
+        msg: '',
         type: '',
         showInput: false,
         inputValue: null,

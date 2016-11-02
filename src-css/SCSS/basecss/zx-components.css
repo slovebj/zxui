@@ -244,33 +244,42 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-msg-fade-leave-active.bottom {
   transform: translate(-50.01%, 100%); }
 
-.c-msgbox {
+.c-msgbox-wrapper {
   position: fixed;
-  top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  align-items: center;
+  height: 100%; }
+
+.c-msgbox {
+  position: relative;
+  left: -50%;
   background-color: #fff;
   width: 420px;
   border-radius: 3px;
-  font-size: 16px;
   -webkit-user-select: none;
   overflow: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.c-msgbox-header {
-  padding: 20px 20px 0; }
+.c-msgbox-title {
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 42px;
+  font-weight: 700;
+  height: 42px;
+  background-color: #F8F8F8; }
 
 .c-msgbox-content {
   padding: 30px 20px;
   color: #475669;
-  font-size: 14px;
+  font-size: 15px;
   position: relative; }
 
 .c-msgbox-close {
   display: inline-block;
   position: absolute;
-  top: 19px;
+  top: 16px;
   right: 20px;
   color: #999;
   cursor: pointer;
@@ -278,7 +287,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   text-align: center; }
 
 .c-msgbox-close:hover {
-  color: #20a0ff; }
+  color: #5FB878; }
 
 .c-msgbox-input {
   padding-top: 15px; }
@@ -293,51 +302,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   min-height: 18px;
   margin-top: 2px; }
 
-.c-msgbox-title {
-  padding-left: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: 700;
-  height: 18px;
-  color: #333; }
-
-.c-msgbox-message {
-  margin: 0; }
-
-.c-msgbox-message p {
-  margin: 0;
-  line-height: 1.4; }
-
 .c-msgbox-btns {
-  padding: 10px 20px 15px;
+  padding: 5px 20px 15px;
   text-align: right; }
 
 .c-msgbox-btns button:nth-child(2) {
   margin-left: 10px; }
-
-.c-msgbox-btns-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse; }
 
 .c-msgbox-status {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 36px !important; }
-
-.c-msgbox-status.c-icon-circle-check {
-  color: #13ce66; }
-
-.c-msgbox-status.c-icon-information {
-  color: #50bfff; }
-
-.c-msgbox-status.c-icon-warning {
-  color: #f7ba2a; }
-
-.c-msgbox-status.c-icon-circle-cross {
-  color: #ff4949; }
 
 .msgbox-bounce-enter-active {
   animation: msgbox-bounce-in 0.3s cubic-bezier(0.3, 0, 0, 1.5); }
@@ -347,14 +323,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 @keyframes msgbox-bounce-in {
   0% {
-    transform: translate3d(-50%, -50%, 0) scale(0.8); }
+    transform: scale(0.8); }
   100% {
-    transform: translate3d(-50%, -50%, 0) scale(1); } }
+    transform: scale(1); } }
 @keyframes msgbox-bounce-out {
   0% {
-    transform: translate3d(-50%, -50%, 0) scale(1); }
+    transform: scale(1); }
   100% {
-    transform: translate3d(-50%, -50%, 0) scale(0.7); } }
+    transform: scale(0.7); } }
 .c-notification {
   width: 330px;
   padding: 20px;
