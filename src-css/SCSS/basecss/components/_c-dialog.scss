@@ -28,12 +28,19 @@
     background: #000
 }
 
+.c-dialog-wrapper {
+    position: fixed;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .c-dialog {
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    left: -50%;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 3px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
     box-sizing: border-box
 }
@@ -55,36 +62,6 @@
     top: 0;
     height: 100%;
     overflow: auto
-}
-
-.c-dialog-wrapper {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    overflow: auto;
-    margin: 0
-}
-
-.c-dialog-header {
-    padding: 20px 20px 0
-}
-
-.c-dialog-close {
-    cursor: pointer;
-    color: #C0CCDA
-}
-
-.c-dialog-close:hover {
-    color: #20a0ff
-}
-
-.c-dialog-title {
-    line-height: 1;
-    font-size: 16px;
-    font-weight: 700;
-    color: #1f2d3d
 }
 
 .c-dialog-body {

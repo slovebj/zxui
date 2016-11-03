@@ -6,11 +6,9 @@
         :class="[sizeClass, customClass]"
         ref="dialog"
         :style="style">
-        <div class="c-dialog-header">
-          <span class="c-dialog-title">{{title}}</span>
-          <div class="c-dialog-headerbtn">
-            <i class="c-dialog-close c-icon c-icon-close" @click='close()'></i>
-          </div>
+        <div class="c-msgbox-title" :class="titleClass" v-if="title !== ''">
+          {{ title }}
+          <i class="c-msgbox-close iconfont icon-close" @click="close()" v-if="showClose"></i>
         </div>
         <div class="c-dialog-body" v-if="rendered"><slot></slot></div>
         <div class="c-dialog-footer" v-if="$slots.footer">
@@ -31,6 +29,11 @@
 
     props: {
       title: {
+        type: String,
+        default: ''
+      },
+
+      titleClass: {
         type: String,
         default: ''
       },
@@ -68,6 +71,11 @@
       top: {
         type: String,
         default: '15%'
+      },
+
+      showClose: {
+        type: Boolean,
+        default: true
       }
     },
 
