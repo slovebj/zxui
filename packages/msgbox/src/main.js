@@ -3,8 +3,9 @@ var CANCEL_TEXT = '取消';
 
 var defaults = {
   title: '提示',
+  titleClass: '',
   msg: '',
-  type: '',
+  icon: '',
   showInput: false,
   showClose: true,
   modalFade: true,
@@ -14,15 +15,15 @@ var defaults = {
   inputPattern: null,
   inputValidator: null,
   inputErrorMsg: '',
-  showConfirmButton: true,
-  showCancelButton: false,
-  confirmButtonPosition: 'right',
-  confirmButtonHighlight: false,
-  cancelButtonHighlight: false,
-  confirmButtonText: CONFIRM_TEXT,
-  cancelButtonText: CANCEL_TEXT,
-  confirmButtonClass: '',
-  cancelButtonClass: ''
+  showConfirmBtn: true,
+  showCancelBtn: false,
+  confirmBtnPosition: 'right',
+  confirmBtnHighlight: false,
+  cancelBtnHighlight: false,
+  confirmBtnText: CONFIRM_TEXT,
+  cancelBtnText: CANCEL_TEXT,
+  confirmBtnClass: '',
+  cancelBtnClass: ''
 };
 
 import Vue from 'vue';
@@ -176,7 +177,7 @@ Msgbox.confirm = function(msg, title, options) {
     title: title,
     msg: msg,
     $type: 'confirm',
-    showCancelButton: true
+    showCancelBtn: true
   }, options));
 };
 
@@ -188,7 +189,7 @@ Msgbox.prompt = function(msg, title, options) {
   return Msgbox(merge({
     title: title,
     msg: msg,
-    showCancelButton: true,
+    showCancelBtn: true,
     showInput: true,
     $type: 'prompt'
   }, options));

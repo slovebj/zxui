@@ -2,21 +2,21 @@
   <div class="c-msgbox-wrapper">
     <transition name="msgbox-bounce">
       <div class="c-msgbox" v-show="value">
-        <div class="c-msgbox-title" :class="color" v-if="title !== ''">
+        <div class="c-msgbox-title" :class="titleClass" v-if="title !== ''">
           {{ title }}
           <i class="c-msgbox-close iconfont icon-close" @click="handleAction('cancel')" v-if="showClose"></i>
         </div>
         <div class="c-msgbox-content" v-if="msg !== ''">
-          <i class="c-msgbox-status iconfont" :class="[ icon,iconClass ]"></i>
-          <div :style="{ 'margin-left': iconClass ? '50px' : '0' }">{{ msg }}</div>
+          <i class="c-msgbox-icon iconfont" :class="icon"></i>
+          <div :style="{ 'margin-left': icon ? '50px' : '0' }">{{ msg }}</div>
           <div class="c-msgbox-input" v-show="showInput">
             <c-input v-model="inputValue" :placeholder="inputPlaceholder" ref="input"></c-input>
             <div class="c-msgbox-errormsg" :style="{ visibility: !!editorErrorMsg ? 'visible' : 'hidden' }">{{ editorErrorMsg }}</div>
           </div>
         </div>
         <div class="c-msgbox-btns">
-          <button :class="[ cancelButtonClasses ]" v-show="showCancelButton" @click="handleAction('cancel')">{{ cancelButtonText }}</button>
-          <button :class="[ confirmButtonClasses ]" v-show="showConfirmButton" @click="handleAction('confirm')">{{ confirmButtonText }}</button>
+          <button class="btn" :class="cancelBtnClass" v-show="showCancelBtn" @click="handleAction('cancel')">{{ cancelBtnText }}</button>
+          <button class="btn" :class="confirmBtnClass" v-show="showConfirmBtn" @click="handleAction('confirm')">{{ confirmBtnText }}</button>
         </div>
       </div>
     </transition>
@@ -34,7 +34,6 @@
     name: 'c-msgbox',
     mixins: [ Popup ],
     props: {
-      color: String,
       modal: {
         default: true
       },
@@ -52,19 +51,6 @@
 
     components: {
       CInput
-    },
-
-    computed: {
-      iconClass() {
-        return (this.icon ? 'icon-' + this.icon : '');
-      },
-
-      confirmButtonClasses() {
-        return `btn btn-o ${ this.confirmButtonClass }`;
-      },
-      cancelButtonClasses() {
-        return `btn ${ this.cancelButtonClass }`;
-      }
     },
 
     methods: {
@@ -147,21 +133,22 @@
     data() {
       return {
         title: '',
+        titleClass: '',
         msg: '',
-        type: '',
+        icon: '',
         showInput: false,
         inputValue: null,
         inputPlaceholder: '',
         inputPattern: null,
         inputValidator: null,
         inputErrorMsg: '',
-        showConfirmButton: true,
-        showCancelButton: false,
-        confirmButtonText: CONFIRM_TEXT,
-        cancelButtonText: CANCEL_TEXT,
-        confirmButtonClass: '',
-        confirmButtonDisabled: false,
-        cancelButtonClass: '',
+        showConfirmBtn: true,
+        showCancelBtn: false,
+        confirmBtnText: CONFIRM_TEXT,
+        cancelBtnText: CANCEL_TEXT,
+        confirmBtnClass: '',
+        confirmBtnDisabled: false,
+        cancelBtnClass: '',
 
         editorErrorMsg: null,
         callback: null

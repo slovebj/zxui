@@ -8,7 +8,7 @@ var demoMsgbox = new Vue({
 
       open2() {
         this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
-          type: 'warning'
+          icon: 'icon-warning fg-orange7'
         }).then(() => {
           setTimeout(() => {
             this.$msg({
@@ -51,6 +51,7 @@ var demoMsgbox = new Vue({
       open4() {
         this.$msgbox({
           title: '消息',
+          titleClass: 'bg-blue6',
           msg: '这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容',
           showCancelButton: true
         }).then(action => {

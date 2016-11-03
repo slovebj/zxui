@@ -19,10 +19,10 @@
 
 .c-msgbox-title {
     padding: 0 20px;
-    font-size: 16px;
     line-height: 42px;
     height: 42px;
-    background-color: #E6E6E6;
+    color:#fff;
+    background-color: $color-primary;
 }
 
 .c-msgbox-content {
@@ -34,12 +34,12 @@
 
 .c-msgbox-close {
     float: right;
-    color: #999;
+    color: #ccc;
     cursor: pointer;
 }
 
 .c-msgbox-close:hover {
-    color: $color-active;
+    color: #fff;
 }
 
 .c-msgbox-input {
@@ -60,7 +60,7 @@
 
 
 .c-msgbox-btns {
-    padding: 5px 20px 15px;
+    padding: 0 20px 10px;
     text-align: right
 }
 
@@ -68,7 +68,7 @@
     margin-left: 10px
 }
 
-.c-msgbox-status {
+.c-msgbox-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

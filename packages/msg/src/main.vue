@@ -1,9 +1,11 @@
 <template>
   <transition name="c-msg-fade">
-    <div class="c-msg" :class="[type,atTop]" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
-        <i class="iconfont f4" :class="iconClass"></i>
+    <div class="c-msg" :class="atTop" v-show="visible" @mouseenter="clearTimer" @mouseleave="startTimer">
+      <div class="c-msg-content" :class="type">
+        <i class="iconfont f5" :class="iconClass"></i>
         <span >{{ msg }}</span>
         <span class="c-msg-closebtn" v-show="closeText!==''" @click="handleClose">{{closeText}}</span>
+      </div>
     </div>
   </transition>
 </template>

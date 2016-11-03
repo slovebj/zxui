@@ -212,15 +212,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   opacity: 0; }
 
 .c-msg {
-  padding: 10px 0 10px 16px;
   position: fixed;
   left: 50%;
-  transform: translateX(-50.01%);
+  z-index: 3000;
+  transition: opacity 0.3s, transform .4s; }
+
+.c-msg-content {
+  padding: 7px 0 5px 16px;
+  position: relative;
+  left: -50%;
   background-color: #5c5c5c;
   color: #fff;
-  transition: opacity 0.3s, transform .4s;
-  overflow: hidden;
-  z-index: 3000; }
+  overflow: hidden; }
 
 .c-msg.top {
   top: 20px; }
@@ -228,7 +231,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-msg.bottom {
   bottom: 24px; }
 
-.c-msg > * {
+.c-msg-content > * {
   vertical-align: middle;
   margin-right: 16px; }
 
@@ -238,11 +241,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .c-msg-fade-enter,
 .c-msg-fade-leave-active {
   opacity: 0;
-  transform: translate(-50.01%, -100%); }
+  transform: translateY(-100%); }
 
 .c-msg-fade-enter.bottom,
 .c-msg-fade-leave-active.bottom {
-  transform: translate(-50.01%, 100%); }
+  transform: translateY(100%); }
 
 .c-msgbox-wrapper {
   position: fixed;
@@ -264,11 +267,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .c-msgbox-title {
   padding: 0 20px;
-  font-size: 16px;
   line-height: 42px;
-  font-weight: 700;
   height: 42px;
-  background-color: #F8F8F8; }
+  color: #fff;
+  background-color: #26a69a; }
 
 .c-msgbox-content {
   padding: 30px 20px;
@@ -277,17 +279,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   position: relative; }
 
 .c-msgbox-close {
-  display: inline-block;
-  position: absolute;
-  top: 16px;
-  right: 20px;
-  color: #999;
-  cursor: pointer;
-  line-height: 20px;
-  text-align: center; }
+  float: right;
+  color: #ccc;
+  cursor: pointer; }
 
 .c-msgbox-close:hover {
-  color: #5FB878; }
+  color: #fff; }
 
 .c-msgbox-input {
   padding-top: 15px; }
@@ -303,13 +300,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   margin-top: 2px; }
 
 .c-msgbox-btns {
-  padding: 5px 20px 15px;
+  padding: 0 20px 10px;
   text-align: right; }
 
 .c-msgbox-btns button:nth-child(2) {
   margin-left: 10px; }
 
-.c-msgbox-status {
+.c-msgbox-icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
