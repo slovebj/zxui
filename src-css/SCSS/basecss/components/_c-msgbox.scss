@@ -25,17 +25,21 @@
     background-color: $color-primary;
 }
 
+.c-msgbox-title > i {
+    float: right;
+    color: #ccc;
+    cursor: pointer;
+    margin-left: .5rem;
+    &:hover {
+    color: #fff;
+  }
+}
+
 .c-msgbox-content {
     padding: 30px 20px;
     color: #475669;
     font-size: 15px;
     position: relative
-}
-
-.c-msgbox-close {
-    float: right;
-    color: #ccc;
-    cursor: pointer;
 }
 
 .c-msgbox-close:hover {

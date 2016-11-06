@@ -19,7 +19,7 @@
         "build:entry": "node build/bin/build-entry.js",
         "dev": "npm run bootstrap && npm run build:entry",
         "dist": "npm run build:entry && npm run lint && cooking build -c build/cooking.conf.js,build/cooking.component.js -p && npm run build:utils",
-        "dist:c": "node packages/build-all.js",
+        "dist:c": "npm run lint && cooking build -c build/cooking.conf.js",
         "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-default/gulpfile.js && cp-cli packages/theme-default/lib lib/theme-default",
         "deploy": "npm run build:file && cooking build -c build/cooking.demo.js -p && echo element.eleme.io>>examples/zxui/CNAME && gh-pages -d examples/element-ui --remote eleme && del examples/element-ui",
         "bootstrap": "npm i && lerna bootstrap",

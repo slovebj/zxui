@@ -1,14 +1,14 @@
 <template>
   <transition name="dialog-fade">
-    <div class="c-dialog-wrapper" v-show="value" @click.self="handleWrapperClick">
+    <div class="c-dialog-wrapper" :style="widthStyle" v-show="value" @click.self="handleWrapperClick">
       <div
         class="c-dialog"
-        :class="[sizeClass, customClass]"
-        ref="dialog"
-        :style="style">
+        :style="heightStyle"
+        ref="dialog">
         <div class="c-msgbox-title" :class="titleClass" v-if="title !== ''">
           {{ title }}
-          <i class="c-msgbox-close iconfont icon-close" @click="close()" v-if="showClose"></i>
+          <i class="iconfont icon-close" @click="close()" v-if="showClose"></i>
+          <i class="iconfont" :class="fullClass" @click="fullScreen()" v-if="resize"></i>
         </div>
         <div class="c-dialog-body" v-if="rendered"><slot></slot></div>
         <div class="c-dialog-footer" v-if="$slots.footer">
@@ -48,29 +48,34 @@
         default: true
       },
 
-      closeOnClickModal: {
+      modalClose: {
         type: Boolean,
         default: true
       },
 
-      closeOnPressEscape: {
+      escClose: {
         type: Boolean,
         default: true
       },
 
-      size: {
+      width: {
         type: String,
-        default: 'small'
+        default: '20%'
       },
 
-      customClass: {
+      height: {
         type: String,
         default: ''
       },
 
-      top: {
-        type: String,
-        default: '15%'
+      full: {
+        type: Boolean,
+        default: false
+      },
+
+      resize: {
+        type: Boolean,
+        default: true
       },
 
       showClose: {
@@ -93,19 +98,26 @@
     },
 
     computed: {
-      sizeClass() {
-        return `c-dialog-${ this.size }`;
+      widthStyle() {
+        return this.full ? { 'width': '100%'} : (this.width ? { 'width': this.width } : '');
       },
-      style() {
-        return this.size === 'full' ? {} : { 'margin-bottom': '50px', 'top': this.top };
+      heightStyle() {
+        return this.full ? { 'height': '100%'} : (this.height ? { 'height': this.height } : '');
+      },
+      fullClass() {
+        return this.full ? 'icon-exitfull' : 'icon-full';
       }
     },
 
     methods: {
       handleWrapperClick() {
-        if (this.closeOnClickModal) {
+        if (this.modalClose) {
           this.$emit('input', false);
         }
+      },
+
+      fullScreen() {
+        this.full = !this.full;
       }
     },
 

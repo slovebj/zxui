@@ -73,7 +73,7 @@ var demoDialog = new Vue({
 <demo-block class="demo-box">
                     <div class="source"><button type="button" class="btn" @click="dialogVisible = true">点击打开 Dialog</button>
 
-<c-dialog title="提示" v-model="dialogVisible" size="tiny">
+<c-dialog title="提示" v-model="dialogVisible" width="40%" height="30%" modal="false">
   <span>这是一段信息</span>
   <span slot="footer" class="dialog-footer">
     <button type="button" class="btn" @click="dialogVisible = false">取 消</button>
@@ -86,7 +86,7 @@ var demoDialog = new Vue({
 </div>
                       <div class="highlight"><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"dialogVisible = true"</span>&gt;</span>点击打开 Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">c-dialog</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"提示"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"dialogVisible"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"tiny"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">c-dialog</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"提示"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"dialogVisible"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"40%"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"30%"</span> <span class="hljs-attr">modal</span>=<span class="hljs-string">false</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>这是一段信息<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"footer"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"dialog-footer"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"dialogVisible = false"</span>&gt;</span>取 消<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -101,7 +101,7 @@ var demoDialog = new Vue({
                     <div class="source"><!-- Table -->
 <button type="button" class="btn" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</button>
 
-<c-dialog title="收货地址" v-model="dialogTableVisible">
+<c-dialog title="收货地址" v-model="dialogTableVisible" modal="false">
   <el-table :data="gridData">
     <el-table-column property="date" label="日期" width="150"></el-table-column>
     <el-table-column property="name" label="姓名" width="200"></el-table-column>
@@ -135,7 +135,7 @@ var demoDialog = new Vue({
                       <div class="highlight"><pre><code class="language-html"><span class="hljs-comment">&lt;!-- Table --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"dialogTableVisible = true"</span>&gt;</span>打开嵌套表格的 Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">c-dialog</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"收货地址"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"dialogTableVisible"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">c-dialog</span> <span class="hljs-attr">title</span>=<span class="hljs-string">"收货地址"</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">"dialogTableVisible"</span> <span class="hljs-attr">modal</span>=<span class="hljs-string">false</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">el-table</span> <span class="hljs-attr">:data</span>=<span class="hljs-string">"gridData"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"date"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"150"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"姓名"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"200"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
@@ -185,11 +185,25 @@ var demoDialog = new Vue({
 <td>—</td>
 </tr>
 <tr>
-<td>size</td>
-<td>Dialog 的大小</td>
+<td>title-class</td>
+<td>Dialog 的标题样式类</td>
 <td>string</td>
-<td>tiny/small/large/full</td>
-<td>small</td>
+<td>预定义的各颜色、字体类</td>
+<td>—</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Dialog 的宽度</td>
+<td>string</td>
+<td>0~100%</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Dialog 的高度</td>
+<td>string</td>
+<td>0~100%</td>
+<td>-</td>
 </tr>
 <tr>
 <td>modal</td>
@@ -199,21 +213,35 @@ var demoDialog = new Vue({
 <td>true</td>
 </tr>
 <tr>
-<td>custom-class</td>
-<td>Dialog 的自定义类名</td>
-<td>string</td>
+<td>full</td>
+<td>Dialog 全屏或最大化</td>
+<td>boolean</td>
 <td>—</td>
-<td>—</td>
+<td>false</td>
 </tr>
 <tr>
-<td>close-on-click-modal</td>
+<td>resize</td>
+<td>Dialog 可以调整尺寸及显示全屏或最大化按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>true</td>
+</tr>
+<tr>
+<td>show-close</td>
+<td>是否显示关闭按钮</td>
+<td>boolean</td>
+<td>—</td>
+<td>true</td>
+</tr>
+<tr>
+<td>modal-close</td>
 <td>是否可以通过点击 modal 关闭 Dialog</td>
 <td>boolean</td>
 <td>—</td>
 <td>true</td>
 </tr>
 <tr>
-<td>close-on-press-escape</td>
+<td>esc-close</td>
 <td>是否可以通过按下 ESC 关闭 Dialog</td>
 <td>boolean</td>
 <td>—</td>
