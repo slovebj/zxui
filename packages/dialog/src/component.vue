@@ -1,6 +1,6 @@
 <template>
   <transition name="dialog-fade">
-    <div class="c-dialog-wrapper" :style="widthStyle" v-show="value" @click.self="handleWrapperClick">
+    <div :class="dialogClass" :style="widthStyle" v-show="value" @click.self="handleWrapperClick">
       <div
         class="c-dialog"
         :style="heightStyle"
@@ -48,12 +48,12 @@
         default: true
       },
 
-      modalClose: {
+      closeOnClickModal: {
         type: Boolean,
         default: true
       },
 
-      escClose: {
+      closeOnPressEscape: {
         type: Boolean,
         default: true
       },
@@ -78,6 +78,11 @@
         default: true
       },
 
+      absolute: {
+        type: Boolean,
+        default: false
+      },
+
       showClose: {
         type: Boolean,
         default: true
@@ -98,6 +103,9 @@
     },
 
     computed: {
+      dialogClass() {
+        return this.absolute ? 'c-dialog-absolute' : 'c-dialog-fixed';
+      },
       widthStyle() {
         return this.full ? { 'width': '100%'} : (this.width ? { 'width': this.width } : '');
       },
@@ -111,7 +119,7 @@
 
     methods: {
       handleWrapperClick() {
-        if (this.modalClose) {
+        if (this.closeOnClickModal && this.absolute !== true) {
           this.$emit('input', false);
         }
       },

@@ -608,7 +608,7 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
   opacity: .5;
   background: #000; }
 
-.c-dialog-wrapper {
+.c-dialog-fixed {
   position: fixed;
   top: 0;
   left: 50%;
@@ -616,6 +616,16 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
   align-items: center;
   height: 100%;
   min-width: 320px; }
+
+.c-dialog-absolute {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-width: 320px;
+  z-index: 2000; }
 
 .c-dialog {
   position: relative;

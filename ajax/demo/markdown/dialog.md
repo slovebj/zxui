@@ -79,7 +79,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
 ```html
 <button type="button" class="btn" @click="dialogVisible = true">点击打开 Dialog</button>
 
-<c-dialog title="提示" v-model="dialogVisible" width="40%" height="30%" modal=false>
+<c-dialog title="提示" v-model="dialogVisible" width="40%" height="30%" modal>
   <span>这是一段信息</span>
   <span slot="footer" class="dialog-footer">
     <button type="button" class="btn" @click="dialogVisible = false">取 消</button>
@@ -98,7 +98,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 <!-- Table -->
 <button type="button" class="btn" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</button>
 
-<c-dialog title="收货地址" v-model="dialogTableVisible" modal=false>
+<c-dialog title="收货地址" v-model="dialogTableVisible" :modal="false" absolute>
   <el-table :data="gridData">
     <el-table-column property="date" label="日期" width="150"></el-table-column>
     <el-table-column property="name" label="姓名" width="200"></el-table-column>
@@ -137,11 +137,12 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 | width      | Dialog 的宽度 | string    | 0~100% | 20% |
 | height      | Dialog 的高度 | string    | 0~100% | -     |
 | modal     | 是否需要遮罩层   | boolean   | — | true |
+| absolute     | position设置为absolute，使Dialog处于navTab中   | boolean   | — | false |
 | full      | Dialog 全屏或最大化 | boolean    | — | false |
 | resize      | Dialog 可以调整尺寸及显示全屏或最大化按钮 | boolean    | — | true |
 | show-close | 是否显示关闭按钮 | boolean    | — | true |
-| modal-close | 是否可以通过点击 modal 关闭 Dialog | boolean    | — | true |
-| esc-close | 是否可以通过按下 ESC 关闭 Dialog | boolean    | — | true |
+| close-on-click-modal | 是否可以通过点击 modal 关闭 Dialog | boolean    | — | true |
+| close-on-press-escape | 是否可以通过按下 ESC 关闭 Dialog | boolean    | — | true |
 
 ### Slot
 | name | 说明 |

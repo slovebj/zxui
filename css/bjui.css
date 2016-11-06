@@ -31,8 +31,8 @@
 #navtab > .tabsMoreList > li{height:1.5rem;line-height:1.5rem;overflow:hidden;}
 #navtab > .tabsMoreList > li a{ padding:0 15px; height:1.5rem; white-space:nowrap;color: #fff;}
 #navtab > .tabsMoreList > li a:hover{text-decoration:none;font-weight: bolder;}
-#navtab > .navtabBody{position: absolute;overflow-y: scroll;top: 1.6rem;bottom: 1.5rem;right: 0;left: 0;}
-#navtab > .navtabBody > .navtabPage{height:100%;}
+#navtab > .navtabBody{position: absolute;top: 1.6rem;bottom: 1.5rem;right: 0;left: 0;}
+#navtab > .navtabBody > .navtabPage{height:100%;overflow-y: scroll;}
 
 /* Contextmenu */
 #contextmenu{position:absolute; z-index:1000; left:0; top:0; display:none; border-radius:4px;background-color: #736086;}
