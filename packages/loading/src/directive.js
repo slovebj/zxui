@@ -1,4 +1,6 @@
-import Spinner from './spinner';
+import Vue from 'vue';
+let Spinner = Vue.extend(require('./spinner.vue'));
+
 exports.install = Vue => {
   let toggleLoading = (el, binding) => {
     if (binding.value) {
@@ -44,7 +46,7 @@ exports.install = Vue => {
         el.spinner.style.display = 'none';
         el.domVisible = false;
 
-        if (binding.modifiers.fullscreen) {
+        if (binding.modifiers.fullscreen && el.originalOverflow !== 'hidden') {
           document.body.style.overflow = el.originalOverflow;
         }
         if (binding.modifiers.fullscreen || binding.modifiers.body) {
@@ -88,11 +90,18 @@ exports.install = Vue => {
       el.maskStyle = {
         position: 'absolute',
         zIndex: '10000',
-        backgroundColor: 'rgba(0, 0, 0, .65)',
+        backgroundColor: 'rgba(255, 255, 255, .9)',
         margin: '0'
       };
 
-      el.spinner = (new Spinner()).el;
+      let spinner = new Spinner({
+        data: {
+          text: el.getAttribute('element-loading-text'),
+          fullScreen: !!binding.modifiers.fullscreen
+        }
+      });
+      spinner.$mount(el.mask);
+      el.spinner = spinner.$el;
       el.spinnerStyle = {
         position: 'absolute'
       };
@@ -111,8 +120,12 @@ exports.install = Vue => {
           document.body.removeChild(el.mask);
           el.mask.removeChild(el.spinner);
         } else {
-          el.removeChild(el.mask);
-          el.mask.removeChild(el.spinner);
+          el.mask &&
+          el.mask.parentNode &&
+          el.mask.parentNode.removeChild(el.mask);
+          el.spinner &&
+          el.spinner.parentNode &&
+          el.spinner.parentNode.removeChild(el.spinner);
         }
       }
     }
