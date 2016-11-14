@@ -90,13 +90,14 @@ exports.install = Vue => {
       el.maskStyle = {
         position: 'absolute',
         zIndex: '10000',
-        backgroundColor: 'rgba(255, 255, 255, .9)',
+        backgroundColor: '#000',
+        opacity: '0.8',
         margin: '0'
       };
 
       let spinner = new Spinner({
         data: {
-          text: el.getAttribute('element-loading-text'),
+          text: el.getAttribute('data-loading-text'),
           fullScreen: !!binding.modifiers.fullscreen
         }
       });

@@ -139,42 +139,42 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   font-weight: bold; }
 
 .c-loading-spinner {
-  height: 12px;
-  width: 60px;
   top: 50%;
-  left: 50%;
-  font-size: 0;
-  text-align: center;
-  margin-top: -6px;
-  margin-left: -30px;
-  z-index: 10001; }
+  margin-top: -21px;
+  width: 100%;
+  text-align: center; }
+  .c-loading-spinner .c-loading-text {
+    color: #fff;
+    margin: 3px 0;
+    font-size: 14px; }
+  .c-loading-spinner .circular {
+    width: 42px;
+    animation: rotate 2s linear infinite; }
+  .c-loading-spinner .path {
+    stroke-dasharray: 1, 100;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: #fff;
+    animation: dash 1.5s ease-in-out infinite;
+    stroke-linecap: round; }
+  .c-loading-spinner.full-screen {
+    margin-top: -25px; }
+    .c-loading-spinner.full-screen .circular {
+      width: 56px; }
 
-.c-loading-bubble {
-  height: 12px;
-  width: 12px;
-  background-color: #fff;
-  margin: 0 3px;
-  border-radius: 50%;
-  display: inline-block;
-  animation: 1s cubic-bezier(0.2, 0.68, 0.18, 1.08) infinite both bubble-pulse; }
-
-.c-loading-bubble.bubble1 {
-  animation-delay: 0.16s; }
-
-.c-loading-bubble.bubble2 {
-  animation-delay: 0.32s; }
-
-.c-loading-bubble.bubble3 {
-  animation-delay: 0.48s; }
-
-@keyframes bubble-pulse {
-  0%,
-    80% {
-    transform: scale(1);
-    opacity: 1; }
-  45% {
-    transform: scale(0);
-    opacity: 0; } }
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg); } }
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,150;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -124; } }
 .c-alert {
   width: 100%;
   padding: 5px 10px;

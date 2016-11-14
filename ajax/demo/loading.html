@@ -3,8 +3,21 @@ var demoLoading = new Vue({
     el: '#demo-loading',
     data() {
       return {
+        tableData: [{
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }],
         loading: true,
-        loading2: false,
+        loading2: true,
         fullscreenLoading: false
       }
     },
@@ -20,10 +33,8 @@ var demoLoading = new Vue({
   });
 </script>
 <style>
-  .demo-box .loading-demo {
-    border: solid 1px #999;
-    border-radius: 4px;
-    height: 100px;
+  .demo-loading .el-table {
+    border: none;
   }
 </style>
 <h2>Loading 加载</h2>
@@ -31,18 +42,120 @@ var demoLoading = new Vue({
 <h3>区域加载</h3>
 <p>在表格等容器中加载数据时显示。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <div v-loading="loading" class="loading-demo"></div>
+                    <div class="source">  <el-table v-loading.body="loading" :data="tableData" style="width: 100%">
+    <el-table-column prop="date" label="日期" width="180">
+    </el-table-column>
+    <el-table-column prop="name" label="姓名" width="180">
+    </el-table-column>
+    <el-table-column prop="address" label="地址">
+    </el-table-column>
+  </el-table>
+
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>在 Loading 组件中，Zxui 准备了自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加<code>body</code>修饰符，可以使遮罩插入至 DOM 中的 body 上。</p>
+                      <div class="description"><p>在 Loading 组件中，Element 准备了自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加<code>body</code>修饰符，可以使遮罩插入至 DOM 中的 body 上。</p>
 </div>
-                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loading-demo"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">el-table</span>
+    <span class="hljs-attr">v-loading.body</span>=<span class="hljs-string">"loading"</span>
+    <span class="hljs-attr">:data</span>=<span class="hljs-string">"tableData"</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"date"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"180"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"name"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"姓名"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"180"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"address"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"地址"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">el-table</span>&gt;</span>
+
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     data() {
       <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">tableData</span>: [{
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-03'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }, {
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-02'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }, {
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-04'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }],
         <span class="hljs-attr">loading</span>: <span class="hljs-literal">true</span>
+      };
+    }
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+</div></div></demo-block>
+<h3>加载文案</h3>
+<p>可自定义加载文案。</p>
+<demo-block class="demo-box">
+                    <div class="source">  <el-table v-loading="loading2" data-loading-text="拼命加载中" :data="tableData" style="width: 100%">
+    <el-table-column prop="date" label="日期" width="180">
+    </el-table-column>
+    <el-table-column prop="name" label="姓名" width="180">
+    </el-table-column>
+    <el-table-column prop="address" label="地址">
+    </el-table-column>
+  </el-table>
+
+
+</div>
+                    <div class="meta">
+                      <div class="description"><p>在绑定了<code>v-loading</code>指令的元素上添加<code>data-loading-text</code>属性，其值会被渲染为加载文案，并显示在加载图标的下方。</p>
+</div>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">el-table</span>
+    <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading2"</span>
+    <span class="hljs-attr">data-loading-text</span>=<span class="hljs-string">"拼命加载中"</span>
+    <span class="hljs-attr">:data</span>=<span class="hljs-string">"tableData"</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"date"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"180"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"name"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"姓名"</span>
+      <span class="hljs-attr">width</span>=<span class="hljs-string">"180"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
+      <span class="hljs-attr">prop</span>=<span class="hljs-string">"address"</span>
+      <span class="hljs-attr">label</span>=<span class="hljs-string">"地址"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">el-table-column</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">el-table</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    data() {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">tableData</span>: [{
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-03'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }, {
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-02'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }, {
+          <span class="hljs-attr">date</span>: <span class="hljs-string">'2016-05-04'</span>,
+          <span class="hljs-attr">name</span>: <span class="hljs-string">'王小虎'</span>,
+          <span class="hljs-attr">address</span>: <span class="hljs-string">'上海市普陀区金沙江路 1518 弄'</span>
+        }],
+        <span class="hljs-attr">loading2</span>: <span class="hljs-literal">true</span>
       };
     }
   };
@@ -52,18 +165,19 @@ var demoLoading = new Vue({
 <h3>整页加载</h3>
 <p>页面数据加载时显示。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <button type="button" class="btn" @click="openFullScreen" v-loading.fullscreen="fullscreenLoading">
+                    <div class="source">  <button type="button" @click="openFullScreen" v-loading.fullscreen.lock="fullscreenLoading">
     显示整页加载，3 秒后消失
   </button>
 
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>当需要全屏遮罩时，可使用<code>fullscreen</code>修饰符（此时遮罩会插入至 body 上）</p>
+                      <div class="description"><p>当需要全屏遮罩时，可使用<code>fullscreen</code>修饰符（此时遮罩会插入至 body 上）。此时若需要锁定屏幕的滚动，可以使用<code>lock</code>修饰符。</p>
 </div>
-                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn"</span>
+                      <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>
     @<span class="hljs-attr">click</span>=<span class="hljs-string">"openFullScreen"</span>
-    <span class="hljs-attr">v-loading.fullscreen</span>=<span class="hljs-string">"fullscreenLoading"</span>&gt;</span>
+    <span class="hljs-attr">v-loading.fullscreen.lock</span>=<span class="hljs-string">"fullscreenLoading"</span>&gt;</span>
     显示整页加载，3 秒后消失
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -73,8 +187,8 @@ var demoLoading = new Vue({
       <span class="hljs-keyword">return</span> {
         <span class="hljs-attr">fullscreenLoading</span>: <span class="hljs-literal">false</span>
       }
-    }
-    methods: {
+    },
+    <span class="hljs-attr">methods</span>: {
       openFullScreen() {
         <span class="hljs-keyword">this</span>.fullscreenLoading = <span class="hljs-literal">true</span>;
         setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {

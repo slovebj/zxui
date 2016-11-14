@@ -1,17 +1,17 @@
 .c-loading-spinner {
   top: 50%;
-  margin-top: calc(- var(--loading-spinner-size) / 2);
+  margin-top: -21px;
   width: 100%;
   text-align: center;
 
   .c-loading-text {
-    color: var(--color-primary);
+    color: #fff;
     margin: 3px 0;
     font-size: 14px;
   }
 
   .circular {
-    width: var(--loading-spinner-size);
+    width: 42px;
     animation: rotate 2s linear infinite;
   }
 
@@ -19,16 +19,16 @@
     stroke-dasharray: 1, 100;
     stroke-dashoffset: 0;
     stroke-width: 2;
-    stroke: var(--color-primary);
+    stroke: #fff;
     animation: dash 1.5s ease-in-out infinite;
     stroke-linecap: round;
   }
 
-  @when full-screen {
-    margin-top: calc(- var(--loading-fullscreen-spinner-size) / 2);
+  &.full-screen {
+    margin-top: -25px;
 
     .circular {
-      width: var(--loading-fullscreen-spinner-size);
+      width: 56px;
     }
   }
 }
@@ -41,15 +41,15 @@
 
 @keyframes dash {
   0% {
-    stroke-dasharray: 1, 100;
-    stroke-dashoffset: 0;
+      stroke-dasharray: 1,150;
+      stroke-dashoffset: 0;
   }
   50% {
-    stroke-dasharray: 45, 100;
-    stroke-dashoffset: -35px;
+      stroke-dasharray: 90,150;
+      stroke-dashoffset: -35;
   }
   100% {
-    stroke-dasharray: 45, 100;
-    stroke-dashoffset: -124px;
+      stroke-dasharray: 90,150;
+      stroke-dashoffset: -124;
   }
 }
