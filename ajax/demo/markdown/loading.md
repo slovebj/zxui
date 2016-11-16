@@ -18,16 +18,15 @@ var demoLoading = new Vue({
         }],
         loading: true,
         loading2: true,
-        fullscreenLoading: false
+        loading3: false
       }
     },
-
     methods: {
-      openFullScreen() {
-        this.fullscreenLoading = true;
+      navTabLoading() {
+        this.loading3 = 'demo-loading';
         setTimeout(() => {
-          this.fullscreenLoading = false;
-        }, 3000);
+          this.loading3 = false;
+        }, 3000000);
       }
     }
   });
@@ -48,7 +47,7 @@ var demoLoading = new Vue({
 :::demo 在 Loading 组件中，Element 准备了自定义命令`v-loading`，只需要绑定`Boolean`即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加`body`修饰符，可以使遮罩插入至 DOM 中的 body 上。
 ```html
   <el-table
-    v-loading.body="loading"
+    v-loading="loading"
     :data="tableData"
     style="width: 100%">
     <el-table-column
@@ -148,13 +147,13 @@ var demoLoading = new Vue({
 
 页面数据加载时显示。
 
-:::demo 当需要全屏遮罩时，可使用`fullscreen`修饰符（此时遮罩会插入至 body 上）。此时若需要锁定屏幕的滚动，可以使用`lock`修饰符。
+:::demo 当需要指定在哪个页面范围内显示loading层时，可将loading的value值由true设置为id的名称。此时若需要锁定屏幕的滚动，可以使用`lock`修饰符。
 
 ```html
   <button
     type="button"
-    @click="openFullScreen"
-    v-loading.fullscreen.lock="fullscreenLoading">
+    @click="navTabLoading"
+    v-loading.lock="loading3">
     显示整页加载，3 秒后消失
   </button>
 
@@ -162,14 +161,14 @@ var demoLoading = new Vue({
   export default {
     data() {
       return {
-        fullscreenLoading: false
+        loading3: false
       }
     },
     methods: {
-      openFullScreen() {
-        this.fullscreenLoading = true;
+      navTabLoading() {
+        this.loading3 = true;
         setTimeout(() => {
-          this.fullscreenLoading = false;
+          this.loading3 = false;
         }, 3000);
       }
     }

@@ -18,16 +18,15 @@ var demoLoading = new Vue({
         }],
         loading: true,
         loading2: true,
-        fullscreenLoading: false
+        loading3: false
       }
     },
-
     methods: {
-      openFullScreen() {
-        this.fullscreenLoading = true;
+      navTabLoading() {
+        this.loading3 = 'demo-loading';
         setTimeout(() => {
-          this.fullscreenLoading = false;
-        }, 3000);
+          this.loading3 = false;
+        }, 3000000);
       }
     }
   });
@@ -42,7 +41,7 @@ var demoLoading = new Vue({
 <h3>区域加载</h3>
 <p>在表格等容器中加载数据时显示。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <el-table v-loading.body="loading" :data="tableData" style="width: 100%">
+                    <div class="source">  <el-table v-loading="loading" :data="tableData" style="width: 100%">
     <el-table-column prop="date" label="日期" width="180">
     </el-table-column>
     <el-table-column prop="name" label="姓名" width="180">
@@ -57,7 +56,7 @@ var demoLoading = new Vue({
                       <div class="description"><p>在 Loading 组件中，Element 准备了自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加<code>body</code>修饰符，可以使遮罩插入至 DOM 中的 body 上。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">el-table</span>
-    <span class="hljs-attr">v-loading.body</span>=<span class="hljs-string">"loading"</span>
+    <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading"</span>
     <span class="hljs-attr">:data</span>=<span class="hljs-string">"tableData"</span>
     <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
@@ -165,19 +164,19 @@ var demoLoading = new Vue({
 <h3>整页加载</h3>
 <p>页面数据加载时显示。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <button type="button" @click="openFullScreen" v-loading.fullscreen.lock="fullscreenLoading">
+                    <div class="source">  <button type="button" @click="navTabLoading" v-loading.lock="loading3">
     显示整页加载，3 秒后消失
   </button>
 
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>当需要全屏遮罩时，可使用<code>fullscreen</code>修饰符（此时遮罩会插入至 body 上）。此时若需要锁定屏幕的滚动，可以使用<code>lock</code>修饰符。</p>
+                      <div class="description"><p>当需要指定在哪个页面范围内显示loading层时，可将loading的value值由true设置为id的名称。此时若需要锁定屏幕的滚动，可以使用<code>lock</code>修饰符。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
     <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>
-    @<span class="hljs-attr">click</span>=<span class="hljs-string">"openFullScreen"</span>
-    <span class="hljs-attr">v-loading.fullscreen.lock</span>=<span class="hljs-string">"fullscreenLoading"</span>&gt;</span>
+    @<span class="hljs-attr">click</span>=<span class="hljs-string">"navTabLoading"</span>
+    <span class="hljs-attr">v-loading.lock</span>=<span class="hljs-string">"loading3"</span>&gt;</span>
     显示整页加载，3 秒后消失
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
@@ -185,14 +184,14 @@ var demoLoading = new Vue({
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     data() {
       <span class="hljs-keyword">return</span> {
-        <span class="hljs-attr">fullscreenLoading</span>: <span class="hljs-literal">false</span>
+        <span class="hljs-attr">loading3</span>: <span class="hljs-literal">false</span>
       }
     },
     <span class="hljs-attr">methods</span>: {
-      openFullScreen() {
-        <span class="hljs-keyword">this</span>.fullscreenLoading = <span class="hljs-literal">true</span>;
+      navTabLoading() {
+        <span class="hljs-keyword">this</span>.loading3 = <span class="hljs-literal">true</span>;
         setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-          <span class="hljs-keyword">this</span>.fullscreenLoading = <span class="hljs-literal">false</span>;
+          <span class="hljs-keyword">this</span>.loading3 = <span class="hljs-literal">false</span>;
         }, <span class="hljs-number">3000</span>);
       }
     }
