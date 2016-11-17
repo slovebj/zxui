@@ -26,7 +26,7 @@ var demoLoading = new Vue({
         this.loading3 = 'demo-loading';
         setTimeout(() => {
           this.loading3 = false;
-        }, 3000000);
+        }, 3000);
       }
     }
   });
@@ -41,7 +41,7 @@ var demoLoading = new Vue({
 <h3>区域加载</h3>
 <p>在表格等容器中加载数据时显示。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <el-table v-loading="loading" :data="tableData" style="width: 100%">
+                    <div class="source">  <el-table v-loading="loading" :data="tableData" style="width: 100%;position:relative">
     <el-table-column prop="date" label="日期" width="180">
     </el-table-column>
     <el-table-column prop="name" label="姓名" width="180">
@@ -53,12 +53,12 @@ var demoLoading = new Vue({
 
 </div>
                     <div class="meta">
-                      <div class="description"><p>在 Loading 组件中，Element 准备了自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，通过添加<code>body</code>修饰符，可以使遮罩插入至 DOM 中的 body 上。</p>
+                      <div class="description"><p>在 Loading 组件中，使用自定义命令<code>v-loading</code>，只需要绑定<code>Boolean</code>即可。默认状况下，Loading 遮罩会插入到绑定元素的子节点，绑定元素需设置position为relative或absolute使遮罩在绑定元素内显示。</p>
 </div>
                       <div class="highlight"><pre><code class="language-html">  <span class="hljs-tag">&lt;<span class="hljs-name">el-table</span>
     <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading"</span>
     <span class="hljs-attr">:data</span>=<span class="hljs-string">"tableData"</span>
-    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span>&gt;</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%;position:relative"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
       <span class="hljs-attr">prop</span>=<span class="hljs-string">"date"</span>
       <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span>
@@ -102,7 +102,7 @@ var demoLoading = new Vue({
 <h3>加载文案</h3>
 <p>可自定义加载文案。</p>
 <demo-block class="demo-box">
-                    <div class="source">  <el-table v-loading="loading2" data-loading-text="拼命加载中" :data="tableData" style="width: 100%">
+                    <div class="source">  <el-table v-loading="loading2" data-loading-text="拼命加载中" :data="tableData" style="width: 100%;position:relative">
     <el-table-column prop="date" label="日期" width="180">
     </el-table-column>
     <el-table-column prop="name" label="姓名" width="180">
@@ -120,7 +120,7 @@ var demoLoading = new Vue({
     <span class="hljs-attr">v-loading</span>=<span class="hljs-string">"loading2"</span>
     <span class="hljs-attr">data-loading-text</span>=<span class="hljs-string">"拼命加载中"</span>
     <span class="hljs-attr">:data</span>=<span class="hljs-string">"tableData"</span>
-    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span>&gt;</span>
+    <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%;position:relative"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">el-table-column</span>
       <span class="hljs-attr">prop</span>=<span class="hljs-string">"date"</span>
       <span class="hljs-attr">label</span>=<span class="hljs-string">"日期"</span>
@@ -189,7 +189,7 @@ var demoLoading = new Vue({
     },
     <span class="hljs-attr">methods</span>: {
       navTabLoading() {
-        <span class="hljs-keyword">this</span>.loading3 = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">this</span>.loading3 = <span class="hljs-string">'demo-loading'</span>;
         setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.loading3 = <span class="hljs-literal">false</span>;
         }, <span class="hljs-number">3000</span>);

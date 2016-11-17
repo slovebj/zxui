@@ -1,6 +1,17 @@
+.c-loading-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(0,0,0,0.7);
+  margin: 0;
+}
 .c-loading-spinner {
+  position: absolute;
   top: 50%;
-  margin-top: -21px;
+  margin-top: -30px;
   width: 100%;
   text-align: center;
 
@@ -11,7 +22,7 @@
   }
 
   .circular {
-    width: 42px;
+    width: 60px;
     animation: rotate 2s linear infinite;
   }
 
@@ -22,14 +33,6 @@
     stroke: #fff;
     animation: dash 1.5s ease-in-out infinite;
     stroke-linecap: round;
-  }
-
-  &.full-screen {
-    margin-top: -25px;
-
-    .circular {
-      width: 56px;
-    }
   }
 }
 

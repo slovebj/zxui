@@ -138,9 +138,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold; }
 
+.c-loading-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0; }
+
 .c-loading-spinner {
+  position: absolute;
   top: 50%;
-  margin-top: -21px;
+  margin-top: -30px;
   width: 100%;
   text-align: center; }
   .c-loading-spinner .c-loading-text {
@@ -148,7 +159,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin: 3px 0;
     font-size: 14px; }
   .c-loading-spinner .circular {
-    width: 42px;
+    width: 60px;
     animation: rotate 2s linear infinite; }
   .c-loading-spinner .path {
     stroke-dasharray: 1, 100;
@@ -157,10 +168,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     stroke: #fff;
     animation: dash 1.5s ease-in-out infinite;
     stroke-linecap: round; }
-  .c-loading-spinner.full-screen {
-    margin-top: -25px; }
-    .c-loading-spinner.full-screen .circular {
-      width: 56px; }
 
 @keyframes rotate {
   100% {
@@ -633,10 +640,12 @@ input:disabled ~ .input-addon > .c-input-number, .c-input-number.is-disabled {
   width: 100%;
   background: #fff;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  resize: both;
+  overflow: auto; }
 
 .c-dialog-body {
-  padding: 00px 00px 45px;
+  padding: 0 0 45px;
   font-size: .95rem;
   height: calc(100% - 45px); }
 

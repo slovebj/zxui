@@ -6,16 +6,11 @@ exports.install = Vue => {
 
     if (binding.value) {
       Vue.nextTick(() => {
-        ['top', 'right', 'bottom', 'left'].forEach(property => {
-          el.maskStyle[property] = '0';
-        });
         if (binding.value !== true) {
           el.parent = document.getElementById(binding.value);
-          el.originalPosition = el.parent.style.position;
           el.originalOverflow = el.parent.style.overflow;
           insertDom(el.parent, el, binding);
         } else {
-          el.originalPosition = el.style.position;
           el.originalOverflow = el.style.overflow;
           insertDom(el, el, binding);
         }
@@ -25,7 +20,6 @@ exports.install = Vue => {
         el.mask.style.display = 'none';
         el.spinner.style.display = 'none';
         el.domVisible = false;
-        el.style.position = el.originalPosition;
         if (el.parent) {
           el.parent.style.overflow = el.originalOverflow;
         } else {
@@ -36,19 +30,9 @@ exports.install = Vue => {
   };
   let insertDom = (parent, directive, binding) => {
     if (!directive.domVisible) {
-      if (directive.originalPosition !== 'absolute') {
-        parent.style.position = 'relative';
-      }
       if (binding.modifiers.lock) {
         parent.style.overflow = 'hidden';
       }
-      Object.keys(directive.maskStyle).forEach(property => {
-        directive.mask.style[property] = directive.maskStyle[property];
-      });
-
-      Object.keys(directive.spinnerStyle).forEach(property => {
-        directive.spinner.style[property] = directive.spinnerStyle[property];
-      });
 
       directive.mask.style.display = 'block';
       directive.spinner.style.display = 'inline-block';
@@ -64,13 +48,6 @@ exports.install = Vue => {
     bind: function(el, binding) {
       el.mask = document.createElement('div');
       el.mask.className = 'c-loading-mask';
-      el.maskStyle = {
-        position: 'absolute',
-        zIndex: '10000',
-        backgroundColor: '#000',
-        opacity: '0.8',
-        margin: '0'
-      };
 
       let spinner = new Spinner({
         data: {
@@ -79,9 +56,6 @@ exports.install = Vue => {
       });
       spinner.$mount(el.mask);
       el.spinner = spinner.$el;
-      el.spinnerStyle = {
-        position: 'absolute'
-      };
       toggleLoading(el, binding);
     },
 
