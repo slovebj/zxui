@@ -10,6 +10,8 @@ import Slider from '../packages/slider/index.js';
 import DemoBlock from '../packages/demo-block/index.js';
 import Input from '../packages/input/index.js';
 import InputNumber from '../packages/input-number/index.js';
+import Tabs from '../packages/tabs/index.js';
+import TabPane from '../packages/tab-pane/index.js';
 
 const install = function(Vue) {
   if (install.installed) return;
@@ -23,6 +25,8 @@ const install = function(Vue) {
   Vue.component(DemoBlock.name, DemoBlock);
   Vue.component(Input.name, Input);
   Vue.component(InputNumber.name, InputNumber);
+  Vue.component(Tabs.name, Tabs);
+  Vue.component(TabPane.name, TabPane);
 
   Vue.use(Loading);
 
@@ -53,5 +57,7 @@ module.exports = {
   Slider,
   DemoBlock,
   Input,
-  InputNumber
+  InputNumber,
+  Tabs,
+  TabPane
 };

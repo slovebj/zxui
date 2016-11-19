@@ -1042,7 +1042,13 @@
      * @returns {Element} offset parent
      */
     function getScrollParent(element) {
-        if (element === root.document) {
+        var parent = element.parentNode;
+
+        if (!parent) {
+            return element;
+        }
+
+        if (parent === root.document) {
             // Firefox puts the scrollTOp value on `documentElement` instead of `body`, we then check which of them is
             // greater than 0 and return the proper element
             if (root.document.body.scrollTop) {
@@ -1054,16 +1060,16 @@
 
         // Firefox want us to check `-x` and `-y` variations as well
         if (
-            ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow')) !== -1 ||
-            ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-x')) !== -1 ||
-            ['scroll', 'auto'].indexOf(getStyleComputedProperty(element, 'overflow-y')) !== -1
+            ['scroll', 'auto'].indexOf(getStyleComputedProperty(parent, 'overflow')) !== -1 ||
+            ['scroll', 'auto'].indexOf(getStyleComputedProperty(parent, 'overflow-x')) !== -1 ||
+            ['scroll', 'auto'].indexOf(getStyleComputedProperty(parent, 'overflow-y')) !== -1
         ) {
             // If the detected scrollParent is body, we perform an additional check on its parentNode
             // in this way we'll get body if the browser is Chrome-ish, or documentElement otherwise
             // fixes issue #65
-            return element === root.document.body ? getScrollParent(element.parentNode) : element;
+            return parent;
         }
-        return element.parentNode ? getScrollParent(element.parentNode) : element;
+        return getScrollParent(element.parentNode);
     }
 
     /**
@@ -1148,13 +1154,22 @@
      */
     function getBoundingClientRect(element) {
         var rect = element.getBoundingClientRect();
+
+        // whether the IE version is lower than 11
+        var isIE = navigator.userAgent.indexOf("MSIE") != -1;
+
+        // fix ie document bouding top always 0 bug
+        var rectTop = isIE && element.tagName === 'HTML'
+            ? -element.scrollTop
+            : rect.top;
+
         return {
             left: rect.left,
-            top: rect.top,
+            top: rectTop,
             right: rect.right,
             bottom: rect.bottom,
             width: rect.right - rect.left,
-            height: rect.bottom - rect.top
+            height: rect.bottom - rectTop
         };
     }
 

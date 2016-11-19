@@ -1,9 +1,8 @@
-const ElTabs = require('./src/tabs');
-const ElTabPane = require('./src/tab-pane');
+import CTabs from './src/tabs';
 
-ElTabs.install = function(Vue) {
-  Vue.component(ElTabs.name, ElTabs);
-  Vue.component(ElTabPane.name, ElTabPane);
+/* istanbul ignore next */
+CTabs.install = function(Vue) {
+  Vue.component(CTabs.name, CTabs);
 };
 
-module.exports = ElTabs;
+export default CTabs;

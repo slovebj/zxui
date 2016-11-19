@@ -1,0 +1,208 @@
+.c-tabs {
+    display: inline-block;
+}
+
+.c-tabs-card {
+    .c-tabs-active-bar {
+        display: none;
+    }
+    .c-tabs-item {
+        border: 1px solid transparent;
+        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        &.is-closable {
+            &:hover {
+                padding-left: 9px;
+                padding-right: 9px;
+                .c-icon-close {
+                    width: 14px;
+                }
+            }
+        }
+        &.is-active {
+            border: 1px solid #d3dce6;
+            border-bottom-color: #fff;
+            border-radius: 4px 4px 0 0;
+            &.is-closable {
+                padding-left: 16px;
+                padding-right: 16px;
+                .c-icon-close {
+                    width: 14px;
+                }
+            }
+        }
+    }
+}
+
+.c-tabs-card2 {
+    background: #fff;
+    border: 1px solid #d3dce6;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12), 0px 0px 6px 0px rgba(0, 0, 0, 0.04);
+    .c-tabs-content {
+        padding: 15px;
+    }
+    .c-tabs-header {
+        background-color: #eff2f7;
+        margin: 0;
+    }
+    .c-tabs-item {
+        transition: all .3s cubic-bezier(.645, .045, .355, 1);
+        border: 1px solid transparent;
+        border-top: 0;
+        margin-left: -1px;
+        margin-right: -1px;
+        &.is-active {
+            background-color: #fff;
+            border-right-color: #d3dce6;
+            border-left-color: #d3dce6;
+            &:first-child {
+                border-left-color: #d3dce6;
+            }
+            &:last-child {
+                border-right-color: #d3dce6;
+            }
+        }
+    }
+}
+
+.c-tabs-header {
+    border-bottom: 1px solid #d3dce6;
+    padding: 0;
+    position: relative;
+    margin: 0 0 15px;
+    @include clearfix();
+}
+
+.c-tabs-active-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $color-active;
+    z-index: 1;
+    transition: transform .3s cubic-bezier(.645, .045, .355, 1);
+    list-style: none;
+}
+
+.c-tabs-item {
+    padding: 0 16px;
+    height: 2.65rem;
+    box-sizing: border-box;
+    line-height: 2.65rem;
+    float: left;
+    list-style: none;
+    font-size: .95rem;
+    color: #8492a6;
+    margin-bottom: -1px;
+    position: relative;
+    &.is-active,&:hover {
+        color: $color-active;
+        cursor: pointer;
+    }
+}
+
+.c-icon-close {
+    font-size: 14px;
+    vertical-align: middle;
+    line-height: 14px;
+    overflow: hidden;
+    width: 0;
+    height: 14px;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    position: relative;
+    top: -1px;
+    right: -5px;
+    display: inline-block;
+    &:hover {
+        color: $color-info;
+    }
+}
+
+.c-tabs-content {
+    overflow: hidden;
+    position: relative;
+}
+
+.c-tab-pane {
+    width: 100%;
+    display: inline-block;
+}
+
+.slideInRight-transition,
+.slideInLeft-transition {
+    display: inline-block;
+}
+
+.slideInRight-enter {
+    animation: slideInRight-enter .3s;
+}
+
+.slideInRight-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: slideInRight-leave .3s;
+}
+
+.slideInLeft-enter {
+    animation: slideInLeft-enter .3s;
+}
+
+.slideInLeft-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    animation: slideInLeft-leave .3s;
+}
+
+@keyframes slideInRight-enter {
+    0% {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: translateX(100%)
+    }
+    to {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInRight-leave {
+    0% {
+        transform-origin: 0 0;
+        transform: translateX(0);
+        opacity: 1
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: translateX(100%);
+        opacity: 0
+    }
+}
+
+@keyframes slideInLeft-enter {
+    0% {
+        opacity: 0;
+        transform-origin: 0 0;
+        transform: translateX(-100%)
+    }
+    to {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: translateX(0)
+    }
+}
+
+@keyframes slideInLeft-leave {
+    0% {
+        transform-origin: 0 0;
+        transform: translateX(0);
+        opacity: 1
+    }
+    100% {
+        transform-origin: 0 0;
+        transform: translateX(-100%);
+        opacity: 0
+    }
+}

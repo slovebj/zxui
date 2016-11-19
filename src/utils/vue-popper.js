@@ -1,7 +1,5 @@
 import PopperJS from './popper';
 import { PopupManager } from 'vue-popup';
-PopupManager.zIndex = 2000;
-
 /**
  * @param {HTMLElement} [reference=$refs.reference] - The reference element used to position the popper.
  * @param {HTMLElement} [popper=$refs.popper] - The HTML element used as popper, or a configuration used to generate the popper.

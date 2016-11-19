@@ -10,5 +10,7 @@
   "slider": "./packages/slider/index.js",
   "demo-block": "./packages/demo-block/index.js",
   "input": "./packages/input/index.js",
-  "input-number": "./packages/input-number/index.js"
+  "input-number": "./packages/input-number/index.js",
+  "tabs": "./packages/tabs/index.js",
+  "tab-pane": "./packages/tab-pane/index.js"
 }
