@@ -8,7 +8,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "marked": "^0.3.6"
   },
   "devDependencies": {
     "less": "^2.7.1",

@@ -10,13 +10,13 @@ cooking.set({
     log: false,
     publicPath: '/'
   },
-  minimize: false,
-  extends: ['vue2']
+  minimize: true,
+  extends: ['vue2'],
 });
 
 cooking.add('externals', {
   vue: {
-    root: 'vue',
+    root: 'Vue',
     commonjs: 'vue',
     commonjs2: 'vue',
     amd: 'vue'
