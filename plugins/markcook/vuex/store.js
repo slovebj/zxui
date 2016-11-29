@@ -1,4 +1,3 @@
-const striptags = require('../../../build/strip-tags.js');
 const hljs = require('highlight.js');
 const md = require('markdown-it')({
   html: true,
@@ -22,7 +21,7 @@ const md = require('markdown-it')({
         var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/);
         if (tokens[idx].nesting === 1) {
           var description = (m && m.length > 1) ? m[1] : '';
-          var html = convert(striptags(tokens[idx + 1].content, 'script'));
+          var html = convert(tokens[idx + 1].content);
           var descriptionHTML = description
             ? '<div class="description">' + md.render(description) + '</div>'
             : '';
@@ -37,7 +36,10 @@ const md = require('markdown-it')({
     });
 
 function convert(str) {
-  str = str.replace(/(&#x)(\w{4});/gi, function($0) {
+	str=str.replace(/&lt;/g,'<');  
+	str=str.replace(/&gt;/g,'>');
+  str = str.replace(/<script[^>]*>.*(?=<\/script>)<\/script>/gi,'');
+	str = str.replace(/(&#x)(\w{4});/gi, function($0) {
     return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16));
   });
   return str;
