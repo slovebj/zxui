@@ -36,9 +36,7 @@ const md = require('markdown-it')({
     });
 
 function convert(str) {
-	str=str.replace(/&lt;/g,'<');  
-	str=str.replace(/&gt;/g,'>');
-  str = str.replace(/<script[^>]*>.*(?=<\/script>)<\/script>/gi,'');
+  str = str.replace(/<script[^>]*>(\s*.*)*<\/script>/gi,'');
 	str = str.replace(/(&#x)(\w{4});/gi, function($0) {
     return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16));
   });
