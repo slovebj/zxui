@@ -9,8 +9,8 @@ const path = require('path');
 const fs = require('fs');
 const outPath = path.resolve(__dirname, './');
 const striptags = require('../../build/strip-tags.js');
-const hljs = require('highlight.js');
-const md = require('markdown-it')({
+const hljs = require('../../plugins/highlight');
+const md = require('markdown-it/dist/markdown-it.min.js')({
     html: true,
     linkify: true,
     typographer: true,
@@ -23,7 +23,7 @@ const md = require('markdown-it')({
 
         return ''; // use external default escaping
     }
-}).use(require('markdown-it-emoji')).use(require('markdown-it-container'), 'demo', {
+}).use(require('markdown-it-emoji/dist/markdown-it-emoji-light.min.js')).use(require('markdown-it-container/dist/markdown-it-container.min.js'), 'demo', {
     validate: function(params) {
         return params.trim().match(/^demo\s*(.*)$/);
     },
