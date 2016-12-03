@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="inputer">
 		<textarea id="inputer" :value='rawTxt' @input='inputting' @scroll='syncStroll' @drop.stop.prevent='dragging' autofocus></textarea>
 	</div>
 </template>
@@ -35,27 +35,3 @@
 		}
 	}
 </script>
-
-<style scoped lang="less">
-	div {
-		width: 50%;
-		height: 100%;
-		margin-right: 10px;
-		textarea {
-			box-sizing: border-box;
-			height: 100%;
-			width: 100%;
-	    vertical-align: top;
-	    padding: 15px;
-	    resize: none;
-	    border: none;
-	    background-color: #f5f5f5;
-	    outline: none;
-	    font-family: inherit;
-	    font-size: 18px;
-	    color: #616161;
-	    box-shadow: 4px 5px 3px #aaa;
-	    transition: all ease .3s;
-		}
-	}
-</style>

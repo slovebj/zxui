@@ -1,5 +1,5 @@
 <template>
-	<nav>
+	<nav class="mc_navbar">
 		<ul>
 			<li><button @click='showMenu'><i class="fa fa-bars"></i></button></li>
 			<li><button @click='insert("**Bold**")'><i class="fa fa-bold"></i></button></li>
@@ -104,49 +104,3 @@
 		}
 	}
 </script>
-
-<style scoped lang="less">
-	nav {
-		box-sizing: border-box;
-		position: relative;
-		height: 45px;
-		background-color: #009688;
-		box-shadow: 4px 3px 3px #aaa;
-		z-index: 20;
-		ul {
-			height: 45px;
-			min-width: 1000px;
-			padding: 0;
-			margin: 0;
-			list-style: none;
-			li {
-				height: 45px;
-				float: left;
-				&:first-child {
-					border-right: 2px solid #00897B;
-				}
-				&:nth-last-child(2) {
-					border-left: 2px solid #00897B;
-				}
-				button {
-					height: 45px;
-					width: 45px;
-					border: none;
-					background: none;
-					outline: none;
-					transition: all ease .3s;
-					&:hover {
-						background: #00897B;
-					}
-					&:active {
-						background: #00796B;
-					}
-					.fa {
-						color: #fff;
-						font-size: 18px;
-					}
-				}
-			}
-		}
-	}
-</style>
