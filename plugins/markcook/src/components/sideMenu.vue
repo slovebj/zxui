@@ -17,13 +17,13 @@
 			<li>
 				<a :href='htmlDataUrl' :download='titleHtml' @mouseenter='createUrl("html")'>
 					<i class="fa fa-html5"></i>
-					Save as .html
+					保存为 .html
 				</a>
 			</li>
 			<li>
 				<a :href='mdDataUrl' :download='titleMd' @mouseenter='createUrl("md")'>
 					<i class="fa fa-download"></i>
-					Save as .md
+					保存为 .md
 				</a>
 			</li>
 		</ul>

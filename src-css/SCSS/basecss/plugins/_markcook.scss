@@ -6,62 +6,55 @@
 
 @import "../custom"; // custom variable overrides
 @import "../mixins";
+#markcook {
+    overflow: hidden !important;
+}
 //main
 .markcook {
-    position: relative;
-    left: -220px;
-    height: 100%;
-    transition: all ease .5s;
+    height: calc(100% - 5px);
+    width: 100%;
     &.show-menu {
-        left: 0;
-        main {
-        section {
-            padding-right: 230px;
-        }
+        .mc_menu {
+            display: block;
         }
     }
     main {
-        margin-left: 220px;
         width: 100%;
         height: 100%;
         background-color: #e0e0e0;
         section {
-        height: 100%;
-        padding: 10px;
-        padding-bottom: 55px;
-        display: flex;
-        justify-content: center;
-        transition: all ease .5s;
+            height: calc(100% - 40px);
+            padding: 5px;
+            display: flex;
+            justify-content: center;
         }
     }
 }
 
 //sideMenu
 .mc_menu {
-    position: relative;
     float: left;
     height: 100%;
     width: 220px;
-    box-shadow: 4px 5px 3px #aaa;
+    display: none;
     background-color: #f5f5f5;
+    box-shadow: 3px 3px 3px #aaa;
     .files {
         padding: 10px 0 0 0;
         margin: 0;
         max-height: 295px;
-        list-style: none;
         border-bottom: 1px solid #bdbdbd;
-        overflow-y: scroll;
+        overflow-y: auto;
         li {
             position: relative;
-            padding: 0;
             color: #9E9E9E;
             transition: all ease .3s;
-            cursor: default;
+            cursor: pointer;
+            border-left: 6px solid transparent;
             span {
                 display: inline-block;
+                padding: 10px;
                 width: 100%;
-                height: 100%;
-                padding: 15px;
                 white-space: normal;
                 word-break: break-all;
             }
@@ -89,7 +82,7 @@
             }
             &.current {
                 color: #616161;
-                border-left: 6px solid #009688;
+                border-left-color: #009688;
             }
             &:hover {
                 background: #eee;
@@ -101,8 +94,6 @@
     }
     .options {
         padding: 0;
-        margin: 0;
-        list-style: none;
         li {
             color: #616161;
             transition: all ease .3s;
@@ -120,15 +111,10 @@
                 display: inline-block;
                 padding: 0 5px;
                 width: 100%;
-                height: 100%;
                 background: none;
                 border: none;
                 outline: none;
-                text-align: left;
                 color: inherit;
-                font-size: 16px;
-                text-decoration: none;
-                cursor: default;
                 &.add-one-btn {
                     text-align: center;
                 }
@@ -144,18 +130,14 @@
 }
 //navbar
 .mc_navbar {
-    box-sizing: border-box;
-    position: relative;
     height: 45px;
     background-color: #009688;
-    box-shadow: 4px 3px 3px #aaa;
-    z-index: 20;
+    box-shadow: 3px 3px 3px #aaa;
     ul {
         height: 45px;
         min-width: 1000px;
         padding: 0;
         margin: 0;
-        list-style: none;
         li {
             height: 45px;
             float: left;
@@ -191,12 +173,12 @@
 .inputer {
     width: 50%;
     height: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
     textarea {
         height: 100%;
         width: 100%;
         vertical-align: top;
-        padding: 15px;
+        padding: 10px;
         resize: none;
         border: none;
         background-color: #f5f5f5;
@@ -204,7 +186,7 @@
         font-family: inherit;
         font-size: 18px;
         color: #616161;
-        box-shadow: 4px 5px 3px #aaa;
+        box-shadow: 3px 3px 3px #aaa;
         transition: all ease .3s;
     }
 }
@@ -213,7 +195,7 @@
 .outputer {
   	height: 100%;
   	width: 50%;
-    padding: 15px;
+    padding: 10px;
     resize: none;
     border: none;
     background-color: #f5f5f5;
@@ -221,7 +203,7 @@
     font-family: inherit;
     font-size: 18px;
     color: #616161;
-    box-shadow: 4px 5px 3px #aaa;
+    box-shadow: 3px 3px 3px #aaa;
     white-space: normal;
     overflow-y: scroll;
     word-wrap: break-word;
