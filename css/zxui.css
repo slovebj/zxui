@@ -4,101 +4,99 @@
  * Copyright 2016 zxui
  */
 
+
 /*
  * ***************************************************
  * MAIN LAYOUT START
  * ***************************************************
  */
+
 #page {
-  height: 100%;
-  left: 0;
-  right: 0;
-  min-width: 320px;
-  overflow: hidden;
-  position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    min-width: 320px;
+    overflow: hidden;
+    position: absolute;
 }
+
+
 /*
- * HEADER
+ * FOOTER
  */
 
-
-#header {
-  height: 2.5rem;
-  line-height: 2.4rem;
-  font-size: 2.0rem;
-  font-weight: bolder;
-  background-color: #f3f3f3;
-  border-bottom: 1px #228AA9 solid;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 15;
+footer#page-footer {
+    height: 2.0rem;
+    background: #228AA9;
+    position: absolute;
+    line-height: 2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-#header a:hover,#header a:active,#header a:focus {
-  color: #F17272;
-  text-decoration: none;
+#page-footer a:hover,
+#page-footer a:active,
+#page-footer a:focus {
+    color: #F17272;
+    text-decoration: none;
 }
-#header img.avatar-header  {
-  width: 2.45rem;
-  vertical-align:top;
+
+#page-footer img.avatar-footer {
+    width: 2.0rem;
+    vertical-align: top;
 }
-#header img.avatar-header:hover {
-  opacity: 0.7;
+
+#page-footer img.avatar-footer:hover {
+    opacity: 0.7;
 }
+
 
 /*
  * LEFT PANEL
  */
+
 #left-panel {
-  background-color: #F3F3F3;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  width: 250px;
-  padding-top: 2.5rem;
+    background-color: #F3F3F3;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 250px;
+    padding-top: 2.5rem;
 }
+
+
 /*
  * MAIN PANEL
  */
+
 #main {
-  background: #e5e9ec;
-  height: 100%;
-  margin-left: 250px;
-  overflow: hidden;
-  padding: 2.5rem 0 0 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  transition: transform 0.5s, margin-left 0.5s;
-  -webkit-overflow-scrolling: touch;
+    background: #e5e9ec;
+    height: 100%;
+    margin-left: 250px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: transform 0.5s, margin-left 0.5s;
+    -webkit-overflow-scrolling: touch;
 }
 
 
 /*
  * HIDDEN Panel
  */
+
 body.hidePanel #main {
-  margin-left: 0;
-}
-footer#page-footer {
-  height: 1.5rem;
-  background: #228AA9;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1000;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
-
-  #main {
-  margin-left: 0;
-}
-
-body.hidePanel #main {
-  margin-left: 250px;
-}
+    #main {
+        margin-left: 0;
+    }
+    body.hidePanel #main {
+        margin-left: 250px;
+    }
 }
