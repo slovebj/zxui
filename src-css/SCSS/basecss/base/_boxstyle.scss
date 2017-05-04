@@ -1,130 +1,155 @@
-
 // Z-levels
 .zdepth0 {
-  box-shadow: none !important;
+    box-shadow: none !important;
 }
-.zdepth1{
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
+
+.zdepth1 {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.zdepth2{
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+.zdepth2 {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.zdepth3{
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.zdepth3 {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.zdepth4{
-  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+.zdepth4 {
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.zdepth5{
-  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+
+.zdepth5 {
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
-.zdepth6{
-  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+
+.zdepth6 {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
 .hoverable {
-  transition: box-shadow .25s;
-  box-shadow: 0;
+    transition: box-shadow .25s;
+    box-shadow: 0;
 }
 
 .hoverable:hover {
-  transition: box-shadow .25s;
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 //Box-radius
 .radius0 {
-  border-radius:0 !important;
+    border-radius: 0 !important;
 }
+
+.radius0-l {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.radius0-r {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.radius0-t {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.radius0-b {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
 .radius1 {
-  border-radius:0.25rem;
+    border-radius: 0.25rem;
 }
 
 .radius2 {
-  border-radius:0.5rem;
+    border-radius: 0.5rem;
 }
 
 .radius3 {
-  border-radius:1rem;
+    border-radius: 1rem;
 }
 
 .radius4 {
-  border-radius:1.5rem;
+    border-radius: 1.5rem;
 }
 
 .radius5 {
-  border-radius:2rem;
-  padding-left:1rem;
-  padding-right:1rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .circle {
-  border-radius: 500em;
+    border-radius: 500em;
 }
-
 
 //border
 .bd-top {
-  border-top: solid;
+    border-top: solid;
 }
 
 .bd-right {
-  border-right: solid;
+    border-right: solid;
 }
 
 .bd-bottom {
-  border-bottom: solid;
+    border-bottom: solid;
 }
 
 .bd-left {
-  border-left: solid;
+    border-left: solid;
 }
 
 .bd-x {
-  border-left: solid;
-  border-right: solid;
+    border-left: solid;
+    border-right: solid;
 }
 
 .bd-y {
-  border-top: solid;
-  border-bottom: solid;
+    border-top: solid;
+    border-bottom: solid;
 }
 
 .bd-xy {
-  border: solid;
+    border: solid;
 }
 
-
-@each $key, $width in $bd-width {
-  .bd-w#{$key} {
-    border-width: #{$width};
-  }
+@each $key,
+$width in $bd-width {
+    .bd-w#{$key} {
+        border-width: #{$width};
+    }
 }
 
 .bd-dashed {
-  border-style: dashed;
+    border-style: dashed;
 }
 
 .bd-dotted {
-  border-style: dotted;
+    border-style: dotted;
 }
 
 .bd-double {
-  border-style: double;
+    border-style: double;
 }
 
 .bd-inset {
-  border-style: inset;
+    border-style: inset;
 }
 
 .bd-outset {
-  border-style: outset;
+    border-style: outset;
 }
 
-@each $key, $width in $box-size {
-  .size#{$key} {
-    width: #{$width};
-    height: auto;
-  }
+@each $key,
+$width in $box-size {
+    .size#{$key} {
+        width: #{$width};
+        height: auto;
+    }
 }

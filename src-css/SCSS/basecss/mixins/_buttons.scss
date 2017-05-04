@@ -2,93 +2,127 @@
 //
 // Easily pump out default styles, as well as :hover, :focus, :active,
 // and disabled options for all buttons
-
 @mixin button-variant($color, $background, $border) {
-  $active-background: darken($background, 10%);
-  $active-border: darken($border, 12%);
-
-  color: $color;
-  background-color: $background;
-  border-color: $border;
-  @include box-shadow($btn-box-shadow);
-
-  @include hover {
+    $active-background: darken($background, 10%);
+    $active-border: darken($border, 12%);
     color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &:focus,
-  &.focus {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    color: $color;
-    background-color: $active-background;
-        border-color: $active-border;
-    // Remove the gradient for the pressed/active state
-    background-image: none;
-    @include box-shadow($btn-active-box-shadow);
-
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: darken($background, 17%);
-          border-color: darken($border, 25%);
-    }
-  }
-
-  &.disabled,
-  &:disabled {
-    &:focus,
-    &.focus {
-      background-color: $background;
-          border-color: $border;
-    }
+    background-color: $background;
+    border-color: $border;
+    @include box-shadow($btn-box-shadow);
     @include hover {
-      background-color: $background;
-          border-color: $border;
+        color: $color;
+        background-color: $active-background;
+        border-color: $active-border;
     }
-  }
+    &:focus,
+    &.focus {
+        color: $color;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        color: $color;
+        background-color: $active-background;
+        border-color: $active-border;
+        // Remove the gradient for the pressed/active state
+        background-image: none;
+        @include box-shadow($btn-active-box-shadow);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            background-color: darken($background, 17%);
+            border-color: darken($border, 25%);
+        }
+    }
+    &.disabled,
+    &:disabled {
+        &:focus,
+        &.focus {
+            background-color: $background;
+            border-color: $border;
+        }
+        @include hover {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
 }
 
 @mixin button-outline-variant($color) {
-  color: $color;
-  background-color: transparent;
-  border:1px solid;
-  border-color: currentColor;
-
-  @include hover {
-    background-color: currentColor;
-  }
-
-  &:focus,
-  &.focus {
-    background-color: currentColor;
-  }
-
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-color: currentColor;
-
-    &:hover,
+    color: $color;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: currentColor;
+    @include hover {
+        background-color: currentColor;
+    }
     &:focus,
     &.focus {
-      background-color: currentColor;
+        background-color: currentColor;
     }
-  }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        background-color: currentColor;
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: currentColor;
+        }
+    }
 }
 
 // Button sizes
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
-  padding: $padding-y $padding-x;
-  font-size: $font-size;
-  @include border-radius($border-radius);
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    @include border-radius($border-radius);
+}
+
+// Button animate
+.btn-animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animate-v span {
+    transition: all .2s ease-out 0s;
+}
+
+.btn-animate span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+}
+
+.btn-animate-v:hover span {
+    transform: translate(0, 200%)
+}
+
+.btn-animate-v span>i {
+    position: absolute;
+    top: -0.64em;
+    left: 50%;
+    display: block;
+    font-size: 1.5em;
+    transform: translate(-50%, -100%);
+}
+
+.btn-animate-v.btn-xs span>i {
+    top: -1.05em;
+    font-size: 1em;
+}
+
+.btn-animate-v.btn-sm span>i {
+    top: -0.875em;
+    font-size: 1.2em;
+}
+
+.btn-animate-v.btn-lg span>i {
+    top: -0.45em;
+    font-size: 1.8em;
 }
