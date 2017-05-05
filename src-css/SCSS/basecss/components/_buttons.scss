@@ -267,3 +267,87 @@
 .btn.block+.btn.block {
     margin-top: $btn-block-spacing-y;
 }
+
+// Button animate
+.btn-animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-animate-v span {
+    transition: all .2s ease-out 0s;
+}
+
+.btn-animate span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0);
+}
+
+.btn-animate-v:hover span {
+    transform: translate(0, 200%)
+}
+
+.btn-animate-v span>i {
+    position: absolute;
+    top: -0.5em;
+    left: 50%;
+    display: block;
+    font-size: 1.5em;
+    transform: translate(-50%, -100%);
+}
+
+.btn-animate-v.btn-xs span>i {
+    top: -1em;
+    font-size: 1em;
+}
+
+.btn-animate-v.btn-sm span>i {
+    top: -0.75em;
+    font-size: 1.2em;
+}
+
+.btn-animate-v.btn-lg span>i {
+    top: -0.45em;
+    font-size: 1.8em;
+}
+
+.btn-animate-h {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.btn-animate-h span {
+    transition: transform .2s ease-out 0s;
+}
+
+.btn-animate-h span>i {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity .2s ease-out 0s;
+    transform: translate(-1em, -50%);
+}
+
+.btn-animate-h:hover span {
+    transform: translate(10px, 0);
+}
+
+.btn-animate-h:hover span>i {
+    opacity: 1;
+}
+
+.btn-animate-h.btn-xs:hover span {
+    transform: translate(8px, 0);
+}
+
+.btn-animate-h.btn-sm:hover span {
+    transform: translate(8px, 0);
+}
+
+.btn-animate-h.btn-lg:hover span {
+    transform: translate(14px, 0);
+}
