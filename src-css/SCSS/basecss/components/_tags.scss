@@ -155,7 +155,7 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
     border-right-color: inherit;
 }
 
-.tag-r,.tag-at {
+.tag-r,.tag-at,.tag-bm {
 	position: absolute;
 	display: block;
     padding:.2em .5em;
@@ -200,3 +200,34 @@ a.tag[class*="tag-o"],.tags.tag-o a.tag,.tags.tag-op a.tag {
   display: inline-block;
 }
 
+.tag-d-sup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.tag-d-sub {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.tag-bm:before{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    border: 15px solid #526069;
+    border-right: 10px solid transparent;
+}

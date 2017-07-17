@@ -12,7 +12,7 @@
     "start": "cooking watch -c build/cooking.markcook.js -p",
     "new": "node build/bin/new.js",
     "zxui:c": "node-sass src-css/SCSS/basecss/zx-components.scss src-css/SCSS/basecss/zx-components.css",
-    "zxui": "node-sass src-css/SCSS/basecss/zxbase.scss > src-css/SCSS/basecss/zxbase.css",
+    "zxui": "sass src-css/SCSS/basecss/zxbase.scss > src-css/SCSS/basecss/zxbase.css",
     "markcook": "cooking build -c build/cooking.markcook.js -p",
     "md2html": "node ajax/demo/md2html.js",
     "demo": "node ajax/demo/demo.js",
