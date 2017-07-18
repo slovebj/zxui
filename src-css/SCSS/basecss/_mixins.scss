@@ -1,5 +1,3 @@
-// Toggles
-//
 // Used in conjunction with global variables to enable certain theme features.
 
 @mixin box-shadow($shadow...) {
@@ -50,5 +48,4 @@
 @import "mixins/grid";
 @import "mixins/display";
 @import "mixins/navbar-align";
-
 @import "mixins/float";

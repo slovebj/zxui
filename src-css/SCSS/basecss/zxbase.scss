@@ -1,11 +1,11 @@
 /*!
  * zxui v1.0.0
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT
  */
 
 // Core variables and mixins
+//@import "variables";
 @import "custom";
-@import "variables";
 @import "mixins";
 
 // Reset and dependencies
@@ -13,6 +13,19 @@
 @import "base/reboot";
 @import "base/print";
 
+// Base
+@import "base/grid";
+@import "base/display";
+@import "base/float-align";
+@import "base/color";
+@import "base/opacity";
+@import "base/boxstyle";
+@import "base/typo";
+@import "base/clearfix";
+@import "base/screenreaders";
+@import "base/spacing";
+@import "base/visibility";
+@import "base/flex";
 
 //Elements
 @import "elements/animation";
@@ -41,16 +54,3 @@
 //Views
 @import "view/card";
 
-// Core CSS
-@import "base/grid";
-@import "base/display";
-@import "base/float-align";
-@import "base/color";
-@import "base/opacity";
-@import "base/boxstyle";
-@import "base/typo";
-@import "base/clearfix";
-@import "base/screenreaders";
-@import "base/spacing";
-@import "base/visibility";
-@import "base/flex";
