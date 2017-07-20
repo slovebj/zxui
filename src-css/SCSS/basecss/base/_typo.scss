@@ -39,6 +39,10 @@ h6, .h6,.f1 { font-size: $font-size-h6; }
 //
 // Emphasis
 //
+small {
+  font-size: 80%;
+}
+
 h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h4 small,.h4 small,h5 small,.h5 small,h6 small,.h6 small,.small {
   font-size:$small-font-size;
   opacity:$small-font-opacity;
@@ -51,6 +55,59 @@ mark,
   padding: $mark-padding;
   background-color: $mark-bg;
 }
+
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  /*border-bottom: none;  1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+
 // Transformation
 
 .lowercase      { text-transform: lowercase !important; }
