@@ -4,6 +4,7 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -50,6 +51,29 @@ h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h4 small,.h4 small,h5 s
   }
 
 
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
 mark,
 .mark {
   padding: $mark-padding;
@@ -84,29 +108,62 @@ sup {
  */
 
 abbr[title] {
-  /*border-bottom: none;  1 */
+  cursor: help;
+  border-bottom: 1px dotted $abbr-border-color;
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
 }
 
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-  font-weight: bolder;
+// Builds on `abbr`
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
 }
 
-/**
- * Add the correct font style in Android 4.3-.
- */
-
-dfn {
-  font-style: italic;
+//
+// Line height,max key 6
+//
+@each $key, $height in $line-height {
+  .lh#{$key} {
+    line-height: #{$height};
+  }
 }
 
+//Paragraph
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+//List
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: $dt-font-weight;
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0; // Undo browser default
+}
 
 // Transformation
 
@@ -121,7 +178,7 @@ dfn {
 .italic  { font-style: italic; }
 // Text-Alignment
 
-.justify { text-align: justify !important; }
+.text-j { text-align: justify !important; }
 .text-l { text-align: left !important; }
 .text-r { text-align: right !important; }
 .text-c { text-align: center !important; }
@@ -150,40 +207,10 @@ dfn {
   user-select: none;
 }
 
-//
-// Line height
-//
-@each $key, $height in $line-height {
-  .line-height#{$key} {
-    line-height: #{$height};
-  }
-}
-
-//
-// Horizontal rules
-//
-
-hr {
-  margin-top: $spacer-y;
-  margin-bottom: $spacer-y;
-  border: 0;
-  border-top: $hr-border-width solid $hr-border-color;
-}
-
-
-//
-// Misc
-//
-
-// Builds on `abbr`
-.initialism {
-  font-size: 90%;
-  text-transform: uppercase;
-}
-
 // Blockquotes
 blockquote {
   padding: ($spacer / 2) $spacer;
+  margin: 0 0 1rem;
   font-size: $blockquote-font-size;
   border-left: solid $blockquote-border-width $blockquote-border-color;
   background-color: #ECECEC;
@@ -210,7 +237,7 @@ blockquote {
 }
 
 // Opposite alignment of blockquote
-blockquote.bq-reverse {
+.bq-reverse {
   text-align: right;
   border-left-width: 0;
   border-right: solid $blockquote-border-width $blockquote-border-color;
@@ -229,6 +256,20 @@ blockquote.bq-reverse {
   &::after {
     content: "\00A0 \2014"; // nbsp, em dash
   }
+}
+
+//
+// Horizontal rules
+//
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  margin-top: $spacer-y;
+  margin-bottom: $spacer-y;
+  border: 0;
+  border-top: $hr-border-width solid $hr-border-color;
 }
 
 @if not $enable-flex {

@@ -4,12 +4,10 @@
  */
 
 // Core variables and mixins
-//@import "variables";
-@import "custom";
+@import "variables";
 @import "mixins";
 
 // Reset and dependencies
-@import "base/normalize";
 @import "base/reboot";
 @import "base/print";
 
@@ -20,7 +18,7 @@
 @import "base/color";
 @import "base/opacity";
 @import "base/boxstyle";
-@import "base/typo";
+@import "base/typography";
 @import "base/clearfix";
 @import "base/screenreaders";
 @import "base/spacing";
