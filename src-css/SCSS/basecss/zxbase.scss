@@ -35,19 +35,16 @@
 @import "elements/images";
 @import "elements/tables";
 @import "elements/scrollbar";
-
-
-//Components
-@import "components/buttons";
-@import "components/button-group";
-@import "components/tags";
-@import "components/breadcrumb";
-@import "components/dropdown";
-@import "components/list";
-@import "components/media";
-@import "components/forms";
-@import "components/forms-custom";
-@import "components/input-group";
+@import "elements/buttons";
+@import "elements/button-group";
+@import "elements/tags";
+@import "elements/breadcrumb";
+@import "elements/dropdown";
+@import "elements/list";
+@import "elements/media";
+@import "elements/forms";
+@import "elements/forms-custom";
+@import "elements/input-group";
 
 //Views
 @import "view/card";
