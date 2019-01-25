@@ -50,7 +50,6 @@ h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h4 small,.h4 small,h5 s
   margin-left:$small-font-margin-left;
   }
 
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -136,6 +135,20 @@ p {
     margin-bottom: 1rem;
 }
 
+p.title {
+  line-height: 26px;
+  font-size: 14px;
+  color: #888
+}
+
+p.title em {
+  color: #999
+}
+
+p.title cite {
+  color: #35b8e0;
+  padding: 0px 5px
+}
 
 //List
 ol,
@@ -176,17 +189,11 @@ dd {
 .normal  { font-weight: normal; }
 .bold    { font-weight: bold; }
 .italic  { font-style: italic; }
-// Text-Alignment
-
-.text-j { text-align: justify !important; }
-.text-l { text-align: left !important; }
-.text-r { text-align: right !important; }
-.text-c { text-align: center !important; }
 
 
 .nowrap { white-space: nowrap !important; }
 .breakall {word-break:break-all;}
-.truncate { @include text-truncate; }
+.ellip { @include text-ellipsis; }
 .indent,.indent p,.indent div {
   text-indent: 2em;}
 

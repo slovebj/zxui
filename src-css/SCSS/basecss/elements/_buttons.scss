@@ -101,10 +101,10 @@
 .btn-z,
 .btn-pz,
 .btn-cz {
-    @extend .zdepth1;
+    @extend .sd1;
     transition: .2s ease-out;
     &:hover {
-        @extend .zdepth2;
+        @extend .sd2;
     }
 }
 

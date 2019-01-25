@@ -1,11 +1,11 @@
-@mixin hidden-bp-up($bp){
-.hidden-#{$bp}-up {
+@mixin hide-bp-up($bp){
+.hide-#{$bp}-up {
       display: none !important;
     }
   }
 
-@mixin hidden-bp-down($bp){
-.hidden-#{$bp}-down {
+@mixin hide-bp-down($bp){
+.hide-#{$bp}-down {
       display: none !important;
     }
   }

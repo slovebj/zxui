@@ -33,7 +33,7 @@
 
 @each $bp in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($bp) {
-      @include hidden-bp-up($bp);
+      @include hide-bp-up($bp);
       @include float-bp-up($bp);
       @include text-align-up($bp);
     }
@@ -41,7 +41,7 @@
 
 @each $bp in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($bp) {
-      @include hidden-bp-down($bp);
+      @include hide-bp-down($bp);
     }
   }
 

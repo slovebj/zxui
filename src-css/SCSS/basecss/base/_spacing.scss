@@ -10,18 +10,18 @@
     $length-x:   map-get($lengths, x);
     $length-y:   map-get($lengths, y);
 
-    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
-    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
-    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
-    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
-    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
+    .#{$abbrev}#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
+    .#{$abbrev}#{$size}-t { #{$prop}-top:    $length-y !important; }
+    .#{$abbrev}#{$size}-r { #{$prop}-right:  $length-x !important; }
+    .#{$abbrev}#{$size}-b { #{$prop}-bottom: $length-y !important; }
+    .#{$abbrev}#{$size}-l { #{$prop}-left:   $length-x !important; }
 
     // Axes
-    .#{$abbrev}-lr-#{$size} {
+    .#{$abbrev}#{$size}-x {
       #{$prop}-right:  $length-x !important;
       #{$prop}-left:   $length-x !important;
     }
-    .#{$abbrev}-tb-#{$size} {
+    .#{$abbrev}#{$size}-y {
       #{$prop}-top:    $length-y !important;
       #{$prop}-bottom: $length-y !important;
     }

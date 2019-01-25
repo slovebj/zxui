@@ -1,29 +1,29 @@
-// Z-levels
-.zdepth0 {
+// Box-shadow
+.sd0 {
     box-shadow: none !important;
 }
 
-.zdepth1 {
+.sd1 {
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16), 0 3px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.zdepth2 {
+.sd2 {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 
-.zdepth3 {
+.sd3 {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.zdepth4 {
+.sd4 {
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.zdepth5 {
+.sd5 {
     box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
 
-.zdepth6 {
+.sd6 {
     box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.22), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
@@ -38,70 +38,70 @@
 }
 
 //Box-radius
-.radius0 {
+.br0 {
     border-radius: 0 !important;
 }
 
-.radius0-l {
+.br0-l {
     border-top-left-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
 }
 
-.radius0-r {
+.br0-r {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
 
-.radius0-t {
+.br0-t {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
 }
 
-.radius0-b {
+.br0-b {
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
 
-.radius1 {
+.br1 {
     border-radius: 0.25rem;
 }
 
-.radius2 {
+.br2 {
     border-radius: 0.5rem;
 }
 
-.radius3 {
+.br3 {
     border-radius: 1rem;
 }
 
-.radius4 {
+.br4 {
     border-radius: 1.5rem;
 }
 
-.radius5 {
+.br5 {
     border-radius: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
 .circle {
-    border-radius: 500em;
+    border-radius: 100%;
 }
 
 //border
-.bd-top {
+.bd-t {
     border-top: solid;
 }
 
-.bd-right {
+.bd-r {
     border-right: solid;
 }
 
-.bd-bottom {
+.bd-b {
     border-bottom: solid;
 }
 
-.bd-left {
+.bd-l {
     border-left: solid;
 }
 
@@ -115,34 +115,33 @@
     border-bottom: solid;
 }
 
-.bd-xy {
+.bd {
     border: solid;
 }
 
-@each $key,
-$width in $bd-width {
-    .bd-w#{$key} {
+@each $key,$width in $bd-width {
+    .bw#{$key} {
         border-width: #{$width};
     }
 }
 
-.bd-dashed {
+.bs-dashed {
     border-style: dashed;
 }
 
-.bd-dotted {
+.bs-dotted {
     border-style: dotted;
 }
 
-.bd-double {
+.bs-double {
     border-style: double;
 }
 
-.bd-inset {
+.bs-inset {
     border-style: inset;
 }
 
-.bd-outset {
+.bs-outset {
     border-style: outset;
 }
 

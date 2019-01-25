@@ -30,9 +30,9 @@ $gray: #5c5c5c !default;
 $gray-light: #818a91 !default;
 $gray-lighter: #e2e2e2 !default;
 $gray-lightest: #f7f7f9 !default;
-$color-primary: #26a69a !default;
-$color-success: #5cb85c !default;
-$color-info: #0275d8 !default;
+$color-primary: #188AE2 !default;
+$color-success: #31CE77 !default;
+$color-info: #35B8E0 !default;
 $color-warning: #FF5722 !default;
 $color-error: #d9534f !default;
 $color-active: #5FB878 !default;
@@ -52,7 +52,7 @@ $enable-print-styles: false !default;
 $spacer: 1rem !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
-$spacers: ( 0: ( x: 0, y: 0), 1: ( x: $spacer-x, y: $spacer-y), 2: ( x: ($spacer-x * 1.5), y: ($spacer-y * 1.5)), 3: ( x: ($spacer-x * 3), y: ($spacer-y * 3))) !default;
+$spacers: ( 0: ( x: 0, y: 0), 1: ( x: ($spacer-x*0.5), y: ($spacer-y*0.5)), 2: ( x: $spacer-x , y: $spacer-y), 3: ( x: ($spacer-x * 1.5), y: ($spacer-y * 1.5)), 4: ( x: ($spacer-x * 3), y: ($spacer-y * 3)), 5: ( x: ($spacer-x * 5), y: ($spacer-y * 5))) !default;
 
 //Box style
 $border-width: 1px !default;
@@ -66,7 +66,7 @@ $body-color: $gray-dark !default;
 // Links
 $link-color: $gray-dark !default;
 $link-decoration: none !default;
-$link-hover-color: $color-info !default;
+$link-hover-color: #777 !default;
 $link-hover-decoration: none !default;
 
 // Grid breakpoints

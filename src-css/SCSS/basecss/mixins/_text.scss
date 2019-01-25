@@ -25,9 +25,9 @@
     border: 0;
 }
 
-// Text truncate
+// Text ellipsis
 // Requires inline-block or block for proper styling
-@mixin text-truncate() {
+@mixin text-ellipsis() {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
