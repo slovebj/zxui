@@ -26,10 +26,10 @@
 @import "base/flex";
 
 //Elements
-@import "elements/animation";
+// @import "elements/animation";
 @import "elements/divider";
 @import "elements/progress";
-@import "elements/close";
+// @import "elements/close";
 @import "elements/code";
 @import "elements/resp-embed";
 @import "elements/images";
@@ -38,14 +38,15 @@
 @import "elements/buttons";
 @import "elements/button-group";
 @import "elements/tags";
-@import "elements/breadcrumb";
-@import "elements/dropdown";
+// @import "elements/breadcrumb";
+// @import "elements/dropdown";
 @import "elements/list";
 @import "elements/media";
-@import "elements/forms";
-@import "elements/forms-custom";
-@import "elements/input-group";
+// @import "elements/forms";
+// @import "elements/forms-custom";
+// @import "elements/input-group";
 
 //Views
 @import "view/card";
-
+@import "view/animation";
+@import "view/hover";

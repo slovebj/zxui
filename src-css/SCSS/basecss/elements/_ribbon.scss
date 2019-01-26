@@ -1,0 +1,1103 @@
+.ribbon-box {
+    position: relative;
+    box-shadow: 0px 10px 35px 0px rgba(154, 161, 171, 0.1)
+}
+
+.ribbon-custom {
+    background: #fff;
+    border: 1px solid #eee
+}
+
+.ribbon {
+    display: block;
+    vertical-align: top;
+    width: auto;
+    min-height: 70px;
+    position: relative
+}
+
+.ribbon-content {
+    position: absolute;
+    top: 20px;
+    left: -1px;
+    color: #fff;
+    background: #019486;
+    min-width: 80px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0px 12px;
+    margin-bottom: 20px;
+    border-radius: 1px
+}
+
+.ribbon-reverse>.ribbon-content {
+    position: static;
+    float: right;
+    text-align: right
+}
+
+.ribbon.ribbon-vertical {
+    display: inline-block;
+    width: 50px;
+    height: 160px;
+    overflow-x: hidden
+}
+
+.ribbon.ribbon-vertical>.ribbon-content {
+    display: block;
+    width: 30px;
+    writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    font-size: 16px;
+    vertical-align: middle;
+    font-weight: 400;
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    letter-spacing: 5px;
+    text-align: center;
+    padding: 20px 2px
+}
+
+.ribbon.ribbon-vertical>.ribbon-content>i {
+    display: block;
+    font-size: 24px;
+    margin-top: 10px
+}
+
+.ribbon.ribbon-vertical.ribbon-reverse {
+    position: absolute;
+    top: 0px;
+    right: 15px !important;
+    margin-top: 0px;
+    overflow: hidden
+}
+
+.ribbon.ribbon-vertical.ribbon-reverse>.ribbon-content {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    margin-top: 0px !important
+}
+
+.ribbon.ribbon-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px
+}
+
+.ribbon-shadow {
+    position: absolute;
+    left: -15px;
+    padding-left: 20px;
+    box-shadow: 2px 5px 10px rgba(59, 62, 71, 0.20)
+}
+
+.ribbon-shadow:before {
+    content: " ";
+    border-style: solid;
+    border-width: 15px;
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    margin-bottom: -15px;
+    z-index: -1;
+    border-color: #019486 transparent transparent
+}
+
+.ribbon-custom:hover .ribbon-shadow:before {
+    transform: translate(0, 0)
+}
+
+.ribbon.ribbon-bottom>.ribbon-shadow.ribbon-left:before {
+    top: auto;
+    bottom: 45px;
+    border: 8px solid transparent;
+    border-top-color: transparent;
+    border-bottom-color: #019486;
+    border-right-color: #019486
+}
+
+.ribbon-content.ribbon-bookmark {
+    padding-right: 30px;
+    box-shadow: none
+}
+
+.ribbon-content.ribbon-bookmark {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent 22px, #019486 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #019486 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #019486 0);
+    background-image: linear-gradient(to left, transparent 22px, #019486 0)
+}
+
+.ribbon-content.ribbon-bookmark:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15px solid #019486;
+    border-right: 10px solid transparent
+}
+
+.ribbon.ribbon-reverse>.ribbon-bookmark {
+    padding-right: 15px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #019486 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #019486 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #019486 0);
+    background-image: linear-gradient(to right, transparent 22px, #019486 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #019486;
+    border-left: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-bookmark {
+    height: 80px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: linear-gradient(to top, transparent 22px, #019486 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #019486;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-badge {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right
+}
+
+.ribbon.ribbon-badge>* {
+    font-size: 13px;
+    color: #fff;
+    font-family: "Libre Franklin", sans-serif;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 100px;
+    display: block;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0 0 rgba(0, 0, 0, 0.02);
+    position: absolute;
+    top: 19px;
+    left: -21px;
+    font-weight: 600
+}
+
+.ribbon.ribbon-badge>*:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #019486;
+    border-top: 3px solid #019486;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent
+}
+
+.ribbon.ribbon-badge>*:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #019486;
+    border-top: 3px solid #019486;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent
+}
+
+.ribbon.ribbon-corner {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #fff
+}
+
+.ribbon.ribbon-corner>*:before {
+    content: '.';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 35px solid transparent;
+    border-top-color: #019486;
+    border-left-color: #019486;
+    box-sizing: border-box;
+    z-index: -1
+}
+
+.ribbon.ribbon-corner>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 550;
+    z-index: 3
+}
+
+.ribbon.ribbon-corner i {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 26px;
+    font-weight: 560;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 5px
+}
+
+.ribbon-success {
+    background: #11C26D
+}
+
+.ribbon-primary {
+    background: #188AE2
+}
+
+.ribbon-dark {
+    background: #3B3E47
+}
+
+.ribbon-info {
+    background: #35B8E0
+}
+
+.ribbon-warning {
+    background: #FBCC5C
+}
+
+.ribbon-danger {
+    background: #ff5722
+}
+
+.ribbon-green {
+    background: #019486
+}
+
+.ribbon-lightdark {
+    background: #526069
+}
+
+.ribbon-blue {
+    background: #1E9FFF
+}
+
+.ribbon-brightblue {
+    background: #3E8EF7
+}
+
+.ribbon-purple {
+    background: #D6359A
+}
+
+.ribbon-success.ribbon-bookmark {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent 22px, #11C26D 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #11C26D 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #11C26D 0);
+    background-image: linear-gradient(to left, transparent 22px, #11C26D 0)
+}
+
+.ribbon-success.ribbon-bookmark:before {
+    border: 15px solid #11C26D;
+    border-right: 10px solid transparent
+}
+
+.ribbon-primary.ribbon-bookmark {
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent 22px, #188AE2 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #188AE2 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #188AE2 0);
+    background-image: linear-gradient(to left, transparent 22px, #188AE2 0)
+}
+
+.ribbon-primary.ribbon-bookmark:before {
+    border: 15px solid #188AE2;
+    border-right: 10px solid transparent
+}
+
+.ribbon-dark.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #3B3E47 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #3B3E47 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #3B3E47 0);
+    background-image: linear-gradient(to left, transparent 22px, #3B3E47 0)
+}
+
+.ribbon-dark.ribbon-bookmark:before {
+    border: 15px solid #3B3E47;
+    border-right: 10px solid transparent
+}
+
+.ribbon-info.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #35B8E0 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #35B8E0 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #35B8E0 0);
+    background-image: -o-linear-gradient(right, transparent 22px, #35B8E0 0);
+    background-image: linear-gradient(to left, transparent 22px, #35B8E0 0)
+}
+
+.ribbon-info.ribbon-bookmark:before {
+    border: 15px solid #35B8E0;
+    border-right: 10px solid transparent
+}
+
+.ribbon-warning.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #FBCC5C 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #FBCC5C 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #FBCC5C 0);
+    background-image: -o-linear-gradient(right, transparent 22px, #FBCC5C 0);
+    background-image: linear-gradient(to left, transparent 22px, #FBCC5C 0)
+}
+
+.ribbon-warning.ribbon-bookmark:before {
+    border: 15px solid #FBCC5C;
+    border-right: 10px solid transparent
+}
+
+.ribbon-danger.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #ff5722 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #ff5722 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #ff5722 0);
+    background-image: linear-gradient(to left, transparent 22px, #ff5722 0)
+}
+
+.ribbon-danger.ribbon-bookmark:before {
+    border: 15px solid #ff5722;
+    border-right: 10px solid transparent
+}
+
+.ribbon-lightdark.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #526069 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #526069 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #526069 0);
+    background-image: linear-gradient(to left, transparent 22px, #526069 0)
+}
+
+.ribbon-lightdark.ribbon-bookmark:before {
+    border: 15px solid #526069;
+    border-right: 10px solid transparent
+}
+
+.ribbon-blue.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #1E9FFF 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #1E9FFF 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #1E9FFF 0);
+    background-image: linear-gradient(to left, transparent 22px, #1E9FFF 0)
+}
+
+.ribbon-blue.ribbon-bookmark:before {
+    border: 15px solid #1E9FFF;
+    border-right: 10px solid transparent
+}
+
+.ribbon-brightblue.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #3E8EF7 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #3E8EF7 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #3E8EF7 0);
+    background-image: linear-gradient(to left, transparent 22px, #3E8EF7 0)
+}
+
+.ribbon-brightblue.ribbon-bookmark:before {
+    border: 15px solid #3E8EF7;
+    border-right: 10px solid transparent
+}
+
+.ribbon-purple.ribbon-bookmark {
+    background-image: -webkit-linear-gradient(right, transparent 22px, #D6359A 0);
+    background-image: -moz-linear-gradient(right, transparent 22px, #D6359A 0);
+    background-image: -ms-linear-gradient(right, transparent 22px, #D6359A 0);
+    background-image: linear-gradient(to left, transparent 22px, #D6359A 0)
+}
+
+.ribbon-purple.ribbon-bookmark:before {
+    border: 15px solid #D6359A;
+    border-right: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-success.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #11C26D 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #11C26D 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #11C26D 0);
+    background-image: linear-gradient(to right, transparent 22px, #11C26D 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-success.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #11C26D;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-primary.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #188AE2 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #188AE2 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #188AE2 0);
+    background-image: linear-gradient(to right, transparent 22px, #188AE2 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-primary.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #188AE2;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-dark.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #3B3E47 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #3B3E47 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #3B3E47 0);
+    background-image: linear-gradient(to right, transparent 22px, #3B3E47 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-dark.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #3B3E47;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-info.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #35B8E0 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #35B8E0 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #35B8E0 0);
+    background-image: linear-gradient(to right, transparent 22px, #35B8E0 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-info.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #35B8E0;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-warning.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #FBCC5C 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #FBCC5C 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #FBCC5C 0);
+    background-image: linear-gradient(to right, transparent 22px, #FBCC5C 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-warning.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #FBCC5C;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-danger.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #ff5722 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #ff5722 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #ff5722 0);
+    background-image: linear-gradient(to right, transparent 22px, #ff5722 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-danger.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #ff5722;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-lightdark.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #526069 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #526069 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #526069 0);
+    background-image: linear-gradient(to right, transparent 22px, #526069 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-lightdark.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #526069;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-blue.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #1E9FFF 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #1E9FFF 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #1E9FFF 0);
+    background-image: linear-gradient(to right, transparent 22px, #1E9FFF 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-blue.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #1E9FFF;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-brightblue.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #3E8EF7 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #3E8EF7 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #3E8EF7 0);
+    background-image: linear-gradient(to right, transparent 22px, #3E8EF7 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-brightblue.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #3E8EF7;
+    border-left: 10px solid transparent
+}
+
+.ribbon-reverse>.ribbon-purple.ribbon-bookmark {
+    padding-right: 20px;
+    padding-left: 25px;
+    background-image: -webkit-linear-gradient(left, transparent 22px, #D6359A 0);
+    background-image: -moz-linear-gradient(left, transparent 22px, #D6359A 0);
+    background-image: -ms-linear-gradient(left, transparent 22px, #D6359A 0);
+    background-image: linear-gradient(to right, transparent 22px, #D6359A 0);
+    position: relative
+}
+
+.ribbon.ribbon-reverse>.ribbon-purple.ribbon-bookmark:before {
+    left: 0;
+    border: 15px solid #D6359A;
+    border-left: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-success.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #11C26D 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #11C26D 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #11C26D 0);
+    background-image: linear-gradient(to top, transparent 22px, #11C26D 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-success.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #11C26D;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-primary.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #188AE2 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #188AE2 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #188AE2 0);
+    background-image: linear-gradient(to top, transparent 22px, #188AE2 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-primary.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #188AE2;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-dark.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #3B3E47 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #3B3E47 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #3B3E47 0);
+    background-image: linear-gradient(to top, transparent 22px, #3B3E47 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-dark.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #3B3E47;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-info.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #35B8E0 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #35B8E0 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #35B8E0 0);
+    background-image: linear-gradient(to top, transparent 22px, #35B8E0 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-info.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #35B8E0;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-warning.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #FBCC5C 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #FBCC5C 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #FBCC5C 0);
+    background-image: linear-gradient(to top, transparent 22px, #FBCC5C 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-warning.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #FBCC5C;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-danger.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #ff5722 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #ff5722 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #ff5722 0);
+    background-image: linear-gradient(to top, transparent 22px, #ff5722 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-danger.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #ff5722;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-green.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #019486 0);
+    background-image: linear-gradient(to top, transparent 22px, #019486 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-green.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #019486;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-lightdark.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #526069 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #526069 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #526069 0);
+    background-image: linear-gradient(to top, transparent 22px, #526069 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-lightdark.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #526069;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-blue.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #1E9FFF 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #1E9FFF 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #1E9FFF 0);
+    background-image: linear-gradient(to top, transparent 22px, #1E9FFF 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-blue.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #1E9FFF;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-brightblue.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #3E8EF7 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #3E8EF7 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #3E8EF7 0);
+    background-image: linear-gradient(to top, transparent 22px, #3E8EF7 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-brightblue.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #3E8EF7;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon.ribbon-vertical>.ribbon-purple.ribbon-bookmark {
+    height: 82px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    background-image: -webkit-linear-gradient(bottom, transparent 22px, #D6359A 0);
+    background-image: -moz-linear-gradient(bottom, transparent 22px, #D6359A 0);
+    background-image: -ms-linear-gradient(bottom, transparent 22px, #D6359A 0);
+    background-image: linear-gradient(to top, transparent 22px, #D6359A 0);
+    position: relative
+}
+
+.ribbon.ribbon-vertical>.ribbon-purple.ribbon-bookmark:before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    margin-top: -15px;
+    border-right: 20px solid #D6359A;
+    border-bottom: 10px solid transparent
+}
+
+.ribbon-success.ribbon-shadow:before {
+    border-color: #11C26D transparent transparent
+}
+
+.ribbon-primary.ribbon-shadow:before {
+    border-color: #188AE2 transparent transparent
+}
+
+.ribbon-dark.ribbon-shadow:before {
+    border-color: #3B3E47 transparent transparent
+}
+
+.ribbon-info.ribbon-shadow:before {
+    border-color: #35B8E0 transparent transparent
+}
+
+.ribbon-warning.ribbon-shadow:before {
+    border-color: #FBCC5C transparent transparent
+}
+
+.ribbon-danger.ribbon-shadow:before {
+    border-color: #ff5722 transparent transparent
+}
+
+.ribbon-green.ribbon-shadow:before {
+    border-color: #019486 transparent transparent
+}
+
+.ribbon-lightdark.ribbon-shadow:before {
+    border-color: #526069 transparent transparent
+}
+
+.ribbon-blue.ribbon-shadow:before {
+    border-color: #1E9FFF transparent transparent
+}
+
+.ribbon-brightblue.ribbon-shadow:before {
+    border-color: #3E8EF7 transparent transparent
+}
+
+.ribbon-purple.ribbon-shadow:before {
+    border-color: #D6359A transparent transparent
+}
+
+.ribbon.ribbon-bottom>.ribbon-success.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #11C26D;
+    border-right-color: #11C26D
+}
+
+.ribbon.ribbon-bottom>.ribbon-primary.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #188AE2;
+    border-right-color: #188AE2
+}
+
+.ribbon.ribbon-bottom>.ribbon-dark.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #3B3E47;
+    border-right-color: #3B3E47
+}
+
+.ribbon.ribbon-bottom>.ribbon-info.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #35B8E0;
+    border-right-color: #35B8E0
+}
+
+.ribbon.ribbon-bottom>.ribbon-warning.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #FBCC5C;
+    border-right-color: #FBCC5C
+}
+
+.ribbon.ribbon-bottom>.ribbon-danger.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #ff5722;
+    border-right-color: #ff5722
+}
+
+.ribbon.ribbon-bottom>.ribbon-green.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #019486;
+    border-right-color: #019486
+}
+
+.ribbon.ribbon-bottom>.ribbon-lightdark.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #526069;
+    border-right-color: #526069
+}
+
+.ribbon.ribbon-bottom>.ribbon-blue.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #1E9FFF;
+    border-right-color: #1E9FFF
+}
+
+.ribbon.ribbon-bottom>.ribbon-brightblue.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #3E8EF7;
+    border-right-color: #3E8EF7
+}
+
+.ribbon.ribbon-bottom>.ribbon-purple.ribbon-shadow.ribbon-left:before {
+    border-bottom-color: #D6359A;
+    border-right-color: #D6359A
+}
+
+.ribbon.ribbon-badge>*.ribbon-success:before {
+    border-left: 3px solid #11C26D;
+    border-top: 3px solid #11C26D
+}
+
+.ribbon.ribbon-badge>*.ribbon-success:after {
+    border-right: 3px solid #11C26D;
+    border-top: 3px solid #11C26D
+}
+
+.ribbon.ribbon-badge>*.ribbon-primary:before {
+    border-left: 3px solid #188AE2;
+    border-top: 3px solid #188AE2
+}
+
+.ribbon.ribbon-badge>*.ribbon-primary:after {
+    border-right: 3px solid #188AE2;
+    border-top: 3px solid #188AE2
+}
+
+.ribbon.ribbon-badge>*.ribbon-dark:before {
+    border-left: 3px solid #3B3E47;
+    border-top: 3px solid #3B3E47
+}
+
+.ribbon.ribbon-badge>*.ribbon-dark:after {
+    border-right: 3px solid #3B3E47;
+    border-top: 3px solid #3B3E47
+}
+
+.ribbon.ribbon-badge>*.ribbon-info:before {
+    border-left: 3px solid #35B8E0;
+    border-top: 3px solid #35B8E0
+}
+
+.ribbon.ribbon-badge>*.ribbon-info:after {
+    border-right: 3px solid #35B8E0;
+    border-top: 3px solid #35B8E0
+}
+
+.ribbon.ribbon-badge>*.ribbon-warning:before {
+    border-left: 3px solid #FBCC5C;
+    border-top: 3px solid #FBCC5C
+}
+
+.ribbon.ribbon-badge>*.ribbon-warning:after {
+    border-right: 3px solid #FBCC5C;
+    border-top: 3px solid #FBCC5C
+}
+
+.ribbon.ribbon-badge>*.ribbon-danger:before {
+    border-left: 3px solid #ff5722;
+    border-top: 3px solid #ff5722
+}
+
+.ribbon.ribbon-badge>*.ribbon-danger:after {
+    border-right: 3px solid #ff5722;
+    border-top: 3px solid #ff5722
+}
+
+.ribbon.ribbon-badge>*.ribbon-green:before {
+    border-left: 3px solid #019486;
+    border-top: 3px solid #019486
+}
+
+.ribbon.ribbon-badge>*.ribbon-green:after {
+    border-right: 3px solid #019486;
+    border-top: 3px solid #019486
+}
+
+.ribbon.ribbon-badge>*.ribbon-lightdark:before {
+    border-left: 3px solid #526069;
+    border-top: 3px solid #526069
+}
+
+.ribbon.ribbon-badge>*.ribbon-lightdark:after {
+    border-right: 3px solid #526069;
+    border-top: 3px solid #526069
+}
+
+.ribbon.ribbon-badge>*.ribbon-blue:before {
+    border-left: 3px solid #1E9FFF;
+    border-top: 3px solid #1E9FFF
+}
+
+.ribbon.ribbon-badge>*.ribbon-blue:after {
+    border-right: 3px solid #1E9FFF;
+    border-top: 3px solid #1E9FFF
+}
+
+.ribbon.ribbon-badge>*.ribbon-brightblue:before {
+    border-left: 3px solid #3E8EF7;
+    border-top: 3px solid #3E8EF7
+}
+
+.ribbon.ribbon-badge>*.ribbon-brightblue:after {
+    border-right: 3px solid #3E8EF7;
+    border-top: 3px solid #3E8EF7
+}
+
+.ribbon.ribbon-badge>*.ribbon-purple:before {
+    border-left: 3px solid #D6359A;
+    border-top: 3px solid #D6359A
+}
+
+.ribbon.ribbon-badge>*.ribbon-purple:after {
+    border-right: 3px solid #D6359A;
+    border-top: 3px solid #D6359A
+}
+
+.ribbon.ribbon-corner>*.ribbon-success:before {
+    border-top-color: #11C26D;
+    border-left-color: #11C26D
+}
+
+.ribbon.ribbon-corner>*.ribbon-primary:before {
+    border-top-color: #188AE2;
+    border-left-color: #188AE2
+}
+
+.ribbon.ribbon-corner>*.ribbon-dark:before {
+    border-top-color: #3B3E47;
+    border-left-color: #3B3E47
+}
+
+.ribbon.ribbon-corner>*.ribbon-info:before {
+    border-top-color: #35B8E0;
+    border-left-color: #35B8E0
+}
+
+.ribbon.ribbon-corner>*.ribbon-warning:before {
+    border-top-color: #FBCC5C;
+    border-left-color: #FBCC5C
+}
+
+.ribbon.ribbon-corner>*.ribbon-danger:before {
+    border-top-color: #ff5722;
+    border-left-color: #ff5722
+}
+
+.ribbon.ribbon-corner>*.ribbon-green:before {
+    border-top-color: #019486;
+    border-left-color: #019486
+}
+
+.ribbon.ribbon-corner>*.ribbon-lightdark:before {
+    border-top-color: #526069;
+    border-left-color: #526069
+}
+
+.ribbon.ribbon-corner>*.ribbon-blue:before {
+    border-top-color: #1E9FFF;
+    border-left-color: #1E9FFF
+}
+
+.ribbon.ribbon-corner>*.ribbon-brightblue:before {
+    border-top-color: #3E8EF7;
+    border-left-color: #3E8EF7
+}
+
+.ribbon.ribbon-corner>*.ribbon-purple:before {
+    border-top-color: #D6359A;
+    border-left-color: #D6359A
+}

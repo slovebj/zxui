@@ -84,7 +84,7 @@ select[multiple]{
 // Build on `.form-ctrl` with modifier classes to decrease or increase the
 // height and font-size of form ctrls.
 //
-// The `.form-group-* form-ctrl` variations are sadly duplicated to avoid the
+// The `.form-item-* form-ctrl` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
 .form-ctrl-sm {
@@ -133,8 +133,8 @@ select[multiple]{
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 
-.form-group {
-  margin-bottom: $form-group-margin-bottom;
+.form-item {
+  margin-bottom: $form-item-margin-bottom;
   position: relative;
 }
 
@@ -157,15 +157,15 @@ select[multiple]{
   // Kick in the inline
   @include media-breakpoint-up(sm) {
     // Inline-block all the things for "inline"
-    &.form-group {
+    &.form-item {
       display: inline-block;
       height: 2rem;
     }
 
-    // Allow folks to *not* use `.form-group`
+    // Allow folks to *not* use `.form-item`
     .form-ctrl {
       display: inline-block;
-      width: auto; // Prevent labels from stacking above inputs in `.form-group`
+      width: auto; // Prevent labels from stacking above inputs in `.form-item`
       vertical-align: middle;
     }
 
